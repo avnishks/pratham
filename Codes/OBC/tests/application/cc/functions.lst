@@ -1,0 +1,1366 @@
+GAS LISTING /tmp/ccfNX6Eb.s 			page 1
+
+
+   1               		.file	"functions.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+   8               		.global __do_copy_data
+   9               		.global __do_clear_bss
+  10               		.stabs	"/home/chaitan3/Satellite/OBC/tests/application/cc/",100,0,2,.Ltext0
+  11               		.stabs	"functions.c",100,0,2,.Ltext0
+  12               		.text
+  13               	.Ltext0:
+  14               		.stabs	"gcc2_compiled.",60,0,0,0
+  15               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,1,0
+  16               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,1,0
+  17               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,1,0
+  18               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,1,0
+  19               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,1,0
+  20               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,1,
+  21               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,1,0
+  22               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,1,0
+  23               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,1,0
+  24               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,1,0
+  25               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,1,0
+  26               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,1,0
+  27               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,1,0
+  28               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,1,0
+  29               		.stabs	"void:t(0,15)=(0,15)",128,0,1,0
+  30               		.stabs	"common.h",130,0,0,0
+  31               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/avr/io.h",130,0,0,0
+  32               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/avr/sfr_defs.h",130,0,0,0
+  33               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/inttypes.h",130,0,0,0
+  34               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/stdint.h",130,0,0,0
+  35               		.stabs	"int8_t:t(5,1)=(0,10)",128,0,121,0
+  36               		.stabs	"uint8_t:t(5,2)=(0,11)",128,0,122,0
+  37               		.stabs	"int16_t:t(5,3)=(0,1)",128,0,123,0
+  38               		.stabs	"uint16_t:t(5,4)=(0,4)",128,0,124,0
+  39               		.stabs	"int32_t:t(5,5)=(0,3)",128,0,125,0
+  40               		.stabs	"uint32_t:t(5,6)=(0,5)",128,0,126,0
+  41               		.stabs	"int64_t:t(5,7)=(0,6)",128,0,128,0
+  42               		.stabs	"uint64_t:t(5,8)=(0,7)",128,0,129,0
+  43               		.stabs	"intptr_t:t(5,9)=(5,3)",128,0,142,0
+  44               		.stabs	"uintptr_t:t(5,10)=(5,4)",128,0,147,0
+  45               		.stabs	"int_least8_t:t(5,11)=(5,1)",128,0,159,0
+  46               		.stabs	"uint_least8_t:t(5,12)=(5,2)",128,0,164,0
+  47               		.stabs	"int_least16_t:t(5,13)=(5,3)",128,0,169,0
+  48               		.stabs	"uint_least16_t:t(5,14)=(5,4)",128,0,174,0
+  49               		.stabs	"int_least32_t:t(5,15)=(5,5)",128,0,179,0
+  50               		.stabs	"uint_least32_t:t(5,16)=(5,6)",128,0,184,0
+  51               		.stabs	"int_least64_t:t(5,17)=(5,7)",128,0,192,0
+  52               		.stabs	"uint_least64_t:t(5,18)=(5,8)",128,0,199,0
+  53               		.stabs	"int_fast8_t:t(5,19)=(5,1)",128,0,213,0
+  54               		.stabs	"uint_fast8_t:t(5,20)=(5,2)",128,0,218,0
+  55               		.stabs	"int_fast16_t:t(5,21)=(5,3)",128,0,223,0
+  56               		.stabs	"uint_fast16_t:t(5,22)=(5,4)",128,0,228,0
+  57               		.stabs	"int_fast32_t:t(5,23)=(5,5)",128,0,233,0
+GAS LISTING /tmp/ccfNX6Eb.s 			page 2
+
+
+  58               		.stabs	"uint_fast32_t:t(5,24)=(5,6)",128,0,238,0
+  59               		.stabs	"int_fast64_t:t(5,25)=(5,7)",128,0,246,0
+  60               		.stabs	"uint_fast64_t:t(5,26)=(5,8)",128,0,253,0
+  61               		.stabs	"intmax_t:t(5,27)=(5,7)",128,0,273,0
+  62               		.stabs	"uintmax_t:t(5,28)=(5,8)",128,0,278,0
+  63               		.stabn	162,0,0,0
+  64               		.stabs	"int_farptr_t:t(4,1)=(5,5)",128,0,77,0
+  65               		.stabs	"uint_farptr_t:t(4,2)=(5,6)",128,0,81,0
+  66               		.stabn	162,0,0,0
+  67               		.stabn	162,0,0,0
+  68               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/avr/fuse.h",130,0,0,0
+  69               		.stabs	"__fuse_t:t(6,1)=(6,2)=s2low:(0,11),0,8;high:(0,11),8,8;;",128,0,247,0
+  70               		.stabn	162,0,0,0
+  71               		.stabn	162,0,0,0
+  72               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/stdlib.h",130,0,0,0
+  73               		.stabs	"/usr/lib/gcc/avr/4.3.4/include/stddef.h",130,0,0,0
+  74               		.stabs	"size_t:t(8,1)=(0,4)",128,0,214,0
+  75               		.stabs	"wchar_t:t(8,2)=(0,1)",128,0,326,0
+  76               		.stabn	162,0,0,0
+  77               		.stabs	"div_t:t(7,1)=(7,2)=s4quot:(0,1),0,16;rem:(0,1),16,16;;",128,0,71,0
+  78               		.stabs	"ldiv_t:t(7,3)=(7,4)=s8quot:(0,3),0,32;rem:(0,3),32,32;;",128,0,77,0
+  79               		.stabs	"__compar_fn_t:t(7,5)=(7,6)=*(7,7)=f(0,1)",128,0,80,0
+  80               		.stabn	162,0,0,0
+  81               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/stdio.h",130,0,0,0
+  82               		.stabs	"/usr/lib/gcc/avr/4.3.4/include/stdarg.h",130,0,0,0
+  83               		.stabs	"__gnuc_va_list:t(10,1)=(10,2)=*(0,15)",128,0,43,0
+  84               		.stabs	"va_list:t(10,3)=(10,1)",128,0,105,0
+  85               		.stabn	162,0,0,0
+  86               		.stabs	"__file:T(9,1)=s14buf:(9,2)=*(0,2),0,16;unget:(0,11),16,8;flags:(5,2),24,8;size:(0,1),32,16
+  87               		.stabn	162,0,0,0
+  88               		.stabn	162,0,0,0
+  89               		.stabs	"ReadFromCC1020Register:F(0,11)",36,0,42,ReadFromCC1020Register
+  90               		.stabs	"addr:P(0,11)",64,0,41,24
+  91               	.global	ReadFromCC1020Register
+  92               		.type	ReadFromCC1020Register, @function
+  93               	ReadFromCC1020Register:
+  94               		.stabd	46,0,0
+   0:functions.c   **** 
+   1:functions.c   **** #include "common.h"
+   2:functions.c   **** #include "spi.h"
+   3:functions.c   **** #include "cc1020.h"
+   4:functions.c   **** #include "functions.h"
+   5:functions.c   **** 
+   6:functions.c   **** uint8_t x;
+   7:functions.c   **** char arr[100];
+   8:functions.c   **** 
+   9:functions.c   **** int init_CC1020 (void){
+  10:functions.c   ****   
+  11:functions.c   ****   //init_SPI_trans(CC1020);
+  12:functions.c   ****   SetupCC1020PD();
+  13:functions.c   ****   ResetCC1020();//CC is still in PD (Power_Down mode) after reset
+  14:functions.c   ****   SetupCC1020Allregisters();
+  15:functions.c   ****   WakeUpCC1020ToTX(TXANALOG);
+  16:functions.c   ****   CalibrateCC1020 (PA_POWER);
+  17:functions.c   ****   
+  18:functions.c   ****   WakeUpCC1020ToTX(TXANALOG);													
+  19:functions.c   ****   return SetupCC1020TX(TXANALOG,PA_POWER);
+GAS LISTING /tmp/ccfNX6Eb.s 			page 3
+
+
+  20:functions.c   **** }
+  21:functions.c   **** 
+  22:functions.c   **** /****************************************************************************/
+  23:functions.c   **** /*  This routine writes to a single CC1020 register                         */
+  24:functions.c   **** /****************************************************************************/
+  25:functions.c   **** 
+  26:functions.c   **** void WriteToCC1020Register(unsigned char addr, unsigned char data)
+  27:functions.c   **** {
+  28:functions.c   ****   cbi(PORTB, SS);
+  29:functions.c   ****   
+  30:functions.c   ****   addr = (addr << 1) | 0x01;
+  31:functions.c   ****   SPI_transfer(addr);
+  32:functions.c   ****   SPI_transfer(data);
+  33:functions.c   ****   
+  34:functions.c   ****   sbi(PORTB, SS);
+  35:functions.c   **** }
+  36:functions.c   **** /****************************************************************************/
+  37:functions.c   **** /*  This routine reads from a single CC1020 register                        */
+  38:functions.c   **** /****************************************************************************/
+  39:functions.c   **** 
+  40:functions.c   **** unsigned char ReadFromCC1020Register(unsigned char addr)
+  41:functions.c   **** {
+  95               		.stabn	68,0,42,.LM0-.LFBB1
+  96               	.LM0:
+  97               	.LFBB1:
+  98               	/* prologue: function */
+  99               	/* frame size = 0 */
+  42:functions.c   ****   cbi(PORTB, SS);
+ 100               		.stabn	68,0,43,.LM1-.LFBB1
+ 101               	.LM1:
+ 102 0000 C498      		cbi 56-32,4
+  43:functions.c   ****   
+  44:functions.c   **** 	char Value;
+  45:functions.c   ****   addr = (addr << 1) & 0xFE;
+  46:functions.c   ****   SPI_transfer(addr);
+ 103               		.stabn	68,0,47,.LM2-.LFBB1
+ 104               	.LM2:
+ 105 0002 880F      		lsl r24
+ 106 0004 0E94 0000 		call SPI_transfer
+  47:functions.c   ****   
+  48:functions.c   ****   Value = SPI_transfer(0xFF);
+ 107               		.stabn	68,0,49,.LM3-.LFBB1
+ 108               	.LM3:
+ 109 0008 8FEF      		ldi r24,lo8(-1)
+ 110 000a 0E94 0000 		call SPI_transfer
+  49:functions.c   ****   
+  50:functions.c   ****   sbi(PORTB, SS);
+ 111               		.stabn	68,0,51,.LM4-.LFBB1
+ 112               	.LM4:
+ 113 000e C49A      		sbi 56-32,4
+ 114               	/* epilogue start */
+  51:functions.c   **** 	return Value;
+  52:functions.c   **** }
+ 115               		.stabn	68,0,53,.LM5-.LFBB1
+ 116               	.LM5:
+ 117 0010 0895      		ret
+ 118               		.size	ReadFromCC1020Register, .-ReadFromCC1020Register
+GAS LISTING /tmp/ccfNX6Eb.s 			page 4
+
+
+ 119               	.Lscope1:
+ 120               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 121               		.stabd	78,0,0
+ 122               		.stabs	"WriteToCC1020Register:F(0,15)",36,0,28,WriteToCC1020Register
+ 123               		.stabs	"addr:P(0,11)",64,0,27,24
+ 124               		.stabs	"data:P(0,11)",64,0,27,17
+ 125               	.global	WriteToCC1020Register
+ 126               		.type	WriteToCC1020Register, @function
+ 127               	WriteToCC1020Register:
+ 128               		.stabd	46,0,0
+  28:functions.c   **** {
+ 129               		.stabn	68,0,28,.LM6-.LFBB2
+ 130               	.LM6:
+ 131               	.LFBB2:
+ 132 0012 1F93      		push r17
+ 133               	/* prologue: function */
+ 134               	/* frame size = 0 */
+ 135 0014 162F      		mov r17,r22
+  29:functions.c   ****   cbi(PORTB, SS);
+ 136               		.stabn	68,0,29,.LM7-.LFBB2
+ 137               	.LM7:
+ 138 0016 C498      		cbi 56-32,4
+  31:functions.c   ****   addr = (addr << 1) | 0x01;
+ 139               		.stabn	68,0,31,.LM8-.LFBB2
+ 140               	.LM8:
+ 141 0018 880F      		lsl r24
+  32:functions.c   ****   SPI_transfer(addr);
+ 142               		.stabn	68,0,32,.LM9-.LFBB2
+ 143               	.LM9:
+ 144 001a 8160      		ori r24,lo8(1)
+ 145 001c 0E94 0000 		call SPI_transfer
+  33:functions.c   ****   SPI_transfer(data);
+ 146               		.stabn	68,0,33,.LM10-.LFBB2
+ 147               	.LM10:
+ 148 0020 812F      		mov r24,r17
+ 149 0022 0E94 0000 		call SPI_transfer
+  35:functions.c   ****   sbi(PORTB, SS);
+ 150               		.stabn	68,0,35,.LM11-.LFBB2
+ 151               	.LM11:
+ 152 0026 C49A      		sbi 56-32,4
+ 153               	/* epilogue start */
+  36:functions.c   **** }
+ 154               		.stabn	68,0,36,.LM12-.LFBB2
+ 155               	.LM12:
+ 156 0028 1F91      		pop r17
+ 157 002a 0895      		ret
+ 158               		.size	WriteToCC1020Register, .-WriteToCC1020Register
+ 159               	.Lscope2:
+ 160               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 161               		.stabd	78,0,0
+ 162               		.stabs	"CalibrateCC1020:F(0,1)",36,0,145,CalibrateCC1020
+ 163               		.stabs	"PA_POWER1:P(0,2)",64,0,144,11
+ 164               	.global	CalibrateCC1020
+ 165               		.type	CalibrateCC1020, @function
+ 166               	CalibrateCC1020:
+ 167               		.stabd	46,0,0
+  53:functions.c   **** 
+GAS LISTING /tmp/ccfNX6Eb.s 			page 5
+
+
+  54:functions.c   **** /****************************************************************************/
+  55:functions.c   **** /*  This routine puts the CC1020 into power down mode. Use WakeUpCC1020ToRX */
+  56:functions.c   **** /*  followed by SetupCC1020RX or WakeupCC1020ToTX followed by SetupCC1020TX */
+  57:functions.c   **** /*  to wake up from power down                                              */
+  58:functions.c   **** /****************************************************************************/
+  59:functions.c   **** 
+  60:functions.c   **** void SetupCC1020PD(void)
+  61:functions.c   **** {
+  62:functions.c   ****   
+  63:functions.c   ****   // Put CC1020 into power-down
+  64:functions.c   ****   WriteToCC1020Register(CC1020_MAIN,0x1F);
+  65:functions.c   ****   
+  66:functions.c   ****   x = ReadFromCC1020Register(CC1020_MAIN);
+  67:functions.c   ****   sprintf(arr, "Read: %x\r\n", x);
+  68:functions.c   ****   send_UART(arr, strlen(arr));
+  69:functions.c   **** 
+  70:functions.c   ****   // Turn off PA to minimise current draw
+  71:functions.c   ****   WriteToCC1020Register(CC1020_PA_POWER,0x00);
+  72:functions.c   **** }
+  73:functions.c   **** 
+  74:functions.c   **** 
+  75:functions.c   **** /****************************************************************************/
+  76:functions.c   **** /*  This routine resets the CC1020, clearing all registers.                 */
+  77:functions.c   **** /****************************************************************************/  
+  78:functions.c   **** 
+  79:functions.c   **** void ResetCC1020(void)
+  80:functions.c   **** {
+  81:functions.c   ****   // Reset CC1020
+  82:functions.c   ****   WriteToCC1020Register(CC1020_MAIN, 0x0E);
+  83:functions.c   **** 
+  84:functions.c   ****   // Bring CC1020 out of reset
+  85:functions.c   ****   WriteToCC1020Register(CC1020_MAIN, 0x1F);
+  86:functions.c   **** }
+  87:functions.c   **** 
+  88:functions.c   **** 
+  89:functions.c   **** /****************************************************************************/
+  90:functions.c   **** /*  This routine configures all CC1020 registers as per values stored in DefaultConfig433[] */
+  91:functions.c   **** /****************************************************************************/
+  92:functions.c   **** 
+  93:functions.c   **** void SetupCC1020Allregisters(void)
+  94:functions.c   **** {
+  95:functions.c   ****   char counter, value;
+  96:functions.c   ****   
+  97:functions.c   ****   for(counter = 0x01; counter <= 0x20; counter++)
+  98:functions.c   ****   {
+  99:functions.c   ****     value = DefaultConfig433[counter - 1];				// For Transmitter as well as Receiver
+ 100:functions.c   ****     WriteToCC1020Register(counter, value);
+ 101:functions.c   ****   }
+ 102:functions.c   **** }
+ 103:functions.c   **** 
+ 104:functions.c   **** 
+ 105:functions.c   **** /****************************************************************************/
+ 106:functions.c   **** /*  This routine wakes the CC1020 up from PD mode to TX mode. CC is still in 
+ 107:functions.c   **** 	power down mode 		*/
+ 108:functions.c   **** /****************************************************************************/
+ 109:functions.c   **** 
+ 110:functions.c   **** void WakeUpCC1020ToTX(char TXANALOG1)
+GAS LISTING /tmp/ccfNX6Eb.s 			page 6
+
+
+ 111:functions.c   **** {
+ 112:functions.c   ****   // Turn on xtal oscillator core
+ 113:functions.c   ****   WriteToCC1020Register(CC1020_MAIN,0xDB);
+ 114:functions.c   **** 
+ 115:functions.c   ****   // Setup bias current adjustment
+ 116:functions.c   ****   WriteToCC1020Register(CC1020_ANALOG,TXANALOG1);
+ 117:functions.c   **** 
+ 118:functions.c   ****   // Insert wait routine here, must wait for xtal oscillator to stabilise, 
+ 119:functions.c   ****   // typically takes 2-5ms.
+ 120:functions.c   **** 	_delay_ms(3);
+ 121:functions.c   **** 
+ 122:functions.c   ****   // Turn on bias generator
+ 123:functions.c   ****   WriteToCC1020Register(CC1020_MAIN,0xD9);
+ 124:functions.c   **** 
+ 125:functions.c   ****   // Wait for 150 usec
+ 126:functions.c   **** 	_delay_us(150);		
+ 127:functions.c   **** 
+ 128:functions.c   ****   // Turn on frequency synthesiser
+ 129:functions.c   ****   WriteToCC1020Register(CC1020_MAIN,0xD1);
+ 130:functions.c   ****   
+ 131:functions.c   ****   x = ReadFromCC1020Register(CC1020_MAIN);
+ 132:functions.c   ****   sprintf(arr, "Read: %x\r\n", x);
+ 133:functions.c   ****   send_UART(arr, strlen(arr));
+ 134:functions.c   ****   
+ 135:functions.c   **** }
+ 136:functions.c   **** 
+ 137:functions.c   **** /****************************************************************************/
+ 138:functions.c   **** /*  This routine calibrates the CC1020                                      */
+ 139:functions.c   **** /*  Returns 0 if calibration fails, non-zero otherwise. Checks the LOCK     */
+ 140:functions.c   **** /*  to check for success.                                                   */
+ 141:functions.c   **** /****************************************************************************/
+ 142:functions.c   **** 
+ 143:functions.c   **** int CalibrateCC1020(char PA_POWER1)
+ 144:functions.c   **** {
+ 168               		.stabn	68,0,145,.LM13-.LFBB3
+ 169               	.LM13:
+ 170               	.LFBB3:
+ 171 002c BF92      		push r11
+ 172 002e CF92      		push r12
+ 173 0030 DF92      		push r13
+ 174 0032 EF92      		push r14
+ 175 0034 FF92      		push r15
+ 176 0036 0F93      		push r16
+ 177 0038 1F93      		push r17
+ 178 003a CF93      		push r28
+ 179 003c DF93      		push r29
+ 180               	/* prologue: function */
+ 181               	/* frame size = 0 */
+ 182 003e B82E      		mov r11,r24
+ 145:functions.c   ****   int TimeOutCounter;
+ 146:functions.c   ****   int nCalAttempt;
+ 147:functions.c   **** 
+ 148:functions.c   ****   // Turn off PA to avoid spurs during calibration in TX mode
+ 149:functions.c   ****   WriteToCC1020Register(CC1020_PA_POWER,0x00);
+ 183               		.stabn	68,0,150,.LM14-.LFBB3
+ 184               	.LM14:
+ 185 0040 8CE1      		ldi r24,lo8(28)
+GAS LISTING /tmp/ccfNX6Eb.s 			page 7
+
+
+ 186 0042 60E0      		ldi r22,lo8(0)
+ 187 0044 0E94 0000 		call WriteToCC1020Register
+ 188 0048 04E0      		ldi r16,lo8(4)
+ 189 004a 10E0      		ldi r17,hi8(4)
+ 190               	.LBB58:
+ 191               	.LBB59:
+ 192               	.LBB60:
+ 193               	.LBB61:
+ 194               	.LBB62:
+ 195               	.LBB63:
+ 196               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h",132,0,0,.Ltext1
+ 197               	.Ltext1:
+   0:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** /* Copyright (c) 2002, Marek Michalkiewicz
+   1:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****    Copyright (c) 2007 Joerg Wunsch
+   2:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****    All rights reserved.
+   3:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** 
+   4:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****    Redistribution and use in source and binary forms, with or without
+   5:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****    modification, are permitted provided that the following conditions are met:
+   6:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** 
+   7:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****    * Redistributions of source code must retain the above copyright
+   8:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****      notice, this list of conditions and the following disclaimer.
+   9:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** 
+  10:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****    * Redistributions in binary form must reproduce the above copyright
+  11:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****      notice, this list of conditions and the following disclaimer in
+  12:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****      the documentation and/or other materials provided with the
+  13:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****      distribution.
+  14:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** 
+  15:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****    * Neither the name of the copyright holders nor the names of
+  16:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****      contributors may be used to endorse or promote products derived
+  17:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****      from this software without specific prior written permission.
+  18:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** 
+  19:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  20:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****   AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  21:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****   IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  22:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****   ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+  23:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****   LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  24:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****   CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+  25:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****   SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+  26:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****   INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+  27:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****   CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+  28:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****   ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  29:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****   POSSIBILITY OF SUCH DAMAGE. */
+  30:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** 
+  31:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** /* $Id: delay_basic.h,v 1.1 2007/05/13 21:23:20 joerg_wunsch Exp $ */
+  32:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** 
+  33:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** #ifndef _UTIL_DELAY_BASIC_H_
+  34:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** #define _UTIL_DELAY_BASIC_H_ 1
+  35:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** 
+  36:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** #include <inttypes.h>
+  37:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** 
+  38:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** /** \file */
+  39:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** /** \defgroup util_delay_basic <util/delay_basic.h>: Basic busy-wait delay loops
+  40:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****     \code
+  41:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****     #include <util/delay_basic.h>
+  42:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****     \endcode
+  43:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** 
+  44:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****     The functions in this header file implement simple delay loops
+GAS LISTING /tmp/ccfNX6Eb.s 			page 8
+
+
+  45:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****     that perform a busy-waiting.  They are typically used to
+  46:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****     facilitate short delays in the program execution.  They are
+  47:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****     implemented as count-down loops with a well-known CPU cycle
+  48:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****     count per loop iteration.  As such, no other processing can
+  49:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****     occur simultaneously.  It should be kept in mind that the
+  50:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****     functions described here do not disable interrupts.
+  51:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** 
+  52:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****     In general, for long delays, the use of hardware timers is
+  53:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****     much preferrable, as they free the CPU, and allow for
+  54:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****     concurrent processing of other events while the timer is
+  55:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****     running.  However, in particular for very short delays, the
+  56:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****     overhead of setting up a hardware timer is too much compared
+  57:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****     to the overall delay time.
+  58:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** 
+  59:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****     Two inline functions are provided for the actual delay algorithms.
+  60:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** 
+  61:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** */
+  62:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** 
+  63:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** #if !defined(__DOXYGEN__)
+  64:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** static inline void _delay_loop_1(uint8_t __count) __attribute__((always_inline));
+  65:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** static inline void _delay_loop_2(uint16_t __count) __attribute__((always_inline));
+  66:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** #endif
+  67:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** 
+  68:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** /** \ingroup util_delay_basic
+  69:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** 
+  70:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****     Delay loop using an 8-bit counter \c __count, so up to 256
+  71:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****     iterations are possible.  (The value 256 would have to be passed
+  72:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****     as 0.)  The loop executes three CPU cycles per iteration, not
+  73:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****     including the overhead the compiler needs to setup the counter
+  74:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****     register.
+  75:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** 
+  76:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****     Thus, at a CPU speed of 1 MHz, delays of up to 768 microseconds
+  77:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****     can be achieved.
+  78:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** */
+  79:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** void
+  80:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** _delay_loop_1(uint8_t __count)
+  81:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** {
+  82:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** 	__asm__ volatile (
+  83:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** 		"1: dec %0" "\n\t"
+  84:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** 		"brne 1b"
+  85:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** 		: "=r" (__count)
+  86:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** 		: "0" (__count)
+  87:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** 	);
+  88:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** }
+  89:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** 
+  90:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** /** \ingroup util_delay_basic
+  91:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** 
+  92:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****     Delay loop using a 16-bit counter \c __count, so up to 65536
+  93:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****     iterations are possible.  (The value 65536 would have to be
+  94:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****     passed as 0.)  The loop executes four CPU cycles per iteration,
+  95:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****     not including the overhead the compiler requires to setup the
+  96:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****     counter register pair.
+  97:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** 
+  98:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****     Thus, at a CPU speed of 1 MHz, delays of up to about 262.1
+  99:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****     milliseconds can be achieved.
+ 100:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h ****  */
+ 101:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** void
+GAS LISTING /tmp/ccfNX6Eb.s 			page 9
+
+
+ 102:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** _delay_loop_2(uint16_t __count)
+ 103:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** {
+ 104:/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h **** 	__asm__ volatile (
+ 198               		.stabn	68,0,105,.LM15-.LFBB3
+ 199               	.LM15:
+ 200 004c 28EC      		ldi r18,lo8(200)
+ 201 004e C22E      		mov r12,r18
+ 202 0050 D12C      		mov r13,__zero_reg__
+ 203               	.LBE63:
+ 204               	.LBE62:
+ 205               	.LBE61:
+ 206               	.LBE60:
+ 207               	.LBE59:
+ 208               	.LBE58:
+ 209               	.LBB69:
+ 210               	.LBB70:
+ 211               	.LBB71:
+ 212               	.LBB72:
+ 213               		.stabs	"functions.c",132,0,0,.Ltext2
+ 214               	.Ltext2:
+ 150:functions.c   **** 
+ 151:functions.c   ****   // Calibrate, and re-calibrate if necessary:
+ 152:functions.c   ****   for (nCalAttempt = CAL_ATTEMPT_MAX; nCalAttempt > 0; nCalAttempt--) 
+ 153:functions.c   ****   {
+ 154:functions.c   **** 
+ 155:functions.c   ****     // Start calibration
+ 156:functions.c   ****     WriteToCC1020Register(CC1020_CALIBRATE,0xB4);            // verified with cc1020 datasheet
+ 157:functions.c   ****     
+ 158:functions.c   ****     // Wait for 100 usec. As given errata notes.
+ 159:functions.c   ****     _delay_us(100);
+ 160:functions.c   **** 
+ 161:functions.c   ****     // Monitor calibration complete bit in STATUS register
+ 162:functions.c   ****     // CAL_COMPLETE bit set to 1 when calibration is complete
+ 163:functions.c   ****     // Waiting time according to register settings is approx 27ms. Ref_freq=fosc/2 and CAL_WAIT = 1
+ 164:functions.c   ****     // We are waiting for 30ms
+ 165:functions.c   ****     for(TimeOutCounter = 30; ((ReadFromCC1020Register(CC1020_STATUS) & 0x80) == 0x00) && (TimeOutCo
+ 215               		.stabn	68,0,166,.LM16-.LFBB3
+ 216               	.LM16:
+ 217 0052 90ED      		ldi r25,lo8(2000)
+ 218 0054 E92E      		mov r14,r25
+ 219 0056 97E0      		ldi r25,hi8(2000)
+ 220 0058 F92E      		mov r15,r25
+ 221               	.L13:
+ 222               	.LBE72:
+ 223               	.LBE71:
+ 224               	.LBE70:
+ 225               	.LBE69:
+ 157:functions.c   ****     WriteToCC1020Register(CC1020_CALIBRATE,0xB4);            // verified with cc1020 datasheet
+ 226               		.stabn	68,0,157,.LM17-.LFBB3
+ 227               	.LM17:
+ 228 005a 8BE1      		ldi r24,lo8(27)
+ 229 005c 64EB      		ldi r22,lo8(-76)
+ 230 005e 0E94 0000 		call WriteToCC1020Register
+ 231               	.LBB76:
+ 232               	.LBB68:
+ 233               	.LBB67:
+ 234               	.LBB66:
+GAS LISTING /tmp/ccfNX6Eb.s 			page 10
+
+
+ 235               	.LBB65:
+ 236               	.LBB64:
+ 237               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h",132,0,0,.Ltext3
+ 238               	.Ltext3:
+ 239               		.stabn	68,0,105,.LM18-.LFBB3
+ 240               	.LM18:
+ 241 0062 C601      		movw r24,r12
+ 242               	/* #APP */
+ 243               	 ;  105 "/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h" 1
+ 244 0064 0197      		1: sbiw r24,1
+ 245 0066 01F4      		brne 1b
+ 246               	 ;  0 "" 2
+ 247               	/* #NOAPP */
+ 248 0068 CEE1      		ldi r28,lo8(30)
+ 249 006a D0E0      		ldi r29,hi8(30)
+ 250 006c 00C0      		rjmp .L6
+ 251               	.L8:
+ 252               	.LBE64:
+ 253               	.LBE65:
+ 254               	.LBE66:
+ 255               	.LBE67:
+ 256               	.LBE68:
+ 257               	.LBE76:
+ 258               	.LBB77:
+ 259               	.LBB75:
+ 260               	.LBB74:
+ 261               	.LBB73:
+ 262               		.stabs	"functions.c",132,0,0,.Ltext4
+ 263               	.Ltext4:
+ 264               		.stabn	68,0,166,.LM19-.LFBB3
+ 265               	.LM19:
+ 266 006e C701      		movw r24,r14
+ 267               	/* #APP */
+ 268               	 ;  105 "/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h" 1
+ 269 0070 0197      		1: sbiw r24,1
+ 270 0072 01F4      		brne 1b
+ 271               	 ;  0 "" 2
+ 272               	/* #NOAPP */
+ 273               	.LBE73:
+ 274               	.LBE74:
+ 275               	.LBE75:
+ 276               	.LBE77:
+ 277 0074 2197      		sbiw r28,1
+ 278               	.L6:
+ 279 0076 80E4      		ldi r24,lo8(64)
+ 280 0078 0E94 0000 		call ReadFromCC1020Register
+ 281 007c 87FD      		sbrc r24,7
+ 282 007e 00C0      		rjmp .L7
+ 283 0080 2097      		sbiw r28,0
+ 284 0082 01F4      		brne .L8
+ 285 0084 00C0      		rjmp .L7
+ 286               	.L11:
+ 287               	.LBB78:
+ 288               	.LBB79:
+ 289               	.LBB80:
+ 290               	.LBB81:
+ 291               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h",132,0,0,.Ltext5
+GAS LISTING /tmp/ccfNX6Eb.s 			page 11
+
+
+ 292               	.Ltext5:
+ 293               		.stabn	68,0,105,.LM20-.LFBB3
+ 294               	.LM20:
+ 295 0086 C701      		movw r24,r14
+ 296               	/* #APP */
+ 297               	 ;  105 "/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h" 1
+ 298 0088 0197      		1: sbiw r24,1
+ 299 008a 01F4      		brne 1b
+ 300               	 ;  0 "" 2
+ 301               	/* #NOAPP */
+ 302               	.LBE81:
+ 303               	.LBE80:
+ 304               	.LBE79:
+ 305               	.LBE78:
+ 306               		.stabs	"functions.c",132,0,0,.Ltext6
+ 307               	.Ltext6:
+ 166:functions.c   ****       _delay_ms(1);
+ 167:functions.c   ****     
+ 168:functions.c   ****     // Monitor lock
+ 169:functions.c   ****     // LOCK_CONTINUOUS bit in STATUS register is set to 1 when PLL is in LOCK
+ 170:functions.c   ****     for(TimeOutCounter = 30; ((ReadFromCC1020Register(CC1020_STATUS) & 0x10) == 0x00) && (TimeOutCo
+ 308               		.stabn	68,0,171,.LM21-.LFBB3
+ 309               	.LM21:
+ 310 008c 2197      		sbiw r28,1
+ 311 008e 00C0      		rjmp .L9
+ 312               	.L7:
+ 313 0090 CEE1      		ldi r28,lo8(30)
+ 314 0092 D0E0      		ldi r29,hi8(30)
+ 315               	.L9:
+ 316 0094 80E4      		ldi r24,lo8(64)
+ 317 0096 0E94 0000 		call ReadFromCC1020Register
+ 318 009a 84FD      		sbrc r24,4
+ 319 009c 00C0      		rjmp .L10
+ 320 009e 2097      		sbiw r28,0
+ 321 00a0 01F4      		brne .L11
+ 322               	.L10:
+ 171:functions.c   ****       _delay_ms(1);	
+ 172:functions.c   **** 
+ 173:functions.c   ****     // Abort further recalibration attempts if successful LOCK
+ 174:functions.c   ****     if((ReadFromCC1020Register(CC1020_STATUS) & 0x10) == 0x10) 
+ 323               		.stabn	68,0,175,.LM22-.LFBB3
+ 324               	.LM22:
+ 325 00a2 80E4      		ldi r24,lo8(64)
+ 326 00a4 0E94 0000 		call ReadFromCC1020Register
+ 327 00a8 84FD      		sbrc r24,4
+ 328 00aa 00C0      		rjmp .L12
+ 153:functions.c   ****   for (nCalAttempt = CAL_ATTEMPT_MAX; nCalAttempt > 0; nCalAttempt--) 
+ 329               		.stabn	68,0,153,.LM23-.LFBB3
+ 330               	.LM23:
+ 331 00ac 0150      		subi r16,lo8(-(-1))
+ 332 00ae 1040      		sbci r17,hi8(-(-1))
+ 333 00b0 01F4      		brne .L13
+ 334               	.L12:
+ 175:functions.c   **** 		 break;
+ 176:functions.c   ****   }
+ 177:functions.c   **** 
+ 178:functions.c   ****   // Restore PA setting
+GAS LISTING /tmp/ccfNX6Eb.s 			page 12
+
+
+ 179:functions.c   ****   WriteToCC1020Register(CC1020_PA_POWER, PA_POWER1);
+ 335               		.stabn	68,0,180,.LM24-.LFBB3
+ 336               	.LM24:
+ 337 00b2 8CE1      		ldi r24,lo8(28)
+ 338 00b4 6B2D      		mov r22,r11
+ 339 00b6 0E94 0000 		call WriteToCC1020Register
+ 180:functions.c   **** 
+ 181:functions.c   ****   // Return state of LOCK_CONTINUOUS bit
+ 182:functions.c   ****   return ((ReadFromCC1020Register(CC1020_STATUS) & 0x10) == 0x10);
+ 340               		.stabn	68,0,183,.LM25-.LFBB3
+ 341               	.LM25:
+ 342 00ba 80E4      		ldi r24,lo8(64)
+ 343 00bc 0E94 0000 		call ReadFromCC1020Register
+ 344 00c0 282F      		mov r18,r24
+ 345 00c2 30E0      		ldi r19,lo8(0)
+ 346 00c4 84E0      		ldi r24,4
+ 347 00c6 3695      	1:	lsr r19
+ 348 00c8 2795      		ror r18
+ 349 00ca 8A95      		dec r24
+ 350 00cc 01F4      		brne 1b
+ 351 00ce 2170      		andi r18,lo8(1)
+ 352 00d0 3070      		andi r19,hi8(1)
+ 183:functions.c   **** }
+ 353               		.stabn	68,0,184,.LM26-.LFBB3
+ 354               	.LM26:
+ 355 00d2 C901      		movw r24,r18
+ 356               	/* epilogue start */
+ 357 00d4 DF91      		pop r29
+ 358 00d6 CF91      		pop r28
+ 359 00d8 1F91      		pop r17
+ 360 00da 0F91      		pop r16
+ 361 00dc FF90      		pop r15
+ 362 00de EF90      		pop r14
+ 363 00e0 DF90      		pop r13
+ 364 00e2 CF90      		pop r12
+ 365 00e4 BF90      		pop r11
+ 366 00e6 0895      		ret
+ 367               		.size	CalibrateCC1020, .-CalibrateCC1020
+ 368               		.stabs	"TimeOutCounter:r(0,1)",64,0,146,28
+ 369               		.stabs	"nCalAttempt:r(0,1)",64,0,147,16
+ 370               		.stabn	192,0,0,.LFBB3-.LFBB3
+ 371               		.stabn	224,0,0,.Lscope3-.LFBB3
+ 372               	.Lscope3:
+ 373               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 374               		.stabd	78,0,0
+ 375               		.stabs	"SetupCC1020TX:F(0,2)",36,0,187,SetupCC1020TX
+ 376               		.stabs	"TXANALOG1:P(0,2)",64,0,186,17
+ 377               		.stabs	"PA_POWER1:P(0,2)",64,0,186,15
+ 378               	.global	SetupCC1020TX
+ 379               		.type	SetupCC1020TX, @function
+ 380               	SetupCC1020TX:
+ 381               		.stabd	46,0,0
+ 184:functions.c   **** 
+ 185:functions.c   **** char SetupCC1020TX(char TXANALOG1, char PA_POWER1)
+ 186:functions.c   **** {
+ 382               		.stabn	68,0,187,.LM27-.LFBB4
+ 383               	.LM27:
+GAS LISTING /tmp/ccfNX6Eb.s 			page 13
+
+
+ 384               	.LFBB4:
+ 385 00e8 FF92      		push r15
+ 386 00ea 0F93      		push r16
+ 387 00ec 1F93      		push r17
+ 388 00ee CF93      		push r28
+ 389 00f0 DF93      		push r29
+ 390               	/* prologue: function */
+ 391               	/* frame size = 0 */
+ 392 00f2 182F      		mov r17,r24
+ 393 00f4 F62E      		mov r15,r22
+ 187:functions.c   ****   int TimeOutCounter;
+ 188:functions.c   ****   int lock_status;
+ 189:functions.c   **** 
+ 190:functions.c   ****   // Turn off PA to avoid frequency splatter
+ 191:functions.c   ****   WriteToCC1020Register(CC1020_PA_POWER,0x00);
+ 394               		.stabn	68,0,192,.LM28-.LFBB4
+ 395               	.LM28:
+ 396 00f6 8CE1      		ldi r24,lo8(28)
+ 397 00f8 60E0      		ldi r22,lo8(0)
+ 398 00fa 0E94 0000 		call WriteToCC1020Register
+ 192:functions.c   **** 
+ 193:functions.c   ****   // Setup bias current adjustment
+ 194:functions.c   ****   WriteToCC1020Register(CC1020_ANALOG,TXANALOG1);
+ 399               		.stabn	68,0,195,.LM29-.LFBB4
+ 400               	.LM29:
+ 401 00fe 87E1      		ldi r24,lo8(23)
+ 402 0100 612F      		mov r22,r17
+ 403 0102 0E94 0000 		call WriteToCC1020Register
+ 195:functions.c   **** 
+ 196:functions.c   ****   // Switch into TX, switch to freq. reg B
+ 197:functions.c   ****   WriteToCC1020Register(CC1020_MAIN,0xC1);     // TX Coming out of Power down at this stage
+ 404               		.stabn	68,0,198,.LM30-.LFBB4
+ 405               	.LM30:
+ 406 0106 80E0      		ldi r24,lo8(0)
+ 407 0108 61EC      		ldi r22,lo8(-63)
+ 408 010a 0E94 0000 		call WriteToCC1020Register
+ 409 010e CEE1      		ldi r28,lo8(30)
+ 410 0110 D0E0      		ldi r29,hi8(30)
+ 411               	.LBB82:
+ 412               	.LBB83:
+ 413               	.LBB84:
+ 414               	.LBB85:
+ 415               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h",132,0,0,.Ltext7
+ 416               	.Ltext7:
+ 417               		.stabn	68,0,105,.LM31-.LFBB4
+ 418               	.LM31:
+ 419 0112 00ED      		ldi r16,lo8(2000)
+ 420 0114 17E0      		ldi r17,hi8(2000)
+ 421 0116 00C0      		rjmp .L17
+ 422               	.L19:
+ 423 0118 C801      		movw r24,r16
+ 424               	/* #APP */
+ 425               	 ;  105 "/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h" 1
+ 426 011a 0197      		1: sbiw r24,1
+ 427 011c 01F4      		brne 1b
+ 428               	 ;  0 "" 2
+ 429               	/* #NOAPP */
+GAS LISTING /tmp/ccfNX6Eb.s 			page 14
+
+
+ 430               	.LBE85:
+ 431               	.LBE84:
+ 432               	.LBE83:
+ 433               	.LBE82:
+ 434               		.stabs	"functions.c",132,0,0,.Ltext8
+ 435               	.Ltext8:
+ 198:functions.c   **** 
+ 199:functions.c   ****   // Monitor lock
+ 200:functions.c   ****   // LOCK_CONTINUOUS bit set to 1 when PLL is in LOCK
+ 201:functions.c   ****   for(TimeOutCounter=30; ((ReadFromCC1020Register(CC1020_STATUS)&0x10)==0x00)&&(TimeOutCounter>0); 
+ 436               		.stabn	68,0,202,.LM32-.LFBB4
+ 437               	.LM32:
+ 438 011e 2197      		sbiw r28,1
+ 439               	.L17:
+ 440 0120 80E4      		ldi r24,lo8(64)
+ 441 0122 0E94 0000 		call ReadFromCC1020Register
+ 442 0126 84FD      		sbrc r24,4
+ 443 0128 00C0      		rjmp .L18
+ 444 012a 2097      		sbiw r28,0
+ 445 012c 01F4      		brne .L19
+ 446               	.L18:
+ 202:functions.c   ****     _delay_ms(1);
+ 203:functions.c   **** 	
+ 204:functions.c   ****   // If PLL in lock 
+ 205:functions.c   ****   if((ReadFromCC1020Register(CC1020_STATUS)&0x10)==0x10)
+ 447               		.stabn	68,0,206,.LM33-.LFBB4
+ 448               	.LM33:
+ 449 012e 80E4      		ldi r24,lo8(64)
+ 450 0130 0E94 0000 		call ReadFromCC1020Register
+ 451 0134 84FF      		sbrs r24,4
+ 452 0136 00C0      		rjmp .L20
+ 453 0138 C1E0      		ldi r28,lo8(1)
+ 454 013a D0E0      		ldi r29,hi8(1)
+ 455 013c 00C0      		rjmp .L21
+ 456               	.L20:
+ 206:functions.c   ****     lock_status = TRUE;
+ 207:functions.c   ****     
+ 208:functions.c   ****   else	// if PLL is not locked then Recalibrate
+ 209:functions.c   ****   {
+ 210:functions.c   ****     // If recalibration ok
+ 211:functions.c   **** 		if(CalibrateCC1020(PA_POWER1))
+ 457               		.stabn	68,0,212,.LM34-.LFBB4
+ 458               	.LM34:
+ 459 013e 8F2D      		mov r24,r15
+ 460 0140 0E94 0000 		call CalibrateCC1020
+ 461 0144 0097      		sbiw r24,0
+ 462 0146 01F0      		breq .L22
+ 463 0148 81E0      		ldi r24,lo8(1)
+ 464 014a 90E0      		ldi r25,hi8(1)
+ 465               	.L22:
+ 466 014c EC01      		movw r28,r24
+ 467               	.L21:
+ 212:functions.c   ****       lock_status = TRUE;
+ 213:functions.c   ****     else
+ 214:functions.c   ****       lock_status = FALSE;
+ 215:functions.c   ****   }
+ 216:functions.c   **** 
+GAS LISTING /tmp/ccfNX6Eb.s 			page 15
+
+
+ 217:functions.c   ****   // Restore PA setting
+ 218:functions.c   ****   WriteToCC1020Register(CC1020_PA_POWER,PA_POWER1);
+ 468               		.stabn	68,0,219,.LM35-.LFBB4
+ 469               	.LM35:
+ 470 014e 8CE1      		ldi r24,lo8(28)
+ 471 0150 6F2D      		mov r22,r15
+ 472 0152 0E94 0000 		call WriteToCC1020Register
+ 219:functions.c   **** 
+ 220:functions.c   ****   // Turn OFF DCLK_CS (Carrier Sense Squelch) in TX
+ 221:functions.c   ****   WriteToCC1020Register(CC1020_INTERFACE,ReadFromCC1020Register(CC1020_INTERFACE) & (~0x10));
+ 473               		.stabn	68,0,222,.LM36-.LFBB4
+ 474               	.LM36:
+ 475 0156 81E0      		ldi r24,lo8(1)
+ 476 0158 0E94 0000 		call ReadFromCC1020Register
+ 477 015c 682F      		mov r22,r24
+ 478 015e 6F7E      		andi r22,lo8(-17)
+ 479 0160 81E0      		ldi r24,lo8(1)
+ 480 0162 0E94 0000 		call WriteToCC1020Register
+ 222:functions.c   ****   
+ 223:functions.c   ****   // Configure LOCK pin to continuous lock status. Active low indicates PLL in lock
+ 224:functions.c   ****   WriteToCC1020Register(CC1020_LOCK,0x20);
+ 481               		.stabn	68,0,225,.LM37-.LFBB4
+ 482               	.LM37:
+ 483 0166 85E1      		ldi r24,lo8(21)
+ 484 0168 60E2      		ldi r22,lo8(32)
+ 485 016a 0E94 0000 		call WriteToCC1020Register
+ 225:functions.c   **** 
+ 226:functions.c   ****   // Return LOCK status to application
+ 227:functions.c   ****   return (lock_status);
+ 228:functions.c   **** }
+ 486               		.stabn	68,0,229,.LM38-.LFBB4
+ 487               	.LM38:
+ 488 016e 8C2F      		mov r24,r28
+ 489               	/* epilogue start */
+ 490 0170 DF91      		pop r29
+ 491 0172 CF91      		pop r28
+ 492 0174 1F91      		pop r17
+ 493 0176 0F91      		pop r16
+ 494 0178 FF90      		pop r15
+ 495 017a 0895      		ret
+ 496               		.size	SetupCC1020TX, .-SetupCC1020TX
+ 497               		.stabs	"TimeOutCounter:r(0,1)",64,0,188,28
+ 498               		.stabs	"lock_status:r(0,1)",64,0,189,28
+ 499               		.stabn	192,0,0,.LFBB4-.LFBB4
+ 500               		.stabn	224,0,0,.Lscope4-.LFBB4
+ 501               	.Lscope4:
+ 502               		.stabs	"",36,0,0,.Lscope4-.LFBB4
+ 503               		.stabd	78,0,0
+ 504               		.data
+ 505               	.LC0:
+ 506 0000 5265 6164 		.string	"Read: %x\r\n"
+ 506      3A20 2578 
+ 506      0D0A 00
+ 507               		.text
+ 508               		.stabs	"WakeUpCC1020ToTX:F(0,15)",36,0,112,WakeUpCC1020ToTX
+ 509               		.stabs	"TXANALOG1:P(0,2)",64,0,111,17
+ 510               	.global	WakeUpCC1020ToTX
+GAS LISTING /tmp/ccfNX6Eb.s 			page 16
+
+
+ 511               		.type	WakeUpCC1020ToTX, @function
+ 512               	WakeUpCC1020ToTX:
+ 513               		.stabd	46,0,0
+ 112:functions.c   **** {
+ 514               		.stabn	68,0,112,.LM39-.LFBB5
+ 515               	.LM39:
+ 516               	.LFBB5:
+ 517 017c 0F93      		push r16
+ 518 017e 1F93      		push r17
+ 519               	/* prologue: function */
+ 520               	/* frame size = 0 */
+ 521 0180 182F      		mov r17,r24
+ 114:functions.c   ****   WriteToCC1020Register(CC1020_MAIN,0xDB);
+ 522               		.stabn	68,0,114,.LM40-.LFBB5
+ 523               	.LM40:
+ 524 0182 80E0      		ldi r24,lo8(0)
+ 525 0184 6BED      		ldi r22,lo8(-37)
+ 526 0186 0E94 0000 		call WriteToCC1020Register
+ 117:functions.c   ****   WriteToCC1020Register(CC1020_ANALOG,TXANALOG1);
+ 527               		.stabn	68,0,117,.LM41-.LFBB5
+ 528               	.LM41:
+ 529 018a 87E1      		ldi r24,lo8(23)
+ 530 018c 612F      		mov r22,r17
+ 531 018e 0E94 0000 		call WriteToCC1020Register
+ 532               	.LBB86:
+ 533               	.LBB87:
+ 534               	.LBB88:
+ 535               	.LBB89:
+ 536               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h",132,0,0,.Ltext9
+ 537               	.Ltext9:
+ 538               		.stabn	68,0,105,.LM42-.LFBB5
+ 539               	.LM42:
+ 540 0192 80E7      		ldi r24,lo8(6000)
+ 541 0194 97E1      		ldi r25,hi8(6000)
+ 542               	/* #APP */
+ 543               	 ;  105 "/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h" 1
+ 544 0196 0197      		1: sbiw r24,1
+ 545 0198 01F4      		brne 1b
+ 546               	 ;  0 "" 2
+ 547               	/* #NOAPP */
+ 548               	.LBE89:
+ 549               	.LBE88:
+ 550               	.LBE87:
+ 551               	.LBE86:
+ 552               		.stabs	"functions.c",132,0,0,.Ltext10
+ 553               	.Ltext10:
+ 124:functions.c   ****   WriteToCC1020Register(CC1020_MAIN,0xD9);
+ 554               		.stabn	68,0,124,.LM43-.LFBB5
+ 555               	.LM43:
+ 556 019a 80E0      		ldi r24,lo8(0)
+ 557 019c 69ED      		ldi r22,lo8(-39)
+ 558 019e 0E94 0000 		call WriteToCC1020Register
+ 559               	.LBB90:
+ 560               	.LBB91:
+ 561               	.LBB92:
+ 562               	.LBB93:
+ 563               	.LBB94:
+GAS LISTING /tmp/ccfNX6Eb.s 			page 17
+
+
+ 564               	.LBB95:
+ 565               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h",132,0,0,.Ltext11
+ 566               	.Ltext11:
+ 567               		.stabn	68,0,105,.LM44-.LFBB5
+ 568               	.LM44:
+ 569 01a2 8CE2      		ldi r24,lo8(300)
+ 570 01a4 91E0      		ldi r25,hi8(300)
+ 571               	/* #APP */
+ 572               	 ;  105 "/usr/lib/gcc/avr/4.3.4/../../../avr/include/util/delay_basic.h" 1
+ 573 01a6 0197      		1: sbiw r24,1
+ 574 01a8 01F4      		brne 1b
+ 575               	 ;  0 "" 2
+ 576               	/* #NOAPP */
+ 577               	.LBE95:
+ 578               	.LBE94:
+ 579               	.LBE93:
+ 580               	.LBE92:
+ 581               	.LBE91:
+ 582               	.LBE90:
+ 583               		.stabs	"functions.c",132,0,0,.Ltext12
+ 584               	.Ltext12:
+ 130:functions.c   ****   WriteToCC1020Register(CC1020_MAIN,0xD1);
+ 585               		.stabn	68,0,130,.LM45-.LFBB5
+ 586               	.LM45:
+ 587 01aa 80E0      		ldi r24,lo8(0)
+ 588 01ac 61ED      		ldi r22,lo8(-47)
+ 589 01ae 0E94 0000 		call WriteToCC1020Register
+ 132:functions.c   ****   x = ReadFromCC1020Register(CC1020_MAIN);
+ 590               		.stabn	68,0,132,.LM46-.LFBB5
+ 591               	.LM46:
+ 592 01b2 80E0      		ldi r24,lo8(0)
+ 593 01b4 0E94 0000 		call ReadFromCC1020Register
+ 594 01b8 8093 0000 		sts x,r24
+ 133:functions.c   ****   sprintf(arr, "Read: %x\r\n", x);
+ 595               		.stabn	68,0,133,.LM47-.LFBB5
+ 596               	.LM47:
+ 597 01bc 00D0      		rcall .
+ 598 01be 00D0      		rcall .
+ 599 01c0 00D0      		rcall .
+ 600 01c2 EDB7      		in r30,__SP_L__
+ 601 01c4 FEB7      		in r31,__SP_H__
+ 602 01c6 3196      		adiw r30,1
+ 603 01c8 00E0      		ldi r16,lo8(arr)
+ 604 01ca 10E0      		ldi r17,hi8(arr)
+ 605 01cc ADB7      		in r26,__SP_L__
+ 606 01ce BEB7      		in r27,__SP_H__
+ 607 01d0 1296      		adiw r26,1+1
+ 608 01d2 1C93      		st X,r17
+ 609 01d4 0E93      		st -X,r16
+ 610 01d6 1197      		sbiw r26,1
+ 611 01d8 20E0      		ldi r18,lo8(.LC0)
+ 612 01da 30E0      		ldi r19,hi8(.LC0)
+ 613 01dc 3383      		std Z+3,r19
+ 614 01de 2283      		std Z+2,r18
+ 615 01e0 8483      		std Z+4,r24
+ 616 01e2 1582      		std Z+5,__zero_reg__
+ 617 01e4 0E94 0000 		call sprintf
+GAS LISTING /tmp/ccfNX6Eb.s 			page 18
+
+
+ 134:functions.c   ****   send_UART(arr, strlen(arr));
+ 618               		.stabn	68,0,134,.LM48-.LFBB5
+ 619               	.LM48:
+ 620 01e8 F801      		movw r30,r16
+ 621 01ea 0190      		ld __tmp_reg__,Z+
+ 622 01ec 0020      		tst __tmp_reg__
+ 623 01ee 01F4      		brne .-6
+ 624 01f0 3197      		sbiw r30,1
+ 625 01f2 E01B      		sub r30,r16
+ 626 01f4 F10B      		sbc r31,r17
+ 627 01f6 8DB7      		in r24,__SP_L__
+ 628 01f8 9EB7      		in r25,__SP_H__
+ 629 01fa 0696      		adiw r24,6
+ 630 01fc 0FB6      		in __tmp_reg__,__SREG__
+ 631 01fe F894      		cli
+ 632 0200 9EBF      		out __SP_H__,r25
+ 633 0202 0FBE      		out __SREG__,__tmp_reg__
+ 634 0204 8DBF      		out __SP_L__,r24
+ 635 0206 C801      		movw r24,r16
+ 636 0208 BF01      		movw r22,r30
+ 637 020a 0E94 0000 		call send_UART
+ 638               	/* epilogue start */
+ 136:functions.c   **** }
+ 639               		.stabn	68,0,136,.LM49-.LFBB5
+ 640               	.LM49:
+ 641 020e 1F91      		pop r17
+ 642 0210 0F91      		pop r16
+ 643 0212 0895      		ret
+ 644               		.size	WakeUpCC1020ToTX, .-WakeUpCC1020ToTX
+ 645               	.Lscope5:
+ 646               		.stabs	"",36,0,0,.Lscope5-.LFBB5
+ 647               		.stabd	78,0,0
+ 648               		.stabs	"SetupCC1020Allregisters:F(0,15)",36,0,95,SetupCC1020Allregisters
+ 649               	.global	SetupCC1020Allregisters
+ 650               		.type	SetupCC1020Allregisters, @function
+ 651               	SetupCC1020Allregisters:
+ 652               		.stabd	46,0,0
+  95:functions.c   **** {
+ 653               		.stabn	68,0,95,.LM50-.LFBB6
+ 654               	.LM50:
+ 655               	.LFBB6:
+ 656 0214 CF93      		push r28
+ 657 0216 DF93      		push r29
+ 658               	/* prologue: function */
+ 659               	/* frame size = 0 */
+  95:functions.c   **** {
+ 660               		.stabn	68,0,95,.LM51-.LFBB6
+ 661               	.LM51:
+ 662 0218 C0E0      		ldi r28,lo8(0)
+ 663 021a D0E0      		ldi r29,hi8(0)
+ 664               	.L27:
+ 101:functions.c   ****     WriteToCC1020Register(counter, value);
+ 665               		.stabn	68,0,101,.LM52-.LFBB6
+ 666               	.LM52:
+ 667 021c FE01      		movw r30,r28
+ 668 021e E050      		subi r30,lo8(-(DefaultConfig433))
+ 669 0220 F040      		sbci r31,hi8(-(DefaultConfig433))
+GAS LISTING /tmp/ccfNX6Eb.s 			page 19
+
+
+ 670 0222 9E01      		movw r18,r28
+ 671 0224 2F5F      		subi r18,lo8(-(1))
+ 672 0226 822F      		mov r24,r18
+ 673 0228 6081      		ld r22,Z
+ 674 022a 0E94 0000 		call WriteToCC1020Register
+ 675 022e 2196      		adiw r28,1
+  98:functions.c   ****   for(counter = 0x01; counter <= 0x20; counter++)
+ 676               		.stabn	68,0,98,.LM53-.LFBB6
+ 677               	.LM53:
+ 678 0230 C032      		cpi r28,32
+ 679 0232 D105      		cpc r29,__zero_reg__
+ 680 0234 01F4      		brne .L27
+ 681               	/* epilogue start */
+ 103:functions.c   **** }
+ 682               		.stabn	68,0,103,.LM54-.LFBB6
+ 683               	.LM54:
+ 684 0236 DF91      		pop r29
+ 685 0238 CF91      		pop r28
+ 686 023a 0895      		ret
+ 687               		.size	SetupCC1020Allregisters, .-SetupCC1020Allregisters
+ 688               	.Lscope6:
+ 689               		.stabs	"",36,0,0,.Lscope6-.LFBB6
+ 690               		.stabd	78,0,0
+ 691               		.stabs	"ResetCC1020:F(0,15)",36,0,81,ResetCC1020
+ 692               	.global	ResetCC1020
+ 693               		.type	ResetCC1020, @function
+ 694               	ResetCC1020:
+ 695               		.stabd	46,0,0
+  81:functions.c   **** {
+ 696               		.stabn	68,0,81,.LM55-.LFBB7
+ 697               	.LM55:
+ 698               	.LFBB7:
+ 699               	/* prologue: function */
+ 700               	/* frame size = 0 */
+  83:functions.c   ****   WriteToCC1020Register(CC1020_MAIN, 0x0E);
+ 701               		.stabn	68,0,83,.LM56-.LFBB7
+ 702               	.LM56:
+ 703 023c 80E0      		ldi r24,lo8(0)
+ 704 023e 6EE0      		ldi r22,lo8(14)
+ 705 0240 0E94 0000 		call WriteToCC1020Register
+  86:functions.c   ****   WriteToCC1020Register(CC1020_MAIN, 0x1F);
+ 706               		.stabn	68,0,86,.LM57-.LFBB7
+ 707               	.LM57:
+ 708 0244 80E0      		ldi r24,lo8(0)
+ 709 0246 6FE1      		ldi r22,lo8(31)
+ 710 0248 0E94 0000 		call WriteToCC1020Register
+ 711               	/* epilogue start */
+  87:functions.c   **** }
+ 712               		.stabn	68,0,87,.LM58-.LFBB7
+ 713               	.LM58:
+ 714 024c 0895      		ret
+ 715               		.size	ResetCC1020, .-ResetCC1020
+ 716               	.Lscope7:
+ 717               		.stabs	"",36,0,0,.Lscope7-.LFBB7
+ 718               		.stabd	78,0,0
+ 719               		.stabs	"SetupCC1020PD:F(0,15)",36,0,62,SetupCC1020PD
+ 720               	.global	SetupCC1020PD
+GAS LISTING /tmp/ccfNX6Eb.s 			page 20
+
+
+ 721               		.type	SetupCC1020PD, @function
+ 722               	SetupCC1020PD:
+ 723               		.stabd	46,0,0
+  62:functions.c   **** {
+ 724               		.stabn	68,0,62,.LM59-.LFBB8
+ 725               	.LM59:
+ 726               	.LFBB8:
+ 727 024e 0F93      		push r16
+ 728 0250 1F93      		push r17
+ 729               	/* prologue: function */
+ 730               	/* frame size = 0 */
+  65:functions.c   ****   WriteToCC1020Register(CC1020_MAIN,0x1F);
+ 731               		.stabn	68,0,65,.LM60-.LFBB8
+ 732               	.LM60:
+ 733 0252 80E0      		ldi r24,lo8(0)
+ 734 0254 6FE1      		ldi r22,lo8(31)
+ 735 0256 0E94 0000 		call WriteToCC1020Register
+  67:functions.c   ****   x = ReadFromCC1020Register(CC1020_MAIN);
+ 736               		.stabn	68,0,67,.LM61-.LFBB8
+ 737               	.LM61:
+ 738 025a 80E0      		ldi r24,lo8(0)
+ 739 025c 0E94 0000 		call ReadFromCC1020Register
+ 740 0260 8093 0000 		sts x,r24
+  68:functions.c   ****   sprintf(arr, "Read: %x\r\n", x);
+ 741               		.stabn	68,0,68,.LM62-.LFBB8
+ 742               	.LM62:
+ 743 0264 00D0      		rcall .
+ 744 0266 00D0      		rcall .
+ 745 0268 00D0      		rcall .
+ 746 026a EDB7      		in r30,__SP_L__
+ 747 026c FEB7      		in r31,__SP_H__
+ 748 026e 3196      		adiw r30,1
+ 749 0270 00E0      		ldi r16,lo8(arr)
+ 750 0272 10E0      		ldi r17,hi8(arr)
+ 751 0274 ADB7      		in r26,__SP_L__
+ 752 0276 BEB7      		in r27,__SP_H__
+ 753 0278 1296      		adiw r26,1+1
+ 754 027a 1C93      		st X,r17
+ 755 027c 0E93      		st -X,r16
+ 756 027e 1197      		sbiw r26,1
+ 757 0280 20E0      		ldi r18,lo8(.LC0)
+ 758 0282 30E0      		ldi r19,hi8(.LC0)
+ 759 0284 3383      		std Z+3,r19
+ 760 0286 2283      		std Z+2,r18
+ 761 0288 8483      		std Z+4,r24
+ 762 028a 1582      		std Z+5,__zero_reg__
+ 763 028c 0E94 0000 		call sprintf
+  69:functions.c   ****   send_UART(arr, strlen(arr));
+ 764               		.stabn	68,0,69,.LM63-.LFBB8
+ 765               	.LM63:
+ 766 0290 F801      		movw r30,r16
+ 767 0292 0190      		ld __tmp_reg__,Z+
+ 768 0294 0020      		tst __tmp_reg__
+ 769 0296 01F4      		brne .-6
+ 770 0298 3197      		sbiw r30,1
+ 771 029a E01B      		sub r30,r16
+ 772 029c F10B      		sbc r31,r17
+GAS LISTING /tmp/ccfNX6Eb.s 			page 21
+
+
+ 773 029e 8DB7      		in r24,__SP_L__
+ 774 02a0 9EB7      		in r25,__SP_H__
+ 775 02a2 0696      		adiw r24,6
+ 776 02a4 0FB6      		in __tmp_reg__,__SREG__
+ 777 02a6 F894      		cli
+ 778 02a8 9EBF      		out __SP_H__,r25
+ 779 02aa 0FBE      		out __SREG__,__tmp_reg__
+ 780 02ac 8DBF      		out __SP_L__,r24
+ 781 02ae C801      		movw r24,r16
+ 782 02b0 BF01      		movw r22,r30
+ 783 02b2 0E94 0000 		call send_UART
+  72:functions.c   ****   WriteToCC1020Register(CC1020_PA_POWER,0x00);
+ 784               		.stabn	68,0,72,.LM64-.LFBB8
+ 785               	.LM64:
+ 786 02b6 8CE1      		ldi r24,lo8(28)
+ 787 02b8 60E0      		ldi r22,lo8(0)
+ 788 02ba 0E94 0000 		call WriteToCC1020Register
+ 789               	/* epilogue start */
+  73:functions.c   **** }
+ 790               		.stabn	68,0,73,.LM65-.LFBB8
+ 791               	.LM65:
+ 792 02be 1F91      		pop r17
+ 793 02c0 0F91      		pop r16
+ 794 02c2 0895      		ret
+ 795               		.size	SetupCC1020PD, .-SetupCC1020PD
+ 796               	.Lscope8:
+ 797               		.stabs	"",36,0,0,.Lscope8-.LFBB8
+ 798               		.stabd	78,0,0
+ 799               		.stabs	"init_CC1020:F(0,1)",36,0,10,init_CC1020
+ 800               	.global	init_CC1020
+ 801               		.type	init_CC1020, @function
+ 802               	init_CC1020:
+ 803               		.stabd	46,0,0
+  10:functions.c   **** int init_CC1020 (void){
+ 804               		.stabn	68,0,10,.LM66-.LFBB9
+ 805               	.LM66:
+ 806               	.LFBB9:
+ 807               	/* prologue: function */
+ 808               	/* frame size = 0 */
+  13:functions.c   ****   SetupCC1020PD();
+ 809               		.stabn	68,0,13,.LM67-.LFBB9
+ 810               	.LM67:
+ 811 02c4 0E94 0000 		call SetupCC1020PD
+  14:functions.c   ****   ResetCC1020();//CC is still in PD (Power_Down mode) after reset
+ 812               		.stabn	68,0,14,.LM68-.LFBB9
+ 813               	.LM68:
+ 814 02c8 0E94 0000 		call ResetCC1020
+  15:functions.c   ****   SetupCC1020Allregisters();
+ 815               		.stabn	68,0,15,.LM69-.LFBB9
+ 816               	.LM69:
+ 817 02cc 0E94 0000 		call SetupCC1020Allregisters
+  16:functions.c   ****   WakeUpCC1020ToTX(TXANALOG);
+ 818               		.stabn	68,0,16,.LM70-.LFBB9
+ 819               	.LM70:
+ 820 02d0 87E4      		ldi r24,lo8(71)
+ 821 02d2 0E94 0000 		call WakeUpCC1020ToTX
+  17:functions.c   ****   CalibrateCC1020 (PA_POWER);
+GAS LISTING /tmp/ccfNX6Eb.s 			page 22
+
+
+ 822               		.stabn	68,0,17,.LM71-.LFBB9
+ 823               	.LM71:
+ 824 02d6 8FE0      		ldi r24,lo8(15)
+ 825 02d8 0E94 0000 		call CalibrateCC1020
+  19:functions.c   ****   WakeUpCC1020ToTX(TXANALOG);													
+ 826               		.stabn	68,0,19,.LM72-.LFBB9
+ 827               	.LM72:
+ 828 02dc 87E4      		ldi r24,lo8(71)
+ 829 02de 0E94 0000 		call WakeUpCC1020ToTX
+  20:functions.c   ****   return SetupCC1020TX(TXANALOG,PA_POWER);
+ 830               		.stabn	68,0,20,.LM73-.LFBB9
+ 831               	.LM73:
+ 832 02e2 87E4      		ldi r24,lo8(71)
+ 833 02e4 6FE0      		ldi r22,lo8(15)
+ 834 02e6 0E94 0000 		call SetupCC1020TX
+  21:functions.c   **** }
+ 835               		.stabn	68,0,21,.LM74-.LFBB9
+ 836               	.LM74:
+ 837 02ea 90E0      		ldi r25,lo8(0)
+ 838               	/* epilogue start */
+ 839 02ec 0895      		ret
+ 840               		.size	init_CC1020, .-init_CC1020
+ 841               	.Lscope9:
+ 842               		.stabs	"",36,0,0,.Lscope9-.LFBB9
+ 843               		.stabd	78,0,0
+ 844               	.global	DefaultConfig433
+ 845               		.data
+ 846               		.type	DefaultConfig433, @object
+ 847               		.size	DefaultConfig433, 32
+ 848               	DefaultConfig433:
+ 849 000b 0F        		.byte	15
+ 850 000c FF        		.byte	-1
+ 851 000d 8F        		.byte	-113
+ 852 000e 39        		.byte	57
+ 853 000f F0        		.byte	-16
+ 854 0010 0F        		.byte	15
+ 855 0011 3B        		.byte	59
+ 856 0012 39        		.byte	57
+ 857 0013 FA        		.byte	-6
+ 858 0014 B9        		.byte	-71
+ 859 0015 3B        		.byte	59
+ 860 0016 44        		.byte	68
+ 861 0017 50        		.byte	80
+ 862 0018 0B        		.byte	11
+ 863 0019 CC        		.byte	-52
+ 864 001a 2F        		.byte	47
+ 865 001b 61        		.byte	97
+ 866 001c 55        		.byte	85
+ 867 001d 2F        		.byte	47
+ 868 001e 2D        		.byte	45
+ 869 001f 10        		.byte	16
+ 870 0020 78        		.byte	120
+ 871 0021 47        		.byte	71
+ 872 0022 14        		.byte	20
+ 873 0023 22        		.byte	34
+ 874 0024 AE        		.byte	-82
+ 875 0025 34        		.byte	52
+GAS LISTING /tmp/ccfNX6Eb.s 			page 23
+
+
+ 876 0026 F0        		.byte	-16
+ 877 0027 00        		.byte	0
+ 878 0028 00        		.byte	0
+ 879 0029 00        		.byte	0
+ 880 002a 00        		.byte	0
+ 881               		.comm x,1,1
+ 882               		.comm arr,100,1
+ 883               		.stabs	"DefaultConfig433:G(0,16)=ar(0,17)=r(0,17);0;0177777;;0;31;(0,18)=k(0,2)",32,0,24,0
+ 884               		.stabs	"x:G(5,2)",32,0,7,0
+ 885               		.stabs	"arr:G(0,19)=ar(0,17);0;99;(0,2)",32,0,8,0
+ 886               		.text
+ 887               		.stabs	"",100,0,0,.Letext0
+ 888               	.Letext0:
+GAS LISTING /tmp/ccfNX6Eb.s 			page 24
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 functions.c
+     /tmp/ccfNX6Eb.s:2      *ABS*:000000000000003f __SREG__
+     /tmp/ccfNX6Eb.s:3      *ABS*:000000000000003e __SP_H__
+     /tmp/ccfNX6Eb.s:4      *ABS*:000000000000003d __SP_L__
+     /tmp/ccfNX6Eb.s:5      *ABS*:0000000000000034 __CCP__
+     /tmp/ccfNX6Eb.s:6      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccfNX6Eb.s:7      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccfNX6Eb.s:93     .text:0000000000000000 ReadFromCC1020Register
+     /tmp/ccfNX6Eb.s:127    .text:0000000000000012 WriteToCC1020Register
+     /tmp/ccfNX6Eb.s:166    .text:000000000000002c CalibrateCC1020
+     /tmp/ccfNX6Eb.s:380    .text:00000000000000e8 SetupCC1020TX
+     /tmp/ccfNX6Eb.s:512    .text:000000000000017c WakeUpCC1020ToTX
+                            *COM*:0000000000000001 x
+                            *COM*:0000000000000064 arr
+     /tmp/ccfNX6Eb.s:651    .text:0000000000000214 SetupCC1020Allregisters
+     /tmp/ccfNX6Eb.s:848    .data:000000000000000b DefaultConfig433
+     /tmp/ccfNX6Eb.s:694    .text:000000000000023c ResetCC1020
+     /tmp/ccfNX6Eb.s:722    .text:000000000000024e SetupCC1020PD
+     /tmp/ccfNX6Eb.s:802    .text:00000000000002c4 init_CC1020
+
+UNDEFINED SYMBOLS
+__do_copy_data
+__do_clear_bss
+SPI_transfer
+sprintf
+send_UART

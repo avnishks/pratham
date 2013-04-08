@@ -1,0 +1,691 @@
+GAS LISTING /tmp/ccWchZIb.s 			page 1
+
+
+   1               		.file	"main.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+   8               		.global __do_copy_data
+   9               		.global __do_clear_bss
+  10               		.stabs	"/media/data/Satellite/OBC/tests/application/eeprom/",100,0,2,.Ltext0
+  11               		.stabs	"main.c",100,0,2,.Ltext0
+  12               		.text
+  13               	.Ltext0:
+  14               		.stabs	"gcc2_compiled.",60,0,0,0
+  15               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,1,0
+  16               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,1,0
+  17               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,1,0
+  18               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,1,0
+  19               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,1,0
+  20               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,1,
+  21               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,1,0
+  22               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,1,0
+  23               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,1,0
+  24               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,1,0
+  25               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,1,0
+  26               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,1,0
+  27               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,1,0
+  28               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,1,0
+  29               		.stabs	"void:t(0,15)=(0,15)",128,0,1,0
+  30               		.stabs	"common.h",130,0,0,0
+  31               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/avr/io.h",130,0,0,0
+  32               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/avr/sfr_defs.h",130,0,0,0
+  33               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/inttypes.h",130,0,0,0
+  34               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/stdint.h",130,0,0,0
+  35               		.stabs	"int8_t:t(5,1)=(0,10)",128,0,121,0
+  36               		.stabs	"uint8_t:t(5,2)=(0,11)",128,0,122,0
+  37               		.stabs	"int16_t:t(5,3)=(0,1)",128,0,123,0
+  38               		.stabs	"uint16_t:t(5,4)=(0,4)",128,0,124,0
+  39               		.stabs	"int32_t:t(5,5)=(0,3)",128,0,125,0
+  40               		.stabs	"uint32_t:t(5,6)=(0,5)",128,0,126,0
+  41               		.stabs	"int64_t:t(5,7)=(0,6)",128,0,128,0
+  42               		.stabs	"uint64_t:t(5,8)=(0,7)",128,0,129,0
+  43               		.stabs	"intptr_t:t(5,9)=(5,3)",128,0,142,0
+  44               		.stabs	"uintptr_t:t(5,10)=(5,4)",128,0,147,0
+  45               		.stabs	"int_least8_t:t(5,11)=(5,1)",128,0,159,0
+  46               		.stabs	"uint_least8_t:t(5,12)=(5,2)",128,0,164,0
+  47               		.stabs	"int_least16_t:t(5,13)=(5,3)",128,0,169,0
+  48               		.stabs	"uint_least16_t:t(5,14)=(5,4)",128,0,174,0
+  49               		.stabs	"int_least32_t:t(5,15)=(5,5)",128,0,179,0
+  50               		.stabs	"uint_least32_t:t(5,16)=(5,6)",128,0,184,0
+  51               		.stabs	"int_least64_t:t(5,17)=(5,7)",128,0,192,0
+  52               		.stabs	"uint_least64_t:t(5,18)=(5,8)",128,0,199,0
+  53               		.stabs	"int_fast8_t:t(5,19)=(5,1)",128,0,213,0
+  54               		.stabs	"uint_fast8_t:t(5,20)=(5,2)",128,0,218,0
+  55               		.stabs	"int_fast16_t:t(5,21)=(5,3)",128,0,223,0
+  56               		.stabs	"uint_fast16_t:t(5,22)=(5,4)",128,0,228,0
+  57               		.stabs	"int_fast32_t:t(5,23)=(5,5)",128,0,233,0
+GAS LISTING /tmp/ccWchZIb.s 			page 2
+
+
+  58               		.stabs	"uint_fast32_t:t(5,24)=(5,6)",128,0,238,0
+  59               		.stabs	"int_fast64_t:t(5,25)=(5,7)",128,0,246,0
+  60               		.stabs	"uint_fast64_t:t(5,26)=(5,8)",128,0,253,0
+  61               		.stabs	"intmax_t:t(5,27)=(5,7)",128,0,273,0
+  62               		.stabs	"uintmax_t:t(5,28)=(5,8)",128,0,278,0
+  63               		.stabn	162,0,0,0
+  64               		.stabs	"int_farptr_t:t(4,1)=(5,5)",128,0,77,0
+  65               		.stabs	"uint_farptr_t:t(4,2)=(5,6)",128,0,81,0
+  66               		.stabn	162,0,0,0
+  67               		.stabn	162,0,0,0
+  68               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/avr/fuse.h",130,0,0,0
+  69               		.stabs	"__fuse_t:t(6,1)=(6,2)=s2low:(0,11),0,8;high:(0,11),8,8;;",128,0,247,0
+  70               		.stabn	162,0,0,0
+  71               		.stabn	162,0,0,0
+  72               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/stdlib.h",130,0,0,0
+  73               		.stabs	"/usr/lib/gcc/avr/4.3.4/include/stddef.h",130,0,0,0
+  74               		.stabs	"size_t:t(8,1)=(0,4)",128,0,214,0
+  75               		.stabs	"wchar_t:t(8,2)=(0,1)",128,0,326,0
+  76               		.stabn	162,0,0,0
+  77               		.stabs	"div_t:t(7,1)=(7,2)=s4quot:(0,1),0,16;rem:(0,1),16,16;;",128,0,71,0
+  78               		.stabs	"ldiv_t:t(7,3)=(7,4)=s8quot:(0,3),0,32;rem:(0,3),32,32;;",128,0,77,0
+  79               		.stabs	"__compar_fn_t:t(7,5)=(7,6)=*(7,7)=f(0,1)",128,0,80,0
+  80               		.stabn	162,0,0,0
+  81               		.stabn	162,0,0,0
+  82               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/stdio.h",130,0,0,0
+  83               		.stabs	"/usr/lib/gcc/avr/4.3.4/include/stdarg.h",130,0,0,0
+  84               		.stabs	"__gnuc_va_list:t(10,1)=(10,2)=*(0,15)",128,0,43,0
+  85               		.stabs	"va_list:t(10,3)=(10,1)",128,0,105,0
+  86               		.stabn	162,0,0,0
+  87               		.stabs	"__file:T(9,1)=s14buf:(9,2)=*(0,2),0,16;unget:(0,11),16,8;flags:(5,2),24,8;size:(0,1),32,16
+  88               		.stabn	162,0,0,0
+  89               		.stabs	"init_UART:F(0,15)",36,0,2,init_UART
+  90               	.global	init_UART
+  91               		.type	init_UART, @function
+  92               	init_UART:
+  93               		.stabd	46,0,0
+  94               		.stabs	"uart.h",132,0,0,.Ltext1
+  95               	.Ltext1:
+   0:uart.h        **** void init_UART(void)
+   1:uart.h        **** {
+  96               		.stabn	68,0,2,.LM0-.LFBB1
+  97               	.LM0:
+  98               	.LFBB1:
+  99               	/* prologue: function */
+ 100               	/* frame size = 0 */
+   2:uart.h        ****     UCSRA = 0;
+ 101               		.stabn	68,0,3,.LM1-.LFBB1
+ 102               	.LM1:
+ 103 0000 1BB8      		out 43-32,__zero_reg__
+   3:uart.h        ****     UCSRB = 0;
+ 104               		.stabn	68,0,4,.LM2-.LFBB1
+ 105               	.LM2:
+ 106 0002 1AB8      		out 42-32,__zero_reg__
+   4:uart.h        ****     UCSRC = 0;
+ 107               		.stabn	68,0,5,.LM3-.LFBB1
+ 108               	.LM3:
+ 109 0004 10BC      		out 64-32,__zero_reg__
+GAS LISTING /tmp/ccWchZIb.s 			page 3
+
+
+   5:uart.h        ****     
+   6:uart.h        ****     UCSRA |= (1<<U2X);
+ 110               		.stabn	68,0,7,.LM4-.LFBB1
+ 111               	.LM4:
+ 112 0006 599A      		sbi 43-32,1
+   7:uart.h        ****     UCSRB |=(1<<RXEN)|(1<<TXEN);
+ 113               		.stabn	68,0,8,.LM5-.LFBB1
+ 114               	.LM5:
+ 115 0008 8AB1      		in r24,42-32
+ 116 000a 8861      		ori r24,lo8(24)
+ 117 000c 8AB9      		out 42-32,r24
+   8:uart.h        ****     UCSRC |=(1<<URSEL)|(1<<UCSZ0)|(1<<UCSZ1);
+ 118               		.stabn	68,0,9,.LM6-.LFBB1
+ 119               	.LM6:
+ 120 000e 80B5      		in r24,64-32
+ 121 0010 8668      		ori r24,lo8(-122)
+ 122 0012 80BD      		out 64-32,r24
+   9:uart.h        **** 
+  10:uart.h        ****     UBRRL = 103;
+ 123               		.stabn	68,0,11,.LM7-.LFBB1
+ 124               	.LM7:
+ 125 0014 87E6      		ldi r24,lo8(103)
+ 126 0016 89B9      		out 41-32,r24
+  11:uart.h        ****     UBRRH = 0;
+ 127               		.stabn	68,0,12,.LM8-.LFBB1
+ 128               	.LM8:
+ 129 0018 10BC      		out 64-32,__zero_reg__
+ 130               	/* epilogue start */
+  12:uart.h        **** }
+ 131               		.stabn	68,0,13,.LM9-.LFBB1
+ 132               	.LM9:
+ 133 001a 0895      		ret
+ 134               		.size	init_UART, .-init_UART
+ 135               	.Lscope1:
+ 136               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 137               		.stabd	78,0,0
+ 138               		.stabs	"send_UART:F(0,15)",36,0,15,send_UART
+ 139               		.stabs	"data:P(9,2)",64,0,14,20
+ 140               		.stabs	"size:P(5,2)",64,0,14,22
+ 141               	.global	send_UART
+ 142               		.type	send_UART, @function
+ 143               	send_UART:
+ 144               		.stabd	46,0,0
+  13:uart.h        **** void send_UART(char *data, uint8_t size)
+  14:uart.h        **** {
+ 145               		.stabn	68,0,15,.LM10-.LFBB2
+ 146               	.LM10:
+ 147               	.LFBB2:
+ 148               	/* prologue: function */
+ 149               	/* frame size = 0 */
+ 150 001c AC01      		movw r20,r24
+ 151               		.stabn	68,0,15,.LM11-.LFBB2
+ 152               	.LM11:
+ 153 001e 20E0      		ldi r18,lo8(0)
+ 154 0020 30E0      		ldi r19,hi8(0)
+  15:uart.h        ****     uint16_t i;
+  16:uart.h        ****     for(i = 0;i < size; i++)
+GAS LISTING /tmp/ccWchZIb.s 			page 4
+
+
+ 155               		.stabn	68,0,17,.LM12-.LFBB2
+ 156               	.LM12:
+ 157 0022 70E0      		ldi r23,lo8(0)
+ 158 0024 00C0      		rjmp .L4
+ 159               	.L7:
+  17:uart.h        ****     {
+  18:uart.h        ****         while ( !(UCSRA & (_BV(UDRE))) );
+ 160               		.stabn	68,0,19,.LM13-.LFBB2
+ 161               	.LM13:
+ 162 0026 5D9B      		sbis 43-32,5
+ 163 0028 00C0      		rjmp .L7
+  19:uart.h        ****         UDR = data[i];
+ 164               		.stabn	68,0,20,.LM14-.LFBB2
+ 165               	.LM14:
+ 166 002a FA01      		movw r30,r20
+ 167 002c E20F      		add r30,r18
+ 168 002e F31F      		adc r31,r19
+ 169 0030 8081      		ld r24,Z
+ 170 0032 8CB9      		out 44-32,r24
+  17:uart.h        ****     {
+ 171               		.stabn	68,0,17,.LM15-.LFBB2
+ 172               	.LM15:
+ 173 0034 2F5F      		subi r18,lo8(-(1))
+ 174 0036 3F4F      		sbci r19,hi8(-(1))
+ 175               	.L4:
+ 176 0038 2617      		cp r18,r22
+ 177 003a 3707      		cpc r19,r23
+ 178 003c 00F0      		brlo .L7
+ 179               	/* epilogue start */
+  20:uart.h        ****     }
+  21:uart.h        **** }
+ 180               		.stabn	68,0,22,.LM16-.LFBB2
+ 181               	.LM16:
+ 182 003e 0895      		ret
+ 183               		.size	send_UART, .-send_UART
+ 184               		.stabs	"i:r(5,4)",64,0,16,18
+ 185               		.stabn	192,0,0,.LFBB2-.LFBB2
+ 186               		.stabn	224,0,0,.Lscope2-.LFBB2
+ 187               	.Lscope2:
+ 188               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 189               		.stabd	78,0,0
+ 190               		.stabs	"read_frame_from_eeprom:F(0,1)",36,0,31,read_frame_from_eeprom
+ 191               		.stabs	"frame:P(0,16)=*(5,2)",64,0,30,20
+ 192               	.global	read_frame_from_eeprom
+ 193               		.type	read_frame_from_eeprom, @function
+ 194               	read_frame_from_eeprom:
+ 195               		.stabd	46,0,0
+ 196               		.stabs	"main.c",132,0,0,.Ltext2
+ 197               	.Ltext2:
+   0:main.c        **** #include "common.h"
+   1:main.c        **** #include "eeprom.h"
+   2:main.c        **** #include "uart.h"
+   3:main.c        **** #include<stdio.h>
+   4:main.c        **** 
+   5:main.c        **** static uint32_t read_addr = 2222, write_addr = 2222;
+   6:main.c        **** #define MAX_ADDR 65536
+   7:main.c        **** #define FRAME_SIZE 5
+GAS LISTING /tmp/ccWchZIb.s 			page 5
+
+
+   8:main.c        **** 
+   9:main.c        **** int write_frame_to_eeprom(uint8_t *frame)
+  10:main.c        **** {
+  11:main.c        ****   //correct the eeprom function for supporting 32-bit addresses
+  12:main.c        ****   static uint8_t start = 0;
+  13:main.c        ****   uint8_t x;
+  14:main.c        ****   
+  15:main.c        ****   //if((write_addr == read_addr) && start)
+  16:main.c        ****     //read_addr += FRAME_SIZE;
+  17:main.c        ****     
+  18:main.c        ****   x = eeprom_write_bytes((uint16_t)write_addr, FRAME_SIZE,frame);
+  19:main.c        ****   write_addr += FRAME_SIZE;
+  20:main.c        ****   
+  21:main.c        ****   if(write_addr + FRAME_SIZE > MAX_ADDR)
+  22:main.c        ****     write_addr = 0;
+  23:main.c        ****   
+  24:main.c        ****   start = 1;
+  25:main.c        ****   
+  26:main.c        ****   return x;
+  27:main.c        **** }
+  28:main.c        **** 
+  29:main.c        **** int read_frame_from_eeprom(uint8_t *frame)
+  30:main.c        **** {
+ 198               		.stabn	68,0,31,.LM17-.LFBB3
+ 199               	.LM17:
+ 200               	.LFBB3:
+ 201               	/* prologue: function */
+ 202               	/* frame size = 0 */
+ 203 0040 AC01      		movw r20,r24
+  31:main.c        ****   uint8_t x;
+  32:main.c        ****   x = eeprom_read_bytes((uint16_t)read_addr, FRAME_SIZE, frame);
+ 204               		.stabn	68,0,33,.LM18-.LFBB3
+ 205               	.LM18:
+ 206 0042 8091 0000 		lds r24,read_addr
+ 207 0046 9091 0000 		lds r25,(read_addr)+1
+ 208 004a 65E0      		ldi r22,lo8(5)
+ 209 004c 70E0      		ldi r23,hi8(5)
+ 210 004e 0E94 0000 		call eeprom_read_bytes
+ 211 0052 282F      		mov r18,r24
+  33:main.c        ****   read_addr += FRAME_SIZE;
+ 212               		.stabn	68,0,34,.LM19-.LFBB3
+ 213               	.LM19:
+ 214 0054 8091 0000 		lds r24,read_addr
+ 215 0058 9091 0000 		lds r25,(read_addr)+1
+ 216 005c A091 0000 		lds r26,(read_addr)+2
+ 217 0060 B091 0000 		lds r27,(read_addr)+3
+ 218 0064 0596      		adiw r24,5
+ 219 0066 A11D      		adc r26,__zero_reg__
+ 220 0068 B11D      		adc r27,__zero_reg__
+ 221 006a 8093 0000 		sts read_addr,r24
+ 222 006e 9093 0000 		sts (read_addr)+1,r25
+ 223 0072 A093 0000 		sts (read_addr)+2,r26
+ 224 0076 B093 0000 		sts (read_addr)+3,r27
+  34:main.c        ****   
+  35:main.c        ****   if(read_addr + FRAME_SIZE > MAX_ADDR)
+ 225               		.stabn	68,0,36,.LM20-.LFBB3
+ 226               	.LM20:
+GAS LISTING /tmp/ccWchZIb.s 			page 6
+
+
+ 227 007a 0596      		adiw r24,5
+ 228 007c A11D      		adc r26,__zero_reg__
+ 229 007e B11D      		adc r27,__zero_reg__
+ 230 0080 8150      		subi r24,lo8(65537)
+ 231 0082 9040      		sbci r25,hi8(65537)
+ 232 0084 A140      		sbci r26,hlo8(65537)
+ 233 0086 B040      		sbci r27,hhi8(65537)
+ 234 0088 00F0      		brlo .L10
+  36:main.c        ****     read_addr = 0;
+ 235               		.stabn	68,0,37,.LM21-.LFBB3
+ 236               	.LM21:
+ 237 008a 1092 0000 		sts read_addr,__zero_reg__
+ 238 008e 1092 0000 		sts (read_addr)+1,__zero_reg__
+ 239 0092 1092 0000 		sts (read_addr)+2,__zero_reg__
+ 240 0096 1092 0000 		sts (read_addr)+3,__zero_reg__
+ 241               	.L10:
+  37:main.c        ****     
+  38:main.c        ****   return x;
+  39:main.c        **** }
+ 242               		.stabn	68,0,40,.LM22-.LFBB3
+ 243               	.LM22:
+ 244 009a 822F      		mov r24,r18
+ 245 009c 90E0      		ldi r25,lo8(0)
+ 246               	/* epilogue start */
+ 247 009e 0895      		ret
+ 248               		.size	read_frame_from_eeprom, .-read_frame_from_eeprom
+ 249               	.Lscope3:
+ 250               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 251               		.stabd	78,0,0
+ 252               		.data
+ 253               	.LC0:
+ 254 0000 4869 0D00 		.string	"Hi\r"
+ 255               		.text
+ 256               		.stabs	"main:F(0,1)",36,0,45,main
+ 257               	.global	main
+ 258               		.type	main, @function
+ 259               	main:
+ 260               		.stabd	46,0,0
+  40:main.c        **** 
+  41:main.c        **** 
+  42:main.c        **** 
+  43:main.c        **** int main(void)
+  44:main.c        **** {
+ 261               		.stabn	68,0,45,.LM23-.LFBB4
+ 262               	.LM23:
+ 263               	.LFBB4:
+ 264 00a0 CF92      		push r12
+ 265 00a2 DF92      		push r13
+ 266 00a4 EF92      		push r14
+ 267 00a6 FF92      		push r15
+ 268 00a8 1F93      		push r17
+ 269 00aa DF93      		push r29
+ 270 00ac CF93      		push r28
+ 271 00ae CDB7      		in r28,__SP_L__
+ 272 00b0 DEB7      		in r29,__SP_H__
+ 273 00b2 C456      		subi r28,lo8(-(-100))
+ 274 00b4 D040      		sbci r29,hi8(-(-100))
+GAS LISTING /tmp/ccWchZIb.s 			page 7
+
+
+ 275 00b6 0FB6      		in __tmp_reg__,__SREG__
+ 276 00b8 F894      		cli
+ 277 00ba DEBF      		out __SP_H__,r29
+ 278 00bc 0FBE      		out __SREG__,__tmp_reg__
+ 279 00be CDBF      		out __SP_L__,r28
+ 280               	/* prologue: function */
+ 281               	/* frame size = 100 */
+  45:main.c        ****   uint8_t frame[100]; 
+  46:main.c        ****   
+  47:main.c        ****   ioinit();
+ 282               		.stabn	68,0,48,.LM24-.LFBB4
+ 283               	.LM24:
+ 284 00c0 0E94 0000 		call ioinit
+ 285               	.LBB8:
+ 286               	.LBB9:
+ 287               		.stabs	"uart.h",132,0,0,.Ltext3
+ 288               	.Ltext3:
+   3:uart.h        ****     UCSRA = 0;
+ 289               		.stabn	68,0,3,.LM25-.LFBB4
+ 290               	.LM25:
+ 291 00c4 1BB8      		out 43-32,__zero_reg__
+   4:uart.h        ****     UCSRB = 0;
+ 292               		.stabn	68,0,4,.LM26-.LFBB4
+ 293               	.LM26:
+ 294 00c6 1AB8      		out 42-32,__zero_reg__
+   5:uart.h        ****     UCSRC = 0;
+ 295               		.stabn	68,0,5,.LM27-.LFBB4
+ 296               	.LM27:
+ 297 00c8 10BC      		out 64-32,__zero_reg__
+   7:uart.h        ****     UCSRA |= (1<<U2X);
+ 298               		.stabn	68,0,7,.LM28-.LFBB4
+ 299               	.LM28:
+ 300 00ca 599A      		sbi 43-32,1
+   8:uart.h        ****     UCSRB |=(1<<RXEN)|(1<<TXEN);
+ 301               		.stabn	68,0,8,.LM29-.LFBB4
+ 302               	.LM29:
+ 303 00cc 8AB1      		in r24,42-32
+ 304 00ce 8861      		ori r24,lo8(24)
+ 305 00d0 8AB9      		out 42-32,r24
+   9:uart.h        ****     UCSRC |=(1<<URSEL)|(1<<UCSZ0)|(1<<UCSZ1);
+ 306               		.stabn	68,0,9,.LM30-.LFBB4
+ 307               	.LM30:
+ 308 00d2 80B5      		in r24,64-32
+ 309 00d4 8668      		ori r24,lo8(-122)
+ 310 00d6 80BD      		out 64-32,r24
+  11:uart.h        ****     UBRRL = 103;
+ 311               		.stabn	68,0,11,.LM31-.LFBB4
+ 312               	.LM31:
+ 313 00d8 87E6      		ldi r24,lo8(103)
+ 314 00da 89B9      		out 41-32,r24
+  12:uart.h        ****     UBRRH = 0;
+ 315               		.stabn	68,0,12,.LM32-.LFBB4
+ 316               	.LM32:
+ 317 00dc 10BC      		out 64-32,__zero_reg__
+ 318 00de E0E0      		ldi r30,lo8(.LC0)
+ 319 00e0 F0E0      		ldi r31,hi8(.LC0)
+ 320               	.L22:
+GAS LISTING /tmp/ccWchZIb.s 			page 8
+
+
+ 321               	.LBE9:
+ 322               	.LBE8:
+ 323               	.LBB10:
+ 324               	.LBB11:
+  19:uart.h        ****         while ( !(UCSRA & (_BV(UDRE))) );
+ 325               		.stabn	68,0,19,.LM33-.LFBB4
+ 326               	.LM33:
+ 327 00e2 5D9B      		sbis 43-32,5
+ 328 00e4 00C0      		rjmp .L22
+  20:uart.h        ****         UDR = data[i];
+ 329               		.stabn	68,0,20,.LM34-.LFBB4
+ 330               	.LM34:
+ 331 00e6 8191      		ld r24,Z+
+ 332 00e8 8CB9      		out 44-32,r24
+  17:uart.h        ****     for(i = 0;i < size; i++)
+ 333               		.stabn	68,0,17,.LM35-.LFBB4
+ 334               	.LM35:
+ 335 00ea 80E0      		ldi r24,hi8(.LC0+3)
+ 336 00ec E030      		cpi r30,lo8(.LC0+3)
+ 337 00ee F807      		cpc r31,r24
+ 338 00f0 01F4      		brne .L22
+ 339 00f2 10E0      		ldi r17,lo8(0)
+ 340               	.LBE11:
+ 341               	.LBE10:
+ 342               		.stabs	"main.c",132,0,0,.Ltext4
+ 343               	.Ltext4:
+  48:main.c        ****   init_UART();
+  49:main.c        ****   send_UART("Hi\r",3  );
+  50:main.c        ****   uint8_t i, j;
+  51:main.c        ****   
+  52:main.c        ****   /*for(i = 0;i < 6; i++)
+  53:main.c        ****   {
+  54:main.c        ****     for(j = 0;j < FRAME_SIZE; j++)
+  55:main.c        ****       frame[j] = j * (i + 1);
+  56:main.c        ****     write_frame_to_eeprom(frame);
+  57:main.c        ****   }*/
+  58:main.c        ****    
+  59:main.c        ****   for(i = 0;i < 6; i++)
+  60:main.c        ****   {
+  61:main.c        ****     read_frame_from_eeprom(frame);
+ 344               		.stabn	68,0,62,.LM36-.LFBB4
+ 345               	.LM36:
+ 346 00f4 7E01      		movw r14,r28
+ 347 00f6 0894      		sec
+ 348 00f8 E11C      		adc r14,__zero_reg__
+ 349 00fa F11C      		adc r15,__zero_reg__
+ 350               	.LBB12:
+ 351               	.LBB13:
+ 352               		.stabs	"uart.h",132,0,0,.Ltext5
+ 353               	.Ltext5:
+  17:uart.h        ****     for(i = 0;i < size; i++)
+ 354               		.stabn	68,0,17,.LM37-.LFBB4
+ 355               	.LM37:
+ 356 00fc 86E0      		ldi r24,lo8(6)
+ 357 00fe C82E      		mov r12,r24
+ 358 0100 D12C      		mov r13,__zero_reg__
+ 359 0102 CC0E      		add r12,r28
+GAS LISTING /tmp/ccWchZIb.s 			page 9
+
+
+ 360 0104 DD1E      		adc r13,r29
+ 361               	.L15:
+ 362               	.LBE13:
+ 363               	.LBE12:
+ 364               		.stabs	"main.c",132,0,0,.Ltext6
+ 365               	.Ltext6:
+ 366               		.stabn	68,0,62,.LM38-.LFBB4
+ 367               	.LM38:
+ 368 0106 C701      		movw r24,r14
+ 369 0108 0E94 0000 		call read_frame_from_eeprom
+ 370 010c F701      		movw r30,r14
+ 371               	.L23:
+ 372               	.LBB15:
+ 373               	.LBB14:
+ 374               		.stabs	"uart.h",132,0,0,.Ltext7
+ 375               	.Ltext7:
+  19:uart.h        ****         while ( !(UCSRA & (_BV(UDRE))) );
+ 376               		.stabn	68,0,19,.LM39-.LFBB4
+ 377               	.LM39:
+ 378 010e 5D9B      		sbis 43-32,5
+ 379 0110 00C0      		rjmp .L23
+  20:uart.h        ****         UDR = data[i];
+ 380               		.stabn	68,0,20,.LM40-.LFBB4
+ 381               	.LM40:
+ 382 0112 8191      		ld r24,Z+
+ 383 0114 8CB9      		out 44-32,r24
+  17:uart.h        ****     for(i = 0;i < size; i++)
+ 384               		.stabn	68,0,17,.LM41-.LFBB4
+ 385               	.LM41:
+ 386 0116 EC15      		cp r30,r12
+ 387 0118 FD05      		cpc r31,r13
+ 388 011a 01F4      		brne .L23
+ 389               	.LBE14:
+ 390               	.LBE15:
+ 391               		.stabs	"main.c",132,0,0,.Ltext8
+ 392               	.Ltext8:
+  60:main.c        ****   for(i = 0;i < 6; i++)
+ 393               		.stabn	68,0,60,.LM42-.LFBB4
+ 394               	.LM42:
+ 395 011c 1F5F      		subi r17,lo8(-(1))
+ 396 011e 1630      		cpi r17,lo8(6)
+ 397 0120 01F4      		brne .L15
+  62:main.c        ****     send_UART(frame, FRAME_SIZE);
+  63:main.c        ****   }
+  64:main.c        ****   return 0;
+  65:main.c        **** }
+ 398               		.stabn	68,0,66,.LM43-.LFBB4
+ 399               	.LM43:
+ 400 0122 80E0      		ldi r24,lo8(0)
+ 401 0124 90E0      		ldi r25,hi8(0)
+ 402               	/* epilogue start */
+ 403 0126 CC59      		subi r28,lo8(-(100))
+ 404 0128 DF4F      		sbci r29,hi8(-(100))
+ 405 012a 0FB6      		in __tmp_reg__,__SREG__
+ 406 012c F894      		cli
+ 407 012e DEBF      		out __SP_H__,r29
+ 408 0130 0FBE      		out __SREG__,__tmp_reg__
+GAS LISTING /tmp/ccWchZIb.s 			page 10
+
+
+ 409 0132 CDBF      		out __SP_L__,r28
+ 410 0134 CF91      		pop r28
+ 411 0136 DF91      		pop r29
+ 412 0138 1F91      		pop r17
+ 413 013a FF90      		pop r15
+ 414 013c EF90      		pop r14
+ 415 013e DF90      		pop r13
+ 416 0140 CF90      		pop r12
+ 417 0142 0895      		ret
+ 418               		.size	main, .-main
+ 419               		.stabs	"frame:(0,17)=ar(0,18)=r(0,18);0;0177777;;0;99;(5,2)",128,0,46,1
+ 420               		.stabs	"i:r(5,2)",64,0,51,17
+ 421               		.stabn	192,0,0,.LFBB4-.LFBB4
+ 422               		.stabn	224,0,0,.Lscope4-.LFBB4
+ 423               	.Lscope4:
+ 424               		.stabs	"",36,0,0,.Lscope4-.LFBB4
+ 425               		.stabd	78,0,0
+ 426               		.stabs	"write_frame_to_eeprom:F(0,1)",36,0,11,write_frame_to_eeprom
+ 427               		.stabs	"frame:P(0,16)",64,0,10,20
+ 428               	.global	write_frame_to_eeprom
+ 429               		.type	write_frame_to_eeprom, @function
+ 430               	write_frame_to_eeprom:
+ 431               		.stabd	46,0,0
+  11:main.c        **** {
+ 432               		.stabn	68,0,11,.LM44-.LFBB5
+ 433               	.LM44:
+ 434               	.LFBB5:
+ 435               	/* prologue: function */
+ 436               	/* frame size = 0 */
+ 437 0144 AC01      		movw r20,r24
+  19:main.c        ****   x = eeprom_write_bytes((uint16_t)write_addr, FRAME_SIZE,frame);
+ 438               		.stabn	68,0,19,.LM45-.LFBB5
+ 439               	.LM45:
+ 440 0146 8091 0000 		lds r24,write_addr
+ 441 014a 9091 0000 		lds r25,(write_addr)+1
+ 442 014e 65E0      		ldi r22,lo8(5)
+ 443 0150 70E0      		ldi r23,hi8(5)
+ 444 0152 0E94 0000 		call eeprom_write_bytes
+ 445 0156 282F      		mov r18,r24
+  20:main.c        ****   write_addr += FRAME_SIZE;
+ 446               		.stabn	68,0,20,.LM46-.LFBB5
+ 447               	.LM46:
+ 448 0158 8091 0000 		lds r24,write_addr
+ 449 015c 9091 0000 		lds r25,(write_addr)+1
+ 450 0160 A091 0000 		lds r26,(write_addr)+2
+ 451 0164 B091 0000 		lds r27,(write_addr)+3
+ 452 0168 0596      		adiw r24,5
+ 453 016a A11D      		adc r26,__zero_reg__
+ 454 016c B11D      		adc r27,__zero_reg__
+ 455 016e 8093 0000 		sts write_addr,r24
+ 456 0172 9093 0000 		sts (write_addr)+1,r25
+ 457 0176 A093 0000 		sts (write_addr)+2,r26
+ 458 017a B093 0000 		sts (write_addr)+3,r27
+  22:main.c        ****   if(write_addr + FRAME_SIZE > MAX_ADDR)
+ 459               		.stabn	68,0,22,.LM47-.LFBB5
+ 460               	.LM47:
+ 461 017e 0596      		adiw r24,5
+GAS LISTING /tmp/ccWchZIb.s 			page 11
+
+
+ 462 0180 A11D      		adc r26,__zero_reg__
+ 463 0182 B11D      		adc r27,__zero_reg__
+ 464 0184 8150      		subi r24,lo8(65537)
+ 465 0186 9040      		sbci r25,hi8(65537)
+ 466 0188 A140      		sbci r26,hlo8(65537)
+ 467 018a B040      		sbci r27,hhi8(65537)
+ 468 018c 00F0      		brlo .L25
+  23:main.c        ****     write_addr = 0;
+ 469               		.stabn	68,0,23,.LM48-.LFBB5
+ 470               	.LM48:
+ 471 018e 1092 0000 		sts write_addr,__zero_reg__
+ 472 0192 1092 0000 		sts (write_addr)+1,__zero_reg__
+ 473 0196 1092 0000 		sts (write_addr)+2,__zero_reg__
+ 474 019a 1092 0000 		sts (write_addr)+3,__zero_reg__
+ 475               	.L25:
+  25:main.c        ****   start = 1;
+ 476               		.stabn	68,0,25,.LM49-.LFBB5
+ 477               	.LM49:
+ 478 019e 81E0      		ldi r24,lo8(1)
+ 479 01a0 8093 0000 		sts start.1780,r24
+  28:main.c        **** }
+ 480               		.stabn	68,0,28,.LM50-.LFBB5
+ 481               	.LM50:
+ 482 01a4 822F      		mov r24,r18
+ 483 01a6 90E0      		ldi r25,lo8(0)
+ 484               	/* epilogue start */
+ 485 01a8 0895      		ret
+ 486               		.size	write_frame_to_eeprom, .-write_frame_to_eeprom
+ 487               		.stabs	"start:V(5,2)",38,0,13,start.1780
+ 488               		.stabn	192,0,0,.LFBB5-.LFBB5
+ 489               		.stabn	224,0,0,.Lscope5-.LFBB5
+ 490               	.Lscope5:
+ 491               		.stabs	"",36,0,0,.Lscope5-.LFBB5
+ 492               		.stabd	78,0,0
+ 493               		.data
+ 494               		.type	read_addr, @object
+ 495               		.size	read_addr, 4
+ 496               	read_addr:
+ 497 0004 AE        		.byte	-82
+ 498 0005 08        		.byte	8
+ 499 0006 00        		.byte	0
+ 500 0007 00        		.byte	0
+ 501               		.type	write_addr, @object
+ 502               		.size	write_addr, 4
+ 503               	write_addr:
+ 504 0008 AE        		.byte	-82
+ 505 0009 08        		.byte	8
+ 506 000a 00        		.byte	0
+ 507 000b 00        		.byte	0
+ 508               		.lcomm start.1780,1
+ 509               		.comm twst,1,1
+ 510               		.stabs	"start:V(5,2)",38,0,13,start.1780
+ 511               		.stabs	"read_addr:S(5,6)",38,0,6,read_addr
+ 512               		.stabs	"write_addr:S(5,6)",38,0,6,write_addr
+ 513               		.stabs	"twst:G(5,2)",32,0,97,0
+ 514               		.text
+ 515               		.stabs	"",100,0,0,.Letext0
+GAS LISTING /tmp/ccWchZIb.s 			page 12
+
+
+ 516               	.Letext0:
+GAS LISTING /tmp/ccWchZIb.s 			page 13
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 main.c
+     /tmp/ccWchZIb.s:2      *ABS*:000000000000003f __SREG__
+     /tmp/ccWchZIb.s:3      *ABS*:000000000000003e __SP_H__
+     /tmp/ccWchZIb.s:4      *ABS*:000000000000003d __SP_L__
+     /tmp/ccWchZIb.s:5      *ABS*:0000000000000034 __CCP__
+     /tmp/ccWchZIb.s:6      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccWchZIb.s:7      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccWchZIb.s:92     .text:0000000000000000 init_UART
+     /tmp/ccWchZIb.s:143    .text:000000000000001c send_UART
+     /tmp/ccWchZIb.s:194    .text:0000000000000040 read_frame_from_eeprom
+     /tmp/ccWchZIb.s:496    .data:0000000000000004 read_addr
+     /tmp/ccWchZIb.s:259    .text:00000000000000a0 main
+     /tmp/ccWchZIb.s:430    .text:0000000000000144 write_frame_to_eeprom
+     /tmp/ccWchZIb.s:503    .data:0000000000000008 write_addr
+                             .bss:0000000000000000 start.1780
+                            *COM*:0000000000000001 twst
+
+UNDEFINED SYMBOLS
+__do_copy_data
+__do_clear_bss
+eeprom_read_bytes
+ioinit
+eeprom_write_bytes

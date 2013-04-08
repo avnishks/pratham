@@ -1,0 +1,903 @@
+Terminal log file
+Date: 24-03-2012 - 21:53:08
+-----------------------------------------------
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : ff
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : ff
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : c0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : ff
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : ff
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : c0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : ff
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : ff
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : ff
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : ff
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : fc
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : ff
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : fe
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : ff
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : ff
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : ff
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : ff
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : ff
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : ff
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : ff
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : ff
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : ff
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : ff
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : ff
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : ff
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : ff
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : ff
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : ff
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : ff
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : ff
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : ff
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : ff
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : c0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : ff
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : ff
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : ff
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : ff
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : ff
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : ff
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : ff
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : ff
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : c0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : ff
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : c0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : fe
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 80
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : fc
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : c0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : f0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+	PLL Lock Failed
+Hello	..This is IITB's Student Satellite...Reading from CC1020_MAIN (must read 0x1F) : ff
+Reading from CC1020_MAIN (must read 0x19) : ff
+
+Rx config done....
+Reading from CC1020_MAIN (must read 0xD9) : ff
+
+Tx config done....
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+	PLL Lock Failed
+Hello	..This is IITB's Student Satellite...Reading from CC1020_MAIN (must read 0x1F) : 0
+Reading from CC1020_MAIN (must read 0x19) : ff
+
+Rx config done....
+Reading from CC1020_MAIN (must read 0xD9) : 0
+
+Tx config done....
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 80
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+	PLL Lock Failed
+Hello	..This isHello	..This is IITB's Student Satellite...Reading from CC1020_MAIN (must read 0x1F) : 0
+Reading from CC1020_MAIN (must read 0x19) : 0
+
+Rx config done....
+Reading from CC1020_MAIN (must read 0xD9) : ff
+
+Tx config done....
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hello	..This is Hello	..This is IITB's Student Satellite...Reading from CC1020_MAIN (must read 0x1F) : 0
+Reading from CC1020_MAIN (must read 0x19) : ff
+
+Rx config done....
+Reading from CC1020_MAIN (must read 0xD9) : ff
+
+Tx config done....
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hello	..ThisÿHello	..This is IITB's Student Satellite...Reading from CC1020_MAIN (must read 0x1F) : 0
+Reading from CC1020_MAIN (must read 0x19) : 0
+
+Rx config done....
+Reading from CC1020_MAIN (must read 0xD9) : ff
+
+Tx config done....
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : c0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : c0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 80
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : c0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : ff
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Communication Using CC1020_Reading from CC1020_MAIN (must read 0xD9) : 0
+1 Done:	PLL Locked
+Transmission completeReading from CC1020_MAIN (must read 0x1F) : 0
+Hi	..This is HUSSAIN's UPLNK/BEACN code.Wireless Comý
+-----------------------------------------------
+Date: 24-03-2012 - 22:04:41
+End log file

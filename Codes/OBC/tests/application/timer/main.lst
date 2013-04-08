@@ -1,0 +1,491 @@
+GAS LISTING /tmp/ccRFqtJr.s 			page 1
+
+
+   1               		.file	"main.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+   8               		.global __do_copy_data
+   9               		.global __do_clear_bss
+  10               		.stabs	"/home/chaitan3/Satellite/OBC/tests/application/timer/",100,0,2,.Ltext0
+  11               		.stabs	"main.c",100,0,2,.Ltext0
+  12               		.text
+  13               	.Ltext0:
+  14               		.stabs	"gcc2_compiled.",60,0,0,0
+  15               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,1,0
+  16               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,1,0
+  17               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,1,0
+  18               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,1,0
+  19               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,1,0
+  20               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,1,
+  21               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,1,0
+  22               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,1,0
+  23               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,1,0
+  24               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,1,0
+  25               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,1,0
+  26               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,1,0
+  27               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,1,0
+  28               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,1,0
+  29               		.stabs	"void:t(0,15)=(0,15)",128,0,1,0
+  30               		.stabs	"common.h",130,0,0,0
+  31               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/avr/io.h",130,0,0,0
+  32               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/avr/sfr_defs.h",130,0,0,0
+  33               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/inttypes.h",130,0,0,0
+  34               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/stdint.h",130,0,0,0
+  35               		.stabs	"int8_t:t(5,1)=(0,10)",128,0,121,0
+  36               		.stabs	"uint8_t:t(5,2)=(0,11)",128,0,122,0
+  37               		.stabs	"int16_t:t(5,3)=(0,1)",128,0,123,0
+  38               		.stabs	"uint16_t:t(5,4)=(0,4)",128,0,124,0
+  39               		.stabs	"int32_t:t(5,5)=(0,3)",128,0,125,0
+  40               		.stabs	"uint32_t:t(5,6)=(0,5)",128,0,126,0
+  41               		.stabs	"int64_t:t(5,7)=(0,6)",128,0,128,0
+  42               		.stabs	"uint64_t:t(5,8)=(0,7)",128,0,129,0
+  43               		.stabs	"intptr_t:t(5,9)=(5,3)",128,0,142,0
+  44               		.stabs	"uintptr_t:t(5,10)=(5,4)",128,0,147,0
+  45               		.stabs	"int_least8_t:t(5,11)=(5,1)",128,0,159,0
+  46               		.stabs	"uint_least8_t:t(5,12)=(5,2)",128,0,164,0
+  47               		.stabs	"int_least16_t:t(5,13)=(5,3)",128,0,169,0
+  48               		.stabs	"uint_least16_t:t(5,14)=(5,4)",128,0,174,0
+  49               		.stabs	"int_least32_t:t(5,15)=(5,5)",128,0,179,0
+  50               		.stabs	"uint_least32_t:t(5,16)=(5,6)",128,0,184,0
+  51               		.stabs	"int_least64_t:t(5,17)=(5,7)",128,0,192,0
+  52               		.stabs	"uint_least64_t:t(5,18)=(5,8)",128,0,199,0
+  53               		.stabs	"int_fast8_t:t(5,19)=(5,1)",128,0,213,0
+  54               		.stabs	"uint_fast8_t:t(5,20)=(5,2)",128,0,218,0
+  55               		.stabs	"int_fast16_t:t(5,21)=(5,3)",128,0,223,0
+  56               		.stabs	"uint_fast16_t:t(5,22)=(5,4)",128,0,228,0
+  57               		.stabs	"int_fast32_t:t(5,23)=(5,5)",128,0,233,0
+GAS LISTING /tmp/ccRFqtJr.s 			page 2
+
+
+  58               		.stabs	"uint_fast32_t:t(5,24)=(5,6)",128,0,238,0
+  59               		.stabs	"int_fast64_t:t(5,25)=(5,7)",128,0,246,0
+  60               		.stabs	"uint_fast64_t:t(5,26)=(5,8)",128,0,253,0
+  61               		.stabs	"intmax_t:t(5,27)=(5,7)",128,0,273,0
+  62               		.stabs	"uintmax_t:t(5,28)=(5,8)",128,0,278,0
+  63               		.stabn	162,0,0,0
+  64               		.stabs	"int_farptr_t:t(4,1)=(5,5)",128,0,77,0
+  65               		.stabs	"uint_farptr_t:t(4,2)=(5,6)",128,0,81,0
+  66               		.stabn	162,0,0,0
+  67               		.stabn	162,0,0,0
+  68               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/avr/fuse.h",130,0,0,0
+  69               		.stabs	"__fuse_t:t(6,1)=(6,2)=s2low:(0,11),0,8;high:(0,11),8,8;;",128,0,247,0
+  70               		.stabn	162,0,0,0
+  71               		.stabn	162,0,0,0
+  72               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/stdlib.h",130,0,0,0
+  73               		.stabs	"/usr/lib/gcc/avr/4.3.4/include/stddef.h",130,0,0,0
+  74               		.stabs	"size_t:t(8,1)=(0,4)",128,0,214,0
+  75               		.stabs	"wchar_t:t(8,2)=(0,1)",128,0,326,0
+  76               		.stabn	162,0,0,0
+  77               		.stabs	"div_t:t(7,1)=(7,2)=s4quot:(0,1),0,16;rem:(0,1),16,16;;",128,0,71,0
+  78               		.stabs	"ldiv_t:t(7,3)=(7,4)=s8quot:(0,3),0,32;rem:(0,3),32,32;;",128,0,77,0
+  79               		.stabs	"__compar_fn_t:t(7,5)=(7,6)=*(7,7)=f(0,1)",128,0,80,0
+  80               		.stabn	162,0,0,0
+  81               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/stdio.h",130,0,0,0
+  82               		.stabs	"/usr/lib/gcc/avr/4.3.4/include/stdarg.h",130,0,0,0
+  83               		.stabs	"__gnuc_va_list:t(10,1)=(10,2)=*(0,15)",128,0,43,0
+  84               		.stabs	"va_list:t(10,3)=(10,1)",128,0,105,0
+  85               		.stabn	162,0,0,0
+  86               		.stabs	"__file:T(9,1)=s14buf:(9,2)=*(0,2),0,16;unget:(0,11),16,8;flags:(5,2),24,8;size:(0,1),32,16
+  87               		.stabn	162,0,0,0
+  88               		.stabn	162,0,0,0
+  89               		.stabs	"init_UART:F(0,15)",36,0,2,init_UART
+  90               	.global	init_UART
+  91               		.type	init_UART, @function
+  92               	init_UART:
+  93               		.stabd	46,0,0
+  94               		.stabs	"uart.h",132,0,0,.Ltext1
+  95               	.Ltext1:
+   0:uart.h        **** void init_UART(void)
+   1:uart.h        **** {
+  96               		.stabn	68,0,2,.LM0-.LFBB1
+  97               	.LM0:
+  98               	.LFBB1:
+  99               	/* prologue: function */
+ 100               	/* frame size = 0 */
+   2:uart.h        ****     UCSRA = 0;
+ 101               		.stabn	68,0,3,.LM1-.LFBB1
+ 102               	.LM1:
+ 103 0000 1BB8      		out 43-32,__zero_reg__
+   3:uart.h        ****     UCSRB = 0;
+ 104               		.stabn	68,0,4,.LM2-.LFBB1
+ 105               	.LM2:
+ 106 0002 1AB8      		out 42-32,__zero_reg__
+   4:uart.h        ****     UCSRC = 0;
+ 107               		.stabn	68,0,5,.LM3-.LFBB1
+ 108               	.LM3:
+ 109 0004 10BC      		out 64-32,__zero_reg__
+GAS LISTING /tmp/ccRFqtJr.s 			page 3
+
+
+   5:uart.h        ****     
+   6:uart.h        ****     UCSRA |= (1<<U2X);
+ 110               		.stabn	68,0,7,.LM4-.LFBB1
+ 111               	.LM4:
+ 112 0006 599A      		sbi 43-32,1
+   7:uart.h        ****     UCSRB |=(1<<RXEN)|(1<<TXEN);
+ 113               		.stabn	68,0,8,.LM5-.LFBB1
+ 114               	.LM5:
+ 115 0008 8AB1      		in r24,42-32
+ 116 000a 8861      		ori r24,lo8(24)
+ 117 000c 8AB9      		out 42-32,r24
+   8:uart.h        ****     UCSRC |=(1<<URSEL)|(1<<UCSZ0)|(1<<UCSZ1);
+ 118               		.stabn	68,0,9,.LM6-.LFBB1
+ 119               	.LM6:
+ 120 000e 80B5      		in r24,64-32
+ 121 0010 8668      		ori r24,lo8(-122)
+ 122 0012 80BD      		out 64-32,r24
+   9:uart.h        **** 
+  10:uart.h        ****     UBRRL = 103;
+ 123               		.stabn	68,0,11,.LM7-.LFBB1
+ 124               	.LM7:
+ 125 0014 87E6      		ldi r24,lo8(103)
+ 126 0016 89B9      		out 41-32,r24
+  11:uart.h        ****     UBRRH = 0;
+ 127               		.stabn	68,0,12,.LM8-.LFBB1
+ 128               	.LM8:
+ 129 0018 10BC      		out 64-32,__zero_reg__
+ 130               	/* epilogue start */
+  12:uart.h        **** }
+ 131               		.stabn	68,0,13,.LM9-.LFBB1
+ 132               	.LM9:
+ 133 001a 0895      		ret
+ 134               		.size	init_UART, .-init_UART
+ 135               	.Lscope1:
+ 136               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 137               		.stabd	78,0,0
+ 138               		.stabs	"send_UART:F(0,15)",36,0,15,send_UART
+ 139               		.stabs	"data:P(0,16)=*(5,2)",64,0,14,20
+ 140               		.stabs	"size:P(5,4)",64,0,14,22
+ 141               	.global	send_UART
+ 142               		.type	send_UART, @function
+ 143               	send_UART:
+ 144               		.stabd	46,0,0
+  13:uart.h        **** void send_UART(uint8_t *data, uint16_t size)
+  14:uart.h        **** {
+ 145               		.stabn	68,0,15,.LM10-.LFBB2
+ 146               	.LM10:
+ 147               	.LFBB2:
+ 148               	/* prologue: function */
+ 149               	/* frame size = 0 */
+ 150 001c AC01      		movw r20,r24
+ 151               		.stabn	68,0,15,.LM11-.LFBB2
+ 152               	.LM11:
+ 153 001e 20E0      		ldi r18,lo8(0)
+ 154 0020 30E0      		ldi r19,hi8(0)
+ 155 0022 00C0      		rjmp .L4
+ 156               	.L7:
+GAS LISTING /tmp/ccRFqtJr.s 			page 4
+
+
+  15:uart.h        ****     uint16_t i = 0;
+  16:uart.h        ****     while(i < size)
+  17:uart.h        ****     {
+  18:uart.h        ****         while ( !(UCSRA & (_BV(UDRE))) );
+ 157               		.stabn	68,0,19,.LM12-.LFBB2
+ 158               	.LM12:
+ 159 0024 5D9B      		sbis 43-32,5
+ 160 0026 00C0      		rjmp .L7
+  19:uart.h        ****         UDR = data[i];
+ 161               		.stabn	68,0,20,.LM13-.LFBB2
+ 162               	.LM13:
+ 163 0028 FA01      		movw r30,r20
+ 164 002a E20F      		add r30,r18
+ 165 002c F31F      		adc r31,r19
+ 166 002e 8081      		ld r24,Z
+ 167 0030 8CB9      		out 44-32,r24
+  20:uart.h        ****         i++;
+ 168               		.stabn	68,0,21,.LM14-.LFBB2
+ 169               	.LM14:
+ 170 0032 2F5F      		subi r18,lo8(-(1))
+ 171 0034 3F4F      		sbci r19,hi8(-(1))
+ 172               	.L4:
+  17:uart.h        ****     while(i < size)
+ 173               		.stabn	68,0,17,.LM15-.LFBB2
+ 174               	.LM15:
+ 175 0036 2617      		cp r18,r22
+ 176 0038 3707      		cpc r19,r23
+ 177 003a 00F0      		brlo .L7
+ 178               	/* epilogue start */
+  21:uart.h        ****     }
+  22:uart.h        **** }
+ 179               		.stabn	68,0,23,.LM16-.LFBB2
+ 180               	.LM16:
+ 181 003c 0895      		ret
+ 182               		.size	send_UART, .-send_UART
+ 183               		.stabs	"i:r(5,4)",64,0,16,18
+ 184               		.stabn	192,0,0,.LFBB2-.LFBB2
+ 185               		.stabn	224,0,0,.Lscope2-.LFBB2
+ 186               	.Lscope2:
+ 187               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 188               		.stabd	78,0,0
+ 189               		.data
+ 190               	.LC0:
+ 191 0000 4869 0D0A 		.string	"Hi\r\n"
+ 191      00
+ 192               	.LC1:
+ 193 0005 5469 6D65 		.string	"Timer: %u sec\r\n"
+ 193      723A 2025 
+ 193      7520 7365 
+ 193      630D 0A00 
+ 194               		.text
+ 195               		.stabs	"main:F(0,1)",36,0,6,main
+ 196               	.global	main
+ 197               		.type	main, @function
+ 198               	main:
+ 199               		.stabd	46,0,0
+ 200               		.stabs	"main.c",132,0,0,.Ltext2
+GAS LISTING /tmp/ccRFqtJr.s 			page 5
+
+
+ 201               	.Ltext2:
+   0:main.c        **** #include "common.h"
+   1:main.c        **** #include "timer.h"
+   2:main.c        **** #include "uart.h"
+   3:main.c        **** 
+   4:main.c        **** int main(void)
+   5:main.c        **** {
+ 202               		.stabn	68,0,6,.LM17-.LFBB3
+ 203               	.LM17:
+ 204               	.LFBB3:
+ 205 003e CF92      		push r12
+ 206 0040 DF92      		push r13
+ 207 0042 EF92      		push r14
+ 208 0044 FF92      		push r15
+ 209 0046 0F93      		push r16
+ 210 0048 1F93      		push r17
+ 211 004a DF93      		push r29
+ 212 004c CF93      		push r28
+ 213 004e CDB7      		in r28,__SP_L__
+ 214 0050 DEB7      		in r29,__SP_H__
+ 215 0052 C456      		subi r28,lo8(-(-100))
+ 216 0054 D040      		sbci r29,hi8(-(-100))
+ 217 0056 0FB6      		in __tmp_reg__,__SREG__
+ 218 0058 F894      		cli
+ 219 005a DEBF      		out __SP_H__,r29
+ 220 005c 0FBE      		out __SREG__,__tmp_reg__
+ 221 005e CDBF      		out __SP_L__,r28
+ 222               	/* prologue: function */
+ 223               	/* frame size = 100 */
+ 224               	.LBB8:
+ 225               	.LBB9:
+ 226               		.stabs	"uart.h",132,0,0,.Ltext3
+ 227               	.Ltext3:
+   3:uart.h        ****     UCSRA = 0;
+ 228               		.stabn	68,0,3,.LM18-.LFBB3
+ 229               	.LM18:
+ 230 0060 1BB8      		out 43-32,__zero_reg__
+   4:uart.h        ****     UCSRB = 0;
+ 231               		.stabn	68,0,4,.LM19-.LFBB3
+ 232               	.LM19:
+ 233 0062 1AB8      		out 42-32,__zero_reg__
+   5:uart.h        ****     UCSRC = 0;
+ 234               		.stabn	68,0,5,.LM20-.LFBB3
+ 235               	.LM20:
+ 236 0064 10BC      		out 64-32,__zero_reg__
+   7:uart.h        ****     UCSRA |= (1<<U2X);
+ 237               		.stabn	68,0,7,.LM21-.LFBB3
+ 238               	.LM21:
+ 239 0066 599A      		sbi 43-32,1
+   8:uart.h        ****     UCSRB |=(1<<RXEN)|(1<<TXEN);
+ 240               		.stabn	68,0,8,.LM22-.LFBB3
+ 241               	.LM22:
+ 242 0068 8AB1      		in r24,42-32
+ 243 006a 8861      		ori r24,lo8(24)
+ 244 006c 8AB9      		out 42-32,r24
+   9:uart.h        ****     UCSRC |=(1<<URSEL)|(1<<UCSZ0)|(1<<UCSZ1);
+ 245               		.stabn	68,0,9,.LM23-.LFBB3
+GAS LISTING /tmp/ccRFqtJr.s 			page 6
+
+
+ 246               	.LM23:
+ 247 006e 80B5      		in r24,64-32
+ 248 0070 8668      		ori r24,lo8(-122)
+ 249 0072 80BD      		out 64-32,r24
+  11:uart.h        ****     UBRRL = 103;
+ 250               		.stabn	68,0,11,.LM24-.LFBB3
+ 251               	.LM24:
+ 252 0074 87E6      		ldi r24,lo8(103)
+ 253 0076 89B9      		out 41-32,r24
+  12:uart.h        ****     UBRRH = 0;
+ 254               		.stabn	68,0,12,.LM25-.LFBB3
+ 255               	.LM25:
+ 256 0078 10BC      		out 64-32,__zero_reg__
+ 257 007a E0E0      		ldi r30,lo8(.LC0)
+ 258 007c F0E0      		ldi r31,hi8(.LC0)
+ 259               	.L19:
+ 260               	.LBE9:
+ 261               	.LBE8:
+ 262               	.LBB10:
+ 263               	.LBB11:
+  19:uart.h        ****         while ( !(UCSRA & (_BV(UDRE))) );
+ 264               		.stabn	68,0,19,.LM26-.LFBB3
+ 265               	.LM26:
+ 266 007e 5D9B      		sbis 43-32,5
+ 267 0080 00C0      		rjmp .L19
+  20:uart.h        ****         UDR = data[i];
+ 268               		.stabn	68,0,20,.LM27-.LFBB3
+ 269               	.LM27:
+ 270 0082 8191      		ld r24,Z+
+ 271 0084 8CB9      		out 44-32,r24
+  17:uart.h        ****     while(i < size)
+ 272               		.stabn	68,0,17,.LM28-.LFBB3
+ 273               	.LM28:
+ 274 0086 80E0      		ldi r24,hi8(.LC0+4)
+ 275 0088 E030      		cpi r30,lo8(.LC0+4)
+ 276 008a F807      		cpc r31,r24
+ 277 008c 01F4      		brne .L19
+ 278               	.LBE11:
+ 279               	.LBE10:
+ 280               		.stabs	"main.c",132,0,0,.Ltext4
+ 281               	.Ltext4:
+   6:main.c        ****   int Time = 0;
+   7:main.c        ****   char buf[100];
+   8:main.c        ****   
+   9:main.c        ****   init_UART();
+  10:main.c        ****   send_UART((uint8_t *)"Hi\r\n", 4);
+  11:main.c        ****     timer_reset_two_sec();
+ 282               		.stabn	68,0,12,.LM29-.LFBB3
+ 283               	.LM29:
+ 284 008e 0E94 0000 		call timer_reset_two_sec
+ 285 0092 00E0      		ldi r16,lo8(0)
+ 286 0094 10E0      		ldi r17,hi8(0)
+  12:main.c        ****     ///Loop begins
+  13:main.c        ****     while(1){
+  14:main.c        ****       sprintf(buf, "Timer: %u sec\r\n", Time);
+ 287               		.stabn	68,0,15,.LM30-.LFBB3
+ 288               	.LM30:
+GAS LISTING /tmp/ccRFqtJr.s 			page 7
+
+
+ 289 0096 7E01      		movw r14,r28
+ 290 0098 0894      		sec
+ 291 009a E11C      		adc r14,__zero_reg__
+ 292 009c F11C      		adc r15,__zero_reg__
+ 293 009e 80E0      		ldi r24,lo8(.LC1)
+ 294 00a0 C82E      		mov r12,r24
+ 295 00a2 80E0      		ldi r24,hi8(.LC1)
+ 296 00a4 D82E      		mov r13,r24
+ 297               	.L13:
+ 298 00a6 00D0      		rcall .
+ 299 00a8 00D0      		rcall .
+ 300 00aa 00D0      		rcall .
+ 301 00ac EDB7      		in r30,__SP_L__
+ 302 00ae FEB7      		in r31,__SP_H__
+ 303 00b0 3196      		adiw r30,1
+ 304 00b2 ADB7      		in r26,__SP_L__
+ 305 00b4 BEB7      		in r27,__SP_H__
+ 306 00b6 1296      		adiw r26,1+1
+ 307 00b8 FC92      		st X,r15
+ 308 00ba EE92      		st -X,r14
+ 309 00bc 1197      		sbiw r26,1
+ 310 00be D382      		std Z+3,r13
+ 311 00c0 C282      		std Z+2,r12
+ 312 00c2 1583      		std Z+5,r17
+ 313 00c4 0483      		std Z+4,r16
+ 314 00c6 0E94 0000 		call sprintf
+  15:main.c        ****       send_UART((uint8_t *)buf, strlen(buf));
+ 315               		.stabn	68,0,16,.LM31-.LFBB3
+ 316               	.LM31:
+ 317 00ca D701      		movw r26,r14
+ 318 00cc 0D90      		ld __tmp_reg__,X+
+ 319 00ce 0020      		tst __tmp_reg__
+ 320 00d0 01F4      		brne .-6
+ 321 00d2 1197      		sbiw r26,1
+ 322 00d4 AE19      		sub r26,r14
+ 323 00d6 BF09      		sbc r27,r15
+ 324 00d8 20E0      		ldi r18,lo8(0)
+ 325 00da 30E0      		ldi r19,hi8(0)
+ 326 00dc 8DB7      		in r24,__SP_L__
+ 327 00de 9EB7      		in r25,__SP_H__
+ 328 00e0 0696      		adiw r24,6
+ 329 00e2 0FB6      		in __tmp_reg__,__SREG__
+ 330 00e4 F894      		cli
+ 331 00e6 9EBF      		out __SP_H__,r25
+ 332 00e8 0FBE      		out __SREG__,__tmp_reg__
+ 333 00ea 8DBF      		out __SP_L__,r24
+ 334 00ec 00C0      		rjmp .L11
+ 335               	.L16:
+ 336               	.LBB12:
+ 337               	.LBB13:
+ 338               		.stabs	"uart.h",132,0,0,.Ltext5
+ 339               	.Ltext5:
+  19:uart.h        ****         while ( !(UCSRA & (_BV(UDRE))) );
+ 340               		.stabn	68,0,19,.LM32-.LFBB3
+ 341               	.LM32:
+ 342 00ee 5D9B      		sbis 43-32,5
+ 343 00f0 00C0      		rjmp .L16
+GAS LISTING /tmp/ccRFqtJr.s 			page 8
+
+
+  20:uart.h        ****         UDR = data[i];
+ 344               		.stabn	68,0,20,.LM33-.LFBB3
+ 345               	.LM33:
+ 346 00f2 F701      		movw r30,r14
+ 347 00f4 E20F      		add r30,r18
+ 348 00f6 F31F      		adc r31,r19
+ 349 00f8 8081      		ld r24,Z
+ 350 00fa 8CB9      		out 44-32,r24
+  21:uart.h        ****         i++;
+ 351               		.stabn	68,0,21,.LM34-.LFBB3
+ 352               	.LM34:
+ 353 00fc 2F5F      		subi r18,lo8(-(1))
+ 354 00fe 3F4F      		sbci r19,hi8(-(1))
+ 355               	.L11:
+  17:uart.h        ****     while(i < size)
+ 356               		.stabn	68,0,17,.LM35-.LFBB3
+ 357               	.LM35:
+ 358 0100 2A17      		cp r18,r26
+ 359 0102 3B07      		cpc r19,r27
+ 360 0104 00F0      		brlo .L16
+ 361               	.LBE13:
+ 362               	.LBE12:
+ 363               		.stabs	"main.c",132,0,0,.Ltext6
+ 364               	.Ltext6:
+  16:main.c        ****       Time += FRAME_TIME;
+ 365               		.stabn	68,0,17,.LM36-.LFBB3
+ 366               	.LM36:
+ 367 0106 0E5F      		subi r16,lo8(-(2))
+ 368 0108 1F4F      		sbci r17,hi8(-(2))
+  17:main.c        ****       timer_wait_reset();
+ 369               		.stabn	68,0,18,.LM37-.LFBB3
+ 370               	.LM37:
+ 371 010a 0E94 0000 		call timer_wait_reset
+ 372 010e 00C0      		rjmp .L13
+ 373               		.size	main, .-main
+ 374               		.stabs	"Time:r(0,1)",64,0,7,16
+ 375               		.stabs	"buf:(0,17)=ar(0,18)=r(0,18);0;0177777;;0;99;(0,2)",128,0,8,1
+ 376               		.stabn	192,0,0,.LFBB3-.LFBB3
+ 377               		.stabs	"i:r(5,4)",64,0,16,18
+ 378               		.stabn	192,0,0,.LBB13-.LFBB3
+ 379               		.stabn	224,0,0,.LBE13-.LFBB3
+ 380               		.stabn	224,0,0,.Lscope3-.LFBB3
+ 381               	.Lscope3:
+ 382               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 383               		.stabd	78,0,0
+ 384               		.stabs	"",100,0,0,.Letext0
+ 385               	.Letext0:
+GAS LISTING /tmp/ccRFqtJr.s 			page 9
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 main.c
+     /tmp/ccRFqtJr.s:2      *ABS*:000000000000003f __SREG__
+     /tmp/ccRFqtJr.s:3      *ABS*:000000000000003e __SP_H__
+     /tmp/ccRFqtJr.s:4      *ABS*:000000000000003d __SP_L__
+     /tmp/ccRFqtJr.s:5      *ABS*:0000000000000034 __CCP__
+     /tmp/ccRFqtJr.s:6      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccRFqtJr.s:7      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccRFqtJr.s:92     .text:0000000000000000 init_UART
+     /tmp/ccRFqtJr.s:143    .text:000000000000001c send_UART
+     /tmp/ccRFqtJr.s:198    .text:000000000000003e main
+
+UNDEFINED SYMBOLS
+__do_copy_data
+__do_clear_bss
+timer_reset_two_sec
+sprintf
+timer_wait_reset

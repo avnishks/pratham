@@ -1,0 +1,322 @@
+GAS LISTING /tmp/ccAfcv9j.s 			page 1
+
+
+   1               		.file	"timer.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+   8               		.global __do_copy_data
+   9               		.global __do_clear_bss
+  10               		.stabs	"/home/chaitan3/Satellite/OBC/tests/application/timer/",100,0,2,.Ltext0
+  11               		.stabs	"timer.c",100,0,2,.Ltext0
+  12               		.text
+  13               	.Ltext0:
+  14               		.stabs	"gcc2_compiled.",60,0,0,0
+  15               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,1,0
+  16               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,1,0
+  17               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,1,0
+  18               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,1,0
+  19               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,1,0
+  20               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,1,
+  21               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,1,0
+  22               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,1,0
+  23               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,1,0
+  24               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,1,0
+  25               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,1,0
+  26               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,1,0
+  27               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,1,0
+  28               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,1,0
+  29               		.stabs	"void:t(0,15)=(0,15)",128,0,1,0
+  30               		.stabs	"common.h",130,0,0,0
+  31               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/avr/io.h",130,0,0,0
+  32               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/avr/sfr_defs.h",130,0,0,0
+  33               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/inttypes.h",130,0,0,0
+  34               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/stdint.h",130,0,0,0
+  35               		.stabs	"int8_t:t(5,1)=(0,10)",128,0,121,0
+  36               		.stabs	"uint8_t:t(5,2)=(0,11)",128,0,122,0
+  37               		.stabs	"int16_t:t(5,3)=(0,1)",128,0,123,0
+  38               		.stabs	"uint16_t:t(5,4)=(0,4)",128,0,124,0
+  39               		.stabs	"int32_t:t(5,5)=(0,3)",128,0,125,0
+  40               		.stabs	"uint32_t:t(5,6)=(0,5)",128,0,126,0
+  41               		.stabs	"int64_t:t(5,7)=(0,6)",128,0,128,0
+  42               		.stabs	"uint64_t:t(5,8)=(0,7)",128,0,129,0
+  43               		.stabs	"intptr_t:t(5,9)=(5,3)",128,0,142,0
+  44               		.stabs	"uintptr_t:t(5,10)=(5,4)",128,0,147,0
+  45               		.stabs	"int_least8_t:t(5,11)=(5,1)",128,0,159,0
+  46               		.stabs	"uint_least8_t:t(5,12)=(5,2)",128,0,164,0
+  47               		.stabs	"int_least16_t:t(5,13)=(5,3)",128,0,169,0
+  48               		.stabs	"uint_least16_t:t(5,14)=(5,4)",128,0,174,0
+  49               		.stabs	"int_least32_t:t(5,15)=(5,5)",128,0,179,0
+  50               		.stabs	"uint_least32_t:t(5,16)=(5,6)",128,0,184,0
+  51               		.stabs	"int_least64_t:t(5,17)=(5,7)",128,0,192,0
+  52               		.stabs	"uint_least64_t:t(5,18)=(5,8)",128,0,199,0
+  53               		.stabs	"int_fast8_t:t(5,19)=(5,1)",128,0,213,0
+  54               		.stabs	"uint_fast8_t:t(5,20)=(5,2)",128,0,218,0
+  55               		.stabs	"int_fast16_t:t(5,21)=(5,3)",128,0,223,0
+  56               		.stabs	"uint_fast16_t:t(5,22)=(5,4)",128,0,228,0
+  57               		.stabs	"int_fast32_t:t(5,23)=(5,5)",128,0,233,0
+GAS LISTING /tmp/ccAfcv9j.s 			page 2
+
+
+  58               		.stabs	"uint_fast32_t:t(5,24)=(5,6)",128,0,238,0
+  59               		.stabs	"int_fast64_t:t(5,25)=(5,7)",128,0,246,0
+  60               		.stabs	"uint_fast64_t:t(5,26)=(5,8)",128,0,253,0
+  61               		.stabs	"intmax_t:t(5,27)=(5,7)",128,0,273,0
+  62               		.stabs	"uintmax_t:t(5,28)=(5,8)",128,0,278,0
+  63               		.stabn	162,0,0,0
+  64               		.stabs	"int_farptr_t:t(4,1)=(5,5)",128,0,77,0
+  65               		.stabs	"uint_farptr_t:t(4,2)=(5,6)",128,0,81,0
+  66               		.stabn	162,0,0,0
+  67               		.stabn	162,0,0,0
+  68               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/avr/fuse.h",130,0,0,0
+  69               		.stabs	"__fuse_t:t(6,1)=(6,2)=s2low:(0,11),0,8;high:(0,11),8,8;;",128,0,247,0
+  70               		.stabn	162,0,0,0
+  71               		.stabn	162,0,0,0
+  72               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/stdlib.h",130,0,0,0
+  73               		.stabs	"/usr/lib/gcc/avr/4.3.4/include/stddef.h",130,0,0,0
+  74               		.stabs	"size_t:t(8,1)=(0,4)",128,0,214,0
+  75               		.stabs	"wchar_t:t(8,2)=(0,1)",128,0,326,0
+  76               		.stabn	162,0,0,0
+  77               		.stabs	"div_t:t(7,1)=(7,2)=s4quot:(0,1),0,16;rem:(0,1),16,16;;",128,0,71,0
+  78               		.stabs	"ldiv_t:t(7,3)=(7,4)=s8quot:(0,3),0,32;rem:(0,3),32,32;;",128,0,77,0
+  79               		.stabs	"__compar_fn_t:t(7,5)=(7,6)=*(7,7)=f(0,1)",128,0,80,0
+  80               		.stabn	162,0,0,0
+  81               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/stdio.h",130,0,0,0
+  82               		.stabs	"/usr/lib/gcc/avr/4.3.4/include/stdarg.h",130,0,0,0
+  83               		.stabs	"__gnuc_va_list:t(10,1)=(10,2)=*(0,15)",128,0,43,0
+  84               		.stabs	"va_list:t(10,3)=(10,1)",128,0,105,0
+  85               		.stabn	162,0,0,0
+  86               		.stabs	"__file:T(9,1)=s14buf:(9,2)=*(0,2),0,16;unget:(0,11),16,8;flags:(5,2),24,8;size:(0,1),32,16
+  87               		.stabn	162,0,0,0
+  88               		.stabn	162,0,0,0
+  89               		.stabs	"timer_reset_two_sec:F(0,15)",36,0,10,timer_reset_two_sec
+  90               	.global	timer_reset_two_sec
+  91               		.type	timer_reset_two_sec, @function
+  92               	timer_reset_two_sec:
+  93               		.stabd	46,0,0
+   0:timer.c       **** #include "common.h"
+   1:timer.c       **** #include "timer.h"
+   2:timer.c       **** /**
+   3:timer.c       ****  * @file timer.c
+   4:timer.c       ****  * @brief Implement the 2-second Time frame for the main loop using a timer
+   5:timer.c       ****  */
+   6:timer.c       **** 
+   7:timer.c       **** ///@todo verify the timer code
+   8:timer.c       **** 
+   9:timer.c       **** void timer_reset_two_sec(void){
+  94               		.stabn	68,0,10,.LM0-.LFBB1
+  95               	.LM0:
+  96               	.LFBB1:
+  97               	/* prologue: function */
+  98               	/* frame size = 0 */
+  10:timer.c       ****   ///@todo Confirm the configuration of the Timer
+  11:timer.c       ****   
+  12:timer.c       ****   sbi(TIFR, OCF1A);
+  99               		.stabn	68,0,13,.LM1-.LFBB1
+ 100               	.LM1:
+ 101 0000 88B7      		in r24,88-32
+GAS LISTING /tmp/ccAfcv9j.s 			page 3
+
+
+ 102 0002 8061      		ori r24,lo8(16)
+ 103 0004 88BF      		out 88-32,r24
+  13:timer.c       ****   
+  14:timer.c       ****   ///* Stop Timer
+  15:timer.c       ****   TCCR1B = 0x00;
+ 104               		.stabn	68,0,16,.LM2-.LFBB1
+ 105               	.LM2:
+ 106 0006 1EBC      		out 78-32,__zero_reg__
+  16:timer.c       ****   
+  17:timer.c       ****   ///* Reset Count
+  18:timer.c       ****   TCNT1H = 0;
+ 107               		.stabn	68,0,19,.LM3-.LFBB1
+ 108               	.LM3:
+ 109 0008 1DBC      		out 77-32,__zero_reg__
+  19:timer.c       ****   TCNT1L = 0;
+ 110               		.stabn	68,0,20,.LM4-.LFBB1
+ 111               	.LM4:
+ 112 000a 1CBC      		out 76-32,__zero_reg__
+  20:timer.c       ****   
+  21:timer.c       ****   ///* Output compare match value 8 MHz clock
+  22:timer.c       ****   OCR1A = TIMER_TWO_SEC;
+ 113               		.stabn	68,0,23,.LM5-.LFBB1
+ 114               	.LM5:
+ 115 000c 81E1      		ldi r24,lo8(31249)
+ 116 000e 9AE7      		ldi r25,hi8(31249)
+ 117 0010 9BBD      		out (74)+1-32,r25
+ 118 0012 8ABD      		out 74-32,r24
+  23:timer.c       ****   
+  24:timer.c       ****   ///* Start Timer
+  25:timer.c       ****   TCCR1A = 0x00;
+ 119               		.stabn	68,0,26,.LM6-.LFBB1
+ 120               	.LM6:
+ 121 0014 1FBC      		out 79-32,__zero_reg__
+  26:timer.c       ****   TCCR1B = 0x05;
+ 122               		.stabn	68,0,27,.LM7-.LFBB1
+ 123               	.LM7:
+ 124 0016 85E0      		ldi r24,lo8(5)
+ 125 0018 8EBD      		out 78-32,r24
+ 126               	/* epilogue start */
+  27:timer.c       ****     
+  28:timer.c       **** }
+ 127               		.stabn	68,0,29,.LM8-.LFBB1
+ 128               	.LM8:
+ 129 001a 0895      		ret
+ 130               		.size	timer_reset_two_sec, .-timer_reset_two_sec
+ 131               	.Lscope1:
+ 132               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 133               		.stabd	78,0,0
+ 134               		.stabs	"watch_dog:F(0,15)",36,0,31,watch_dog
+ 135               	.global	watch_dog
+ 136               		.type	watch_dog, @function
+ 137               	watch_dog:
+ 138               		.stabd	46,0,0
+  29:timer.c       **** 
+  30:timer.c       **** void watch_dog(int time){
+ 139               		.stabn	68,0,31,.LM9-.LFBB2
+ 140               	.LM9:
+GAS LISTING /tmp/ccAfcv9j.s 			page 4
+
+
+ 141               	.LFBB2:
+ 142               	/* prologue: function */
+ 143               	/* frame size = 0 */
+  31:timer.c       ****   wdt_disable();
+ 144               		.stabn	68,0,32,.LM10-.LFBB2
+ 145               	.LM10:
+ 146 001c 98E1      		ldi r25,lo8(24)
+ 147               	/* #APP */
+ 148               	 ;  32 "timer.c" 1
+ 149 001e 0FB6      		in __tmp_reg__, __SREG__
+ 150 0020 F894      		cli
+ 151 0022 91BD      		out 33, r25
+ 152 0024 11BC      		out 33, __zero_reg__
+ 153 0026 0FBE      		out __SREG__,__tmp_reg__
+ 154               		
+ 155               	 ;  0 "" 2
+  32:timer.c       ****   wdt_enable(time);
+ 156               		.stabn	68,0,33,.LM11-.LFBB2
+ 157               	.LM11:
+ 158               	/* #NOAPP */
+ 159 0028 8770      		andi r24,lo8(7)
+ 160 002a 8860      		ori r24,lo8(8)
+ 161 002c 28E1      		ldi r18,lo8(24)
+ 162 002e 30E0      		ldi r19,hi8(24)
+ 163               	/* #APP */
+ 164               	 ;  33 "timer.c" 1
+ 165 0030 0FB6      		in __tmp_reg__,__SREG__
+ 166 0032 F894      		cli
+ 167 0034 A895      		wdr
+ 168 0036 21BD      		out 33,r18
+ 169 0038 0FBE      		out __SREG__,__tmp_reg__
+ 170 003a 81BD      		out 33,r24
+ 171               	 ;  0 "" 2
+ 172               	/* epilogue start */
+  33:timer.c       **** }
+ 173               		.stabn	68,0,34,.LM12-.LFBB2
+ 174               	.LM12:
+ 175               	/* #NOAPP */
+ 176 003c 0895      		ret
+ 177               		.size	watch_dog, .-watch_dog
+ 178               	.Lscope2:
+ 179               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 180               		.stabd	78,0,0
+ 181               		.stabs	"timer_wait_reset:F(0,15)",36,0,36,timer_wait_reset
+ 182               	.global	timer_wait_reset
+ 183               		.type	timer_wait_reset, @function
+ 184               	timer_wait_reset:
+ 185               		.stabd	46,0,0
+  34:timer.c       **** 
+  35:timer.c       **** void timer_wait_reset(void){
+ 186               		.stabn	68,0,36,.LM13-.LFBB3
+ 187               	.LM13:
+ 188               	.LFBB3:
+ 189               	/* prologue: function */
+ 190               	/* frame size = 0 */
+ 191               	.L6:
+  36:timer.c       ****   ///* Return when timer>2 seconds.
+GAS LISTING /tmp/ccAfcv9j.s 			page 5
+
+
+  37:timer.c       ****   while(!(TIFR & _BV(OCF1A)));
+ 192               		.stabn	68,0,38,.LM14-.LFBB3
+ 193               	.LM14:
+ 194 003e 08B6      		in __tmp_reg__,88-32
+ 195 0040 04FE      		sbrs __tmp_reg__,4
+ 196 0042 00C0      		rjmp .L6
+ 197               	.LBB4:
+ 198               	.LBB5:
+  13:timer.c       ****   sbi(TIFR, OCF1A);
+ 199               		.stabn	68,0,13,.LM15-.LFBB3
+ 200               	.LM15:
+ 201 0044 88B7      		in r24,88-32
+ 202 0046 8061      		ori r24,lo8(16)
+ 203 0048 88BF      		out 88-32,r24
+  16:timer.c       ****   TCCR1B = 0x00;
+ 204               		.stabn	68,0,16,.LM16-.LFBB3
+ 205               	.LM16:
+ 206 004a 1EBC      		out 78-32,__zero_reg__
+  19:timer.c       ****   TCNT1H = 0;
+ 207               		.stabn	68,0,19,.LM17-.LFBB3
+ 208               	.LM17:
+ 209 004c 1DBC      		out 77-32,__zero_reg__
+  20:timer.c       ****   TCNT1L = 0;
+ 210               		.stabn	68,0,20,.LM18-.LFBB3
+ 211               	.LM18:
+ 212 004e 1CBC      		out 76-32,__zero_reg__
+  23:timer.c       ****   OCR1A = TIMER_TWO_SEC;
+ 213               		.stabn	68,0,23,.LM19-.LFBB3
+ 214               	.LM19:
+ 215 0050 81E1      		ldi r24,lo8(31249)
+ 216 0052 9AE7      		ldi r25,hi8(31249)
+ 217 0054 9BBD      		out (74)+1-32,r25
+ 218 0056 8ABD      		out 74-32,r24
+  26:timer.c       ****   TCCR1A = 0x00;
+ 219               		.stabn	68,0,26,.LM20-.LFBB3
+ 220               	.LM20:
+ 221 0058 1FBC      		out 79-32,__zero_reg__
+  27:timer.c       ****   TCCR1B = 0x05;
+ 222               		.stabn	68,0,27,.LM21-.LFBB3
+ 223               	.LM21:
+ 224 005a 85E0      		ldi r24,lo8(5)
+ 225 005c 8EBD      		out 78-32,r24
+ 226               	/* epilogue start */
+ 227               	.LBE5:
+ 228               	.LBE4:
+  38:timer.c       ****   
+  39:timer.c       ****   ///* Restart timer
+  40:timer.c       ****   timer_reset_two_sec();  
+  41:timer.c       **** }
+ 229               		.stabn	68,0,42,.LM22-.LFBB3
+ 230               	.LM22:
+ 231 005e 0895      		ret
+ 232               		.size	timer_wait_reset, .-timer_wait_reset
+ 233               	.Lscope3:
+ 234               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 235               		.stabd	78,0,0
+ 236               		.stabs	"",100,0,0,.Letext0
+GAS LISTING /tmp/ccAfcv9j.s 			page 6
+
+
+ 237               	.Letext0:
+GAS LISTING /tmp/ccAfcv9j.s 			page 7
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 timer.c
+     /tmp/ccAfcv9j.s:2      *ABS*:000000000000003f __SREG__
+     /tmp/ccAfcv9j.s:3      *ABS*:000000000000003e __SP_H__
+     /tmp/ccAfcv9j.s:4      *ABS*:000000000000003d __SP_L__
+     /tmp/ccAfcv9j.s:5      *ABS*:0000000000000034 __CCP__
+     /tmp/ccAfcv9j.s:6      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccAfcv9j.s:7      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccAfcv9j.s:92     .text:0000000000000000 timer_reset_two_sec
+     /tmp/ccAfcv9j.s:137    .text:000000000000001c watch_dog
+     /tmp/ccAfcv9j.s:184    .text:000000000000003e timer_wait_reset
+
+UNDEFINED SYMBOLS
+__do_copy_data
+__do_clear_bss

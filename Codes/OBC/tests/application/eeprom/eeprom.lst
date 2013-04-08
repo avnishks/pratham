@@ -1,0 +1,1168 @@
+GAS LISTING /tmp/cc86BxKh.s 			page 1
+
+
+   1               		.file	"eeprom.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+   8               		.global __do_copy_data
+   9               		.global __do_clear_bss
+  10               		.stabs	"/media/data/Satellite/OBC/tests/application/eeprom/",100,0,2,.Ltext0
+  11               		.stabs	"eeprom.c",100,0,2,.Ltext0
+  12               		.text
+  13               	.Ltext0:
+  14               		.stabs	"gcc2_compiled.",60,0,0,0
+  15               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,1,0
+  16               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,1,0
+  17               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,1,0
+  18               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,1,0
+  19               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,1,0
+  20               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,1,
+  21               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,1,0
+  22               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,1,0
+  23               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,1,0
+  24               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,1,0
+  25               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,1,0
+  26               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,1,0
+  27               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,1,0
+  28               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,1,0
+  29               		.stabs	"void:t(0,15)=(0,15)",128,0,1,0
+  30               		.stabs	"common.h",130,0,0,0
+  31               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/avr/io.h",130,0,0,0
+  32               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/avr/sfr_defs.h",130,0,0,0
+  33               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/inttypes.h",130,0,0,0
+  34               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/stdint.h",130,0,0,0
+  35               		.stabs	"int8_t:t(5,1)=(0,10)",128,0,121,0
+  36               		.stabs	"uint8_t:t(5,2)=(0,11)",128,0,122,0
+  37               		.stabs	"int16_t:t(5,3)=(0,1)",128,0,123,0
+  38               		.stabs	"uint16_t:t(5,4)=(0,4)",128,0,124,0
+  39               		.stabs	"int32_t:t(5,5)=(0,3)",128,0,125,0
+  40               		.stabs	"uint32_t:t(5,6)=(0,5)",128,0,126,0
+  41               		.stabs	"int64_t:t(5,7)=(0,6)",128,0,128,0
+  42               		.stabs	"uint64_t:t(5,8)=(0,7)",128,0,129,0
+  43               		.stabs	"intptr_t:t(5,9)=(5,3)",128,0,142,0
+  44               		.stabs	"uintptr_t:t(5,10)=(5,4)",128,0,147,0
+  45               		.stabs	"int_least8_t:t(5,11)=(5,1)",128,0,159,0
+  46               		.stabs	"uint_least8_t:t(5,12)=(5,2)",128,0,164,0
+  47               		.stabs	"int_least16_t:t(5,13)=(5,3)",128,0,169,0
+  48               		.stabs	"uint_least16_t:t(5,14)=(5,4)",128,0,174,0
+  49               		.stabs	"int_least32_t:t(5,15)=(5,5)",128,0,179,0
+  50               		.stabs	"uint_least32_t:t(5,16)=(5,6)",128,0,184,0
+  51               		.stabs	"int_least64_t:t(5,17)=(5,7)",128,0,192,0
+  52               		.stabs	"uint_least64_t:t(5,18)=(5,8)",128,0,199,0
+  53               		.stabs	"int_fast8_t:t(5,19)=(5,1)",128,0,213,0
+  54               		.stabs	"uint_fast8_t:t(5,20)=(5,2)",128,0,218,0
+  55               		.stabs	"int_fast16_t:t(5,21)=(5,3)",128,0,223,0
+  56               		.stabs	"uint_fast16_t:t(5,22)=(5,4)",128,0,228,0
+  57               		.stabs	"int_fast32_t:t(5,23)=(5,5)",128,0,233,0
+GAS LISTING /tmp/cc86BxKh.s 			page 2
+
+
+  58               		.stabs	"uint_fast32_t:t(5,24)=(5,6)",128,0,238,0
+  59               		.stabs	"int_fast64_t:t(5,25)=(5,7)",128,0,246,0
+  60               		.stabs	"uint_fast64_t:t(5,26)=(5,8)",128,0,253,0
+  61               		.stabs	"intmax_t:t(5,27)=(5,7)",128,0,273,0
+  62               		.stabs	"uintmax_t:t(5,28)=(5,8)",128,0,278,0
+  63               		.stabn	162,0,0,0
+  64               		.stabs	"int_farptr_t:t(4,1)=(5,5)",128,0,77,0
+  65               		.stabs	"uint_farptr_t:t(4,2)=(5,6)",128,0,81,0
+  66               		.stabn	162,0,0,0
+  67               		.stabn	162,0,0,0
+  68               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/avr/fuse.h",130,0,0,0
+  69               		.stabs	"__fuse_t:t(6,1)=(6,2)=s2low:(0,11),0,8;high:(0,11),8,8;;",128,0,247,0
+  70               		.stabn	162,0,0,0
+  71               		.stabn	162,0,0,0
+  72               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/stdlib.h",130,0,0,0
+  73               		.stabs	"/usr/lib/gcc/avr/4.3.4/include/stddef.h",130,0,0,0
+  74               		.stabs	"size_t:t(8,1)=(0,4)",128,0,214,0
+  75               		.stabs	"wchar_t:t(8,2)=(0,1)",128,0,326,0
+  76               		.stabn	162,0,0,0
+  77               		.stabs	"div_t:t(7,1)=(7,2)=s4quot:(0,1),0,16;rem:(0,1),16,16;;",128,0,71,0
+  78               		.stabs	"ldiv_t:t(7,3)=(7,4)=s8quot:(0,3),0,32;rem:(0,3),32,32;;",128,0,77,0
+  79               		.stabs	"__compar_fn_t:t(7,5)=(7,6)=*(7,7)=f(0,1)",128,0,80,0
+  80               		.stabn	162,0,0,0
+  81               		.stabn	162,0,0,0
+  82               		.stabs	"ioinit:F(0,15)",36,0,28,ioinit
+  83               	.global	ioinit
+  84               		.type	ioinit, @function
+  85               	ioinit:
+  86               		.stabd	46,0,0
+   0:eeprom.c      **** /*
+   1:eeprom.c      ****  * ----------------------------------------------------------------------------
+   2:eeprom.c      ****  * "THE BEER-WARE LICENSE" (Revision 42):
+   3:eeprom.c      ****  * <joerg@FreeBSD.ORG> wrote this file.  As long as you retain this notice you
+   4:eeprom.c      ****  * can do whatever you want with this stuff. If we meet some day, and you think
+   5:eeprom.c      ****  * this stuff is worth it, you can buy me a beer in return.        Joerg Wunsch
+   6:eeprom.c      ****  * ----------------------------------------------------------------------------
+   7:eeprom.c      ****  */
+   8:eeprom.c      **** 
+   9:eeprom.c      **** /* $Id: twitest.c,v 1.6 2005/11/05 22:32:46 joerg_wunsch Exp $ */
+  10:eeprom.c      **** 
+  11:eeprom.c      **** /*
+  12:eeprom.c      ****  * Simple demo program that talks to a 24Cxx I²C EEPROM using the
+  13:eeprom.c      ****  * builtin TWI interface of an ATmega device.
+  14:eeprom.c      ****  */
+  15:eeprom.c      **** 
+  16:eeprom.c      **** /**
+  17:eeprom.c      ****  * @file eeprom.c
+  18:eeprom.c      ****  * @brief Interface with the EEPROM Device
+  19:eeprom.c      ****  */
+  20:eeprom.c      **** 
+  21:eeprom.c      **** #include "common.h"
+  22:eeprom.c      **** #include <util/twi.h>		/* Note [1] */
+  23:eeprom.c      **** #include <util/delay.h>
+  24:eeprom.c      **** #include "eeprom.h"
+  25:eeprom.c      **** 
+  26:eeprom.c      **** void ioinit(void)
+  27:eeprom.c      **** {
+GAS LISTING /tmp/cc86BxKh.s 			page 3
+
+
+  87               		.stabn	68,0,28,.LM0-.LFBB1
+  88               	.LM0:
+  89               	.LFBB1:
+  90               	/* prologue: function */
+  91               	/* frame size = 0 */
+  28:eeprom.c      **** 
+  29:eeprom.c      ****   /* initialize TWI clock: 100 kHz clock, TWPS = 0 => prescaler = 1 */
+  30:eeprom.c      **** #if defined(TWPS0)
+  31:eeprom.c      ****   /* has prescaler (mega128 & newer) */
+  32:eeprom.c      ****   TWSR = 0;
+  92               		.stabn	68,0,33,.LM1-.LFBB1
+  93               	.LM1:
+  94 0000 11B8      		out 33-32,__zero_reg__
+  33:eeprom.c      **** #endif
+  34:eeprom.c      **** 
+  35:eeprom.c      **** #if F_CPU < 3600000UL
+  36:eeprom.c      ****   TWBR = 10;			/* smallest TWBR value, see note [5] */
+  37:eeprom.c      **** #else
+  38:eeprom.c      ****   TWBR = (F_CPU / 100000UL - 16) / 2;
+  95               		.stabn	68,0,39,.LM2-.LFBB1
+  96               	.LM2:
+  97 0002 80E2      		ldi r24,lo8(32)
+  98 0004 80B9      		out 32-32,r24
+  99               	/* epilogue start */
+  39:eeprom.c      **** #endif
+  40:eeprom.c      **** }
+ 100               		.stabn	68,0,41,.LM3-.LFBB1
+ 101               	.LM3:
+ 102 0006 0895      		ret
+ 103               		.size	ioinit, .-ioinit
+ 104               	.Lscope1:
+ 105               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 106               		.stabd	78,0,0
+ 107               		.stabs	"eeprom_read_bytes:F(0,1)",36,0,44,eeprom_read_bytes
+ 108               		.stabs	"len:P(0,1)",64,0,43,22
+ 109               		.stabs	"buf:P(0,16)=*(5,2)",64,0,43,30
+ 110               	.global	eeprom_read_bytes
+ 111               		.type	eeprom_read_bytes, @function
+ 112               	eeprom_read_bytes:
+ 113               		.stabd	46,0,0
+  41:eeprom.c      **** 
+  42:eeprom.c      **** int eeprom_read_bytes(uint16_t eeaddr, int len, uint8_t *buf)
+  43:eeprom.c      **** {
+ 114               		.stabn	68,0,44,.LM4-.LFBB2
+ 115               	.LM4:
+ 116               	.LFBB2:
+ 117               	/* prologue: function */
+ 118               	/* frame size = 0 */
+ 119 0008 FA01      		movw r30,r20
+  44:eeprom.c      ****   uint8_t sla, twcr, n = 0;
+  45:eeprom.c      ****   int rv = 0;
+  46:eeprom.c      **** 
+  47:eeprom.c      ****   /* patch high bits of EEPROM address into SLA */
+  48:eeprom.c      ****   sla = TWI_SLA_24CXX;
+  49:eeprom.c      **** 
+  50:eeprom.c      ****   /*
+  51:eeprom.c      ****    * Note [8]
+GAS LISTING /tmp/cc86BxKh.s 			page 4
+
+
+  52:eeprom.c      ****    * First cycle: master transmitter mode
+  53:eeprom.c      ****    */
+  54:eeprom.c      ****  restart:
+  55:eeprom.c      ****   if (n++ >= MAX_ITER)
+  56:eeprom.c      ****     return -1;
+  57:eeprom.c      ****  begin:
+  58:eeprom.c      **** 
+  59:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWSTA) | _BV(TWEN); /* send start condition */
+  60:eeprom.c      ****   while ((TWCR & _BV(TWINT)) == 0) ; /* wait for transmission */
+  61:eeprom.c      ****   switch ((twst = TW_STATUS))
+  62:eeprom.c      ****     {
+  63:eeprom.c      ****     case TW_REP_START:		/* OK, but should not happen */
+  64:eeprom.c      ****     case TW_START:
+  65:eeprom.c      ****       break;
+  66:eeprom.c      **** 
+  67:eeprom.c      ****     case TW_MT_ARB_LOST:	/* Note [9] */
+  68:eeprom.c      ****       goto begin;
+  69:eeprom.c      **** 
+  70:eeprom.c      ****     default:
+  71:eeprom.c      ****       return -1;		/* error: not in start condition */
+  72:eeprom.c      ****       /* NB: do /not/ send stop condition */
+  73:eeprom.c      ****     }
+  74:eeprom.c      **** 
+  75:eeprom.c      ****   /* Note [10] */
+  76:eeprom.c      ****   /* send SLA+W */
+  77:eeprom.c      ****   TWDR = sla | TW_WRITE;
+  78:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWEN); /* clear interrupt to start transmission */
+  79:eeprom.c      ****   while ((TWCR & _BV(TWINT)) == 0) ; /* wait for transmission */
+  80:eeprom.c      ****   switch ((twst = TW_STATUS))
+  81:eeprom.c      ****     {
+  82:eeprom.c      ****     case TW_MT_SLA_ACK:
+  83:eeprom.c      ****       break;
+  84:eeprom.c      **** 
+  85:eeprom.c      ****     case TW_MT_SLA_NACK:	/* nack during select: device busy writing */
+  86:eeprom.c      ****       /* Note [11] */
+  87:eeprom.c      ****       goto restart;
+  88:eeprom.c      **** 
+  89:eeprom.c      ****     case TW_MT_ARB_LOST:	/* re-arbitrate */
+  90:eeprom.c      ****       goto begin;
+  91:eeprom.c      **** 
+  92:eeprom.c      ****     default:
+  93:eeprom.c      ****       goto error;		/* must send stop condition */
+  94:eeprom.c      ****     }
+  95:eeprom.c      **** 
+  96:eeprom.c      ****   TWDR = (eeaddr>>8);		/* high 8 bits of addr */
+ 120               		.stabn	68,0,97,.LM5-.LFBB2
+ 121               	.LM5:
+ 122 000a 2091 0000 		lds r18,twst
+ 123 000e 30E0      		ldi r19,lo8(0)
+  60:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWSTA) | _BV(TWEN); /* send start condition */
+ 124               		.stabn	68,0,60,.LM6-.LFBB2
+ 125               	.LM6:
+ 126 0010 54EA      		ldi r21,lo8(-92)
+  78:eeprom.c      ****   TWDR = sla | TW_WRITE;
+ 127               		.stabn	68,0,78,.LM7-.LFBB2
+ 128               	.LM7:
+ 129 0012 B6EA      		ldi r27,lo8(-90)
+GAS LISTING /tmp/cc86BxKh.s 			page 5
+
+
+  79:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWEN); /* clear interrupt to start transmission */
+ 130               		.stabn	68,0,79,.LM8-.LFBB2
+ 131               	.LM8:
+ 132 0014 44E8      		ldi r20,lo8(-124)
+  97:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWEN); /* clear interrupt to start transmission */
+  98:eeprom.c      ****   while ((TWCR & _BV(TWINT)) == 0) ; /* wait for transmission */
+  99:eeprom.c      ****   switch ((twst = TW_STATUS))
+ 100:eeprom.c      ****     {
+ 101:eeprom.c      ****     case TW_MT_DATA_ACK:
+ 102:eeprom.c      ****       break;
+ 103:eeprom.c      **** 
+ 104:eeprom.c      ****     case TW_MT_DATA_NACK:
+ 105:eeprom.c      **** 
+ 106:eeprom.c      ****     case TW_MT_ARB_LOST:
+ 107:eeprom.c      ****       goto begin;
+ 108:eeprom.c      **** 
+ 109:eeprom.c      ****     default:
+ 110:eeprom.c      ****       goto error;		/* must send stop condition */
+ 111:eeprom.c      ****     }
+ 112:eeprom.c      **** 
+ 113:eeprom.c      ****   TWDR = eeaddr;		/* low 8 bits of addr */
+ 114:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWEN); /* clear interrupt to start transmission */
+ 115:eeprom.c      ****   while ((TWCR & _BV(TWINT)) == 0) ; /* wait for transmission */
+ 116:eeprom.c      ****   switch ((twst = TW_STATUS))
+ 117:eeprom.c      ****     {
+ 118:eeprom.c      ****     case TW_MT_DATA_ACK:
+ 119:eeprom.c      ****       break;
+ 120:eeprom.c      **** 
+ 121:eeprom.c      ****     case TW_MT_DATA_NACK:
+ 122:eeprom.c      ****       goto quit;
+ 123:eeprom.c      **** 
+ 124:eeprom.c      ****     case TW_MT_ARB_LOST:
+ 125:eeprom.c      ****       goto begin;
+ 126:eeprom.c      **** 
+ 127:eeprom.c      ****     default:
+ 128:eeprom.c      ****       goto error;		/* must send stop condition */
+ 129:eeprom.c      ****     }
+ 130:eeprom.c      ****     
+ 131:eeprom.c      ****   /*
+ 132:eeprom.c      ****    * Note [12]
+ 133:eeprom.c      ****    * Next cycle(s): master receiver mode
+ 134:eeprom.c      ****    */
+ 135:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWSTA) | _BV(TWEN); /* send (rep.) start condition */
+ 136:eeprom.c      ****   while ((TWCR & _BV(TWINT)) == 0) ; /* wait for transmission */
+ 137:eeprom.c      ****   switch ((twst = TW_STATUS))
+ 138:eeprom.c      ****     {
+ 139:eeprom.c      ****     case TW_START:		/* OK, but should not happen */
+ 140:eeprom.c      ****     case TW_REP_START:
+ 141:eeprom.c      ****       break;
+ 142:eeprom.c      **** 
+ 143:eeprom.c      ****     case TW_MT_ARB_LOST:
+ 144:eeprom.c      ****       goto begin;
+ 145:eeprom.c      **** 
+ 146:eeprom.c      ****     default:
+ 147:eeprom.c      ****       goto error;
+ 148:eeprom.c      ****     }
+ 149:eeprom.c      **** 
+GAS LISTING /tmp/cc86BxKh.s 			page 6
+
+
+ 150:eeprom.c      ****   /* send SLA+R */
+ 151:eeprom.c      ****   TWDR = sla | TW_READ;
+ 133               		.stabn	68,0,152,.LM9-.LFBB2
+ 134               	.LM9:
+ 135 0016 A7EA      		ldi r26,lo8(-89)
+ 136               	.L4:
+  56:eeprom.c      ****   if (n++ >= MAX_ITER)
+ 137               		.stabn	68,0,56,.LM10-.LFBB2
+ 138               	.LM10:
+ 139 0018 3F5F      		subi r19,lo8(-(1))
+ 140 001a 393C      		cpi r19,lo8(-55)
+ 141 001c 01F0      		breq .L52
+ 142               	.L47:
+  60:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWSTA) | _BV(TWEN); /* send start condition */
+ 143               		.stabn	68,0,60,.LM11-.LFBB2
+ 144               	.LM11:
+ 145 001e 56BF      		out 86-32,r21
+ 146               	.L7:
+  61:eeprom.c      ****   while ((TWCR & _BV(TWINT)) == 0) ; /* wait for transmission */
+ 147               		.stabn	68,0,61,.LM12-.LFBB2
+ 148               	.LM12:
+ 149 0020 06B6      		in __tmp_reg__,86-32
+ 150 0022 07FE      		sbrs __tmp_reg__,7
+ 151 0024 00C0      		rjmp .L7
+  62:eeprom.c      ****   switch ((twst = TW_STATUS))
+ 152               		.stabn	68,0,62,.LM13-.LFBB2
+ 153               	.LM13:
+ 154 0026 21B1      		in r18,33-32
+ 155 0028 287F      		andi r18,lo8(-8)
+ 156 002a 2031      		cpi r18,lo8(16)
+ 157 002c 01F0      		breq .L9
+ 158 002e 2833      		cpi r18,lo8(56)
+ 159 0030 01F0      		breq .L47
+ 160 0032 2830      		cpi r18,lo8(8)
+ 161 0034 01F0      		breq .L9
+ 162               	.L52:
+ 163 0036 2093 0000 		sts twst,r18
+ 164 003a 2FEF      		ldi r18,lo8(-1)
+ 165 003c 3FEF      		ldi r19,hi8(-1)
+ 166 003e 00C0      		rjmp .L6
+ 167               	.L9:
+  78:eeprom.c      ****   TWDR = sla | TW_WRITE;
+ 168               		.stabn	68,0,78,.LM14-.LFBB2
+ 169               	.LM14:
+ 170 0040 B3B9      		out 35-32,r27
+  79:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWEN); /* clear interrupt to start transmission */
+ 171               		.stabn	68,0,79,.LM15-.LFBB2
+ 172               	.LM15:
+ 173 0042 46BF      		out 86-32,r20
+ 174               	.L10:
+  80:eeprom.c      ****   while ((TWCR & _BV(TWINT)) == 0) ; /* wait for transmission */
+ 175               		.stabn	68,0,80,.LM16-.LFBB2
+ 176               	.LM16:
+ 177 0044 06B6      		in __tmp_reg__,86-32
+ 178 0046 07FE      		sbrs __tmp_reg__,7
+ 179 0048 00C0      		rjmp .L10
+  81:eeprom.c      ****   switch ((twst = TW_STATUS))
+GAS LISTING /tmp/cc86BxKh.s 			page 7
+
+
+ 180               		.stabn	68,0,81,.LM17-.LFBB2
+ 181               	.LM17:
+ 182 004a 21B1      		in r18,33-32
+ 183 004c 287F      		andi r18,lo8(-8)
+ 184 004e 2032      		cpi r18,lo8(32)
+ 185 0050 01F0      		breq .L4
+ 186 0052 2833      		cpi r18,lo8(56)
+ 187 0054 01F0      		breq .L47
+ 188 0056 2831      		cpi r18,lo8(24)
+ 189 0058 01F4      		brne .L49
+ 190               	.L12:
+  97:eeprom.c      ****   TWDR = (eeaddr>>8);		/* high 8 bits of addr */
+ 191               		.stabn	68,0,97,.LM18-.LFBB2
+ 192               	.LM18:
+ 193 005a 93B9      		out 35-32,r25
+  98:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWEN); /* clear interrupt to start transmission */
+ 194               		.stabn	68,0,98,.LM19-.LFBB2
+ 195               	.LM19:
+ 196 005c 46BF      		out 86-32,r20
+ 197               	.L14:
+  99:eeprom.c      ****   while ((TWCR & _BV(TWINT)) == 0) ; /* wait for transmission */
+ 198               		.stabn	68,0,99,.LM20-.LFBB2
+ 199               	.LM20:
+ 200 005e 06B6      		in __tmp_reg__,86-32
+ 201 0060 07FE      		sbrs __tmp_reg__,7
+ 202 0062 00C0      		rjmp .L14
+ 100:eeprom.c      ****   switch ((twst = TW_STATUS))
+ 203               		.stabn	68,0,100,.LM21-.LFBB2
+ 204               	.LM21:
+ 205 0064 21B1      		in r18,33-32
+ 206 0066 287F      		andi r18,lo8(-8)
+ 207 0068 2033      		cpi r18,lo8(48)
+ 208 006a 01F0      		breq .L47
+ 209 006c 2833      		cpi r18,lo8(56)
+ 210 006e 01F0      		breq .L47
+ 211 0070 2832      		cpi r18,lo8(40)
+ 212 0072 01F4      		brne .L49
+ 213               	.L16:
+ 114:eeprom.c      ****   TWDR = eeaddr;		/* low 8 bits of addr */
+ 214               		.stabn	68,0,114,.LM22-.LFBB2
+ 215               	.LM22:
+ 216 0074 83B9      		out 35-32,r24
+ 115:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWEN); /* clear interrupt to start transmission */
+ 217               		.stabn	68,0,115,.LM23-.LFBB2
+ 218               	.LM23:
+ 219 0076 46BF      		out 86-32,r20
+ 220               	.L17:
+ 116:eeprom.c      ****   while ((TWCR & _BV(TWINT)) == 0) ; /* wait for transmission */
+ 221               		.stabn	68,0,116,.LM24-.LFBB2
+ 222               	.LM24:
+ 223 0078 06B6      		in __tmp_reg__,86-32
+ 224 007a 07FE      		sbrs __tmp_reg__,7
+ 225 007c 00C0      		rjmp .L17
+ 117:eeprom.c      ****   switch ((twst = TW_STATUS))
+ 226               		.stabn	68,0,117,.LM25-.LFBB2
+ 227               	.LM25:
+ 228 007e 21B1      		in r18,33-32
+GAS LISTING /tmp/cc86BxKh.s 			page 8
+
+
+ 229 0080 287F      		andi r18,lo8(-8)
+ 230 0082 2033      		cpi r18,lo8(48)
+ 231 0084 01F0      		breq .L27
+ 232 0086 2833      		cpi r18,lo8(56)
+ 233 0088 01F0      		breq .L47
+ 234 008a 2832      		cpi r18,lo8(40)
+ 235 008c 01F4      		brne .L49
+ 136:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWSTA) | _BV(TWEN); /* send (rep.) start condition */
+ 236               		.stabn	68,0,136,.LM26-.LFBB2
+ 237               	.LM26:
+ 238 008e 56BF      		out 86-32,r21
+ 239               	.L21:
+ 137:eeprom.c      ****   while ((TWCR & _BV(TWINT)) == 0) ; /* wait for transmission */
+ 240               		.stabn	68,0,137,.LM27-.LFBB2
+ 241               	.LM27:
+ 242 0090 06B6      		in __tmp_reg__,86-32
+ 243 0092 07FE      		sbrs __tmp_reg__,7
+ 244 0094 00C0      		rjmp .L21
+ 138:eeprom.c      ****   switch ((twst = TW_STATUS))
+ 245               		.stabn	68,0,138,.LM28-.LFBB2
+ 246               	.LM28:
+ 247 0096 21B1      		in r18,33-32
+ 248 0098 287F      		andi r18,lo8(-8)
+ 249 009a 2031      		cpi r18,lo8(16)
+ 250 009c 01F0      		breq .L23
+ 251 009e 2833      		cpi r18,lo8(56)
+ 252 00a0 01F4      		brne .+2
+ 253 00a2 00C0      		rjmp .L47
+ 254 00a4 2830      		cpi r18,lo8(8)
+ 255 00a6 01F4      		brne .L49
+ 256               	.L23:
+ 257               		.stabn	68,0,152,.LM29-.LFBB2
+ 258               	.LM29:
+ 259 00a8 A3B9      		out 35-32,r26
+ 152:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWEN); /* clear interrupt to start transmission */
+ 260               		.stabn	68,0,153,.LM30-.LFBB2
+ 261               	.LM30:
+ 262 00aa 46BF      		out 86-32,r20
+ 263               	.L24:
+ 153:eeprom.c      ****   while ((TWCR & _BV(TWINT)) == 0) ; /* wait for transmission */
+ 264               		.stabn	68,0,154,.LM31-.LFBB2
+ 265               	.LM31:
+ 266 00ac 06B6      		in __tmp_reg__,86-32
+ 267 00ae 07FE      		sbrs __tmp_reg__,7
+ 268 00b0 00C0      		rjmp .L24
+ 154:eeprom.c      ****   switch ((twst = TW_STATUS))
+ 269               		.stabn	68,0,155,.LM32-.LFBB2
+ 270               	.LM32:
+ 271 00b2 21B1      		in r18,33-32
+ 272 00b4 287F      		andi r18,lo8(-8)
+ 273 00b6 2034      		cpi r18,lo8(64)
+ 274 00b8 01F0      		breq .L26
+ 275 00ba 2834      		cpi r18,lo8(72)
+ 276 00bc 01F0      		breq .L27
+ 277 00be 2833      		cpi r18,lo8(56)
+ 278 00c0 01F4      		brne .L49
+ 279 00c2 00C0      		rjmp .L47
+GAS LISTING /tmp/cc86BxKh.s 			page 9
+
+
+ 280               	.L27:
+ 281 00c4 2093 0000 		sts twst,r18
+ 282 00c8 20E0      		ldi r18,lo8(0)
+ 283 00ca 30E0      		ldi r19,hi8(0)
+ 284 00cc 00C0      		rjmp .L13
+ 285               	.L49:
+ 286 00ce 2093 0000 		sts twst,r18
+ 287 00d2 00C0      		rjmp .L51
+ 288               	.L26:
+ 289 00d4 2093 0000 		sts twst,r18
+ 290 00d8 94EC      		ldi r25,lo8(-60)
+ 291 00da 20E0      		ldi r18,lo8(0)
+ 292 00dc 30E0      		ldi r19,hi8(0)
+ 293 00de 00C0      		rjmp .L28
+ 294               	.L34:
+ 155:eeprom.c      ****     {
+ 156:eeprom.c      ****     case TW_MR_SLA_ACK:
+ 157:eeprom.c      ****       break;
+ 158:eeprom.c      **** 
+ 159:eeprom.c      ****     case TW_MR_SLA_NACK:
+ 160:eeprom.c      ****       goto quit;
+ 161:eeprom.c      **** 
+ 162:eeprom.c      ****     case TW_MR_ARB_LOST:
+ 163:eeprom.c      ****       goto begin;
+ 164:eeprom.c      **** 
+ 165:eeprom.c      ****     default:
+ 166:eeprom.c      ****       goto error;
+ 167:eeprom.c      ****     }
+ 168:eeprom.c      ****     
+ 169:eeprom.c      ****   
+ 170:eeprom.c      **** 
+ 171:eeprom.c      ****   for (twcr = _BV(TWINT) | _BV(TWEN) | _BV(TWEA);	len > 0;len--)
+ 172:eeprom.c      ****     {
+ 173:eeprom.c      ****       if (len == 1)
+ 295               		.stabn	68,0,174,.LM33-.LFBB2
+ 296               	.LM33:
+ 297 00e0 6130      		cpi r22,1
+ 298 00e2 7105      		cpc r23,__zero_reg__
+ 299 00e4 01F4      		brne .L29
+ 300 00e6 94E8      		ldi r25,lo8(-124)
+ 301               	.L29:
+ 174:eeprom.c      **** 	twcr = _BV(TWINT) | _BV(TWEN); /* send NAK this time */
+ 175:eeprom.c      ****       TWCR = twcr;		/* clear int to start transmission */
+ 302               		.stabn	68,0,176,.LM34-.LFBB2
+ 303               	.LM34:
+ 304 00e8 96BF      		out 86-32,r25
+ 305               	.L30:
+ 176:eeprom.c      ****       while ((TWCR & _BV(TWINT)) == 0) ; /* wait for transmission */
+ 306               		.stabn	68,0,177,.LM35-.LFBB2
+ 307               	.LM35:
+ 308 00ea 06B6      		in __tmp_reg__,86-32
+ 309 00ec 07FE      		sbrs __tmp_reg__,7
+ 310 00ee 00C0      		rjmp .L30
+ 177:eeprom.c      ****       
+ 178:eeprom.c      ****       switch ((twst = TW_STATUS))
+ 311               		.stabn	68,0,179,.LM36-.LFBB2
+ 312               	.LM36:
+GAS LISTING /tmp/cc86BxKh.s 			page 10
+
+
+ 313 00f0 81B1      		in r24,33-32
+ 314 00f2 887F      		andi r24,lo8(-8)
+ 315 00f4 8093 0000 		sts twst,r24
+ 316 00f8 8035      		cpi r24,lo8(80)
+ 317 00fa 01F0      		breq .L32
+ 318 00fc 8835      		cpi r24,lo8(88)
+ 319 00fe 01F0      		breq .L33
+ 320               	.L51:
+ 321 0100 2FEF      		ldi r18,lo8(-1)
+ 322 0102 3FEF      		ldi r19,hi8(-1)
+ 323 0104 00C0      		rjmp .L13
+ 324               	.L33:
+ 325 0106 60E0      		ldi r22,lo8(0)
+ 326 0108 70E0      		ldi r23,hi8(0)
+ 327               	.L32:
+ 179:eeprom.c      **** 	{
+ 180:eeprom.c      **** 	case TW_MR_DATA_NACK:
+ 181:eeprom.c      **** 	  len = 0;		/* force end of loop */
+ 182:eeprom.c      **** 				/* FALLTHROUGH */
+ 183:eeprom.c      **** 	case TW_MR_DATA_ACK:
+ 184:eeprom.c      **** 	  *buf++ = TWDR;
+ 328               		.stabn	68,0,185,.LM37-.LFBB2
+ 329               	.LM37:
+ 330 010a 83B1      		in r24,35-32
+ 331 010c 8193      		st Z+,r24
+ 185:eeprom.c      **** 	  rv++;
+ 332               		.stabn	68,0,186,.LM38-.LFBB2
+ 333               	.LM38:
+ 334 010e 2F5F      		subi r18,lo8(-(1))
+ 335 0110 3F4F      		sbci r19,hi8(-(1))
+ 172:eeprom.c      ****   for (twcr = _BV(TWINT) | _BV(TWEN) | _BV(TWEA);	len > 0;len--)
+ 336               		.stabn	68,0,172,.LM39-.LFBB2
+ 337               	.LM39:
+ 338 0112 6150      		subi r22,lo8(-(-1))
+ 339 0114 7040      		sbci r23,hi8(-(-1))
+ 340               	.L28:
+ 341 0116 1616      		cp __zero_reg__,r22
+ 342 0118 1706      		cpc __zero_reg__,r23
+ 343 011a 04F0      		brlt .L34
+ 344               	.L13:
+ 186:eeprom.c      **** 	  break;
+ 187:eeprom.c      **** 
+ 188:eeprom.c      **** 	default:
+ 189:eeprom.c      **** 	  goto error;
+ 190:eeprom.c      **** 	}
+ 191:eeprom.c      ****     }
+ 192:eeprom.c      ****  quit:
+ 193:eeprom.c      ****   /* Note [14] */
+ 194:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWSTO) | _BV(TWEN); /* send stop condition */
+ 345               		.stabn	68,0,195,.LM40-.LFBB2
+ 346               	.LM40:
+ 347 011c 84E9      		ldi r24,lo8(-108)
+ 348 011e 86BF      		out 86-32,r24
+ 349               	.L6:
+ 195:eeprom.c      ****   
+ 196:eeprom.c      ****   return rv;
+ 197:eeprom.c      **** 
+GAS LISTING /tmp/cc86BxKh.s 			page 11
+
+
+ 198:eeprom.c      ****  error:
+ 199:eeprom.c      ****   rv = -1;
+ 200:eeprom.c      ****   goto quit;
+ 201:eeprom.c      **** }
+ 350               		.stabn	68,0,202,.LM41-.LFBB2
+ 351               	.LM41:
+ 352 0120 C901      		movw r24,r18
+ 353               	/* epilogue start */
+ 354 0122 0895      		ret
+ 355               		.size	eeprom_read_bytes, .-eeprom_read_bytes
+ 356               		.stabs	"twcr:r(5,2)",64,0,45,25
+ 357               		.stabs	"n:r(5,2)",64,0,45,19
+ 358               		.stabs	"rv:r(0,1)",64,0,46,18
+ 359               		.stabn	192,0,0,.LFBB2-.LFBB2
+ 360               		.stabn	224,0,0,.Lscope2-.LFBB2
+ 361               	.Lscope2:
+ 362               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 363               		.stabd	78,0,0
+ 364               		.stabs	"eeprom_write_page:F(0,1)",36,0,205,eeprom_write_page
+ 365               		.stabs	"eeaddr:P(5,4)",64,0,204,24
+ 366               		.stabs	"len:P(0,1)",64,0,204,22
+ 367               		.stabs	"buf:P(0,16)",64,0,204,30
+ 368               	.global	eeprom_write_page
+ 369               		.type	eeprom_write_page, @function
+ 370               	eeprom_write_page:
+ 371               		.stabd	46,0,0
+ 202:eeprom.c      **** 
+ 203:eeprom.c      **** int eeprom_write_page(uint16_t eeaddr, int len, uint8_t *buf)
+ 204:eeprom.c      **** {
+ 372               		.stabn	68,0,205,.LM42-.LFBB3
+ 373               	.LM42:
+ 374               	.LFBB3:
+ 375               	/* prologue: function */
+ 376               	/* frame size = 0 */
+ 377 0124 FA01      		movw r30,r20
+ 205:eeprom.c      ****   uint8_t sla, n = 0;
+ 206:eeprom.c      ****   int rv = 0;
+ 207:eeprom.c      ****   uint16_t endaddr;
+ 208:eeprom.c      **** 
+ 209:eeprom.c      ****   if (eeaddr + len < (eeaddr | (PAGE_SIZE - 1)))
+ 378               		.stabn	68,0,210,.LM43-.LFBB3
+ 379               	.LM43:
+ 380 0126 680F      		add r22,r24
+ 381 0128 791F      		adc r23,r25
+ 382 012a 9C01      		movw r18,r24
+ 383 012c 2F67      		ori r18,lo8(127)
+ 384 012e 6217      		cp r22,r18
+ 385 0130 7307      		cpc r23,r19
+ 386 0132 00F0      		brlo .L54
+ 210:eeprom.c      ****     endaddr = eeaddr + len;
+ 211:eeprom.c      ****   else
+ 212:eeprom.c      ****     endaddr = (eeaddr | (PAGE_SIZE - 1)) + 1;
+ 387               		.stabn	68,0,213,.LM44-.LFBB3
+ 388               	.LM44:
+ 389 0134 B901      		movw r22,r18
+ 390 0136 6F5F      		subi r22,lo8(-(1))
+ 391 0138 7F4F      		sbci r23,hi8(-(1))
+GAS LISTING /tmp/cc86BxKh.s 			page 12
+
+
+ 392               	.L54:
+ 213:eeprom.c      ****   len = endaddr - eeaddr;
+ 214:eeprom.c      **** 
+ 215:eeprom.c      ****   /* patch high bits of EEPROM address into SLA */
+ 216:eeprom.c      ****   sla = TWI_SLA_24CXX;
+ 217:eeprom.c      **** 
+ 218:eeprom.c      ****  restart:
+ 219:eeprom.c      ****   if (n++ >= MAX_ITER)
+ 220:eeprom.c      ****     return -1;
+ 221:eeprom.c      ****  begin:
+ 222:eeprom.c      **** 
+ 223:eeprom.c      ****   /* Note [15] */
+ 224:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWSTA) | _BV(TWEN); /* send start condition */
+ 225:eeprom.c      ****   while ((TWCR & _BV(TWINT)) == 0) ; /* wait for transmission */
+ 226:eeprom.c      ****   switch ((twst = TW_STATUS))
+ 227:eeprom.c      ****     {
+ 228:eeprom.c      ****     case TW_REP_START:		/* OK, but should not happen */
+ 229:eeprom.c      ****     case TW_START:
+ 230:eeprom.c      ****       break;
+ 231:eeprom.c      ****     case TW_MT_ARB_LOST:
+ 232:eeprom.c      ****       goto begin;
+ 233:eeprom.c      ****     default:
+ 234:eeprom.c      ****       return -1;		/* error: not in start condition */
+ 235:eeprom.c      ****       /* NB: do /not/ send stop condition */
+ 236:eeprom.c      ****     }
+ 237:eeprom.c      **** 
+ 238:eeprom.c      ****   /* send SLA+W */
+ 239:eeprom.c      ****   TWDR = sla | TW_WRITE;
+ 240:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWEN); /* clear interrupt to start transmission */
+ 241:eeprom.c      ****   while ((TWCR & _BV(TWINT)) == 0) ; /* wait for transmission */
+ 242:eeprom.c      ****   switch ((twst = TW_STATUS))
+ 243:eeprom.c      ****     {
+ 244:eeprom.c      ****     case TW_MT_SLA_ACK:
+ 245:eeprom.c      ****       break;
+ 246:eeprom.c      **** 
+ 247:eeprom.c      ****     case TW_MT_SLA_NACK:	/* nack during select: device busy writing */
+ 248:eeprom.c      ****       goto restart;
+ 249:eeprom.c      **** 
+ 250:eeprom.c      ****     case TW_MT_ARB_LOST:	/* re-arbitrate */
+ 251:eeprom.c      ****       goto begin;
+ 252:eeprom.c      **** 
+ 253:eeprom.c      ****     default:
+ 254:eeprom.c      ****       goto error;		/* must send stop condition */
+ 255:eeprom.c      ****     }
+ 256:eeprom.c      **** 	
+ 257:eeprom.c      **** 	
+ 258:eeprom.c      ****   TWDR = (eeaddr>>8);		/* high 8 bits of addr */
+ 393               		.stabn	68,0,259,.LM45-.LFBB3
+ 394               	.LM45:
+ 395 013a 592F      		mov r21,r25
+ 396 013c 2091 0000 		lds r18,twst
+ 397 0140 30E0      		ldi r19,lo8(0)
+ 225:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWSTA) | _BV(TWEN); /* send start condition */
+ 398               		.stabn	68,0,225,.LM46-.LFBB3
+ 399               	.LM46:
+ 400 0142 B4EA      		ldi r27,lo8(-92)
+ 240:eeprom.c      ****   TWDR = sla | TW_WRITE;
+GAS LISTING /tmp/cc86BxKh.s 			page 13
+
+
+ 401               		.stabn	68,0,240,.LM47-.LFBB3
+ 402               	.LM47:
+ 403 0144 A6EA      		ldi r26,lo8(-90)
+ 241:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWEN); /* clear interrupt to start transmission */
+ 404               		.stabn	68,0,241,.LM48-.LFBB3
+ 405               	.LM48:
+ 406 0146 44E8      		ldi r20,lo8(-124)
+ 407               	.L55:
+ 220:eeprom.c      ****   if (n++ >= MAX_ITER)
+ 408               		.stabn	68,0,220,.LM49-.LFBB3
+ 409               	.LM49:
+ 410 0148 3F5F      		subi r19,lo8(-(1))
+ 411 014a 393C      		cpi r19,lo8(-55)
+ 412 014c 01F0      		breq .L92
+ 413               	.L88:
+ 225:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWSTA) | _BV(TWEN); /* send start condition */
+ 414               		.stabn	68,0,225,.LM50-.LFBB3
+ 415               	.LM50:
+ 416 014e B6BF      		out 86-32,r27
+ 417               	.L58:
+ 226:eeprom.c      ****   while ((TWCR & _BV(TWINT)) == 0) ; /* wait for transmission */
+ 418               		.stabn	68,0,226,.LM51-.LFBB3
+ 419               	.LM51:
+ 420 0150 06B6      		in __tmp_reg__,86-32
+ 421 0152 07FE      		sbrs __tmp_reg__,7
+ 422 0154 00C0      		rjmp .L58
+ 227:eeprom.c      ****   switch ((twst = TW_STATUS))
+ 423               		.stabn	68,0,227,.LM52-.LFBB3
+ 424               	.LM52:
+ 425 0156 21B1      		in r18,33-32
+ 426 0158 287F      		andi r18,lo8(-8)
+ 427 015a 2031      		cpi r18,lo8(16)
+ 428 015c 01F0      		breq .L60
+ 429 015e 2833      		cpi r18,lo8(56)
+ 430 0160 01F0      		breq .L88
+ 431 0162 2830      		cpi r18,lo8(8)
+ 432 0164 01F0      		breq .L60
+ 433               	.L92:
+ 434 0166 2093 0000 		sts twst,r18
+ 435 016a 2FEF      		ldi r18,lo8(-1)
+ 436 016c 3FEF      		ldi r19,hi8(-1)
+ 437 016e 00C0      		rjmp .L57
+ 438               	.L60:
+ 240:eeprom.c      ****   TWDR = sla | TW_WRITE;
+ 439               		.stabn	68,0,240,.LM53-.LFBB3
+ 440               	.LM53:
+ 441 0170 A3B9      		out 35-32,r26
+ 241:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWEN); /* clear interrupt to start transmission */
+ 442               		.stabn	68,0,241,.LM54-.LFBB3
+ 443               	.LM54:
+ 444 0172 46BF      		out 86-32,r20
+ 445               	.L61:
+ 242:eeprom.c      ****   while ((TWCR & _BV(TWINT)) == 0) ; /* wait for transmission */
+ 446               		.stabn	68,0,242,.LM55-.LFBB3
+ 447               	.LM55:
+ 448 0174 06B6      		in __tmp_reg__,86-32
+ 449 0176 07FE      		sbrs __tmp_reg__,7
+GAS LISTING /tmp/cc86BxKh.s 			page 14
+
+
+ 450 0178 00C0      		rjmp .L61
+ 243:eeprom.c      ****   switch ((twst = TW_STATUS))
+ 451               		.stabn	68,0,243,.LM56-.LFBB3
+ 452               	.LM56:
+ 453 017a 21B1      		in r18,33-32
+ 454 017c 287F      		andi r18,lo8(-8)
+ 455 017e 2032      		cpi r18,lo8(32)
+ 456 0180 01F0      		breq .L55
+ 457 0182 2833      		cpi r18,lo8(56)
+ 458 0184 01F0      		breq .L88
+ 459 0186 2831      		cpi r18,lo8(24)
+ 460 0188 01F4      		brne .L90
+ 461               	.L63:
+ 462               		.stabn	68,0,259,.LM57-.LFBB3
+ 463               	.LM57:
+ 464 018a 53B9      		out 35-32,r21
+ 259:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWEN); /* clear interrupt to start transmission */
+ 465               		.stabn	68,0,260,.LM58-.LFBB3
+ 466               	.LM58:
+ 467 018c 46BF      		out 86-32,r20
+ 468               	.L65:
+ 260:eeprom.c      ****   while ((TWCR & _BV(TWINT)) == 0) ; /* wait for transmission */
+ 469               		.stabn	68,0,261,.LM59-.LFBB3
+ 470               	.LM59:
+ 471 018e 06B6      		in __tmp_reg__,86-32
+ 472 0190 07FE      		sbrs __tmp_reg__,7
+ 473 0192 00C0      		rjmp .L65
+ 261:eeprom.c      ****   switch ((twst = TW_STATUS))
+ 474               		.stabn	68,0,262,.LM60-.LFBB3
+ 475               	.LM60:
+ 476 0194 21B1      		in r18,33-32
+ 477 0196 287F      		andi r18,lo8(-8)
+ 478 0198 2033      		cpi r18,lo8(48)
+ 479 019a 01F0      		breq .L72
+ 480 019c 2833      		cpi r18,lo8(56)
+ 481 019e 01F0      		breq .L88
+ 482 01a0 2832      		cpi r18,lo8(40)
+ 483 01a2 01F4      		brne .L90
+ 262:eeprom.c      ****     {
+ 263:eeprom.c      ****     case TW_MT_DATA_ACK:
+ 264:eeprom.c      ****       break;
+ 265:eeprom.c      **** 
+ 266:eeprom.c      ****     case TW_MT_DATA_NACK:
+ 267:eeprom.c      ****       goto quit;
+ 268:eeprom.c      **** 
+ 269:eeprom.c      ****     case TW_MT_ARB_LOST:
+ 270:eeprom.c      ****       goto begin;
+ 271:eeprom.c      **** 
+ 272:eeprom.c      ****     default:
+ 273:eeprom.c      ****       goto error;		/* must send stop condition */
+ 274:eeprom.c      ****     }
+ 275:eeprom.c      **** 
+ 276:eeprom.c      **** 
+ 277:eeprom.c      ****   TWDR = eeaddr;		/* low 8 bits of addr */
+ 484               		.stabn	68,0,278,.LM61-.LFBB3
+ 485               	.LM61:
+ 486 01a4 83B9      		out 35-32,r24
+GAS LISTING /tmp/cc86BxKh.s 			page 15
+
+
+ 278:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWEN); /* clear interrupt to start transmission */
+ 487               		.stabn	68,0,279,.LM62-.LFBB3
+ 488               	.LM62:
+ 489 01a6 46BF      		out 86-32,r20
+ 490               	.L69:
+ 279:eeprom.c      ****   while ((TWCR & _BV(TWINT)) == 0) ; /* wait for transmission */
+ 491               		.stabn	68,0,280,.LM63-.LFBB3
+ 492               	.LM63:
+ 493 01a8 06B6      		in __tmp_reg__,86-32
+ 494 01aa 07FE      		sbrs __tmp_reg__,7
+ 495 01ac 00C0      		rjmp .L69
+ 280:eeprom.c      ****   switch ((twst = TW_STATUS))
+ 496               		.stabn	68,0,281,.LM64-.LFBB3
+ 497               	.LM64:
+ 498 01ae 21B1      		in r18,33-32
+ 499 01b0 287F      		andi r18,lo8(-8)
+ 500 01b2 2033      		cpi r18,lo8(48)
+ 501 01b4 01F0      		breq .L72
+ 502 01b6 2833      		cpi r18,lo8(56)
+ 503 01b8 01F0      		breq .L88
+ 504 01ba 2832      		cpi r18,lo8(40)
+ 505 01bc 01F4      		brne .L90
+ 506 01be 00C0      		rjmp .L93
+ 507               	.L72:
+ 508 01c0 2093 0000 		sts twst,r18
+ 509 01c4 20E0      		ldi r18,lo8(0)
+ 510 01c6 30E0      		ldi r19,hi8(0)
+ 511 01c8 00C0      		rjmp .L64
+ 512               	.L90:
+ 513 01ca 2093 0000 		sts twst,r18
+ 514 01ce 00C0      		rjmp .L91
+ 515               	.L93:
+ 516 01d0 2093 0000 		sts twst,r18
+ 214:eeprom.c      ****   len = endaddr - eeaddr;
+ 517               		.stabn	68,0,214,.LM65-.LFBB3
+ 518               	.LM65:
+ 519 01d4 681B      		sub r22,r24
+ 520 01d6 790B      		sbc r23,r25
+ 521 01d8 20E0      		ldi r18,lo8(0)
+ 522 01da 30E0      		ldi r19,hi8(0)
+ 281:eeprom.c      ****     {
+ 282:eeprom.c      ****     case TW_MT_DATA_ACK:
+ 283:eeprom.c      ****       break;
+ 284:eeprom.c      **** 
+ 285:eeprom.c      ****     case TW_MT_DATA_NACK:
+ 286:eeprom.c      ****       goto quit;
+ 287:eeprom.c      **** 
+ 288:eeprom.c      ****     case TW_MT_ARB_LOST:
+ 289:eeprom.c      ****       goto begin;
+ 290:eeprom.c      **** 
+ 291:eeprom.c      ****     default:
+ 292:eeprom.c      ****       goto error;		/* must send stop condition */
+ 293:eeprom.c      ****     }
+ 294:eeprom.c      **** 
+ 295:eeprom.c      ****   for (; len > 0; len--)
+ 296:eeprom.c      ****     {
+ 297:eeprom.c      ****       TWDR = *buf++;
+GAS LISTING /tmp/cc86BxKh.s 			page 16
+
+
+ 298:eeprom.c      ****       TWCR = _BV(TWINT) | _BV(TWEN); /* start transmission */
+ 523               		.stabn	68,0,299,.LM66-.LFBB3
+ 524               	.LM66:
+ 525 01dc 44E8      		ldi r20,lo8(-124)
+ 526 01de 00C0      		rjmp .L73
+ 527               	.L77:
+ 298:eeprom.c      ****       TWCR = _BV(TWINT) | _BV(TWEN); /* start transmission */
+ 528               		.stabn	68,0,298,.LM67-.LFBB3
+ 529               	.LM67:
+ 530 01e0 8081      		ld r24,Z
+ 531 01e2 83B9      		out 35-32,r24
+ 532               		.stabn	68,0,299,.LM68-.LFBB3
+ 533               	.LM68:
+ 534 01e4 46BF      		out 86-32,r20
+ 535               	.L74:
+ 299:eeprom.c      ****       while ((TWCR & _BV(TWINT)) == 0) ; /* wait for transmission */
+ 536               		.stabn	68,0,300,.LM69-.LFBB3
+ 537               	.LM69:
+ 538 01e6 06B6      		in __tmp_reg__,86-32
+ 539 01e8 07FE      		sbrs __tmp_reg__,7
+ 540 01ea 00C0      		rjmp .L74
+ 300:eeprom.c      ****       switch ((twst = TW_STATUS))
+ 541               		.stabn	68,0,301,.LM70-.LFBB3
+ 542               	.LM70:
+ 543 01ec 81B1      		in r24,33-32
+ 544 01ee 887F      		andi r24,lo8(-8)
+ 545 01f0 8093 0000 		sts twst,r24
+ 546 01f4 8832      		cpi r24,lo8(40)
+ 547 01f6 01F0      		breq .L76
+ 548               	.L91:
+ 549 01f8 2FEF      		ldi r18,lo8(-1)
+ 550 01fa 3FEF      		ldi r19,hi8(-1)
+ 551 01fc 00C0      		rjmp .L64
+ 552               	.L76:
+ 298:eeprom.c      ****       TWDR = *buf++;
+ 553               		.stabn	68,0,298,.LM71-.LFBB3
+ 554               	.LM71:
+ 555 01fe 3196      		adiw r30,1
+ 301:eeprom.c      **** 	{
+ 302:eeprom.c      **** 	case TW_MT_DATA_NACK:
+ 303:eeprom.c      **** 	  goto error;		/* device write protected -- Note [16] */
+ 304:eeprom.c      **** 
+ 305:eeprom.c      **** 	case TW_MT_DATA_ACK:
+ 306:eeprom.c      **** 	  rv++;
+ 556               		.stabn	68,0,307,.LM72-.LFBB3
+ 557               	.LM72:
+ 558 0200 2F5F      		subi r18,lo8(-(1))
+ 559 0202 3F4F      		sbci r19,hi8(-(1))
+ 560               	.L73:
+ 296:eeprom.c      ****   for (; len > 0; len--)
+ 561               		.stabn	68,0,296,.LM73-.LFBB3
+ 562               	.LM73:
+ 563 0204 CB01      		movw r24,r22
+ 564 0206 821B      		sub r24,r18
+ 565 0208 930B      		sbc r25,r19
+ 566 020a 1816      		cp __zero_reg__,r24
+ 567 020c 1906      		cpc __zero_reg__,r25
+GAS LISTING /tmp/cc86BxKh.s 			page 17
+
+
+ 568 020e 04F0      		brlt .L77
+ 569               	.L64:
+ 307:eeprom.c      **** 	  break;
+ 308:eeprom.c      **** 
+ 309:eeprom.c      **** 	default:
+ 310:eeprom.c      **** 	  goto error;
+ 311:eeprom.c      **** 	}
+ 312:eeprom.c      ****     }
+ 313:eeprom.c      ****  quit:
+ 314:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWSTO) | _BV(TWEN); /* send stop condition */
+ 570               		.stabn	68,0,315,.LM74-.LFBB3
+ 571               	.LM74:
+ 572 0210 84E9      		ldi r24,lo8(-108)
+ 573 0212 86BF      		out 86-32,r24
+ 574               	.L57:
+ 315:eeprom.c      **** 
+ 316:eeprom.c      ****   return rv;
+ 317:eeprom.c      **** 
+ 318:eeprom.c      ****  error:
+ 319:eeprom.c      ****   rv = -1;
+ 320:eeprom.c      ****   goto quit;
+ 321:eeprom.c      **** }
+ 575               		.stabn	68,0,322,.LM75-.LFBB3
+ 576               	.LM75:
+ 577 0214 C901      		movw r24,r18
+ 578               	/* epilogue start */
+ 579 0216 0895      		ret
+ 580               		.size	eeprom_write_page, .-eeprom_write_page
+ 581               		.stabs	"n:r(5,2)",64,0,206,19
+ 582               		.stabs	"rv:r(0,1)",64,0,207,18
+ 583               		.stabs	"endaddr:r(5,4)",64,0,208,22
+ 584               		.stabn	192,0,0,.LFBB3-.LFBB3
+ 585               		.stabn	224,0,0,.Lscope3-.LFBB3
+ 586               	.Lscope3:
+ 587               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 588               		.stabd	78,0,0
+ 589               		.stabs	"eeprom_write_bytes:F(0,1)",36,0,325,eeprom_write_bytes
+ 590               		.stabs	"eeaddr:P(5,4)",64,0,324,12
+ 591               		.stabs	"len:P(0,1)",64,0,324,16
+ 592               		.stabs	"buf:P(0,16)",64,0,324,14
+ 593               	.global	eeprom_write_bytes
+ 594               		.type	eeprom_write_bytes, @function
+ 595               	eeprom_write_bytes:
+ 596               		.stabd	46,0,0
+ 322:eeprom.c      **** 
+ 323:eeprom.c      **** int eeprom_write_bytes(uint16_t eeaddr, int len, uint8_t *buf)
+ 324:eeprom.c      **** {
+ 597               		.stabn	68,0,325,.LM76-.LFBB4
+ 598               	.LM76:
+ 599               	.LFBB4:
+ 600 0218 CF92      		push r12
+ 601 021a DF92      		push r13
+ 602 021c EF92      		push r14
+ 603 021e FF92      		push r15
+ 604 0220 0F93      		push r16
+ 605 0222 1F93      		push r17
+ 606 0224 CF93      		push r28
+GAS LISTING /tmp/cc86BxKh.s 			page 18
+
+
+ 607 0226 DF93      		push r29
+ 608               	/* prologue: function */
+ 609               	/* frame size = 0 */
+ 610 0228 6C01      		movw r12,r24
+ 611 022a 8B01      		movw r16,r22
+ 612 022c 7A01      		movw r14,r20
+ 613               		.stabn	68,0,325,.LM77-.LFBB4
+ 614               	.LM77:
+ 615 022e C0E0      		ldi r28,lo8(0)
+ 616 0230 D0E0      		ldi r29,hi8(0)
+ 617               	.L97:
+ 325:eeprom.c      ****   int rv, total;
+ 326:eeprom.c      **** 
+ 327:eeprom.c      ****   total = 0;
+ 328:eeprom.c      ****   do
+ 329:eeprom.c      ****     {
+ 330:eeprom.c      ****       rv = eeprom_write_page(eeaddr, len, buf);
+ 618               		.stabn	68,0,331,.LM78-.LFBB4
+ 619               	.LM78:
+ 620 0232 C601      		movw r24,r12
+ 621 0234 B801      		movw r22,r16
+ 622 0236 A701      		movw r20,r14
+ 623 0238 0E94 0000 		call eeprom_write_page
+ 331:eeprom.c      ****       if (rv == -1)
+ 624               		.stabn	68,0,332,.LM79-.LFBB4
+ 625               	.LM79:
+ 626 023c 2FEF      		ldi r18,hi8(-1)
+ 627 023e 8F3F      		cpi r24,lo8(-1)
+ 628 0240 9207      		cpc r25,r18
+ 629 0242 01F0      		breq .L95
+ 332:eeprom.c      ****         return -1;
+ 333:eeprom.c      ****       eeaddr += rv;
+ 334:eeprom.c      ****       len -= rv;
+ 630               		.stabn	68,0,335,.LM80-.LFBB4
+ 631               	.LM80:
+ 632 0244 081B      		sub r16,r24
+ 633 0246 190B      		sbc r17,r25
+ 335:eeprom.c      ****       buf += rv;
+ 336:eeprom.c      ****       total += rv;
+ 634               		.stabn	68,0,337,.LM81-.LFBB4
+ 635               	.LM81:
+ 636 0248 C80F      		add r28,r24
+ 637 024a D91F      		adc r29,r25
+ 337:eeprom.c      ****     }
+ 338:eeprom.c      ****   while (len > 0);
+ 638               		.stabn	68,0,339,.LM82-.LFBB4
+ 639               	.LM82:
+ 640 024c 1016      		cp __zero_reg__,r16
+ 641 024e 1106      		cpc __zero_reg__,r17
+ 642 0250 04F4      		brge .L96
+ 334:eeprom.c      ****       eeaddr += rv;
+ 643               		.stabn	68,0,334,.LM83-.LFBB4
+ 644               	.LM83:
+ 645 0252 C80E      		add r12,r24
+ 646 0254 D91E      		adc r13,r25
+ 336:eeprom.c      ****       buf += rv;
+ 647               		.stabn	68,0,336,.LM84-.LFBB4
+GAS LISTING /tmp/cc86BxKh.s 			page 19
+
+
+ 648               	.LM84:
+ 649 0256 E80E      		add r14,r24
+ 650 0258 F91E      		adc r15,r25
+ 651 025a 00C0      		rjmp .L97
+ 652               	.L95:
+ 653 025c CFEF      		ldi r28,lo8(-1)
+ 654 025e DFEF      		ldi r29,hi8(-1)
+ 655               	.L96:
+ 339:eeprom.c      **** 
+ 340:eeprom.c      ****   return total;
+ 341:eeprom.c      **** }
+ 656               		.stabn	68,0,342,.LM85-.LFBB4
+ 657               	.LM85:
+ 658 0260 CE01      		movw r24,r28
+ 659               	/* epilogue start */
+ 660 0262 DF91      		pop r29
+ 661 0264 CF91      		pop r28
+ 662 0266 1F91      		pop r17
+ 663 0268 0F91      		pop r16
+ 664 026a FF90      		pop r15
+ 665 026c EF90      		pop r14
+ 666 026e DF90      		pop r13
+ 667 0270 CF90      		pop r12
+ 668 0272 0895      		ret
+ 669               		.size	eeprom_write_bytes, .-eeprom_write_bytes
+ 670               		.stabs	"rv:r(0,1)",64,0,326,24
+ 671               		.stabs	"total:r(0,1)",64,0,326,28
+ 672               		.stabn	192,0,0,.LFBB4-.LFBB4
+ 673               		.stabn	224,0,0,.Lscope4-.LFBB4
+ 674               	.Lscope4:
+ 675               		.stabs	"",36,0,0,.Lscope4-.LFBB4
+ 676               		.stabd	78,0,0
+ 677               		.stabs	"error:F(0,15)",36,0,345,error
+ 678               	.global	error
+ 679               		.type	error, @function
+ 680               	error:
+ 681               		.stabd	46,0,0
+ 342:eeprom.c      **** 
+ 343:eeprom.c      **** void error(void)
+ 344:eeprom.c      **** {
+ 682               		.stabn	68,0,345,.LM86-.LFBB5
+ 683               	.LM86:
+ 684               	.LFBB5:
+ 685               	/* prologue: function */
+ 686               	/* frame size = 0 */
+ 345:eeprom.c      **** 
+ 346:eeprom.c      ****   exit(0);
+ 687               		.stabn	68,0,347,.LM87-.LFBB5
+ 688               	.LM87:
+ 689 0274 80E0      		ldi r24,lo8(0)
+ 690 0276 90E0      		ldi r25,hi8(0)
+ 691 0278 0E94 0000 		call exit
+ 692               		.size	error, .-error
+ 693               	.Lscope5:
+ 694               		.stabs	"",36,0,0,.Lscope5-.LFBB5
+ 695               		.stabd	78,0,0
+ 696               		.comm twst,1,1
+GAS LISTING /tmp/cc86BxKh.s 			page 20
+
+
+ 697               		.stabs	"twst:G(5,2)",32,0,97,0
+ 698               		.stabs	"",100,0,0,.Letext0
+ 699               	.Letext0:
+GAS LISTING /tmp/cc86BxKh.s 			page 21
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 eeprom.c
+     /tmp/cc86BxKh.s:2      *ABS*:000000000000003f __SREG__
+     /tmp/cc86BxKh.s:3      *ABS*:000000000000003e __SP_H__
+     /tmp/cc86BxKh.s:4      *ABS*:000000000000003d __SP_L__
+     /tmp/cc86BxKh.s:5      *ABS*:0000000000000034 __CCP__
+     /tmp/cc86BxKh.s:6      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/cc86BxKh.s:7      *ABS*:0000000000000001 __zero_reg__
+     /tmp/cc86BxKh.s:85     .text:0000000000000000 ioinit
+     /tmp/cc86BxKh.s:112    .text:0000000000000008 eeprom_read_bytes
+                            *COM*:0000000000000001 twst
+     /tmp/cc86BxKh.s:370    .text:0000000000000124 eeprom_write_page
+     /tmp/cc86BxKh.s:595    .text:0000000000000218 eeprom_write_bytes
+     /tmp/cc86BxKh.s:680    .text:0000000000000274 error
+
+UNDEFINED SYMBOLS
+__do_copy_data
+__do_clear_bss
+exit

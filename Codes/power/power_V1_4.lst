@@ -1,0 +1,2501 @@
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00001 ; changes done by Prashant Rupapara
+                      00002 
+                      00003         list            p=16f877a       ; list directive to define processor
+                      00004         #include        <p16f877a.inc>  ; processor specific variable definitions
+                      00001         LIST
+                      00002 
+                      00003 ;==========================================================================
+                      00004 ;  MPASM PIC16F877A processor include
+                      00005 ; 
+                      00006 ;  (c) Copyright 1999-2010 Microchip Technology, All rights reserved
+                      00007 ;==========================================================================
+                      00008 
+                      00555         LIST
+                      00005 
+                      00006 ;write the config bits
+2007   3F32           00007     __CONFIG _CP_OFF & _WDT_OFF & _BODEN_OFF & _PWRTE_ON & _HS_OSC & _LVP_OFF & _CPD_OFF 
+                      00008 
+                      00009 ;#define DEBUG ; to send debuging data on UART
+                      00010 ;#define DEBUG_ADC ; to send measured data by ADC on UART
+                      00011 
+                      00012         cblock 0x20
+  00000020            00013         LoadStatus
+                      00014 
+                      00015 
+                      00016         ;0x21 stores ADC HM data
+                      00017         ;BatteryCurrent<--
+  00000021            00018         TotalCurrent
+                      00019 
+                      00020         ;BatteryVoltage<--
+  00000022            00021         BatteryVoltageBy2
+                      00022 
+                      00023         ;Panel<--
+  00000023            00024         ConsumptionCurrent
+                      00025 
+                      00026         ;SixVolt <--
+  00000024            00027         SixVolt
+                      00028         
+                      00029         ;ThreeVolt<--
+  00000025            00030         DownlinkVoltageBy2      
+                      00031 
+                      00032     ;BatteryStatus<-- 
+  00000026            00033     BatteryStatus ; Overvoltage and low power of battery
+                      00034     
+                      00035     
+  00000027            00036         HMCounter
+                      00037         
+                      00038         ;variables required for adc: Don't use in interrupts
+  00000028            00039         Channel
+  00000029            00040         Count
+  0000002A            00041         InverseCount
+                      00042 
+                      00043         ;variables required for OC
+  0000002B            00044         Timer
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+  0000002C            00045         Timer7
+  0000002D            00046         Timer6
+  0000002E            00047         Timer5
+  0000002F            00048         Timer4
+  00000030            00049         Timer3
+                      00050 
+                      00051         ;variables required for OBC Command
+  00000031            00052         CommandByte
+                      00053         
+                      00054         ;Variable for i2c byte status
+  00000032            00055         TWIByte
+                      00056         
+                      00057         ;Variable for Ejection State: Snap/Preflight
+  00000033            00058         State
+  00000034            00059         BeaconOCflag
+                      00060         endc
+                      00061 
+                      00062 ;OBC Command Byte format
+  00000007            00063 PBEACON equ 7
+  00000006            00064 PCONTROL equ 6
+  00000005            00065 PGPS equ 5
+  00000004            00066 PDOWNLINK equ 4
+  00000003            00067 POBC equ 3
+  00000002            00068 PMAG equ 2
+                      00069 
+  00000070            00070 w_temp equ 0x70 ; variable used for context saving
+  00000071            00071 status_temp equ 0x71 ; variable used for context saving
+  00000072            00072 fsr_temp equ 0x72
+  00000073            00073 w_temp_send equ 0x73 ; variable used for context saving
+  00000074            00074 status_temp_send equ 0x74 ; variable used for context saving
+                      00075 
+                      00076 
+  00000044            00077 I2C_ADDR equ 0x44
+                      00078 
+                      00079 
+                      00080 CheckLoadTimer macro
+                      00081 
+                      00082         movf Timer, W
+                      00083     subwf INDF,W
+                      00084         btfss STATUS, Z
+                      00085     
+                      00086         endm
+                      00087 ;{
+                      00088 TurnOnLoadOC macro  PORT_TPS_ON, COMPONENT_TPS_ON, bit_pos_ON
+                      00089     
+                      00090     bsf PORT_TPS_ON, COMPONENT_TPS_ON
+                      00091     bsf LoadStatus, bit_pos_ON
+                      00092     
+                      00093         endm
+                      00094 TurnOffLoadOC macro PORT_TPS_OFF, COMPONENT_TPS_OFF, bit_pos_OFF
+                      00095 
+                      00096     bcf PORT_TPS_OFF, COMPONENT_TPS_OFF
+                      00097     bcf LoadStatus, bit_pos_OFF
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE  3
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00098 
+                      00099     movf Timer, W
+                      00100     movwf INDF
+                      00101     
+                      00102         endm
+                      00103  ;}  
+                      00104 
+                      00105 
+                      00106 ; ############################################################# macros end here ########################
+                            ######################
+0000                  00107         org 0x0000
+                      00108         
+0000   28A2           00109         goto SleepMode
+                      00110 
+                      00111 ;{      
+0004                  00112         org     0x004             ; interrupt vector location
+                      00113 
+0004   00F0           00114         movwf   w_temp            ; save off current W register contents
+0005   0803           00115         movf    STATUS, W          ; move status register into W register
+0006   00F1           00116         movwf   status_temp       ; save off contents of STATUS register
+0007   0804           00117         movf    FSR, W
+0008   00F2           00118         movwf   fsr_temp                ;save FSR register
+                      00119         
+0009   1283 1303      00120         banksel ADCON0
+                      00121         
+000B   198C           00122         btfsc PIR1, SSPIF
+000C   2016           00123         call I2CHandler   ; I2C receive interrupt
+                      00124         
+000D   1283 1303      00125         banksel ADCON0
+                      00126 
+000F   108B           00127         bcf INTCON, INTF
+                      00128 
+0010                  00129 ExitISR: 
+                      00130 
+0010   0871           00131         movf    status_temp, W  ; retrieve copy of STATUS register
+0011   0083           00132         movwf   STATUS          ; restore pre-isr STATUS register contents
+0012   0872           00133         movf    fsr_temp,    W  ; retrieve copy of FSR register
+0013   0084           00134         movwf   FSR             ; restore pre-isr FSR register contents
+0014   0870           00135         movf    w_temp,      W  ;restore pre-isr W register
+0015   0009           00136         retfie                  ; return from interrupt 
+                      00137 
+0016                  00138 I2CHandler:
+0016   118C           00139         bcf PIR1, SSPIF
+0017   0813           00140         movf SSPBUF, W
+                      00141         ;Check Read/Write bit
+0018   1683 1303      00142     banksel ADCON1
+                      00143    
+                      00144         ;Check if last byte was Data or address
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+001A   1A94           00145         btfsc SSPSTAT, 5
+                      00146         ;If it was Data call the OBC command response subroutine        
+001B   2831           00147         goto OBCCommandResponse
+                      00148         
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE  4
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00149         ;If it was Address call the send HM data routine
+                      00150 
+001C                  00151 SendHMData:
+                      00152         ;Check if Master in Read Mode
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+001C   1D14           00153         btfss SSPSTAT, 2
+001D   285C           00154         goto ExitI2C
+                      00155 
+001E   1283 1303      00156     banksel ADCON0
+                      00157   
+0020   3020           00158         movlw LoadStatus
+0021   0084           00159         movwf FSR
+                      00160 
+                      00161         ;Calculate address of next data byte
+0022   0827           00162         movf HMCounter, W
+0023   0784           00163         addwf FSR, f
+0024   0800           00164         movf INDF, W
+                      00165 
+0025                  00166 WriteI2C:  
+                      00167         ;Send Data
+0025   1394           00168         bcf SSPCON, WCOL
+0026   0093           00169         movwf SSPBUF
+0027   1B94           00170         btfsc SSPCON, WCOL
+0028   2825           00171         goto WriteI2C
+                      00172         
+                      00173         ;Release Clock
+0029   0AB2           00174         incf TWIByte, f
+002A   1614           00175         bsf SSPCON, CKP
+                      00176 
+                      00177         ;Increment Counter, check if equal to 7 make it 0
+002B   0AA7           00178         incf HMCounter, f
+002C   3007           00179         movlw 7
+002D   0227           00180         subwf HMCounter, W
+002E   1903           00181         btfsc STATUS, Z
+002F   01A7           00182     clrf HMCounter
+                      00183         
+0030   285C           00184         goto ExitI2C
+                      00185 
+0031                  00186 OBCCommandResponse:
+                      00187         ;OBC Command format: Bit 7:0 
+                      00188         ;Beacon : Control: GPS: Downlink : OBC : MAG: Reserved: Reserved
+0031   1283 1303      00189     banksel ADCON0
+                      00190     
+0033   1832           00191     btfsc TWIByte, 0
+0034   285B           00192     goto SkipI2CData
+                      00193     
+                      00194         ;Check if Load has been turned off by Power MuC even when it should be on according to the OBC
+                      00195         
+                      00196         ;PBeacon
+0035   1BB1           00197         btfsc CommandByte, PBEACON 
+0036   2839           00198         goto SkipB1
+0037   1009           00199     bcf PORTE, 0 ;OFF TPS 
+                      00200         #ifdef DEBUG
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE  5
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00201                 call Mpoweroff
+                      00202         #endif
+                      00203         #ifdef DEBUG
+                      00204                 call Mbeacon
+                      00205         #endif
+0038   283A           00206     goto SkipCheck7
+0039                  00207 SkipB1:
+0039   1409           00208     bsf PORTE, 0 ;ON TPS
+                      00209         #ifdef DEBUG
+                      00210                 call Mpoweron
+                      00211         #endif
+                      00212     #ifdef DEBUG
+                      00213                 call Mbeacon
+                      00214         #endif
+                      00215 
+003A                  00216 SkipCheck7:
+                      00217         ;PDownlink
+003A   1A31           00218         btfsc CommandByte, PDOWNLINK
+003B   283E           00219         goto SkipD1
+003C   1109           00220     bcf PORTE, 2 ;OFF TPS
+                      00221         #ifdef DEBUG
+                      00222                 call Mpoweroff
+                      00223         #endif
+                      00224         #ifdef DEBUG
+                      00225                 call Mdownlink
+                      00226         #endif
+003D   283F           00227         goto SkipCheck6
+003E                  00228 SkipD1:    
+003E   1509           00229         bsf PORTE, 2 ;ON TPS
+                      00230         #ifdef DEBUG
+                      00231                 call Mpoweron
+                      00232         #endif
+                      00233         #ifdef DEBUG
+                      00234                 call Mdownlink
+                      00235         #endif
+                      00236 
+003F                  00237 SkipCheck6:
+                      00238         ;PControl
+003F   1B31           00239         btfsc CommandByte, PCONTROL
+0040   2844           00240         goto SkipC1
+0041   1107           00241     bcf PORTC, 2 ;OFF TPS
+0042   1488           00242         bsf PORTD, 1 ;OFF PTH
+                      00243         #ifdef DEBUG
+                      00244                 call Mpoweroff
+                      00245         #endif
+                      00246         #ifdef DEBUG
+                      00247                 call Mcontrol
+                      00248         #endif
+0043   2846           00249     goto SkipCheck5
+0044                  00250 SkipC1:
+0044   1507           00251     bsf PORTC, 2 ;ON TPS
+0045   1088           00252         bcf PORTD, 1 ;ON PTH
+                      00253         #ifdef DEBUG
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE  6
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00254                 call Mpoweron
+                      00255         #endif
+                      00256         #ifdef DEBUG
+                      00257                 call Mcontrol
+                      00258         #endif
+                      00259 
+0046                  00260 SkipCheck5:
+                      00261         ;POBC
+0046   19B1           00262         btfsc CommandByte, POBC
+0047   284B           00263         goto SkipO1
+0048   1108           00264     bcf PORTD, 2 ;OFF TPS
+0049   1687           00265         bsf PORTC, 5 ;OFF PTH 
+                      00266         #ifdef DEBUG
+                      00267                 call Mpoweroff
+                      00268         #endif
+                      00269         #ifdef DEBUG
+                      00270                 call Mobc
+                      00271         #endif
+                      00272         
+004A   284D           00273     goto SkipCheck4
+004B                  00274 SkipO1:
+004B   1508           00275     bsf PORTD, 2 ;ON TPS
+004C   1287           00276         bcf PORTC, 5 ;ON PTH
+                      00277         #ifdef DEBUG
+                      00278                 call Mpoweron
+                      00279         #endif
+                      00280         #ifdef DEBUG
+                      00281                 call Mobc
+                      00282         #endif
+                      00283         
+004D                  00284 SkipCheck4:
+                      00285         ;PGPS
+004D   1AB1           00286         btfsc CommandByte, PGPS
+004E   2852           00287         goto SkipG1
+004F   1208           00288     bcf PORTD, 4 ;OFF TPS
+0050   1708           00289         bsf PORTD, 6 ;OFF PTH
+                      00290         #ifdef DEBUG
+                      00291                 call Mpoweroff
+                      00292         #endif
+                      00293         #ifdef DEBUG
+                      00294                 call Mgps
+                      00295         #endif
+0051   2854           00296     goto SkipCheck3
+0052                  00297 SkipG1:
+0052   1608           00298     bsf PORTD, 4 ;ON TPS
+0053   1308           00299         bcf PORTD, 6 ;ON PTH
+                      00300         #ifdef DEBUG
+                      00301                 call Mpoweron
+                      00302         #endif
+                      00303         #ifdef DEBUG
+                      00304                 call Mgps
+                      00305         #endif
+                      00306 
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE  7
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0054                  00307 SkipCheck3:
+                      00308         ;PMAG
+0054   1931           00309         btfsc CommandByte, PMAG 
+0055   2858           00310         goto SkipM1
+0056   1388           00311     bcf PORTD, 7 ;OFF TPS
+                      00312         #ifdef DEBUG
+                      00313                 call Mpoweroff
+                      00314         #endif
+                      00315         #ifdef DEBUG
+                      00316                 call Mmag
+                      00317         #endif
+0057   2859           00318     goto SkipCheck2
+0058                  00319 SkipM1:
+0058   1788           00320     bsf PORTD, 7 ;ON TPS
+                      00321         #ifdef DEBUG
+                      00322                 call Mpoweron
+                      00323         #endif
+                      00324         #ifdef DEBUG
+                      00325                 call Mmag
+                      00326         #endif
+                      00327 
+0059                  00328 SkipCheck2:
+                      00329         ;Copy CommandByte to LoadStatus
+0059   0831           00330         movf CommandByte, W
+005A   00A0           00331         movwf LoadStatus
+                      00332 
+005B                  00333 SkipI2CData:
+005B   01B2           00334         clrf TWIByte
+                      00335 
+005C                  00336 ExitI2C:
+005C   0000           00337         nop
+005D   0008           00338         return
+                      00339 ;}
+                      00340 
+                      00341 
+                      00342 
+005E                  00343 Startup_all:
+005E   1283 1303      00344         banksel PORTD
+                      00345 
+                      00346         #ifdef DEBUG
+                      00347                 movlw   'S'             
+                      00348                 call    Send
+                      00349 ;               movlw   '\r'
+                      00350 ;               call    Send
+                      00351 ;               movlw   '\n'    
+                      00352 ;               call    Send
+                      00353         #endif
+                      00354         
+                      00355         ;TPS startup
+0060   1409           00356         bsf PORTE, 0 ; EN4=>Enable TPS of BEACON        
+0061   1509           00357         bsf PORTE, 2 ; EN5=>Enable TPS of DOWNLINK
+0062   1507           00358         bsf PORTC, 2 ; EN6=>Enable TPS of CONTROL/TORQUE
+0063   1508           00359         bsf PORTD, 2 ; EN3=>Enable TPS of OBC
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE  8
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0064   1608           00360         bsf PORTD, 4 ; EN2=>Enable TPS of GPS
+0065   1788           00361         bsf PORTD, 7 ; EN7=>Enable TPS of MAG 
+                      00362 
+0066   30F8           00363         movlw b'11111000' ;Bit 7 to 0 => B:C:G:D:O:M:-:-
+0067   00A0           00364         movwf LoadStatus
+0068   00B1           00365     movwf CommandByte
+                      00366 
+                      00367         ;pth startup
+0069   1087           00368         bcf PORTC, 1 ; BEACON & DOWNLINK
+006A   1088           00369         bcf PORTD, 1 ; CONTROL/TORQUE
+006B   1287           00370         bcf PORTC, 5 ; OBC
+006C   1308           00371         bcf PORTD, 6 ; GPS
+                      00372 
+006D   0008           00373         return 
+                      00374 
+006E                  00375 Startup:
+006E   1283 1303      00376         banksel PORTD
+                      00377 
+                      00378         #ifdef DEBUG
+                      00379                 movlw   'S'             
+                      00380                 call    Send
+                      00381 ;               movlw   '\r'
+                      00382 ;               call    Send
+                      00383 ;               movlw   '\n'    
+                      00384 ;               call    Send
+                      00385         #endif
+                      00386 
+                      00387         ;TPS startup
+0070   1409           00388         bsf PORTE, 0 ; EN4=>Enable TPS of BEACON        
+0071   1109           00389         bcf PORTE, 2 ; EN5=>Enable TPS of DOWNLINK
+0072   1507           00390         bsf PORTC, 2 ; EN6=>Enable TPS of CONTROL/TORQUE
+0073   1508           00391         bsf PORTD, 2 ; EN3=>Enable TPS of OBC
+0074   1208           00392         bcf PORTD, 4 ; EN2=>Enable TPS of GPS
+0075   1388           00393         bcf PORTD, 7 ; EN7=>Enable TPS of MAG 
+                      00394 
+                      00395         ;pth startup
+0076   1087           00396         bcf PORTC, 1 ; BEACON & DOWNLINK
+0077   1088           00397         bcf PORTD, 1 ; CONTROL/TORQUE
+0078   1287           00398         bcf PORTC, 5 ; OBC
+0079   1708           00399         bsf PORTD, 6 ; GPS
+                      00400 
+007A   30C8           00401         movlw b'11001000' ;Bit 7 to 0 => B:C:G:D:O:M:-:-
+007B   00A0           00402         movwf LoadStatus
+007C   00B1           00403     movwf CommandByte
+                      00404 
+007D   0008           00405         return 
+                      00406 
+                      00407 
+007E                  00408 Shutdown:
+007E   1283 1303      00409         banksel PORTD
+                      00410 
+                      00411         #ifdef DEBUG
+                      00412                 movlw   's'             
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE  9
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00413                 call    Send
+                      00414 ;               movlw   '\r'
+                      00415 ;               call    Send
+                      00416 ;               movlw   '\n'    
+                      00417 ;               call    Send
+                      00418         #endif
+                      00419 
+                      00420         ;TPS shutdown
+0080   1009           00421         bcf PORTE, 0 ; EN4=>Enable TPS of BEACON
+0081   1109           00422         bcf PORTE, 2 ; EN5=>Enable TPS of DOWNLINK      
+0082   1107           00423         bcf PORTC, 2 ; EN6=>Enable TPS of CONTROL/TORQUE
+0083   1108           00424         bcf PORTD, 2 ; EN3=>Enable TPS of OBC   
+0084   1208           00425         bcf PORTD, 4 ; EN2=>Enable TPS of GPS
+0085   1388           00426         bcf PORTD, 7 ; EN7=>Enable TPS of MAG 
+                      00427 
+                      00428         ;pth shutdown
+0086   1487           00429         bsf PORTC, 1 ; BEACON & DOWNLINK 
+0087   1488           00430         bsf PORTD, 1 ; CONTROL/TORQUE
+0088   1687           00431         bsf PORTC, 5 ; OBC
+0089   1708           00432         bsf PORTD, 6 ; GPS
+                      00433 
+008A   3000           00434         movlw b'00000000' ;Bit 7 to 0 => B:C:G:D:O:M:-:-
+008B   00A0           00435         movwf LoadStatus
+008C   0008           00436         return
+                      00437 
+                      00438 #ifdef DEBUG
+                      00439 ;################ USART #################
+                      00440 Send:
+                      00441     movwf   w_temp_send            ; save off current W register contents
+                      00442         movf    STATUS, W          ; move status register into W register
+                      00443         movwf   status_temp_send       ; save off contents of STATUS register
+                      00444         movf w_temp_send, W     ;restore pre-isr W register
+                      00445         banksel ADCON0
+                      00446         movwf TXREG
+                      00447         call DelayTX
+                      00448         movf    status_temp_send, W     ; retrieve copy of STATUS register
+                      00449         movwf   STATUS            ; restore pre-isr STATUS register contents
+                      00450         return
+                      00451 
+                      00452 ;{
+                      00453 
+                      00454 ; ---------------------------
+                      00455 ; Message to send at startup
+                      00456 ; ---------------------------
+                      00457 Message1:
+                      00458         movlw   '\r'            
+                      00459         call    Send
+                      00460         movlw   '\n'            
+                      00461         call    Send
+                      00462         movlw   'H'             
+                      00463         call    Send
+                      00464         movlw   'e'
+                      00465         call    Send
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE 10
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00466         movlw   'l'
+                      00467         call    Send
+                      00468         movlw   'l'
+                      00469         call    Send
+                      00470         movlw   'o'
+                      00471         call    Send
+                      00472         movlw   '\r'
+                      00473         call    Send
+                      00474         movlw   '\n'
+                      00475         call    Send
+                      00476         movlw   'T'
+                      00477         call    Send
+                      00478         movlw   'h'
+                      00479         call    Send
+                      00480         movlw   'i'
+                      00481         call    Send
+                      00482         movlw   's'
+                      00483         call    Send
+                      00484         movlw   ' '
+                      00485         call    Send
+                      00486         movlw   'i'
+                      00487         call    Send
+                      00488         movlw   's'
+                      00489         call    Send
+                      00490         movlw   ' '
+                      00491         call    Send
+                      00492         movlw   'I'
+                      00493         call    Send
+                      00494         movlw   'I'
+                      00495         call    Send
+                      00496         movlw   'T'
+                      00497         call    Send
+                      00498         movlw   'B'
+                      00499         call    Send
+                      00500         movlw   "'"
+                      00501         call    Send
+                      00502         movlw   's'
+                      00503         call    Send
+                      00504         movlw   ' '             
+                      00505         call    Send
+                      00506         movlw   'S'
+                      00507         call    Send
+                      00508         movlw   't'
+                      00509         call    Send
+                      00510         movlw   'u'
+                      00511         call    Send
+                      00512         movlw   'd'
+                      00513         call    Send
+                      00514         movlw   'e'
+                      00515         call    Send
+                      00516         movlw   'n'
+                      00517         call    Send
+                      00518         movlw   't'
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE 11
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00519         call    Send
+                      00520         movlw   ' '
+                      00521         call    Send
+                      00522         movlw   'S'
+                      00523         call    Send
+                      00524         movlw   'a'
+                      00525         call    Send
+                      00526         movlw   't'
+                      00527         call    Send
+                      00528         movlw   'e'
+                      00529         call    Send
+                      00530         movlw   'l'
+                      00531         call    Send
+                      00532         movlw   'l'
+                      00533         call    Send
+                      00534         movlw   'i'
+                      00535         call    Send
+                      00536         movlw   't'
+                      00537         call    Send
+                      00538         movlw   'e'
+                      00539         call    Send
+                      00540         movlw   '.'
+                      00541         call    Send
+                      00542         movlw   '.'
+                      00543         call    Send
+                      00544         movlw   '\r'
+                      00545         call    Send
+                      00546         movlw   '\r'
+                      00547         call    Send
+                      00548         movlw   '\n'
+                      00549         call    Send
+                      00550         return
+                      00551 Mpoweron:
+                      00552         movlw   '\r'            
+                      00553         call    Send
+                      00554         movlw   '\n'
+                      00555         call    Send
+                      00556         movlw   'P'             
+                      00557         call    Send
+                      00558         movlw   'O'             
+                      00559         call    Send
+                      00560         movlw   'W'             
+                      00561         call    Send
+                      00562         movlw   'E'             
+                      00563         call    Send
+                      00564         movlw   'R'             
+                      00565         call    Send
+                      00566         movlw   ' '             
+                      00567         call    Send    
+                      00568         movlw   'O'             
+                      00569         call    Send
+                      00570         movlw   'N'             
+                      00571         call    Send
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE 12
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00572         movlw   '-'             
+                      00573         call    Send
+                      00574         return
+                      00575 Mpoweroff:
+                      00576         movlw   '\r'            
+                      00577         call    Send
+                      00578         movlw   '\n'
+                      00579         call    Send
+                      00580         movlw   'P'             
+                      00581         call    Send
+                      00582         movlw   'O'             
+                      00583         call    Send
+                      00584         movlw   'W'             
+                      00585         call    Send
+                      00586         movlw   'E'             
+                      00587         call    Send
+                      00588         movlw   'R'     
+                      00589         call    Send
+                      00590         movlw   ' '             
+                      00591         call    Send
+                      00592         movlw   'O'             
+                      00593         call    Send
+                      00594         movlw   'F'             
+                      00595         call    Send
+                      00596         movlw   'F'             
+                      00597         call    Send
+                      00598         movlw   '-'             
+                      00599         call    Send
+                      00600         return
+                      00601 Mbeacon:
+                      00602         movlw   'B'             
+                      00603         call    Send
+                      00604         movlw   'e'             
+                      00605         call    Send
+                      00606         movlw   'a'             
+                      00607         call    Send
+                      00608         movlw   'c'             
+                      00609         call    Send
+                      00610         movlw   'o'             
+                      00611         call    Send
+                      00612         movlw   'n'             
+                      00613         call    Send    
+                      00614         movlw   '\r'            
+                      00615         call    Send    
+                      00616         movlw   '\n'
+                      00617         call    Send
+                      00618         return
+                      00619 Mdownlink:
+                      00620         movlw   'D'             
+                      00621         call    Send
+                      00622         movlw   'o'             
+                      00623         call    Send
+                      00624         movlw   'w'             
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE 13
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00625         call    Send
+                      00626         movlw   'n'             
+                      00627         call    Send
+                      00628         movlw   'l'             
+                      00629         call    Send
+                      00630         movlw   'i'             
+                      00631         call    Send
+                      00632         movlw   'n'             
+                      00633         call    Send
+                      00634         movlw   'k'             
+                      00635         call    Send    
+                      00636         movlw   '\r'            
+                      00637         call    Send    
+                      00638         movlw   '\n'
+                      00639         call    Send
+                      00640         return
+                      00641 Mcontrol:
+                      00642         movlw   'C'             
+                      00643         call    Send
+                      00644         movlw   'o'             
+                      00645         call    Send
+                      00646         movlw   'n'             
+                      00647         call    Send
+                      00648         movlw   't'             
+                      00649         call    Send
+                      00650         movlw   'r'             
+                      00651         call    Send
+                      00652         movlw   'o'             
+                      00653         call    Send
+                      00654         movlw   'l'             
+                      00655         call    Send    
+                      00656         movlw   '\r'            
+                      00657         call    Send    
+                      00658         movlw   '\n'
+                      00659         call    Send
+                      00660         return
+                      00661 Mobc:
+                      00662         movlw   'O'             
+                      00663         call    Send
+                      00664         movlw   'B'             
+                      00665         call    Send
+                      00666         movlw   'C'             
+                      00667         call    Send
+                      00668         movlw   '\r'            
+                      00669         call    Send    
+                      00670         movlw   '\n'
+                      00671         call    Send
+                      00672         return
+                      00673 Mgps:
+                      00674         movlw   'G'             
+                      00675         call    Send
+                      00676         movlw   'P'             
+                      00677         call    Send
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE 14
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00678         movlw   'S'             
+                      00679         call    Send
+                      00680         movlw   '\r'            
+                      00681         call    Send    
+                      00682         movlw   '\n'
+                      00683         call    Send
+                      00684         return
+                      00685 Mmag:
+                      00686         movlw   'M'             
+                      00687         call    Send
+                      00688         movlw   'A'             
+                      00689         call    Send
+                      00690         movlw   'G'             
+                      00691         call    Send
+                      00692         movlw   '\r'            
+                      00693         call    Send    
+                      00694         movlw   '\n'
+                      00695         call    Send
+                      00696         return
+                      00697 #endif
+                      00698 
+                      00699 ;}
+                      00700         
+                      00701 
+                      00702 
+                      00703 
+                      00704 
+                      00705 
+                      00706 
+008D                  00707 Delay_1s:
+008D   3008           00708         movlw 8
+008E   00E2           00709         movwf 0x62
+008F                  00710 Delay20:
+008F   01E1           00711         clrf 0x61
+0090                  00712 Delay109:
+0090   01E0           00713         clrf 0x60
+0091                  00714 Delay108:
+0091   0FE0           00715         incfsz 0x60, f
+0092   2891           00716         goto Delay108
+                      00717         
+0093   0FE1           00718         incfsz 0x61, f
+0094   2890           00719         goto Delay109
+                      00720 
+0095   0BE2           00721         decfsz 0x62, f
+0096   288F           00722         goto Delay20
+                      00723         
+0097   0008           00724         return
+                      00725 
+                      00726 #ifdef DEBUG
+                      00727 DelayTX:
+                      00728                 clrf 0x61
+                      00729 Delay19:
+                      00730                 clrf 0x60
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE 15
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00731 Delay18:
+                      00732                 incfsz 0x60, f
+                      00733                 goto Delay18
+                      00734         
+                      00735                 incfsz 0x61, f
+                      00736                 goto Delay19
+                      00737         return
+                      00738 #endif
+                      00739 ;##########################################################
+                      00740         
+0098                  00741 DelayS:
+0098   00E2           00742         movwf 0x62
+0099                  00743 Delay3:
+0099   01E1           00744         clrf 0x61
+009A                  00745 Delay2:
+009A   01E0           00746         clrf 0x60
+009B                  00747 Delay1:
+009B   0FE0           00748         incfsz 0x60, f
+009C   289B           00749         goto Delay1
+                      00750         
+009D   0FE1           00751         incfsz 0x61, f
+009E   289A           00752         goto Delay2
+                      00753 
+009F   0BE2           00754         decfsz 0x62, f
+00A0   2899           00755         goto Delay3
+                      00756         
+00A1   0008           00757         return
+                      00758 
+00A2                  00759 SleepMode:
+                      00760 
+                      00761 #ifdef DEBUG
+                      00762         ; ########################## UART ####################################
+                      00763         banksel ADCON1
+                      00764         bsf TRISC, 7
+                      00765         bcf TRISC, 6
+                      00766         ;movlw 0x08 ;14400 baud rate ;BRGH=0
+                      00767         ;movlw 0x0C ;9600 baud rate ;BRGH=0
+                      00768         ;movlw 0x19 ;19200 baud rate ;BRGH=1
+                      00769         ;movlw 0x08 ;56000 baud rate ;BRGH=1
+                      00770         ;movlw 0x03 ;128000 baud rate ;BRGH=1
+                      00771         movlw 0x01 ;256000 baud rate ;BRGH=1
+                      00772         movwf SPBRG                      
+                      00773         clrf TXSTA
+                      00774         bsf TXSTA, TXEN          ;enable transmitter
+                      00775         bsf TXSTA, BRGH
+                      00776         banksel ADCON0
+                      00777         clrf RCSTA
+                      00778         bsf RCSTA, SPEN          ;enable UART on the pins
+                      00779         
+                      00780         movlw 0x22
+                      00781         movwf 0x70
+                      00782         
+                      00783         ; Message to send at startup
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE 16
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00784 Message:
+                      00785                 call Message1
+                      00786                 call Delay_1s
+                      00787                 movlw '\n'
+                      00788                 call Send
+                      00789                 movlw '1' ; corresponding to sleep mode
+                      00790                 call Send
+                      00791                 movlw '\r'
+                      00792                 call Send
+                      00793                 movlw '\n'      
+                      00794                 call Send
+                      00795 #endif
+                      00796 ;########################################################################
+                      00797 
+00A2   1683 1303      00798         banksel ADCON1
+                      00799         ;set RB0 as input for SNAP
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+00A4   1406           00800         bsf TRISB, 0    
+                      00801         
+                      00802         
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+00A5   149F           00803         bsf ADCON1,1 ;to select AN0 to AN4 as adc and AN5 to An7 as digital pins
+                      00804 
+                      00805         ;set input direction on the PTH inhibit pins
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+00A6   1087           00806         bcf TRISC, 1 ; PON1=> inhibit PTH Beacon & Downlink
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+00A7   1088           00807         bcf TRISD, 1 ; PON2=> inhibit PTH CONTROL/TORQUE
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+00A8   1287           00808         bcf TRISC, 5 ; PON3=> inhibit PTH OBC
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+00A9   1308           00809         bcf TRISD, 6 ; PON4=> inhibit PTH GPS
+                      00810 
+                      00811         ;set input direction on the TPS enable  pins
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+00AA   1208           00812         bcf TRISD, 4 ; EN2=>Enable TPS of GPS
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+00AB   1108           00813         bcf TRISD, 2 ; EN3=>Enable TPS of OBC
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+00AC   1009           00814         bcf TRISE, 0 ; EN4=>Enable TPS of BEACON        
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+00AD   1109           00815         bcf TRISE, 2 ; EN5=>Enable TPS of DOWNLINK
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+00AE   1107           00816         bcf TRISC, 2 ; EN6=>Enable TPS of CONTROL/TORQUE
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+00AF   1388           00817         bcf TRISD, 7 ; EN7=>Enable TPS of MAG
+                      00818 
+                      00819         ;enable input on the OC lines
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+00B0   1688           00820         bsf TRISD, 5 ;GPS
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+00B1   1588           00821         bsf TRISD, 3 ;OBC
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE 17
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+00B2   1489           00822         bsf TRISE, 1 ;Beacon
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+00B3   1407           00823         bsf TRISC, 0 ;Downlink  
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+00B4   1408           00824         bsf TRISD, 0 ;PCONTROL
+                      00825 
+                      00826         ;enable input on the Uplink lines
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+00B5   1686           00827     bsf TRISB, 5
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+00B6   1606           00828         bsf TRISB, 4
+                      00829 
+                      00830         ;configure I2C ports as Input
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+00B7   1587           00831         bsf TRISC, 3
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+00B8   1607           00832         bsf TRISC, 4
+                      00833         
+                      00834         
+00B9   1283 1303      00835         banksel ADCON0
+                      00836     
+                      00837     ;switch off all loads
+00BB   207E           00838     call Shutdown
+                      00839     ;goto SleepMode
+                      00840         
+                      00841         ;switch on the INT interrupt for wake up from sleep
+00BC   170B           00842         bsf INTCON, PEIE
+                      00843   
+00BD   160B           00844         bsf INTCON, INTE
+00BE   178B           00845         bsf INTCON, GIE 
+00BF   108B           00846         bcf INTCON, INTF
+                      00847  
+00C0                  00848 RealSleep:
+                      00849         #ifdef DEBUG
+                      00850                 movlw '2' ; going to sleep mode
+                      00851                 call Send
+                      00852 ;               movlw '\r'
+                      00853 ;               call Send
+                      00854 ;               movlw '\n'      
+                      00855 ;               call Send
+                      00856         #endif 
+                      00857 
+00C0   0063           00858         sleep
+                      00859         
+00C1   0000           00860         nop
+                      00861         
+                      00862         ;2 second delay to confirm that the interrupt is not a fake
+00C2   3015           00863         movlw 15 ; this gives 2.07 sec delay
+00C3   2098           00864         call DelayS
+                      00865         
+                      00866         ;Check Snap pin
+00C4   1806           00867         btfsc PORTB, 0
+00C5   28C9           00868         goto Snap
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE 18
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00869 
+                      00870         #ifdef DEBUG    
+                      00871                 movlw '3' ; still in sleep mode
+                      00872                 call Send
+                      00873 ;               movlw '\r'
+                      00874 ;               call Send
+                      00875 ;               movlw '\n'      
+                      00876 ;               call Send
+                      00877         #endif
+                      00878 
+                      00879         ;Check Preflight Pin
+00C6   1886           00880         btfsc PORTB, 1
+00C7   28CB           00881         goto Preflight
+                      00882         
+00C8   28C0           00883         goto RealSleep
+                      00884         
+00C9                  00885 Snap:
+                      00886         ;Implement the Eject Delay
+                      00887         #ifdef DEBUG
+                      00888                 movlw '4' ; I snapped
+                      00889                 call Send
+                      00890 ;               movlw '\r'
+                      00891 ;               call Send
+                      00892 ;               movlw '\n'      
+                      00893 ;               call Send
+                      00894         #endif 
+                      00895 
+00C9   01B3           00896         clrf State
+00CA   28CD           00897         goto Start
+                      00898         
+00CB                  00899 Preflight:
+00CB   30FF           00900         movlw 0xFF
+00CC   00B3           00901         movwf State
+                      00902 
+                      00903 
+00CD                  00904 Start: 
+                      00905         #ifdef DEBUG
+                      00906                 movlw '5' ; Lets get this started
+                      00907                 call Send
+                      00908 ;               movlw '\r'
+                      00909 ;               call Send
+                      00910 ;               movlw '\n'      
+                      00911 ;               call Send
+                      00912         #endif 
+                      00913         
+                      00914 ;############################### switching on all PTH #################
+                      00915         ;call Startup_all
+00CD   206E           00916         call Startup
+                      00917 
+00CE   1683 1303      00918         banksel ADCON1
+                      00919         ;configure ADC
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+00D0   019F           00920         clrf ADCON1
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE 19
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+00D1   149F           00921         bsf ADCON1,1 ;to select AN0 to AN4 as adc and AN5 to An7 as digital pins
+                      00922 
+                      00923 
+                      00924         ;set ADC ports as input 
+00D2   30FF           00925         movlw 0xFF
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+00D3   0085           00926         movwf TRISA
+                      00927 
+                      00928         ;confugure I2C
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+00D4   0194           00929         clrf SSPSTAT
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+00D5   0191           00930         clrf SSPCON2
+                      00931         ;configure address of I2C slave
+00D6   3044           00932     movlw I2C_ADDR
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+00D7   0093           00933     movwf SSPADD
+                      00934 
+                      00935         ;Enable SSP/I2C interrupt
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+00D8   158C           00936         bsf PIE1, SSPIE
+                      00937 
+00D9   1283 1303      00938         banksel ADCON0  
+                      00939    
+                      00940         ;configure I2C
+00DB   3036           00941         movlw 0x36
+00DC   0094           00942         movwf SSPCON ;I2C mode 7-bit address
+                      00943         
+                      00944         ;Clear I2C interrupt flag
+00DD   018C           00945         clrf PIR1
+                      00946 
+                      00947         ;Timer for OC and main Loop
+00DE   01AB           00948         clrf Timer
+00DF   01A7           00949         clrf HMCounter
+00E0   01B4           00950         clrf BeaconOCflag
+00E1   01A6           00951         clrf BatteryStatus
+00E2   01B2           00952         clrf TWIByte
+                      00953 
+                      00954 ;main loop
+00E3                  00955 Loop:
+                      00956 
+                      00957 ;       #ifdef DEBUG
+                      00958 ;               movlw '\t'
+                      00959 ;               call Send       
+                      00960 ;               movlw 'M'
+                      00961 ;               call Send
+                      00962 ;       #endif
+                      00963 
+                      00964         ;Uplink check
+00E3   1E86           00965         btfss PORTB, 5
+00E4   28EF           00966         goto SkipUplink
+                      00967         
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE 20
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00968         ;2 second delay to confirm that the interrupt is not a fake
+00E5   3015           00969         movlw 15
+00E6   2098           00970         call DelayS
+                      00971         
+                      00972         ;Test Interrupt pin
+00E7   1E86           00973         btfss PORTB, 5
+00E8   28EF           00974         goto SkipUplink
+                      00975         
+                      00976         #ifdef DEBUG
+                      00977                 movlw 'U'
+                      00978                 call Send       
+                      00979         #endif
+                      00980         ;Check data line, if high Kill satellite
+00E9   1A06           00981         btfsc PORTB, 4
+00EA   29F7           00982         goto Kill
+                      00983         
+                      00984         ;Low: Reset
+00EB   207E           00985         call Shutdown
+                      00986         
+                      00987         ;0.5 second Delay for components to shutdown
+00EC   3005           00988         movlw 5 ; 0.49345 sec delay
+00ED   2098           00989         call DelayS
+                      00990         
+00EE   28CD           00991         goto Start
+                      00992 
+00EF                  00993 SkipUplink:
+                      00994 
+                      00995         ;Check State variable for preflight check
+                      00996         ;Counter for looping 8 times
+00EF   3008           00997         movlw 0x08
+00F0   00AA           00998         movwf InverseCount
+                      00999         ;Counter for number of high bits in State variable
+00F1   01A9           01000         clrf Count
+                      01001         ;Copy State variable to a temp variable
+00F2   0833           01002         movf State, W
+00F3   00A8           01003         movwf Channel
+00F4                  01004 BitCheck:
+                      01005         ;Extract Bit and Check if high, increment Count
+00F4   1828           01006         btfsc Channel, 0
+00F5   0AA9           01007         incf Count, f
+                      01008         ;Do right Shift to get the next bit
+00F6   0CA8           01009         rrf Channel, f
+                      01010         ;Decrement Loop counter and exit loop if it becomes 0
+00F7   0BAA           01011         decfsz InverseCount, f
+00F8   28F4           01012         goto BitCheck
+                      01013         
+                      01014         ;Compare the bit counter with 4
+00F9   3004           01015         movlw 0x04
+00FA   0229           01016         subwf Count, W
+                      01017         ;Skip Check if in Snap mode
+00FB   1C03           01018         btfss STATUS, C
+00FC   28FF           01019         goto SkipPreflight
+                      01020         
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE 21
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      01021         ;Check if Preflight pin is still high
+00FD   1C86           01022         btfss PORTB, 1
+00FE   28A2           01023         goto SleepMode
+                      01024         
+00FF                  01025 SkipPreflight:
+                      01026         ;counter for 5 ADC inputs       
+00FF   3005           01027         movlw 0x05
+                      01028         
+0100   00A9           01029         movwf Count
+                      01030         
+0101   01AA           01031         clrf InverseCount
+                      01032         
+                      01033         ;set indirect address
+                      01034         ;movlw BatteryCurrent
+0102   3021           01035         movlw TotalCurrent
+0103   0084           01036         movwf FSR
+                      01037 
+0104                  01038 ADCLoop:
+                      01039 ;       #ifdef DEBUG
+                      01040 ;               movlw 'A' ; corresponding to checking loads
+                      01041 ;               call Send
+                      01042 ;       #endif
+                      01043         ;select Channel in ADCON0
+0104   082A           01044         movf InverseCount,W
+0105   00A8           01045         movwf Channel
+0106   1003           01046         bcf STATUS, C
+                      01047         
+0107   0DA8           01048         rlf Channel,f
+0108   0DA8           01049         rlf Channel,f
+0109   0DA8           01050         rlf Channel,f
+                      01051         
+010A   0828           01052         movf Channel, W
+010B   3881           01053         iorlw 0x81
+010C   009F           01054         movwf ADCON0 ;fosc/32 clock conversion
+                      01055         
+                      01056         ;Small delay for ADC
+010D   3003           01057         movlw 0x03
+010E   00E1           01058         movwf 0x61
+010F                  01059 Delay5:
+010F   01E0           01060         clrf 0x60
+0110                  01061 Delay4:
+0110   0FE0           01062         incfsz 0x60, f
+0111   2910           01063         goto Delay4
+                      01064         
+0112   0BE1           01065         decfsz 0x61, f
+0113   290F           01066         goto Delay5
+                      01067         
+0114   081F           01068         movf ADCON0, W                          
+                      01069 
+                      01070         ;start conversion
+0115   151F           01071         bsf ADCON0, GO
+0116                  01072 ADCWait:
+0116   191F           01073         btfsc ADCON0,GO
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE 22
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0117   2916           01074         goto ADCWait
+                      01075         
+0118   081E           01076         movf ADRESH, W
+                      01077         
+0119   0080           01078         movwf INDF      
+                      01079 
+011A   0AAA           01080         incf InverseCount, f
+011B   0A84           01081         incf FSR, f
+011C   0BA9           01082         decfsz Count, f
+011D   2904           01083         goto ADCLoop
+                      01084 
+                      01085         ;debug : sending current and voltage reading to serial terminal
+                      01086 #ifdef DEBUG_ADC 
+                      01087         movlw '\n'
+                      01088         call Send
+                      01089         movlw '\n'
+                      01090         call Send
+                      01091         movlw '\n'
+                      01092         call Send
+                      01093         movlw '\r'
+                      01094         call Send
+                      01095         movlw 'I'
+                      01096         call Send
+                      01097         movlw '1'
+                      01098         call Send
+                      01099         movf TotalCurrent,w
+                      01100         call Send
+                      01101         movlw '\n'
+                      01102         call Send
+                      01103         movlw '\r'
+                      01104         call Send
+                      01105 
+                      01106         movlw 'I'
+                      01107         call Send
+                      01108         movlw '2'
+                      01109         call Send
+                      01110         movf ConsumptionCurrent,w
+                      01111         call Send
+                      01112         movlw '\n'
+                      01113         call Send
+                      01114         movlw '\r'
+                      01115         call Send
+                      01116         
+                      01117 
+                      01118         movlw 'V'
+                      01119         call Send
+                      01120         movlw '1'
+                      01121         call Send
+                      01122         movf BatteryVoltageBy2,w
+                      01123         call Send
+                      01124 
+                      01125         movlw '\n'
+                      01126         call Send
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE 23
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      01127         movlw '\r'
+                      01128         call Send
+                      01129 
+                      01130         movlw 'V'
+                      01131         call Send
+                      01132         movlw '2'
+                      01133         call Send
+                      01134         movf SixVolt,w
+                      01135         call Send
+                      01136         movlw '\n'
+                      01137         call Send
+                      01138         movlw '\r'
+                      01139         call Send
+                      01140         
+                      01141 
+                      01142         movlw 'V'
+                      01143         call Send
+                      01144         movlw '3'
+                      01145         call Send
+                      01146         movf DownlinkVoltageBy2,w
+                      01147         call Send
+                      01148         movlw '\n'
+                      01149         call Send
+                      01150         movlw '\r'
+                      01151         call Send
+                      01152         
+                      01153 #endif  
+                      01154 
+                      01155 
+                      01156         ;OC code
+                      01157         ;If component switched off and it should be on according to the OBC:
+                      01158         ;Check the Components timer, if 1 min is over, to switch it on again
+                      01159     ;confirm if component is switched off oc pin is high
+011E   0831           01160         movf CommandByte, W
+011F   0620           01161         xorwf LoadStatus, W
+                      01162         ;check if Load is off and OBC wants it on
+0120   00A8           01163         movwf Channel ; using Channel variable as its use in ADC is finished and now its free to use.
+                      01164         
+                      01165     ;Storing address of Timer for future reference of the temporary timers of the Loads
+0121   302C           01166     movlw Timer7
+0122   0084           01167     movwf FSR
+                      01168     ;PBEACON
+0123   1FA8           01169     btfss Channel, PBEACON
+0124   292C           01170     goto SkipOn7
+                      01171     ;Compare Timer and temporary Timer
+                      01172     CheckLoadTimer
+                          M 
+0125   082B               M         movf Timer, W
+0126   0200               M     subwf INDF,W
+0127   1D03               M         btfss STATUS, Z
+                          M     
+                      01173     
+0128   292C           01174     goto SkipOn7
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE 24
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      01175     ;If equal Turn on the Load
+                      01176         
+                      01177         #ifdef DEBUG
+                      01178                 call Mpoweron
+                      01179                 call Mbeacon
+                      01180         #endif
+                      01181         ;turn on PTH(when shutdown occurs durinf SafeMode PTH is also OFF..so it is needed)
+0129   1087           01182         bcf PORTC, 1 
+                      01183     TurnOnLoadOC PORTE, 0, PBEACON
+                          M     
+012A   1409               M     bsf PORTE,       0
+012B   17A0               M     bsf LoadStatus, PBEACON
+                          M     
+                      01184     
+012C                  01185 SkipOn7:
+012C   0A84           01186     incf FSR, f
+                      01187         ;PDOWNLINK
+012D   1E28           01188     btfss Channel, PDOWNLINK
+012E   2936           01189     goto SkipOn6
+                      01190     
+                      01191     CheckLoadTimer
+                          M 
+012F   082B               M         movf Timer, W
+0130   0200               M     subwf INDF,W
+0131   1D03               M         btfss STATUS, Z
+                          M     
+                      01192     
+0132   2936           01193     goto SkipOn6
+                      01194     
+                      01195         #ifdef DEBUG    
+                      01196                 call Mpoweron
+                      01197                 call Mdownlink   
+                      01198         #endif
+                      01199         ;turn on PTH(when shutdown occurs durinf SafeMode PTH is also OFF..so it is needed)
+0133   1087           01200         bcf PORTC, 1 
+                      01201     TurnOnLoadOC PORTE, 2, PDOWNLINK
+                          M     
+0134   1509               M     bsf PORTE,       2
+0135   1620               M     bsf LoadStatus, PDOWNLINK
+                          M     
+                      01202     
+0136                  01203 SkipOn6:
+0136   0A84           01204     incf FSR, f
+                      01205     ;PCONTROL
+0137   1F28           01206         btfss Channel, PCONTROL
+0138   2940           01207     goto SkipOn5
+                      01208     
+                      01209     CheckLoadTimer
+                          M 
+0139   082B               M         movf Timer, W
+013A   0200               M     subwf INDF,W
+013B   1D03               M         btfss STATUS, Z
+                          M     
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE 25
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      01210     
+013C   2940           01211     goto SkipOn5
+                      01212     
+                      01213         #ifdef DEBUG    
+                      01214                 call Mpoweron
+                      01215                 call Mcontrol  
+                      01216         #endif
+                      01217         ;turn on PTH
+013D   1088           01218         bcf PORTD, 1
+                      01219     TurnOnLoadOC PORTC, 2, PCONTROL
+                          M     
+013E   1507               M     bsf PORTC,       2
+013F   1720               M     bsf LoadStatus, PCONTROL
+                          M     
+                      01220     
+0140                  01221 SkipOn5:
+0140   0A84           01222         incf FSR, f
+                      01223         ;POBC
+0141   1DA8           01224     btfss Channel, POBC
+0142   294A           01225     goto SkipOn4
+                      01226     
+                      01227     CheckLoadTimer
+                          M 
+0143   082B               M         movf Timer, W
+0144   0200               M     subwf INDF,W
+0145   1D03               M         btfss STATUS, Z
+                          M     
+                      01228     
+0146   294A           01229     goto SkipOn4
+                      01230     
+                      01231         #ifdef DEBUG    
+                      01232                 call Mpoweron
+                      01233                 call Mobc  
+                      01234         #endif
+                      01235         ;turn on PTH
+0147   1287           01236         bcf PORTC, 5
+                      01237     TurnOnLoadOC PORTD, 2, POBC
+                          M     
+0148   1508               M     bsf PORTD,       2
+0149   15A0               M     bsf LoadStatus, POBC
+                          M     
+                      01238     
+014A                  01239 SkipOn4:
+014A   0A84           01240     incf FSR, f
+                      01241         ;PGPS
+014B   1EA8           01242     btfss Channel, PGPS
+014C   2954           01243     goto SkipOn3
+                      01244     
+                      01245     CheckLoadTimer
+                          M 
+014D   082B               M         movf Timer, W
+014E   0200               M     subwf INDF,W
+014F   1D03               M         btfss STATUS, Z
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE 26
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                          M     
+                      01246     
+0150   2954           01247     goto SkipOn3
+                      01248     
+                      01249         #ifdef DEBUG    
+                      01250                 call Mpoweron
+                      01251                 call Mgps
+                      01252         #endif
+                      01253         ;turn on PTH
+0151   1308           01254         bcf PORTD, 6
+                      01255     TurnOnLoadOC PORTD, 4, PGPS
+                          M     
+0152   1608               M     bsf PORTD,       4
+0153   16A0               M     bsf LoadStatus, PGPS
+                          M     
+                      01256     
+0154                  01257 SkipOn3:
+                      01258         
+                      01259         ;check if OC pin is low: if low switch off the Load and set it's timer
+                      01260  
+0154   302C           01261     movlw Timer7
+0155   0084           01262     movwf FSR
+                      01263    
+                      01264     ;skip check if load is turned off
+                      01265     ;PBEACON
+0156   1FA0           01266         btfss LoadStatus, PBEACON
+0157   295E           01267     goto SkipOff7
+                      01268         
+0158   1889           01269     btfsc PORTE, 1 ;OC Pin of TPS
+0159   295E           01270     goto SkipOff7
+                      01271         
+                      01272         #ifdef DEBUG
+                      01273                 call Mpoweroff
+                      01274                 call Mbeacon
+                      01275         #endif
+                      01276     TurnOffLoadOC PORTE, 0, PBEACON
+                          M 
+015A   1009               M     bcf PORTE,        0
+015B   13A0               M     bcf LoadStatus, PBEACON
+                          M 
+015C   082B               M     movf Timer, W
+015D   0080               M     movwf INDF
+                          M     
+                      01277     
+015E                  01278 SkipOff7:
+015E   0A84           01279     incf FSR, f
+                      01280     
+                      01281     ;PDOWNLINK
+015F   1E20           01282         btfss LoadStatus, PDOWNLINK
+0160   2967           01283     goto SkipOff6
+                      01284     
+0161   1807           01285     btfsc PORTC, 0
+0162   2967           01286     goto SkipOff6
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE 27
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      01287     
+                      01288         #ifdef DEBUG    
+                      01289                 call Mpoweroff
+                      01290                 call Mdownlink   
+                      01291         #endif
+                      01292         TurnOffLoadOC PORTE, 2, PDOWNLINK
+                          M 
+0163   1109               M     bcf PORTE,        2
+0164   1220               M     bcf LoadStatus, PDOWNLINK
+                          M 
+0165   082B               M     movf Timer, W
+0166   0080               M     movwf INDF
+                          M     
+                      01293     
+0167                  01294 SkipOff6:
+0167   0A84           01295     incf FSR, f
+                      01296 
+                      01297         ;PCONTROL
+0168   1F20           01298         btfss LoadStatus, PCONTROL
+0169   2971           01299     goto SkipOff5       
+                      01300         
+016A   1808           01301     btfsc PORTD, 0
+016B   2971           01302     goto SkipOff5
+                      01303    
+                      01304         #ifdef DEBUG
+                      01305                 call Mpoweroff
+                      01306                 call Mcontrol
+                      01307         #endif
+                      01308         ;turn off PTH
+016C   1488           01309         bsf PORTD, 1
+                      01310     TurnOffLoadOC PORTC, 2, PCONTROL
+                          M 
+016D   1107               M     bcf PORTC,        2
+016E   1320               M     bcf LoadStatus, PCONTROL
+                          M 
+016F   082B               M     movf Timer, W
+0170   0080               M     movwf INDF
+                          M     
+                      01311         
+0171                  01312 SkipOff5:
+0171   0A84           01313         incf FSR, f
+                      01314 
+                      01315     ;POBC
+0172   1DA0           01316         btfss LoadStatus, POBC
+0173   297B           01317     goto SkipOff4  
+                      01318 
+0174   1988           01319     btfsc PORTD, 3
+0175   297B           01320     goto SkipOff4
+                      01321     
+                      01322         #ifdef DEBUG    
+                      01323                 call Mpoweroff
+                      01324                 call Mobc
+                      01325         #endif
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE 28
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      01326         ;turn off PTH
+0176   1687           01327         bsf PORTC, 5
+                      01328     TurnOffLoadOC PORTD, 2, POBC
+                          M 
+0177   1108               M     bcf PORTD,        2
+0178   11A0               M     bcf LoadStatus, POBC
+                          M 
+0179   082B               M     movf Timer, W
+017A   0080               M     movwf INDF
+                          M     
+                      01329     
+017B                  01330 SkipOff4:
+017B   0A84           01331         incf FSR, f
+                      01332 
+                      01333     ;PGPS
+017C   1EA0           01334         btfss LoadStatus, PGPS
+017D   2985           01335     goto BatteryCheck
+                      01336     
+017E   1A88           01337     btfsc PORTD, 5
+017F   2985           01338     goto BatteryCheck
+                      01339     
+                      01340         #ifdef DEBUG
+                      01341                 call Mpoweroff
+                      01342                 call Mgps    
+                      01343         #endif         
+                      01344         ;turn off PTH
+0180   1708           01345         bsf PORTD, 6                              
+                      01346     TurnOffLoadOC PORTD, 4, PGPS
+                          M 
+0181   1208               M     bcf PORTD,        4
+0182   12A0               M     bcf LoadStatus, PGPS
+                          M 
+0183   082B               M     movf Timer, W
+0184   0080               M     movwf INDF
+                          M     
+                      01347 
+0185                  01348 BatteryCheck:
+                      01349 
+0185   3089           01350     movlw 0x89
+0186   009F           01351         movwf ADCON0 ;fosc/32 clock conversion
+                      01352         
+                      01353         ;Small delay for ADC
+0187   3003           01354         movlw 0x03
+0188   00E1           01355         movwf 0x61
+0189                  01356 Delaybattery1:
+0189   01E0           01357         clrf 0x60
+018A                  01358 Delaybattery2:
+018A   0FE0           01359         incfsz 0x60, f
+018B   298A           01360         goto Delaybattery2
+                      01361         
+018C   0BE1           01362         decfsz 0x61, f
+018D   2989           01363         goto Delaybattery1
+                      01364         
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE 29
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+018E   081F           01365         movf ADCON0, W                          
+                      01366 
+                      01367         ;start conversion
+018F   151F           01368         bsf ADCON0, GO
+0190                  01369 ADCWaitbattery:
+0190   191F           01370         btfsc ADCON0,GO
+0191   2990           01371         goto ADCWaitbattery
+                      01372         
+0192   081E           01373         movf ADRESH, W
+0193   00A2           01374         movwf BatteryVoltageBy2    
+                      01375 #ifdef DEBUG
+                      01376         movf BatteryVoltageBy2,w
+                      01377         call Send
+                      01378 #endif
+                      01379         ; Power Saving Mode check: If Battery Voltage drops below 6.4V (3.2V + 3.2V) power off PDOWNLINK
+                            , PCONTROL,  POBC, PGPS, PMAG
+                      01380         ; ADC Value is VBAT/2
+                      01381 
+0194   30A3           01382     movlw 0xA3      ;(VBat/2)*(255/5) gives 163 
+0195   0222           01383     subwf BatteryVoltageBy2, W
+0196   1803           01384     btfsc STATUS, C   
+0197   29C9           01385     goto SkipPowerSavingMode ;if Battery voltage is equal or grater than 6.4V then go to SkipPowerSaveMo
+                            de
+                      01386     
+                      01387         
+                      01388         ; Safe Mode check: If Battery Voltage drops below 6V (3V + 3V) power off everything
+0198   3099           01389         movlw 0x99
+0199   0222           01390     subwf BatteryVoltageBy2, W
+019A   1C03           01391     btfss STATUS, C   
+019B   29C5           01392     goto SafeMode 
+                      01393 
+                      01394         ; PowerSavingMode
+                      01395         
+                      01396         #ifdef DEBUG
+                      01397 ;               movlw '\t'
+                      01398 ;               call Send       
+                      01399                 movlw 'P'
+                      01400                 call Send
+                      01401                 movlw 'R'
+                      01402                 call Send
+                      01403                 movlw '0'
+                      01404                 call Send
+                      01405         #endif    
+019C   1109           01406         bcf PORTE, 2 ; PDOWNLINK TPS OFF        
+                      01407 
+019D   1488           01408         bsf PORTD, 1 ; PCONTROL PTH OFF
+019E   1107           01409         bcf PORTC, 2 ; PCONTROL TPS OFF
+                      01410 
+019F   1687           01411         bsf PORTC, 5 ; POBC PTH OFF
+01A0   1108           01412         bcf PORTD, 2 ; POBC TPS OFF
+                      01413 
+01A1   1708           01414         bsf PORTD, 6  ;PGPS PTH OFF                            
+01A2   1208           01415     bcf PORTD, 4  ;PGPS TPS OFF
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE 30
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      01416 
+01A3   1388           01417         bcf PORTD, 7 ; PMAG TPS OFF 
+                      01418     
+                      01419         ; checking if it is off due to overcurrent and timer timeout occur
+01A4   082B           01420         movf Timer, W
+01A5   022C           01421     subwf Timer7,W
+01A6   1D03           01422         btfss STATUS, Z 
+01A7   29AE           01423     goto SkipBeaconOn1
+                      01424 
+01A8   1409           01425         bsf PORTE, 0 ;PBEACON TPS ON
+01A9   1087           01426         bcf PORTC, 1 ;PBEACON & PDOWNLINK PTH ON
+01AA   3000           01427         movlw 0x00
+01AB   00B4           01428         movwf BeaconOCflag
+01AC   3080           01429         movlw b'10000000' ;Bit 7 to 0 => B:C:G:D:O:M:-:-
+01AD   00A0           01430         movwf LoadStatus
+                      01431         #ifdef DEBUG
+                      01432                 call Mpoweron
+                      01433                 call Mbeacon
+                      01434         #endif
+01AE                  01435 SkipBeaconOn1:
+                      01436         ; Beacon should be ON if it is not drawing over current
+01AE   1889           01437         btfsc PORTE, 1 ;OC Pin of TPS
+01AF   29B9           01438     goto SkipBeaconOff
+01B0   3001           01439         movlw 0x01
+01B1   00B4           01440         movwf BeaconOCflag
+01B2   1009           01441     bcf PORTE, 0 ;PBEACON TPS OFF
+01B3   1487           01442         bsf PORTC, 1 ;PBEACON & PDOWNLINK PTH OFF
+                      01443         #ifdef DEBUG
+                      01444                 call Mpoweroff
+                      01445                 call Mbeacon
+                      01446         #endif
+01B4   082B           01447         movf Timer,W 
+01B5   00AC           01448         movwf Timer7
+01B6                  01449 SkipBeaconOn2:
+01B6   3000           01450         movlw b'00000000' ;Bit 7 to 0 => B:C:G:D:O:M:-:-
+01B7   00A0           01451         movwf LoadStatus
+01B8   29BF           01452         goto PowerSavingModeEND
+                      01453 
+01B9                  01454 SkipBeaconOff:
+01B9   1C34           01455         btfss BeaconOCflag,0
+01BA   29B6           01456         goto SkipBeaconOn2
+01BB   1409           01457         bsf PORTE, 0 ;PBEACON TPS ON
+01BC   1087           01458         bcf PORTC, 1 ;PBEACON & PDOWNLINK PTH ON
+01BD   3080           01459     movlw b'10000000' ;Bit 7 to 0 => B:C:G:D:O:M:-:-
+01BE   00A0           01460         movwf LoadStatus
+                      01461 
+01BF                  01462 PowerSavingModeEND:
+01BF   3041           01463     movlw b'01000001' ;Bit 7 to 0 => SafeMode : PowerSavingMode :-:-:-:-:-:BatteryCheckMode
+01C0   00A6           01464         movwf BatteryStatus
+01C1   0AAB           01465         incf Timer, f
+                      01466         ;0.2 second delay for the main loop
+01C2   3002           01467         movlw 2 ;0.1973815 sec delay
+01C3   2098           01468         call DelayS
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE 31
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+01C4   2985           01469         goto BatteryCheck
+                      01470 
+01C5                  01471 SafeMode:
+01C5   207E           01472         call Shutdown
+01C6   3081           01473         movlw b'10000001' ;Bit 7 to 0 => safemode : powersavingmode :-:-:-:-:-:BatteryCheckMode
+01C7   00A6           01474         movwf BatteryStatus    
+01C8   2985           01475         goto BatteryCheck
+                      01476 
+01C9                  01477 SkipPowerSavingMode:
+01C9   1C26           01478         btfss BatteryStatus,0
+01CA   29F3           01479         goto SkipRestoreLoad
+                      01480                 ;Check if Load has been turned off by Power MuC even when it should be on according to t
+                            he OBC
+                      01481         #ifdef DEBUG
+                      01482 ;               movlw '\t'
+                      01483 ;               call Send       
+                      01484                 movlw 'R'
+                      01485                 call Send
+                      01486         #endif
+                      01487         
+                      01488         ;PBeacon
+01CB   1BB1           01489         btfsc CommandByte, PBEACON 
+01CC   29CF           01490         goto SkipB2
+01CD   1009           01491     bcf PORTE, 0 ;OFF TPS 
+                      01492         #ifdef DEBUG
+                      01493                 call Mpoweroff
+                      01494         #endif
+                      01495         #ifdef DEBUG
+                      01496                 call Mbeacon
+                      01497         #endif
+01CE   29D0           01498     goto SkipLoadCheck7
+01CF                  01499 SkipB2:
+01CF   1409           01500     bsf PORTE, 0 ;ON TPS
+                      01501         #ifdef DEBUG
+                      01502                 call Mpoweron
+                      01503         #endif
+                      01504     #ifdef DEBUG
+                      01505                 call Mbeacon
+                      01506         #endif
+                      01507 
+01D0                  01508 SkipLoadCheck7:
+                      01509         ;PDownlink
+01D0   1A31           01510         btfsc CommandByte, PDOWNLINK
+01D1   29D4           01511         goto SkipD2
+01D2   1109           01512     bcf PORTE, 2 ;OFF TPS
+                      01513         #ifdef DEBUG
+                      01514                 call Mpoweroff
+                      01515         #endif
+                      01516         #ifdef DEBUG
+                      01517                 call Mdownlink
+                      01518         #endif
+01D3   29D5           01519         goto SkipLoadCheck6
+01D4                  01520 SkipD2:    
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE 32
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+01D4   1509           01521         bsf PORTE, 2 ;ON TPS
+                      01522         #ifdef DEBUG
+                      01523                 call Mpoweron
+                      01524         #endif
+                      01525         #ifdef DEBUG
+                      01526                 call Mdownlink
+                      01527         #endif
+                      01528 
+01D5                  01529 SkipLoadCheck6:
+                      01530         ;PControl
+01D5   1B31           01531         btfsc CommandByte, PCONTROL
+01D6   29DA           01532         goto SkipC2
+01D7   1107           01533     bcf PORTC, 2 ;OFF TPS
+01D8   1488           01534         bsf PORTD, 1 ;OFF PTH
+                      01535         #ifdef DEBUG
+                      01536                 call Mpoweroff
+                      01537         #endif
+                      01538         #ifdef DEBUG
+                      01539                 call Mcontrol
+                      01540         #endif
+01D9   29DC           01541     goto SkipLoadCheck5
+01DA                  01542 SkipC2:
+01DA   1507           01543     bsf PORTC, 2 ;ON TPS
+01DB   1088           01544         bcf PORTD, 1 ;ON PTH
+                      01545         #ifdef DEBUG
+                      01546                 call Mpoweron
+                      01547         #endif
+                      01548         #ifdef DEBUG
+                      01549                 call Mcontrol
+                      01550         #endif
+                      01551 
+01DC                  01552 SkipLoadCheck5:
+                      01553         ;POBC
+01DC   19B1           01554         btfsc CommandByte, POBC
+01DD   29E1           01555         goto SkipO2
+01DE   1108           01556     bcf PORTD, 2 ;OFF TPS
+01DF   1687           01557         bsf PORTC, 5 ;OFF PTH 
+                      01558         #ifdef DEBUG
+                      01559                 call Mpoweroff
+                      01560         #endif
+                      01561         #ifdef DEBUG
+                      01562                 call Mobc
+                      01563         #endif
+01E0   29E3           01564     goto SkipLoadCheck4
+01E1                  01565 SkipO2:
+01E1   1508           01566     bsf PORTD, 2 ;ON TPS
+01E2   1287           01567         bcf PORTC, 5 ;ON PTH
+                      01568         #ifdef DEBUG
+                      01569                 call Mpoweron
+                      01570         #endif
+                      01571         #ifdef DEBUG
+                      01572                 call Mobc
+                      01573         #endif
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE 33
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      01574         
+01E3                  01575 SkipLoadCheck4:
+                      01576         ;PGPS
+01E3   1AB1           01577         btfsc CommandByte, PGPS
+01E4   29E8           01578         goto SkipG2
+01E5   1208           01579     bcf PORTD, 4 ;OFF TPS
+01E6   1708           01580         bsf PORTD, 6 ;OFF PTH
+                      01581         #ifdef DEBUG
+                      01582                 call Mpoweroff
+                      01583         #endif
+                      01584         #ifdef DEBUG
+                      01585                 call Mgps
+                      01586         #endif
+01E7   29EA           01587     goto SkipLoadCheck3
+01E8                  01588 SkipG2:
+01E8   1608           01589     bsf PORTD, 4 ;ON TPS
+01E9   1308           01590         bcf PORTD, 6 ;ON PTH
+                      01591         #ifdef DEBUG
+                      01592                 call Mpoweron
+                      01593         #endif
+                      01594         #ifdef DEBUG
+                      01595                 call Mgps
+                      01596         #endif
+                      01597 
+01EA                  01598 SkipLoadCheck3:
+                      01599         ;PMAG
+01EA   1931           01600         btfsc CommandByte, PMAG 
+01EB   29EE           01601         goto SkipM2
+01EC   1388           01602     bcf PORTD, 7 ;OFF TPS
+                      01603         #ifdef DEBUG
+                      01604                 call Mpoweroff
+                      01605         #endif
+                      01606         #ifdef DEBUG
+                      01607                 call Mmag
+                      01608         #endif
+                      01609 
+01ED   29EF           01610     goto SkipLoadCheck2
+01EE                  01611 SkipM2:
+01EE   1788           01612     bsf PORTD, 7 ;ON TPS
+                      01613         #ifdef DEBUG
+                      01614                 call Mpoweron
+                      01615         #endif
+                      01616         #ifdef DEBUG
+                      01617                 call Mmag
+                      01618         #endif
+                      01619 
+01EF                  01620 SkipLoadCheck2:
+                      01621         ;Copy CommandByte to LoadStatus
+01EF   0831           01622         movf CommandByte, W
+01F0   00A0           01623         movwf LoadStatus
+01F1   3000           01624         movlw b'00000000' ;Bit 7 to 0 => SafeMode : PowerSavingMode :-:-:-:-:-:BatteryCheckMode
+01F2   00A6           01625         movwf BatteryStatus
+                      01626 
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE 34
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+01F3                  01627 SkipRestoreLoad:
+                      01628 
+                      01629 
+                      01630         ;increment timer required for OC
+01F3   0AAB           01631         incf Timer, f
+                      01632         
+                      01633         ;0.2 second delay for the main loop
+01F4   3002           01634         movlw 2 ;0.1973815 sec delay
+01F5   2098           01635         call DelayS
+                      01636 
+01F6   28E3           01637         goto Loop
+                      01638 
+01F7                  01639 Kill:
+01F7   207E           01640         call Shutdown
+                      01641          
+01F8                  01642 EndLoop
+01F8   0000           01643         nop
+01F9   29F8           01644         goto EndLoop
+                      01645         
+                      01646         end
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE 35
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+ACKDT                             00000005
+ACKEN                             00000004
+ACKSTAT                           00000006
+ADCLoop                           00000104
+ADCON0                            0000001F
+ADCON1                            0000009F
+ADCS0                             00000006
+ADCS1                             00000007
+ADCS2                             00000006
+ADCWait                           00000116
+ADCWaitbattery                    00000190
+ADDEN                             00000003
+ADFM                              00000007
+ADIE                              00000006
+ADIF                              00000006
+ADON                              00000000
+ADRESH                            0000001E
+ADRESL                            0000009E
+BCLIE                             00000003
+BCLIF                             00000003
+BF                                00000000
+BRGH                              00000002
+BatteryCheck                      00000185
+BatteryStatus                     00000026
+BatteryVoltageBy2                 00000022
+BeaconOCflag                      00000034
+BitCheck                          000000F4
+C                                 00000000
+C1INV                             00000004
+C1OUT                             00000006
+C2INV                             00000005
+C2OUT                             00000007
+CCP1CON                           00000017
+CCP1IE                            00000002
+CCP1IF                            00000002
+CCP1M0                            00000000
+CCP1M1                            00000001
+CCP1M2                            00000002
+CCP1M3                            00000003
+CCP1X                             00000005
+CCP1Y                             00000004
+CCP2CON                           0000001D
+CCP2IE                            00000000
+CCP2IF                            00000000
+CCP2M0                            00000000
+CCP2M1                            00000001
+CCP2M2                            00000002
+CCP2M3                            00000003
+CCP2X                             00000005
+CCP2Y                             00000004
+CCPR1                             00000015
+CCPR1H                            00000016
+CCPR1L                            00000015
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE 36
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+CCPR2                             0000001B
+CCPR2H                            0000001C
+CCPR2L                            0000001B
+CHS0                              00000003
+CHS1                              00000004
+CHS2                              00000005
+CIS                               00000003
+CKE                               00000006
+CKP                               00000004
+CM0                               00000000
+CM1                               00000001
+CM2                               00000002
+CMCON                             0000009C
+CMIE                              00000006
+CMIF                              00000006
+CREN                              00000004
+CSRC                              00000007
+CVR0                              00000000
+CVR1                              00000001
+CVR2                              00000002
+CVR3                              00000003
+CVRCON                            0000009D
+CVREN                             00000007
+CVROE                             00000006
+CVRR                              00000005
+Channel                           00000028
+CheckLoadTimer                    
+CommandByte                       00000031
+ConsumptionCurrent                00000023
+Count                             00000029
+D                                 00000005
+DATA_ADDRESS                      00000005
+DC                                00000001
+D_A                               00000005
+D_NOT_A                           00000005
+Delay1                            0000009B
+Delay108                          00000091
+Delay109                          00000090
+Delay2                            0000009A
+Delay20                           0000008F
+Delay3                            00000099
+Delay4                            00000110
+Delay5                            0000010F
+DelayS                            00000098
+Delay_1s                          0000008D
+Delaybattery1                     00000189
+Delaybattery2                     0000018A
+DownlinkVoltageBy2                00000025
+EEADR                             0000010D
+EEADRH                            0000010F
+EECON1                            0000018C
+EECON2                            0000018D
+EEDATA                            0000010C
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE 37
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+EEDATH                            0000010E
+EEIE                              00000004
+EEIF                              00000004
+EEPGD                             00000007
+EndLoop                           000001F8
+ExitI2C                           0000005C
+ExitISR                           00000010
+F                                 00000001
+FERR                              00000002
+FSR                               00000004
+GCEN                              00000007
+GIE                               00000007
+GO                                00000002
+GO_DONE                           00000002
+GO_NOT_DONE                       00000002
+HMCounter                         00000027
+I2CHandler                        00000016
+I2C_ADDR                          00000044
+I2C_DATA                          00000005
+I2C_READ                          00000002
+I2C_START                         00000003
+I2C_STOP                          00000004
+IBF                               00000007
+IBOV                              00000005
+INDF                              00000000
+INTCON                            0000000B
+INTE                              00000004
+INTEDG                            00000006
+INTF                              00000001
+IRP                               00000007
+InverseCount                      0000002A
+Kill                              000001F7
+LoadStatus                        00000020
+Loop                              000000E3
+NOT_A                             00000005
+NOT_ADDRESS                       00000005
+NOT_BO                            00000000
+NOT_BOR                           00000000
+NOT_DONE                          00000002
+NOT_PD                            00000003
+NOT_POR                           00000001
+NOT_RBPU                          00000007
+NOT_RC8                           00000006
+NOT_T1SYNC                        00000002
+NOT_TO                            00000004
+NOT_TX8                           00000006
+NOT_W                             00000002
+NOT_WRITE                         00000002
+OBCCommandResponse                00000031
+OBF                               00000006
+OERR                              00000001
+OPTION_REG                        00000081
+P                                 00000004
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE 38
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+PBEACON                           00000007
+PCFG0                             00000000
+PCFG1                             00000001
+PCFG2                             00000002
+PCFG3                             00000003
+PCL                               00000002
+PCLATH                            0000000A
+PCON                              0000008E
+PCONTROL                          00000006
+PDOWNLINK                         00000004
+PEIE                              00000006
+PEN                               00000002
+PGPS                              00000005
+PIE1                              0000008C
+PIE2                              0000008D
+PIR1                              0000000C
+PIR2                              0000000D
+PMAG                              00000002
+POBC                              00000003
+PORTA                             00000005
+PORTB                             00000006
+PORTC                             00000007
+PORTD                             00000008
+PORTE                             00000009
+PR2                               00000092
+PS0                               00000000
+PS1                               00000001
+PS2                               00000002
+PSA                               00000003
+PSPIE                             00000007
+PSPIF                             00000007
+PSPMODE                           00000004
+PowerSavingModeEND                000001BF
+Preflight                         000000CB
+R                                 00000002
+RA0                               00000000
+RA1                               00000001
+RA2                               00000002
+RA3                               00000003
+RA4                               00000004
+RA5                               00000005
+RB0                               00000000
+RB1                               00000001
+RB2                               00000002
+RB3                               00000003
+RB4                               00000004
+RB5                               00000005
+RB6                               00000006
+RB7                               00000007
+RBIE                              00000003
+RBIF                              00000000
+RC0                               00000000
+RC1                               00000001
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE 39
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+RC2                               00000002
+RC3                               00000003
+RC4                               00000004
+RC5                               00000005
+RC6                               00000006
+RC7                               00000007
+RC8_9                             00000006
+RC9                               00000006
+RCD8                              00000000
+RCEN                              00000003
+RCIE                              00000005
+RCIF                              00000005
+RCREG                             0000001A
+RCSTA                             00000018
+RD                                00000000
+RD0                               00000000
+RD1                               00000001
+RD2                               00000002
+RD3                               00000003
+RD4                               00000004
+RD5                               00000005
+RD6                               00000006
+RD7                               00000007
+RE0                               00000000
+RE1                               00000001
+RE2                               00000002
+READ_WRITE                        00000002
+RP0                               00000005
+RP1                               00000006
+RSEN                              00000001
+RX9                               00000006
+RX9D                              00000000
+R_NOT_W                           00000002
+R_W                               00000002
+RealSleep                         000000C0
+S                                 00000003
+SEN                               00000000
+SMP                               00000007
+SPBRG                             00000099
+SPEN                              00000007
+SREN                              00000005
+SSPADD                            00000093
+SSPBUF                            00000013
+SSPCON                            00000014
+SSPCON2                           00000091
+SSPEN                             00000005
+SSPIE                             00000003
+SSPIF                             00000003
+SSPM0                             00000000
+SSPM1                             00000001
+SSPM2                             00000002
+SSPM3                             00000003
+SSPOV                             00000006
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE 40
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+SSPSTAT                           00000094
+STATUS                            00000003
+SYNC                              00000004
+SafeMode                          000001C5
+SendHMData                        0000001C
+Shutdown                          0000007E
+SixVolt                           00000024
+SkipB1                            00000039
+SkipB2                            000001CF
+SkipBeaconOff                     000001B9
+SkipBeaconOn1                     000001AE
+SkipBeaconOn2                     000001B6
+SkipC1                            00000044
+SkipC2                            000001DA
+SkipCheck2                        00000059
+SkipCheck3                        00000054
+SkipCheck4                        0000004D
+SkipCheck5                        00000046
+SkipCheck6                        0000003F
+SkipCheck7                        0000003A
+SkipD1                            0000003E
+SkipD2                            000001D4
+SkipG1                            00000052
+SkipG2                            000001E8
+SkipI2CData                       0000005B
+SkipLoadCheck2                    000001EF
+SkipLoadCheck3                    000001EA
+SkipLoadCheck4                    000001E3
+SkipLoadCheck5                    000001DC
+SkipLoadCheck6                    000001D5
+SkipLoadCheck7                    000001D0
+SkipM1                            00000058
+SkipM2                            000001EE
+SkipO1                            0000004B
+SkipO2                            000001E1
+SkipOff4                          0000017B
+SkipOff5                          00000171
+SkipOff6                          00000167
+SkipOff7                          0000015E
+SkipOn3                           00000154
+SkipOn4                           0000014A
+SkipOn5                           00000140
+SkipOn6                           00000136
+SkipOn7                           0000012C
+SkipPowerSavingMode               000001C9
+SkipPreflight                     000000FF
+SkipRestoreLoad                   000001F3
+SkipUplink                        000000EF
+SleepMode                         000000A2
+Snap                              000000C9
+Start                             000000CD
+Startup                           0000006E
+Startup_all                       0000005E
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE 41
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+State                             00000033
+T0CS                              00000005
+T0IE                              00000005
+T0IF                              00000002
+T0SE                              00000004
+T1CKPS0                           00000004
+T1CKPS1                           00000005
+T1CON                             00000010
+T1INSYNC                          00000002
+T1OSCEN                           00000003
+T1SYNC                            00000002
+T2CKPS0                           00000000
+T2CKPS1                           00000001
+T2CON                             00000012
+TMR0                              00000001
+TMR0IE                            00000005
+TMR0IF                            00000002
+TMR1CS                            00000001
+TMR1H                             0000000F
+TMR1IE                            00000000
+TMR1IF                            00000000
+TMR1L                             0000000E
+TMR1ON                            00000000
+TMR2                              00000011
+TMR2IE                            00000001
+TMR2IF                            00000001
+TMR2ON                            00000002
+TOUTPS0                           00000003
+TOUTPS1                           00000004
+TOUTPS2                           00000005
+TOUTPS3                           00000006
+TRISA                             00000085
+TRISA0                            00000000
+TRISA1                            00000001
+TRISA2                            00000002
+TRISA3                            00000003
+TRISA4                            00000004
+TRISA5                            00000005
+TRISB                             00000086
+TRISB0                            00000000
+TRISB1                            00000001
+TRISB2                            00000002
+TRISB3                            00000003
+TRISB4                            00000004
+TRISB5                            00000005
+TRISB6                            00000006
+TRISB7                            00000007
+TRISC                             00000087
+TRISC0                            00000000
+TRISC1                            00000001
+TRISC2                            00000002
+TRISC3                            00000003
+TRISC4                            00000004
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE 42
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+TRISC5                            00000005
+TRISC6                            00000006
+TRISC7                            00000007
+TRISD                             00000088
+TRISD0                            00000000
+TRISD1                            00000001
+TRISD2                            00000002
+TRISD3                            00000003
+TRISD4                            00000004
+TRISD5                            00000005
+TRISD6                            00000006
+TRISD7                            00000007
+TRISE                             00000089
+TRISE0                            00000000
+TRISE1                            00000001
+TRISE2                            00000002
+TRMT                              00000001
+TWIByte                           00000032
+TX8_9                             00000006
+TX9                               00000006
+TX9D                              00000000
+TXD8                              00000000
+TXEN                              00000005
+TXIE                              00000004
+TXIF                              00000004
+TXREG                             00000019
+TXSTA                             00000098
+Timer                             0000002B
+Timer3                            00000030
+Timer4                            0000002F
+Timer5                            0000002E
+Timer6                            0000002D
+Timer7                            0000002C
+TotalCurrent                      00000021
+TurnOffLoadOC                     
+TurnOnLoadOC                      
+UA                                00000001
+W                                 00000000
+WCOL                              00000007
+WR                                00000001
+WREN                              00000002
+WRERR                             00000003
+WriteI2C                          00000025
+Z                                 00000002
+_BODEN_OFF                        00003FBF
+_BODEN_ON                         00003FFF
+_CONFIG                           00002007
+_CPD_OFF                          00003FFF
+_CPD_ON                           00003EFF
+_CP_ALL                           00001FFF
+_CP_OFF                           00003FFF
+_DEBUG_OFF                        00003FFF
+_DEBUG_ON                         000037FF
+MPASM  5.39                    POWER_V1_4.ASM   12-12-2012  1:39:07         PAGE 43
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+_DEVID1                           00002006
+_HS_OSC                           00003FFE
+_IDLOC0                           00002000
+_IDLOC1                           00002001
+_IDLOC2                           00002002
+_IDLOC3                           00002003
+_LP_OSC                           00003FFC
+_LVP_OFF                          00003F7F
+_LVP_ON                           00003FFF
+_PWRTE_OFF                        00003FFF
+_PWRTE_ON                         00003FF7
+_RC_OSC                           00003FFF
+_WDT_OFF                          00003FFB
+_WDT_ON                           00003FFF
+_WRT_1FOURTH                      00003BFF
+_WRT_256                          00003DFF
+_WRT_HALF                         000039FF
+_WRT_OFF                          00003FFF
+_XT_OSC                           00003FFD
+__16F877A                         00000001
+fsr_temp                          00000072
+status_temp                       00000071
+status_temp_send                  00000074
+w_temp                            00000070
+w_temp_send                       00000073
+
+
+MEMORY USAGE MAP ('X' = Used,  '-' = Unused)
+
+0000 : X---XXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
+0040 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
+0080 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
+00C0 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
+0100 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
+0140 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
+0180 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
+01C0 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXX------
+2000 : -------X-------- ---------------- ---------------- ----------------
+
+All other memory blocks unused.
+
+Program Memory Words Used:   503
+Program Memory Words Free:  7689
+
+
+Errors   :     0
+Warnings :     0 reported,     0 suppressed
+Messages :    30 reported,     0 suppressed
+
+

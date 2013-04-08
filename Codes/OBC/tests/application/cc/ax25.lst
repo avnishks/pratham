@@ -1,0 +1,638 @@
+GAS LISTING /tmp/ccSIJRd1.s 			page 1
+
+
+   1               		.file	"ax25.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+   8               		.global __do_copy_data
+   9               		.global __do_clear_bss
+  10               		.stabs	"/home/chaitan3/Satellite/OBC/tests/application/cc/",100,0,2,.Ltext0
+  11               		.stabs	"ax25.c",100,0,2,.Ltext0
+  12               		.text
+  13               	.Ltext0:
+  14               		.stabs	"gcc2_compiled.",60,0,0,0
+  15               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,1,0
+  16               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,1,0
+  17               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,1,0
+  18               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,1,0
+  19               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,1,0
+  20               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,1,
+  21               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,1,0
+  22               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,1,0
+  23               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,1,0
+  24               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,1,0
+  25               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,1,0
+  26               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,1,0
+  27               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,1,0
+  28               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,1,0
+  29               		.stabs	"void:t(0,15)=(0,15)",128,0,1,0
+  30               		.stabs	"common.h",130,0,0,0
+  31               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/avr/io.h",130,0,0,0
+  32               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/avr/sfr_defs.h",130,0,0,0
+  33               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/inttypes.h",130,0,0,0
+  34               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/stdint.h",130,0,0,0
+  35               		.stabs	"int8_t:t(5,1)=(0,10)",128,0,121,0
+  36               		.stabs	"uint8_t:t(5,2)=(0,11)",128,0,122,0
+  37               		.stabs	"int16_t:t(5,3)=(0,1)",128,0,123,0
+  38               		.stabs	"uint16_t:t(5,4)=(0,4)",128,0,124,0
+  39               		.stabs	"int32_t:t(5,5)=(0,3)",128,0,125,0
+  40               		.stabs	"uint32_t:t(5,6)=(0,5)",128,0,126,0
+  41               		.stabs	"int64_t:t(5,7)=(0,6)",128,0,128,0
+  42               		.stabs	"uint64_t:t(5,8)=(0,7)",128,0,129,0
+  43               		.stabs	"intptr_t:t(5,9)=(5,3)",128,0,142,0
+  44               		.stabs	"uintptr_t:t(5,10)=(5,4)",128,0,147,0
+  45               		.stabs	"int_least8_t:t(5,11)=(5,1)",128,0,159,0
+  46               		.stabs	"uint_least8_t:t(5,12)=(5,2)",128,0,164,0
+  47               		.stabs	"int_least16_t:t(5,13)=(5,3)",128,0,169,0
+  48               		.stabs	"uint_least16_t:t(5,14)=(5,4)",128,0,174,0
+  49               		.stabs	"int_least32_t:t(5,15)=(5,5)",128,0,179,0
+  50               		.stabs	"uint_least32_t:t(5,16)=(5,6)",128,0,184,0
+  51               		.stabs	"int_least64_t:t(5,17)=(5,7)",128,0,192,0
+  52               		.stabs	"uint_least64_t:t(5,18)=(5,8)",128,0,199,0
+  53               		.stabs	"int_fast8_t:t(5,19)=(5,1)",128,0,213,0
+  54               		.stabs	"uint_fast8_t:t(5,20)=(5,2)",128,0,218,0
+  55               		.stabs	"int_fast16_t:t(5,21)=(5,3)",128,0,223,0
+  56               		.stabs	"uint_fast16_t:t(5,22)=(5,4)",128,0,228,0
+  57               		.stabs	"int_fast32_t:t(5,23)=(5,5)",128,0,233,0
+GAS LISTING /tmp/ccSIJRd1.s 			page 2
+
+
+  58               		.stabs	"uint_fast32_t:t(5,24)=(5,6)",128,0,238,0
+  59               		.stabs	"int_fast64_t:t(5,25)=(5,7)",128,0,246,0
+  60               		.stabs	"uint_fast64_t:t(5,26)=(5,8)",128,0,253,0
+  61               		.stabs	"intmax_t:t(5,27)=(5,7)",128,0,273,0
+  62               		.stabs	"uintmax_t:t(5,28)=(5,8)",128,0,278,0
+  63               		.stabn	162,0,0,0
+  64               		.stabs	"int_farptr_t:t(4,1)=(5,5)",128,0,77,0
+  65               		.stabs	"uint_farptr_t:t(4,2)=(5,6)",128,0,81,0
+  66               		.stabn	162,0,0,0
+  67               		.stabn	162,0,0,0
+  68               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/avr/fuse.h",130,0,0,0
+  69               		.stabs	"__fuse_t:t(6,1)=(6,2)=s2low:(0,11),0,8;high:(0,11),8,8;;",128,0,247,0
+  70               		.stabn	162,0,0,0
+  71               		.stabn	162,0,0,0
+  72               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/stdlib.h",130,0,0,0
+  73               		.stabs	"/usr/lib/gcc/avr/4.3.4/include/stddef.h",130,0,0,0
+  74               		.stabs	"size_t:t(8,1)=(0,4)",128,0,214,0
+  75               		.stabs	"wchar_t:t(8,2)=(0,1)",128,0,326,0
+  76               		.stabn	162,0,0,0
+  77               		.stabs	"div_t:t(7,1)=(7,2)=s4quot:(0,1),0,16;rem:(0,1),16,16;;",128,0,71,0
+  78               		.stabs	"ldiv_t:t(7,3)=(7,4)=s8quot:(0,3),0,32;rem:(0,3),32,32;;",128,0,77,0
+  79               		.stabs	"__compar_fn_t:t(7,5)=(7,6)=*(7,7)=f(0,1)",128,0,80,0
+  80               		.stabn	162,0,0,0
+  81               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/stdio.h",130,0,0,0
+  82               		.stabs	"/usr/lib/gcc/avr/4.3.4/include/stdarg.h",130,0,0,0
+  83               		.stabs	"__gnuc_va_list:t(10,1)=(10,2)=*(0,15)",128,0,43,0
+  84               		.stabs	"va_list:t(10,3)=(10,1)",128,0,105,0
+  85               		.stabn	162,0,0,0
+  86               		.stabs	"__file:T(9,1)=s14buf:(9,2)=*(0,2),0,16;unget:(0,11),16,8;flags:(5,2),24,8;size:(0,1),32,16
+  87               		.stabn	162,0,0,0
+  88               		.stabn	162,0,0,0
+  89               		.stabs	"update_crc_16:F(5,4)",36,0,45,update_crc_16
+  90               		.stabs	"byte:P(5,2)",64,0,44,19
+  91               		.stabs	"crc:P(5,4)",64,0,44,22
+  92               	.global	update_crc_16
+  93               		.type	update_crc_16, @function
+  94               	update_crc_16:
+  95               		.stabd	46,0,0
+   0:ax25.c        **** #include "common.h"
+   1:ax25.c        **** #include "ax25.h"
+   2:ax25.c        **** 
+   3:ax25.c        **** void make_ax25_frame_from_data(uint8_t *frame, uint8_t *data)
+   4:ax25.c        **** {
+   5:ax25.c        ****   uint8_t i, buf[10], size = 0;
+   6:ax25.c        ****   uint16_t crc;
+   7:ax25.c        ****   
+   8:ax25.c        ****   frame[size++] = AX_FLAG;
+   9:ax25.c        ****   
+  10:ax25.c        ****   memcpy(buf, "CQ    ", AX_ADDR_SIZE);
+  11:ax25.c        ****   for(i = 0; i < AX_ADDR_SIZE; i++)
+  12:ax25.c        ****     frame[i + size] = buf[i] << 1;
+  13:ax25.c        ****   size += AX_ADDR_SIZE;
+  14:ax25.c        ****   frame[size++] = 0b01100000;
+  15:ax25.c        ****   
+  16:ax25.c        ****   memcpy(buf, "VU2DMQ", AX_ADDR_SIZE);
+  17:ax25.c        ****   for(i = 0; i < AX_ADDR_SIZE; i++)
+  18:ax25.c        ****     frame[i + size] = buf[i] << 1;
+GAS LISTING /tmp/ccSIJRd1.s 			page 3
+
+
+  19:ax25.c        ****   size += AX_ADDR_SIZE;
+  20:ax25.c        ****   frame[size++] = 0b01101000;
+  21:ax25.c        ****   
+  22:ax25.c        ****   memcpy(buf, "RELAY ", AX_ADDR_SIZE);
+  23:ax25.c        ****   for(i = 0; i < AX_ADDR_SIZE; i++)
+  24:ax25.c        ****     frame[i + size] = buf[i] << 1;
+  25:ax25.c        ****   size += AX_ADDR_SIZE;
+  26:ax25.c        ****   frame[size++] = 0b01100001;
+  27:ax25.c        ****   
+  28:ax25.c        ****   frame[size++] = AX_CONTROL;
+  29:ax25.c        ****   frame[size++] = AX_PID;
+  30:ax25.c        ****   
+  31:ax25.c        ****   memcpy(frame + size, data, HM_SIZE);
+  32:ax25.c        ****   size += HM_SIZE;
+  33:ax25.c        ****   
+  34:ax25.c        ****   crc = calculate_crc_16(frame + 1, FRAME_SIZE - 4);
+  35:ax25.c        ****   
+  36:ax25.c        ****   memcpy(frame + size, &crc, 2);
+  37:ax25.c        ****   size += 2;
+  38:ax25.c        ****   
+  39:ax25.c        ****   frame[size] = AX_FLAG;
+  40:ax25.c        ****   
+  41:ax25.c        **** }
+  42:ax25.c        **** 
+  43:ax25.c        **** uint16_t update_crc_16(uint8_t byte, uint16_t crc)
+  44:ax25.c        **** {
+  96               		.stabn	68,0,45,.LM0-.LFBB1
+  97               	.LM0:
+  98               	.LFBB1:
+  99               	/* prologue: function */
+ 100               	/* frame size = 0 */
+ 101 0000 382F      		mov r19,r24
+ 102               		.stabn	68,0,45,.LM1-.LFBB1
+ 103               	.LM1:
+ 104 0002 20E0      		ldi r18,lo8(0)
+  45:ax25.c        ****   uint8_t bit, crcbit, j;
+  46:ax25.c        ****   
+  47:ax25.c        ****   for (j = 0; j < 8; j++)
+  48:ax25.c        ****   {
+  49:ax25.c        ****     bit = byte & 0x01;      
+  50:ax25.c        ****     crcbit = crc & 0x01;
+  51:ax25.c        ****     crc = crc >> 1;      
+  52:ax25.c        ****     if (bit != crcbit)
+  53:ax25.c        ****       crc ^= CRC_CCIT_REV;
+ 105               		.stabn	68,0,54,.LM2-.LFBB1
+ 106               	.LM2:
+ 107 0004 48E0      		ldi r20,lo8(-31736)
+ 108 0006 54E8      		ldi r21,hi8(-31736)
+ 109               	.L4:
+  51:ax25.c        ****     crcbit = crc & 0x01;
+ 110               		.stabn	68,0,51,.LM3-.LFBB1
+ 111               	.LM3:
+ 112 0008 962F      		mov r25,r22
+ 113 000a 9170      		andi r25,lo8(1)
+  52:ax25.c        ****     crc = crc >> 1;      
+ 114               		.stabn	68,0,52,.LM4-.LFBB1
+ 115               	.LM4:
+GAS LISTING /tmp/ccSIJRd1.s 			page 4
+
+
+ 116 000c 7695      		lsr r23
+ 117 000e 6795      		ror r22
+  53:ax25.c        ****     if (bit != crcbit)
+ 118               		.stabn	68,0,53,.LM5-.LFBB1
+ 119               	.LM5:
+ 120 0010 832F      		mov r24,r19
+ 121 0012 8170      		andi r24,lo8(1)
+ 122 0014 8917      		cp r24,r25
+ 123 0016 01F0      		breq .L2
+ 124               		.stabn	68,0,54,.LM6-.LFBB1
+ 125               	.LM6:
+ 126 0018 6427      		eor r22,r20
+ 127 001a 7527      		eor r23,r21
+ 128               	.L2:
+  48:ax25.c        ****   for (j = 0; j < 8; j++)
+ 129               		.stabn	68,0,48,.LM7-.LFBB1
+ 130               	.LM7:
+ 131 001c 2F5F      		subi r18,lo8(-(1))
+ 132 001e 2830      		cpi r18,lo8(8)
+ 133 0020 01F0      		breq .L3
+  54:ax25.c        ****     byte = byte >> 1;
+ 134               		.stabn	68,0,55,.LM8-.LFBB1
+ 135               	.LM8:
+ 136 0022 3695      		lsr r19
+ 137 0024 00C0      		rjmp .L4
+ 138               	.L3:
+  55:ax25.c        ****   }
+  56:ax25.c        ****   return crc;
+  57:ax25.c        **** }
+ 139               		.stabn	68,0,58,.LM9-.LFBB1
+ 140               	.LM9:
+ 141 0026 CB01      		movw r24,r22
+ 142               	/* epilogue start */
+ 143 0028 0895      		ret
+ 144               		.size	update_crc_16, .-update_crc_16
+ 145               		.stabs	"crcbit:r(5,2)",64,0,46,25
+ 146               		.stabs	"j:r(5,2)",64,0,46,18
+ 147               		.stabn	192,0,0,.LFBB1-.LFBB1
+ 148               		.stabn	224,0,0,.Lscope1-.LFBB1
+ 149               	.Lscope1:
+ 150               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 151               		.stabd	78,0,0
+ 152               		.stabs	"calculate_crc_16:F(5,4)",36,0,61,calculate_crc_16
+ 153               		.stabs	"size:P(5,2)",64,0,60,22
+ 154               	.global	calculate_crc_16
+ 155               		.type	calculate_crc_16, @function
+ 156               	calculate_crc_16:
+ 157               		.stabd	46,0,0
+  58:ax25.c        **** 
+  59:ax25.c        **** uint16_t calculate_crc_16(uint8_t *data, uint8_t size)
+  60:ax25.c        **** {
+ 158               		.stabn	68,0,61,.LM10-.LFBB2
+ 159               	.LM10:
+ 160               	.LFBB2:
+ 161               	/* prologue: function */
+ 162               	/* frame size = 0 */
+ 163               		.stabn	68,0,61,.LM11-.LFBB2
+GAS LISTING /tmp/ccSIJRd1.s 			page 5
+
+
+ 164               	.LM11:
+ 165 002a FC01      		movw r30,r24
+ 166 002c 2FEF      		ldi r18,lo8(-1)
+ 167 002e 3FEF      		ldi r19,hi8(-1)
+ 168 0030 70E0      		ldi r23,lo8(0)
+ 169               	.LBB4:
+ 170               	.LBB5:
+  54:ax25.c        ****       crc ^= CRC_CCIT_REV;
+ 171               		.stabn	68,0,54,.LM12-.LFBB2
+ 172               	.LM12:
+ 173 0032 A8E0      		ldi r26,lo8(-31736)
+ 174 0034 B4E8      		ldi r27,hi8(-31736)
+ 175 0036 00C0      		rjmp .L7
+ 176               	.L11:
+ 177               	.LBE5:
+ 178               	.LBE4:
+  61:ax25.c        ****   uint16_t crc = 0xFFFF;
+  62:ax25.c        ****   uint8_t i;
+  63:ax25.c        ****   
+  64:ax25.c        ****   for(i = 0; i < size; i++)
+  65:ax25.c        ****     crc = update_crc_16(data[i], crc);
+ 179               		.stabn	68,0,66,.LM13-.LFBB2
+ 180               	.LM13:
+ 181 0038 5081      		ld r21,Z
+ 182 003a 40E0      		ldi r20,lo8(0)
+ 183               	.L10:
+ 184               	.LBB7:
+ 185               	.LBB6:
+  51:ax25.c        ****     crcbit = crc & 0x01;
+ 186               		.stabn	68,0,51,.LM14-.LFBB2
+ 187               	.LM14:
+ 188 003c 922F      		mov r25,r18
+ 189 003e 9170      		andi r25,lo8(1)
+  52:ax25.c        ****     crc = crc >> 1;      
+ 190               		.stabn	68,0,52,.LM15-.LFBB2
+ 191               	.LM15:
+ 192 0040 3695      		lsr r19
+ 193 0042 2795      		ror r18
+  53:ax25.c        ****     if (bit != crcbit)
+ 194               		.stabn	68,0,53,.LM16-.LFBB2
+ 195               	.LM16:
+ 196 0044 852F      		mov r24,r21
+ 197 0046 8170      		andi r24,lo8(1)
+ 198 0048 8917      		cp r24,r25
+ 199 004a 01F0      		breq .L8
+  54:ax25.c        ****       crc ^= CRC_CCIT_REV;
+ 200               		.stabn	68,0,54,.LM17-.LFBB2
+ 201               	.LM17:
+ 202 004c 2A27      		eor r18,r26
+ 203 004e 3B27      		eor r19,r27
+ 204               	.L8:
+  48:ax25.c        ****   for (j = 0; j < 8; j++)
+ 205               		.stabn	68,0,48,.LM18-.LFBB2
+ 206               	.LM18:
+ 207 0050 4F5F      		subi r20,lo8(-(1))
+ 208 0052 4830      		cpi r20,lo8(8)
+ 209 0054 01F0      		breq .L9
+GAS LISTING /tmp/ccSIJRd1.s 			page 6
+
+
+  55:ax25.c        ****     byte = byte >> 1;
+ 210               		.stabn	68,0,55,.LM19-.LFBB2
+ 211               	.LM19:
+ 212 0056 5695      		lsr r21
+ 213 0058 00C0      		rjmp .L10
+ 214               	.L9:
+ 215               	.LBE6:
+ 216               	.LBE7:
+  65:ax25.c        ****   for(i = 0; i < size; i++)
+ 217               		.stabn	68,0,65,.LM20-.LFBB2
+ 218               	.LM20:
+ 219 005a 7F5F      		subi r23,lo8(-(1))
+ 220 005c 3196      		adiw r30,1
+ 221               	.L7:
+ 222 005e 7617      		cp r23,r22
+ 223 0060 00F0      		brlo .L11
+ 224 0062 2095      		com r18
+ 225 0064 3095      		com r19
+  66:ax25.c        ****     
+  67:ax25.c        ****   return ~crc;
+  68:ax25.c        **** }
+ 226               		.stabn	68,0,69,.LM21-.LFBB2
+ 227               	.LM21:
+ 228 0066 C901      		movw r24,r18
+ 229               	/* epilogue start */
+ 230 0068 0895      		ret
+ 231               		.size	calculate_crc_16, .-calculate_crc_16
+ 232               		.stabs	"crc:r(5,4)",64,0,62,18
+ 233               		.stabs	"i:r(5,2)",64,0,63,23
+ 234               		.stabn	192,0,0,.LFBB2-.LFBB2
+ 235               		.stabs	"byte:r(5,2)",64,0,66,21
+ 236               		.stabn	192,0,0,.LBB4-.LFBB2
+ 237               		.stabs	"crcbit:r(5,2)",64,0,46,25
+ 238               		.stabs	"j:r(5,2)",64,0,46,20
+ 239               		.stabn	192,0,0,.LBB5-.LFBB2
+ 240               		.stabn	224,0,0,.LBE5-.LFBB2
+ 241               		.stabs	"crcbit:r(5,2)",64,0,46,25
+ 242               		.stabs	"j:r(5,2)",64,0,46,20
+ 243               		.stabn	192,0,0,.LBB6-.LFBB2
+ 244               		.stabn	224,0,0,.LBE6-.LFBB2
+ 245               		.stabn	224,0,0,.LBE4-.LFBB2
+ 246               		.stabs	"byte:r(5,2)",64,0,66,21
+ 247               		.stabn	192,0,0,.LBB7-.LFBB2
+ 248               		.stabn	224,0,0,.LBE7-.LFBB2
+ 249               		.stabn	224,0,0,.Lscope2-.LFBB2
+ 250               	.Lscope2:
+ 251               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 252               		.stabd	78,0,0
+ 253               		.data
+ 254               	.LC0:
+ 255 0000 4351 2020 		.string	"CQ    "
+ 255      2020 00
+ 256               	.LC1:
+ 257 0007 5655 3244 		.string	"VU2DMQ"
+ 257      4D51 00
+ 258               	.LC2:
+ 259 000e 5245 4C41 		.string	"RELAY "
+GAS LISTING /tmp/ccSIJRd1.s 			page 7
+
+
+ 259      5920 00
+ 260               		.text
+ 261               		.stabs	"make_ax25_frame_from_data:F(0,15)",36,0,5,make_ax25_frame_from_data
+ 262               		.stabs	"frame:P(0,16)=*(5,2)",64,0,4,16
+ 263               	.global	make_ax25_frame_from_data
+ 264               		.type	make_ax25_frame_from_data, @function
+ 265               	make_ax25_frame_from_data:
+ 266               		.stabd	46,0,0
+   5:ax25.c        **** {
+ 267               		.stabn	68,0,5,.LM22-.LFBB3
+ 268               	.LM22:
+ 269               	.LFBB3:
+ 270 006a AF92      		push r10
+ 271 006c BF92      		push r11
+ 272 006e CF92      		push r12
+ 273 0070 DF92      		push r13
+ 274 0072 EF92      		push r14
+ 275 0074 FF92      		push r15
+ 276 0076 0F93      		push r16
+ 277 0078 1F93      		push r17
+ 278 007a DF93      		push r29
+ 279 007c CF93      		push r28
+ 280 007e CDB7      		in r28,__SP_L__
+ 281 0080 DEB7      		in r29,__SP_H__
+ 282 0082 2C97      		sbiw r28,12
+ 283 0084 0FB6      		in __tmp_reg__,__SREG__
+ 284 0086 F894      		cli
+ 285 0088 DEBF      		out __SP_H__,r29
+ 286 008a 0FBE      		out __SREG__,__tmp_reg__
+ 287 008c CDBF      		out __SP_L__,r28
+ 288               	/* prologue: function */
+ 289               	/* frame size = 12 */
+ 290 008e 8C01      		movw r16,r24
+ 291 0090 D62E      		mov r13,r22
+ 292 0092 C72E      		mov r12,r23
+   9:ax25.c        ****   frame[size++] = AX_FLAG;
+ 293               		.stabn	68,0,9,.LM23-.LFBB3
+ 294               	.LM23:
+ 295 0094 8EE7      		ldi r24,lo8(126)
+ 296 0096 D801      		movw r26,r16
+ 297 0098 8C93      		st X,r24
+  11:ax25.c        ****   memcpy(buf, "CQ    ", AX_ADDR_SIZE);
+ 298               		.stabn	68,0,11,.LM24-.LFBB3
+ 299               	.LM24:
+ 300 009a DE01      		movw r26,r28
+ 301 009c 1396      		adiw r26,3
+ 302 009e E0E0      		ldi r30,lo8(.LC0)
+ 303 00a0 F0E0      		ldi r31,hi8(.LC0)
+ 304 00a2 86E0      		ldi r24,lo8(6)
+ 305               	.L14:
+ 306 00a4 0190      		ld r0,Z+
+ 307 00a6 0D92      		st X+,r0
+ 308 00a8 8150      		subi r24,lo8(-(-1))
+ 309 00aa 01F4      		brne .L14
+ 310 00ac 9E01      		movw r18,r28
+ 311 00ae 2D5F      		subi r18,lo8(-(3))
+ 312 00b0 3F4F      		sbci r19,hi8(-(3))
+GAS LISTING /tmp/ccSIJRd1.s 			page 8
+
+
+ 313 00b2 B801      		movw r22,r16
+ 314 00b4 A901      		movw r20,r18
+ 315 00b6 F801      		movw r30,r16
+  12:ax25.c        ****   for(i = 0; i < AX_ADDR_SIZE; i++)
+ 316               		.stabn	68,0,12,.LM25-.LFBB3
+ 317               	.LM25:
+ 318 00b8 C901      		movw r24,r18
+ 319 00ba F22E      		mov r15,r18
+ 320 00bc E92E      		mov r14,r25
+ 321 00be 99E0      		ldi r25,lo8(9)
+ 322 00c0 A92E      		mov r10,r25
+ 323 00c2 B12C      		mov r11,__zero_reg__
+ 324 00c4 AC0E      		add r10,r28
+ 325 00c6 BD1E      		adc r11,r29
+ 326               	.L15:
+  13:ax25.c        ****     frame[i + size] = buf[i] << 1;
+ 327               		.stabn	68,0,13,.LM26-.LFBB3
+ 328               	.LM26:
+ 329 00c8 DA01      		movw r26,r20
+ 330 00ca 8D91      		ld r24,X+
+ 331 00cc AD01      		movw r20,r26
+ 332 00ce 880F      		lsl r24
+ 333 00d0 8183      		std Z+1,r24
+ 334 00d2 3196      		adiw r30,1
+  12:ax25.c        ****   for(i = 0; i < AX_ADDR_SIZE; i++)
+ 335               		.stabn	68,0,12,.LM27-.LFBB3
+ 336               	.LM27:
+ 337 00d4 AA15      		cp r26,r10
+ 338 00d6 BB05      		cpc r27,r11
+ 339 00d8 01F4      		brne .L15
+  15:ax25.c        ****   frame[size++] = 0b01100000;
+ 340               		.stabn	68,0,15,.LM28-.LFBB3
+ 341               	.LM28:
+ 342 00da 80E6      		ldi r24,lo8(96)
+ 343 00dc F801      		movw r30,r16
+ 344 00de 8783      		std Z+7,r24
+  17:ax25.c        ****   memcpy(buf, "VU2DMQ", AX_ADDR_SIZE);
+ 345               		.stabn	68,0,17,.LM29-.LFBB3
+ 346               	.LM29:
+ 347 00e0 8F2D      		mov r24,r15
+ 348 00e2 9E2D      		mov r25,r14
+ 349 00e4 DC01      		movw r26,r24
+ 350 00e6 E0E0      		ldi r30,lo8(.LC1)
+ 351 00e8 F0E0      		ldi r31,hi8(.LC1)
+ 352 00ea 86E0      		ldi r24,lo8(6)
+ 353               	.L16:
+ 354 00ec 0190      		ld r0,Z+
+ 355 00ee 0D92      		st X+,r0
+ 356 00f0 8150      		subi r24,lo8(-(-1))
+ 357 00f2 01F4      		brne .L16
+ 358 00f4 D901      		movw r26,r18
+ 359 00f6 F801      		movw r30,r16
+ 360               	.L17:
+  19:ax25.c        ****     frame[i + size] = buf[i] << 1;
+ 361               		.stabn	68,0,19,.LM30-.LFBB3
+ 362               	.LM30:
+ 363 00f8 8D91      		ld r24,X+
+GAS LISTING /tmp/ccSIJRd1.s 			page 9
+
+
+ 364 00fa 880F      		lsl r24
+ 365 00fc 8087      		std Z+8,r24
+ 366 00fe 3196      		adiw r30,1
+  18:ax25.c        ****   for(i = 0; i < AX_ADDR_SIZE; i++)
+ 367               		.stabn	68,0,18,.LM31-.LFBB3
+ 368               	.LM31:
+ 369 0100 A417      		cp r26,r20
+ 370 0102 B507      		cpc r27,r21
+ 371 0104 01F4      		brne .L17
+  21:ax25.c        ****   frame[size++] = 0b01101000;
+ 372               		.stabn	68,0,21,.LM32-.LFBB3
+ 373               	.LM32:
+ 374 0106 88E6      		ldi r24,lo8(104)
+ 375 0108 D801      		movw r26,r16
+ 376 010a 1E96      		adiw r26,14
+ 377 010c 8C93      		st X,r24
+  23:ax25.c        ****   memcpy(buf, "RELAY ", AX_ADDR_SIZE);
+ 378               		.stabn	68,0,23,.LM33-.LFBB3
+ 379               	.LM33:
+ 380 010e DE01      		movw r26,r28
+ 381 0110 1396      		adiw r26,3
+ 382 0112 E0E0      		ldi r30,lo8(.LC2)
+ 383 0114 F0E0      		ldi r31,hi8(.LC2)
+ 384 0116 86E0      		ldi r24,lo8(6)
+ 385               	.L18:
+ 386 0118 0190      		ld r0,Z+
+ 387 011a 0D92      		st X+,r0
+ 388 011c 8150      		subi r24,lo8(-(-1))
+ 389 011e 01F4      		brne .L18
+ 390               	.L22:
+  25:ax25.c        ****     frame[i + size] = buf[i] << 1;
+ 391               		.stabn	68,0,25,.LM34-.LFBB3
+ 392               	.LM34:
+ 393 0120 F901      		movw r30,r18
+ 394 0122 8191      		ld r24,Z+
+ 395 0124 9F01      		movw r18,r30
+ 396 0126 880F      		lsl r24
+ 397 0128 DB01      		movw r26,r22
+ 398 012a 1F96      		adiw r26,15
+ 399 012c 8C93      		st X,r24
+ 400 012e 6F5F      		subi r22,lo8(-(1))
+ 401 0130 7F4F      		sbci r23,hi8(-(1))
+  24:ax25.c        ****   for(i = 0; i < AX_ADDR_SIZE; i++)
+ 402               		.stabn	68,0,24,.LM35-.LFBB3
+ 403               	.LM35:
+ 404 0132 E417      		cp r30,r20
+ 405 0134 F507      		cpc r31,r21
+ 406 0136 01F4      		brne .L22
+  27:ax25.c        ****   frame[size++] = 0b01100001;
+ 407               		.stabn	68,0,27,.LM36-.LFBB3
+ 408               	.LM36:
+ 409 0138 81E6      		ldi r24,lo8(97)
+ 410 013a F801      		movw r30,r16
+ 411 013c 858B      		std Z+21,r24
+  29:ax25.c        ****   frame[size++] = AX_CONTROL;
+ 412               		.stabn	68,0,29,.LM37-.LFBB3
+ 413               	.LM37:
+GAS LISTING /tmp/ccSIJRd1.s 			page 10
+
+
+ 414 013e 83E0      		ldi r24,lo8(3)
+ 415 0140 868B      		std Z+22,r24
+  30:ax25.c        ****   frame[size++] = AX_PID;
+ 416               		.stabn	68,0,30,.LM38-.LFBB3
+ 417               	.LM38:
+ 418 0142 80EF      		ldi r24,lo8(-16)
+ 419 0144 878B      		std Z+23,r24
+  32:ax25.c        ****   memcpy(frame + size, data, HM_SIZE);
+ 420               		.stabn	68,0,32,.LM39-.LFBB3
+ 421               	.LM39:
+ 422 0146 D801      		movw r26,r16
+ 423 0148 5896      		adiw r26,24
+ 424 014a 2D2D      		mov r18,r13
+ 425 014c 3C2D      		mov r19,r12
+ 426 014e C901      		movw r24,r18
+ 427 0150 FC01      		movw r30,r24
+ 428 0152 87E0      		ldi r24,lo8(7)
+ 429               	.L20:
+ 430 0154 0190      		ld r0,Z+
+ 431 0156 0D92      		st X+,r0
+ 432 0158 8150      		subi r24,lo8(-(-1))
+ 433 015a 01F4      		brne .L20
+  35:ax25.c        ****   crc = calculate_crc_16(frame + 1, FRAME_SIZE - 4);
+ 434               		.stabn	68,0,35,.LM40-.LFBB3
+ 435               	.LM40:
+ 436 015c C801      		movw r24,r16
+ 437 015e 0196      		adiw r24,1
+ 438 0160 6EE1      		ldi r22,lo8(30)
+ 439 0162 0E94 0000 		call calculate_crc_16
+  37:ax25.c        ****   memcpy(frame + size, &crc, 2);
+ 440               		.stabn	68,0,37,.LM41-.LFBB3
+ 441               	.LM41:
+ 442 0166 D801      		movw r26,r16
+ 443 0168 9096      		adiw r26,31+1
+ 444 016a 9C93      		st X,r25
+ 445 016c 8E93      		st -X,r24
+ 446 016e 5F97      		sbiw r26,31
+  40:ax25.c        ****   frame[size] = AX_FLAG;
+ 447               		.stabn	68,0,40,.LM42-.LFBB3
+ 448               	.LM42:
+ 449 0170 8EE7      		ldi r24,lo8(126)
+ 450 0172 9196      		adiw r26,33
+ 451 0174 8C93      		st X,r24
+ 452               	/* epilogue start */
+  42:ax25.c        **** }
+ 453               		.stabn	68,0,42,.LM43-.LFBB3
+ 454               	.LM43:
+ 455 0176 2C96      		adiw r28,12
+ 456 0178 0FB6      		in __tmp_reg__,__SREG__
+ 457 017a F894      		cli
+ 458 017c DEBF      		out __SP_H__,r29
+ 459 017e 0FBE      		out __SREG__,__tmp_reg__
+ 460 0180 CDBF      		out __SP_L__,r28
+ 461 0182 CF91      		pop r28
+ 462 0184 DF91      		pop r29
+ 463 0186 1F91      		pop r17
+ 464 0188 0F91      		pop r16
+GAS LISTING /tmp/ccSIJRd1.s 			page 11
+
+
+ 465 018a FF90      		pop r15
+ 466 018c EF90      		pop r14
+ 467 018e DF90      		pop r13
+ 468 0190 CF90      		pop r12
+ 469 0192 BF90      		pop r11
+ 470 0194 AF90      		pop r10
+ 471 0196 0895      		ret
+ 472               		.size	make_ax25_frame_from_data, .-make_ax25_frame_from_data
+ 473               		.stabs	"buf:(0,17)=ar(0,18)=r(0,18);0;0177777;;0;9;(5,2)",128,0,6,3
+ 474               		.stabs	"crc:(5,4)",128,0,7,1
+ 475               		.stabn	192,0,0,.LFBB3-.LFBB3
+ 476               		.stabn	224,0,0,.Lscope3-.LFBB3
+ 477               	.Lscope3:
+ 478               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 479               		.stabd	78,0,0
+ 480               		.stabs	"",100,0,0,.Letext0
+ 481               	.Letext0:
+GAS LISTING /tmp/ccSIJRd1.s 			page 12
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 ax25.c
+     /tmp/ccSIJRd1.s:2      *ABS*:000000000000003f __SREG__
+     /tmp/ccSIJRd1.s:3      *ABS*:000000000000003e __SP_H__
+     /tmp/ccSIJRd1.s:4      *ABS*:000000000000003d __SP_L__
+     /tmp/ccSIJRd1.s:5      *ABS*:0000000000000034 __CCP__
+     /tmp/ccSIJRd1.s:6      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccSIJRd1.s:7      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccSIJRd1.s:94     .text:0000000000000000 update_crc_16
+     /tmp/ccSIJRd1.s:156    .text:000000000000002a calculate_crc_16
+     /tmp/ccSIJRd1.s:265    .text:000000000000006a make_ax25_frame_from_data
+
+UNDEFINED SYMBOLS
+__do_copy_data
+__do_clear_bss

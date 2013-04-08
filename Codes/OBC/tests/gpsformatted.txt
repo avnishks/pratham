@@ -1,0 +1,1790 @@
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 0.000000 m y = 0.000000 m z = 0.000000 m
+v_x = 0 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 0
+LAT = 0.000000 deg LONG = 0.000000 deg ALT = 0.000000 m
+
+x = 177063.203125 m y = 576215.625000 m z = 207704.875000 m
+v_x = -56 mm/s v_y = -59 mm/s v_z = -38 mm/s
+PDOP = 455
+LAT = 19.130905 deg LONG = 72.918518 deg ALT = 12.090000 m
+
+x = 177064.625000 m y = 576216.812500 m z = 207705.437500 m
+v_x = -83 mm/s v_y = -37 mm/s v_z = -32 mm/s
+PDOP = 455
+LAT = 19.130905 deg LONG = 72.918427 deg ALT = 29.209999 m
+
+x = 177064.359375 m y = 576216.687500 m z = 207705.437500 m
+v_x = 45 mm/s v_y = 57 mm/s v_z = 43 mm/s
+PDOP = 455
+LAT = 19.130911 deg LONG = 72.918449 deg ALT = 27.389999 m
+
+x = 177063.218750 m y = 576214.562500 m z = 207704.984375 m
+v_x = 102 mm/s v_y = 73 mm/s v_z = 21 mm/s
+PDOP = 455
+LAT = 19.130943 deg LONG = 72.918495 deg ALT = 3.470000 m
+
+x = 177063.546875 m y = 576215.062500 m z = 207704.828125 m
+v_x = 2 mm/s v_y = -17 mm/s v_z = -4 mm/s
+PDOP = 455
+LAT = 19.130915 deg LONG = 72.918472 deg ALT = 7.690000 m
+
+x = 177062.859375 m y = 576214.125000 m z = 207704.578125 m
+v_x = -21 mm/s v_y = -45 mm/s v_z = 0 mm/s
+PDOP = 456
+LAT = 19.130922 deg LONG = 72.918510 deg ALT = -2.650000 m
+
+x = 177062.265625 m y = 576213.562500 m z = 207704.562500 m
+v_x = -39 mm/s v_y = 7 mm/s v_z = 6 mm/s
+PDOP = 456
+LAT = 19.130943 deg LONG = 72.918549 deg ALT = -9.820000 m
+
+x = 177062.375000 m y = 576213.625000 m z = 207704.546875 m
+v_x = -4 mm/s v_y = -22 mm/s v_z = -24 mm/s
+PDOP = 456
+LAT = 19.130939 deg LONG = 72.918541 deg ALT = -9.090000 m
+
+x = 177062.140625 m y = 576213.687500 m z = 207704.359375 m
+v_x = -11 mm/s v_y = -27 mm/s v_z = -38 mm/s
+PDOP = 456
+LAT = 19.130924 deg LONG = 72.918564 deg ALT = -9.850000 m
+
+x = 177062.000000 m y = 576213.125000 m z = 207704.625000 m
+v_x = -4 mm/s v_y = 2 mm/s v_z = -20 mm/s
+PDOP = 456
+LAT = 19.130964 deg LONG = 72.918564 deg ALT = -14.530000 m
+
+x = 177063.515625 m y = 576214.375000 m z = 207705.093750 m
+v_x = -74 mm/s v_y = -97 mm/s v_z = 30 mm/s
+PDOP = 457
+LAT = 19.130953 deg LONG = 72.918457 deg ALT = 2.630000 m
+
+x = 177061.812500 m y = 576212.750000 m z = 207704.546875 m
+v_x = -20 mm/s v_y = 36 mm/s v_z = -12 mm/s
+PDOP = 457
+LAT = 19.130970 deg LONG = 72.918571 deg ALT = -18.959999 m
+
+x = 177061.343750 m y = 576212.125000 m z = 207704.781250 m
+v_x = -57 mm/s v_y = 5 mm/s v_z = 11 mm/s
+PDOP = 457
+LAT = 19.131012 deg LONG = 72.918587 deg ALT = -25.260000 m
+
+x = 177062.875000 m y = 576214.062500 m z = 207705.015625 m
+v_x = 8 mm/s v_y = 112 mm/s v_z = 83 mm/s
+PDOP = 457
+LAT = 19.130962 deg LONG = 72.918503 deg ALT = -1.840000 m
+
+x = 177063.734375 m y = 576215.250000 m z = 207705.234375 m
+v_x = -61 mm/s v_y = -43 mm/s v_z = 36 mm/s
+PDOP = 457
+LAT = 19.130939 deg LONG = 72.918465 deg ALT = 11.530000 m
+
+x = 177063.984375 m y = 576215.062500 m z = 207705.140625 m
+v_x = 34 mm/s v_y = 87 mm/s v_z = 15 mm/s
+PDOP = 457
+LAT = 19.130936 deg LONG = 72.918434 deg ALT = 10.330000 m
+
+x = 177063.687500 m y = 576215.000000 m z = 207705.484375 m
+v_x = -5 mm/s v_y = 0 mm/s v_z = 18 mm/s
+PDOP = 458
+LAT = 19.130970 deg LONG = 72.918457 deg ALT = 9.860000 m
+
+x = 177063.531250 m y = 576214.562500 m z = 207705.203125 m
+v_x = -43 mm/s v_y = -62 mm/s v_z = -3 mm/s
+PDOP = 458
+LAT = 19.130959 deg LONG = 72.918465 deg ALT = 4.780000 m
+
+x = 177062.468750 m y = 576213.687500 m z = 207704.859375 m
+v_x = -34 mm/s v_y = -56 mm/s v_z = -10 mm/s
+PDOP = 458
+LAT = 19.130962 deg LONG = 72.918533 deg ALT = -6.880000 m
+
+x = 177063.046875 m y = 576213.437500 m z = 207705.046875 m
+v_x = -20 mm/s v_y = -34 mm/s v_z = 4 mm/s
+PDOP = 458
+LAT = 19.130981 deg LONG = 72.918480 deg ALT = -7.220000 m
+
+x = 177063.171875 m y = 576214.125000 m z = 207704.921875 m
+v_x = 31 mm/s v_y = 35 mm/s v_z = 13 mm/s
+PDOP = 458
+LAT = 19.130951 deg LONG = 72.918488 deg ALT = -0.990000 m
+
+x = 177062.875000 m y = 576213.250000 m z = 207704.937500 m
+v_x = -31 mm/s v_y = 7 mm/s v_z = -15 mm/s
+PDOP = 459
+LAT = 19.130980 deg LONG = 72.918488 deg ALT = -9.710000 m
+
+x = 177062.703125 m y = 576213.375000 m z = 207705.062500 m
+v_x = 16 mm/s v_y = -1 mm/s v_z = 0 mm/s
+PDOP = 459
+LAT = 19.130987 deg LONG = 72.918503 deg ALT = -8.810000 m
+
+x = 177063.015625 m y = 576214.312500 m z = 207704.828125 m
+v_x = -15 mm/s v_y = -9 mm/s v_z = -3 mm/s
+PDOP = 459
+LAT = 19.130938 deg LONG = 72.918503 deg ALT = 0.230000 m
+
+x = 177063.359375 m y = 576214.812500 m z = 207704.984375 m
+v_x = -9 mm/s v_y = -124 mm/s v_z = 6 mm/s
+PDOP = 324
+LAT = 19.130936 deg LONG = 72.918488 deg ALT = 5.510000 m
+
+x = 177063.390625 m y = 576215.125000 m z = 207705.140625 m
+v_x = -38 mm/s v_y = -24 mm/s v_z = -3 mm/s
+PDOP = 324
+LAT = 19.130938 deg LONG = 72.918495 deg ALT = 9.270000 m
+
+x = 177063.765625 m y = 576214.625000 m z = 207705.093750 m
+v_x = -25 mm/s v_y = -19 mm/s v_z = -14 mm/s
+PDOP = 324
+LAT = 19.130943 deg LONG = 72.918442 deg ALT = 6.040000 m
+
+x = 177062.703125 m y = 576213.875000 m z = 207705.031250 m
+v_x = 8 mm/s v_y = -7 mm/s v_z = 0 mm/s
+PDOP = 324
+LAT = 19.130970 deg LONG = 72.918518 deg ALT = -4.490000 m
+
+x = 177064.203125 m y = 576214.875000 m z = 207705.328125 m
+v_x = 11 mm/s v_y = 28 mm/s v_z = 2 mm/s
+PDOP = 324
+LAT = 19.130957 deg LONG = 72.918411 deg ALT = 9.390000 m
+
+x = 177063.812500 m y = 576214.500000 m z = 207705.250000 m
+v_x = -4 mm/s v_y = -30 mm/s v_z = -12 mm/s
+PDOP = 324
+LAT = 19.130962 deg LONG = 72.918434 deg ALT = 5.110000 m
+
+x = 177063.750000 m y = 576214.437500 m z = 207704.953125 m
+v_x = 11 mm/s v_y = -4 mm/s v_z = 14 mm/s
+PDOP = 324
+LAT = 19.130939 deg LONG = 72.918434 deg ALT = 3.490000 m
+
+x = 177064.109375 m y = 576214.625000 m z = 207705.187500 m
+v_x = 9 mm/s v_y = 23 mm/s v_z = -13 mm/s
+PDOP = 324
+LAT = 19.130951 deg LONG = 72.918411 deg ALT = 7.220000 m
+
+x = 177064.078125 m y = 576214.937500 m z = 207705.171875 m
+v_x = -8 mm/s v_y = 19 mm/s v_z = -5 mm/s
+PDOP = 324
+LAT = 19.130939 deg LONG = 72.918427 deg ALT = 9.540000 m
+
+x = 177064.140625 m y = 576215.000000 m z = 207705.140625 m
+v_x = 5 mm/s v_y = 9 mm/s v_z = -11 mm/s
+PDOP = 325
+LAT = 19.130936 deg LONG = 72.918419 deg ALT = 9.950000 m
+
+x = 177063.421875 m y = 576214.812500 m z = 207704.937500 m
+v_x = 3 mm/s v_y = 9 mm/s v_z = -4 mm/s
+PDOP = 325
+LAT = 19.130934 deg LONG = 72.918480 deg ALT = 5.300000 m
+
+x = 177059.968750 m y = 576211.250000 m z = 207704.203125 m
+v_x = 7 mm/s v_y = 6 mm/s v_z = -6 mm/s
+PDOP = 325
+LAT = 19.130999 deg LONG = 72.918701 deg ALT = -38.009998 m
+
+x = 177052.515625 m y = 576205.250000 m z = 207702.906250 m
+v_x = 9 mm/s v_y = -1 mm/s v_z = 4 mm/s
+PDOP = 325
+LAT = 19.131123 deg LONG = 72.919205 deg ALT = -117.650002 m
+
+x = 177063.031250 m y = 576214.500000 m z = 207705.234375 m
+v_x = 5 mm/s v_y = -14 mm/s v_z = -4 mm/s
+PDOP = 325
+LAT = 19.130968 deg LONG = 72.918503 deg ALT = 3.290000 m
+
+x = 177064.296875 m y = 576214.562500 m z = 207705.156250 m
+v_x = 11 mm/s v_y = 4 mm/s v_z = 9 mm/s
+PDOP = 325
+LAT = 19.130947 deg LONG = 72.918388 deg ALT = 7.130000 m
+
+x = 177064.296875 m y = 576214.875000 m z = 207705.156250 m
+v_x = 19 mm/s v_y = 33 mm/s v_z = -1 mm/s
+PDOP = 325
+LAT = 19.130939 deg LONG = 72.918396 deg ALT = 9.160000 m
+
+x = 177063.468750 m y = 576214.625000 m z = 207705.171875 m
+v_x = -9 mm/s v_y = -17 mm/s v_z = 11 mm/s
+PDOP = 325
+LAT = 19.130953 deg LONG = 72.918472 deg ALT = 5.490000 m
+
+x = 177064.187500 m y = 576214.562500 m z = 207705.187500 m
+v_x = -39 mm/s v_y = -17 mm/s v_z = -11 mm/s
+PDOP = 325
+LAT = 19.130953 deg LONG = 72.918404 deg ALT = 6.900000 m
+
+x = 177064.218750 m y = 576214.875000 m z = 207705.312500 m
+v_x = -57 mm/s v_y = -21 mm/s v_z = -18 mm/s
+PDOP = 325
+LAT = 19.130955 deg LONG = 72.918404 deg ALT = 9.390000 m
+
+x = 177063.843750 m y = 576215.187500 m z = 207705.250000 m
+v_x = -12 mm/s v_y = 9 mm/s v_z = 3 mm/s
+PDOP = 325
+LAT = 19.130943 deg LONG = 72.918449 deg ALT = 10.900000 m
+
+x = 177063.812500 m y = 576215.000000 m z = 207705.062500 m
+v_x = -24 mm/s v_y = -42 mm/s v_z = 12 mm/s
+PDOP = 325
+LAT = 19.130932 deg LONG = 72.918449 deg ALT = 9.000000 m
+
+x = 177063.531250 m y = 576214.375000 m z = 207704.984375 m
+v_x = -23 mm/s v_y = -9 mm/s v_z = -24 mm/s
+PDOP = 325
+LAT = 19.130945 deg LONG = 72.918457 deg ALT = 2.560000 m
+
+x = 177064.156250 m y = 576215.187500 m z = 207705.437500 m
+v_x = -24 mm/s v_y = -33 mm/s v_z = -5 mm/s
+PDOP = 325
+LAT = 19.130957 deg LONG = 72.918427 deg ALT = 12.630000 m
+
+x = 177063.390625 m y = 576215.125000 m z = 207705.078125 m
+v_x = 15 mm/s v_y = 7 mm/s v_z = -9 mm/s
+PDOP = 325
+LAT = 19.130934 deg LONG = 72.918488 deg ALT = 8.590000 m
+
+x = 177063.546875 m y = 576214.937500 m z = 207705.218750 m
+v_x = 7 mm/s v_y = 24 mm/s v_z = -12 mm/s
+PDOP = 198
+LAT = 19.130949 deg LONG = 72.918472 deg ALT = 8.040000 m
+
+x = 177063.093750 m y = 576214.250000 m z = 207704.796875 m
+v_x = 20 mm/s v_y = 45 mm/s v_z = -8 mm/s
+PDOP = 198
+LAT = 19.130936 deg LONG = 72.918495 deg ALT = -0.400000 m
+
+x = 177063.218750 m y = 576214.875000 m z = 207704.921875 m
+v_x = -9 mm/s v_y = -12 mm/s v_z = 0 mm/s
+PDOP = 198
+LAT = 19.130930 deg LONG = 72.918503 deg ALT = 5.320000 m
+
+x = 177063.109375 m y = 576214.437500 m z = 207704.968750 m
+v_x = 18 mm/s v_y = -3 mm/s v_z = 0 mm/s
+PDOP = 198
+LAT = 19.130945 deg LONG = 72.918503 deg ALT = 2.020000 m
+
+x = 177063.281250 m y = 576214.375000 m z = 207704.781250 m
+v_x = 25 mm/s v_y = 6 mm/s v_z = 3 mm/s
+PDOP = 198
+LAT = 19.130930 deg LONG = 72.918480 deg ALT = 1.460000 m
+
+x = 177062.984375 m y = 576214.187500 m z = 207704.687500 m
+v_x = 15 mm/s v_y = 20 mm/s v_z = 10 mm/s
+PDOP = 198
+LAT = 19.130930 deg LONG = 72.918503 deg ALT = -1.490000 m
+
+x = 177063.453125 m y = 576214.312500 m z = 207704.984375 m
+v_x = 11 mm/s v_y = -8 mm/s v_z = 13 mm/s
+PDOP = 198
+LAT = 19.130947 deg LONG = 72.918465 deg ALT = 2.030000 m
+
+x = 177063.531250 m y = 576214.625000 m z = 207704.984375 m
+v_x = -22 mm/s v_y = 4 mm/s v_z = -13 mm/s
+PDOP = 198
+LAT = 19.130936 deg LONG = 72.918465 deg ALT = 5.140000 m
+
+x = 177063.609375 m y = 576215.062500 m z = 207705.093750 m
+v_x = -30 mm/s v_y = -36 mm/s v_z = -2 mm/s
+PDOP = 198
+LAT = 19.130936 deg LONG = 72.918465 deg ALT = 8.830000 m
+
+x = 177063.859375 m y = 576215.125000 m z = 207704.890625 m
+v_x = 4 mm/s v_y = -1 mm/s v_z = 13 mm/s
+PDOP = 198
+LAT = 19.130915 deg LONG = 72.918442 deg ALT = 9.530000 m
+
+x = 177063.750000 m y = 576214.875000 m z = 207705.031250 m
+v_x = 9 mm/s v_y = 4 mm/s v_z = 10 mm/s
+PDOP = 198
+LAT = 19.130934 deg LONG = 72.918449 deg ALT = 7.280000 m
+
+x = 177063.734375 m y = 576214.812500 m z = 207705.109375 m
+v_x = 6 mm/s v_y = -7 mm/s v_z = 2 mm/s
+PDOP = 198
+LAT = 19.130943 deg LONG = 72.918449 deg ALT = 7.020000 m
+
+x = 177063.609375 m y = 576215.187500 m z = 207705.015625 m
+v_x = -5 mm/s v_y = -17 mm/s v_z = -1 mm/s
+PDOP = 198
+LAT = 19.130924 deg LONG = 72.918472 deg ALT = 10.000000 m
+
+x = 177063.359375 m y = 576215.125000 m z = 207704.937500 m
+v_x = 11 mm/s v_y = 27 mm/s v_z = 8 mm/s
+PDOP = 198
+LAT = 19.130922 deg LONG = 72.918495 deg ALT = 8.170000 m
+
+x = 177062.171875 m y = 576215.125000 m z = 207705.625000 m
+v_x = -3 mm/s v_y = 35 mm/s v_z = -19 mm/s
+PDOP = 198
+LAT = 19.130991 deg LONG = 72.918602 deg ALT = 7.480000 m
+
+x = 177063.312500 m y = 576214.937500 m z = 207705.218750 m
+v_x = -8 mm/s v_y = -16 mm/s v_z = -7 mm/s
+PDOP = 198
+LAT = 19.130953 deg LONG = 72.918495 deg ALT = 7.260000 m
+
+x = 177063.640625 m y = 576214.562500 m z = 207705.156250 m
+v_x = 22 mm/s v_y = 18 mm/s v_z = 5 mm/s
+PDOP = 198
+LAT = 19.130953 deg LONG = 72.918449 deg ALT = 5.300000 m
+
+x = 177063.359375 m y = 576215.000000 m z = 207705.046875 m
+v_x = -3 mm/s v_y = -19 mm/s v_z = -2 mm/s
+PDOP = 198
+LAT = 19.130936 deg LONG = 72.918495 deg ALT = 7.500000 m
+
+x = 177063.281250 m y = 576214.875000 m z = 207704.859375 m
+v_x = -16 mm/s v_y = 10 mm/s v_z = 11 mm/s
+PDOP = 198
+LAT = 19.130924 deg LONG = 72.918495 deg ALT = 5.570000 m
+
+x = 177063.281250 m y = 576214.875000 m z = 207704.796875 m
+v_x = 3 mm/s v_y = -6 mm/s v_z = 15 mm/s
+PDOP = 198
+LAT = 19.130919 deg LONG = 72.918495 deg ALT = 5.350000 m
+
+x = 177063.656250 m y = 576214.937500 m z = 207704.859375 m
+v_x = -31 mm/s v_y = 19 mm/s v_z = -6 mm/s
+PDOP = 198
+LAT = 19.130920 deg LONG = 72.918457 deg ALT = 7.010000 m
+
+x = 177063.171875 m y = 576215.312500 m z = 207704.968750 m
+v_x = 28 mm/s v_y = 31 mm/s v_z = -13 mm/s
+PDOP = 198
+LAT = 19.130920 deg LONG = 72.918510 deg ALT = 9.670000 m
+
+x = 177063.312500 m y = 576214.750000 m z = 207704.734375 m
+v_x = -12 mm/s v_y = -5 mm/s v_z = 0 mm/s
+PDOP = 198
+LAT = 19.130917 deg LONG = 72.918488 deg ALT = 4.150000 m
+
+x = 177063.312500 m y = 576215.000000 m z = 207705.031250 m
+v_x = 27 mm/s v_y = -4 mm/s v_z = -5 mm/s
+PDOP = 198
+LAT = 19.130934 deg LONG = 72.918495 deg ALT = 7.180000 m
+
+x = 177063.343750 m y = 576214.812500 m z = 207704.906250 m
+v_x = -8 mm/s v_y = -10 mm/s v_z = 9 mm/s
+PDOP = 198
+LAT = 19.130928 deg LONG = 72.918488 deg ALT = 5.510000 m
+
+x = 177063.578125 m y = 576214.812500 m z = 207704.515625 m
+v_x = 37 mm/s v_y = 7 mm/s v_z = 6 mm/s
+PDOP = 198
+LAT = 19.130894 deg LONG = 72.918465 deg ALT = 4.570000 m
+
+x = 177063.875000 m y = 576215.437500 m z = 207704.843750 m
+v_x = -3 mm/s v_y = 28 mm/s v_z = 3 mm/s
+PDOP = 198
+LAT = 19.130901 deg LONG = 72.918457 deg ALT = 12.170000 m
+
+x = 177063.406250 m y = 576215.312500 m z = 207704.953125 m
+v_x = 31 mm/s v_y = -1 mm/s v_z = 8 mm/s
+PDOP = 198
+LAT = 19.130919 deg LONG = 72.918495 deg ALT = 10.270000 m
+
+x = 177063.562500 m y = 576214.500000 m z = 207704.812500 m
+v_x = 16 mm/s v_y = -21 mm/s v_z = 33 mm/s
+PDOP = 198
+LAT = 19.130926 deg LONG = 72.918457 deg ALT = 3.290000 m
+
+x = 177063.890625 m y = 576215.375000 m z = 207705.156250 m
+v_x = 3 mm/s v_y = -37 mm/s v_z = 10 mm/s
+PDOP = 198
+LAT = 19.130928 deg LONG = 72.918449 deg ALT = 13.000000 m
+
+x = 177063.687500 m y = 576215.125000 m z = 207705.031250 m
+v_x = -6 mm/s v_y = -34 mm/s v_z = 6 mm/s
+PDOP = 198
+LAT = 19.130928 deg LONG = 72.918465 deg ALT = 9.350000 m
+
+x = 177064.015625 m y = 576215.687500 m z = 207705.250000 m
+v_x = -2 mm/s v_y = -4 mm/s v_z = 15 mm/s
+PDOP = 198
+LAT = 19.130928 deg LONG = 72.918442 deg ALT = 16.100000 m
+
+x = 177063.515625 m y = 576215.250000 m z = 207705.015625 m
+v_x = 23 mm/s v_y = 23 mm/s v_z = -3 mm/s
+PDOP = 198
+LAT = 19.130922 deg LONG = 72.918488 deg ALT = 10.410000 m
+
+x = 177063.640625 m y = 576215.062500 m z = 207705.187500 m
+v_x = 14 mm/s v_y = -31 mm/s v_z = 33 mm/s
+PDOP = 198
+LAT = 19.130943 deg LONG = 72.918465 deg ALT = 9.320000 m
+
+x = 177062.843750 m y = 576213.625000 m z = 207704.125000 m
+v_x = 24 mm/s v_y = 8 mm/s v_z = -9 mm/s
+PDOP = 198
+LAT = 19.130901 deg LONG = 72.918503 deg ALT = -9.400000 m
+
+x = 177061.906250 m y = 576214.500000 m z = 207705.343750 m
+v_x = 11 mm/s v_y = -19 mm/s v_z = -14 mm/s
+PDOP = 198
+LAT = 19.130985 deg LONG = 72.918610 deg ALT = 0.550000 m
+
+x = 177062.812500 m y = 576214.125000 m z = 207705.171875 m
+v_x = -3 mm/s v_y = 0 mm/s v_z = -6 mm/s
+PDOP = 198
+LAT = 19.130974 deg LONG = 72.918510 deg ALT = -1.340000 m
+
+x = 177063.906250 m y = 576214.812500 m z = 207704.515625 m
+v_x = -7 mm/s v_y = 5 mm/s v_z = 3 mm/s
+PDOP = 198
+LAT = 19.130890 deg LONG = 72.918434 deg ALT = 5.670000 m
+
+x = 177063.500000 m y = 576214.625000 m z = 207704.859375 m
+v_x = -4 mm/s v_y = 10 mm/s v_z = 2 mm/s
+PDOP = 198
+LAT = 19.130928 deg LONG = 72.918465 deg ALT = 4.180000 m
+
+x = 177063.453125 m y = 576213.875000 m z = 207704.718750 m
+v_x = 16 mm/s v_y = 8 mm/s v_z = 3 mm/s
+PDOP = 198
+LAT = 19.130938 deg LONG = 72.918449 deg ALT = -3.400000 m
+
+x = 177059.312500 m y = 576213.812500 m z = 207706.796875 m
+v_x = 7 mm/s v_y = 5 mm/s v_z = 20 mm/s
+PDOP = 198
+LAT = 19.131153 deg LONG = 72.918831 deg ALT = -8.610000 m
+
+x = 177061.171875 m y = 576212.812500 m z = 207705.281250 m
+v_x = 7 mm/s v_y = 2 mm/s v_z = 30 mm/s
+PDOP = 198
+LAT = 19.131035 deg LONG = 72.918633 deg ALT = -17.480000 m
+
+x = 177061.921875 m y = 576211.875000 m z = 207703.796875 m
+v_x = -7 mm/s v_y = 18 mm/s v_z = 7 mm/s
+PDOP = 198
+LAT = 19.130928 deg LONG = 72.918533 deg ALT = -28.290001 m
+
+x = 177062.843750 m y = 576213.375000 m z = 207704.375000 m
+v_x = 41 mm/s v_y = 14 mm/s v_z = 9 mm/s
+PDOP = 198
+LAT = 19.130928 deg LONG = 72.918495 deg ALT = -10.500000 m
+
+x = 177062.546875 m y = 576212.625000 m z = 207704.437500 m
+v_x = 28 mm/s v_y = 10 mm/s v_z = -8 mm/s
+PDOP = 198
+LAT = 19.130957 deg LONG = 72.918503 deg ALT = -18.160000 m
+
+x = 177060.015625 m y = 576212.687500 m z = 207705.921875 m
+v_x = -38 mm/s v_y = -28 mm/s v_z = -18 mm/s
+PDOP = 198
+LAT = 19.131104 deg LONG = 72.918732 deg ALT = -19.730000 m
+
+x = 177062.921875 m y = 576213.500000 m z = 207704.765625 m
+v_x = 12 mm/s v_y = -4 mm/s v_z = 8 mm/s
+PDOP = 198
+LAT = 19.130955 deg LONG = 72.918488 deg ALT = -7.830000 m
+
+x = 177060.156250 m y = 576212.500000 m z = 207705.656250 m
+v_x = 9 mm/s v_y = 9 mm/s v_z = -2 mm/s
+PDOP = 198
+LAT = 19.131088 deg LONG = 72.918709 deg ALT = -22.139999 m
+
+x = 177061.109375 m y = 576212.812500 m z = 207705.390625 m
+v_x = 15 mm/s v_y = -27 mm/s v_z = -4 mm/s
+PDOP = 198
+LAT = 19.131046 deg LONG = 72.918633 deg ALT = -17.170000 m
+
+x = 177060.062500 m y = 576214.062500 m z = 207706.796875 m
+v_x = -7 mm/s v_y = -23 mm/s v_z = -9 mm/s
+PDOP = 198
+LAT = 19.131140 deg LONG = 72.918762 deg ALT = -4.150000 m
+
+x = 177061.250000 m y = 576214.062500 m z = 207706.062500 m
+v_x = -19 mm/s v_y = -31 mm/s v_z = 14 mm/s
+PDOP = 198
+LAT = 19.131067 deg LONG = 72.918655 deg ALT = -3.340000 m
+
+x = 177061.156250 m y = 576213.625000 m z = 207706.281250 m
+v_x = -30 mm/s v_y = 13 mm/s v_z = 23 mm/s
+PDOP = 198
+LAT = 19.131100 deg LONG = 72.918648 deg ALT = -6.950000 m
+
+x = 177061.375000 m y = 576214.500000 m z = 207706.687500 m
+v_x = -2 mm/s v_y = -19 mm/s v_z = 14 mm/s
+PDOP = 198
+LAT = 19.131105 deg LONG = 72.918655 deg ALT = 3.210000 m
+
+x = 177061.765625 m y = 576214.437500 m z = 207706.109375 m
+v_x = 9 mm/s v_y = 6 mm/s v_z = -34 mm/s
+PDOP = 198
+LAT = 19.131054 deg LONG = 72.918625 deg ALT = 1.990000 m
+
+x = 177062.812500 m y = 576214.437500 m z = 207705.343750 m
+v_x = 2 mm/s v_y = -31 mm/s v_z = 0 mm/s
+PDOP = 198
+LAT = 19.130981 deg LONG = 72.918526 deg ALT = 2.370000 m
+
+x = 177063.312500 m y = 576214.500000 m z = 207705.140625 m
+v_x = -4 mm/s v_y = -38 mm/s v_z = 18 mm/s
+PDOP = 214
+LAT = 19.130957 deg LONG = 72.918480 deg ALT = 3.570000 m
+
+x = 177064.250000 m y = 576215.187500 m z = 207704.937500 m
+v_x = -251 mm/s v_y = -69 mm/s v_z = 115 mm/s
+PDOP = 198
+LAT = 19.130915 deg LONG = 72.918411 deg ALT = 11.310000 m
+
+x = 177063.171875 m y = 576214.062500 m z = 207705.265625 m
+v_x = 166 mm/s v_y = 33 mm/s v_z = -68 mm/s
+PDOP = 198
+LAT = 19.130980 deg LONG = 72.918480 deg ALT = -0.270000 m
+
+x = 177063.062500 m y = 576213.812500 m z = 207705.093750 m
+v_x = 81 mm/s v_y = 46 mm/s v_z = -12 mm/s
+PDOP = 198
+LAT = 19.130974 deg LONG = 72.918488 deg ALT = -3.700000 m
+
+x = 177063.203125 m y = 576214.125000 m z = 207705.062500 m
+v_x = -43 mm/s v_y = 43 mm/s v_z = 30 mm/s
+PDOP = 198
+LAT = 19.130960 deg LONG = 72.918480 deg ALT = -0.270000 m
+
+x = 177063.328125 m y = 576215.062500 m z = 207705.390625 m
+v_x = -72 mm/s v_y = -44 mm/s v_z = 21 mm/s
+PDOP = 198
+LAT = 19.130964 deg LONG = 72.918495 deg ALT = 8.970000 m
+
+x = 177063.218750 m y = 576215.062500 m z = 207705.453125 m
+v_x = -68 mm/s v_y = -24 mm/s v_z = 32 mm/s
+PDOP = 198
+LAT = 19.130970 deg LONG = 72.918503 deg ALT = 8.850000 m
+
+x = 177062.890625 m y = 576214.500000 m z = 207705.421875 m
+v_x = 25 mm/s v_y = 12 mm/s v_z = -12 mm/s
+PDOP = 198
+LAT = 19.130985 deg LONG = 72.918518 deg ALT = 3.140000 m
+
+x = 177062.796875 m y = 576213.375000 m z = 207705.093750 m
+v_x = 17 mm/s v_y = -10 mm/s v_z = 13 mm/s
+PDOP = 198
+LAT = 19.130989 deg LONG = 72.918503 deg ALT = -8.090000 m
+
+x = 177062.437500 m y = 576213.500000 m z = 207704.859375 m
+v_x = 88 mm/s v_y = 14 mm/s v_z = -27 mm/s
+PDOP = 197
+LAT = 19.130970 deg LONG = 72.918533 deg ALT = -9.070000 m
+
+x = 177058.625000 m y = 576213.312500 m z = 207707.281250 m
+v_x = -13 mm/s v_y = -16 mm/s v_z = 15 mm/s
+PDOP = 197
+LAT = 19.131214 deg LONG = 72.918877 deg ALT = -13.530000 m
+
+x = 177062.750000 m y = 576213.937500 m z = 207705.078125 m
+v_x = -9 mm/s v_y = -21 mm/s v_z = 7 mm/s
+PDOP = 197
+LAT = 19.130972 deg LONG = 72.918510 deg ALT = -3.510000 m
+
+x = 177062.515625 m y = 576213.562500 m z = 207705.046875 m
+v_x = 46 mm/s v_y = 13 mm/s v_z = 10 mm/s
+PDOP = 197
+LAT = 19.130983 deg LONG = 72.918526 deg ALT = -7.710000 m
+
+x = 177063.062500 m y = 576213.875000 m z = 207705.125000 m
+v_x = 11 mm/s v_y = -4 mm/s v_z = 0 mm/s
+PDOP = 197
+LAT = 19.130974 deg LONG = 72.918488 deg ALT = -2.800000 m
+
+x = 177062.968750 m y = 576214.187500 m z = 207705.125000 m
+v_x = 23 mm/s v_y = 8 mm/s v_z = 18 mm/s
+PDOP = 197
+LAT = 19.130968 deg LONG = 72.918503 deg ALT = -0.360000 m
+
+x = 177062.562500 m y = 576213.437500 m z = 207704.875000 m
+v_x = -8 mm/s v_y = -8 mm/s v_z = 12 mm/s
+PDOP = 197
+LAT = 19.130970 deg LONG = 72.918518 deg ALT = -8.900000 m
+
+x = 177062.359375 m y = 576213.500000 m z = 207704.687500 m
+v_x = 18 mm/s v_y = 6 mm/s v_z = -6 mm/s
+PDOP = 197
+LAT = 19.130955 deg LONG = 72.918541 deg ALT = -9.700000 m
+
+x = 177062.656250 m y = 576214.000000 m z = 207705.015625 m
+v_x = -35 mm/s v_y = -26 mm/s v_z = -6 mm/s
+PDOP = 197
+LAT = 19.130966 deg LONG = 72.918526 deg ALT = -3.330000 m
+
+x = 177062.515625 m y = 576213.562500 m z = 207704.687500 m
+v_x = -18 mm/s v_y = 12 mm/s v_z = -10 mm/s
+PDOP = 197
+LAT = 19.130953 deg LONG = 72.918526 deg ALT = -8.770000 m
+
+x = 177062.343750 m y = 576213.750000 m z = 207704.968750 m
+v_x = -15 mm/s v_y = -3 mm/s v_z = -12 mm/s
+PDOP = 197
+LAT = 19.130974 deg LONG = 72.918549 deg ALT = -6.840000 m
+
+x = 177061.921875 m y = 576213.625000 m z = 207705.109375 m
+v_x = -2 mm/s v_y = -9 mm/s v_z = 2 mm/s
+PDOP = 197
+LAT = 19.130991 deg LONG = 72.918579 deg ALT = -8.600000 m
+
+x = 177062.859375 m y = 576213.750000 m z = 207705.062500 m
+v_x = -24 mm/s v_y = 4 mm/s v_z = 4 mm/s
+PDOP = 197
+LAT = 19.130974 deg LONG = 72.918503 deg ALT = -4.680000 m
+
+x = 177062.593750 m y = 576213.375000 m z = 207704.515625 m
+v_x = -19 mm/s v_y = -12 mm/s v_z = 1 mm/s
+PDOP = 197
+LAT = 19.130943 deg LONG = 72.918510 deg ALT = -11.060000 m
+
+x = 177062.812500 m y = 576213.625000 m z = 207704.703125 m
+v_x = -16 mm/s v_y = -4 mm/s v_z = 0 mm/s
+PDOP = 197
+LAT = 19.130949 deg LONG = 72.918503 deg ALT = -7.060000 m
+
+x = 177062.562500 m y = 576213.687500 m z = 207704.812500 m
+v_x = -8 mm/s v_y = -57 mm/s v_z = -1 mm/s
+PDOP = 197
+LAT = 19.130959 deg LONG = 72.918526 deg ALT = -7.250000 m
+
+x = 177062.828125 m y = 576214.125000 m z = 207704.609375 m
+v_x = 9 mm/s v_y = -6 mm/s v_z = 2 mm/s
+PDOP = 197
+LAT = 19.130926 deg LONG = 72.918510 deg ALT = -2.700000 m
+
+x = 177062.828125 m y = 576214.250000 m z = 207704.828125 m
+v_x = 2 mm/s v_y = -24 mm/s v_z = 0 mm/s
+PDOP = 197
+LAT = 19.130941 deg LONG = 72.918518 deg ALT = -1.150000 m
+
+x = 177063.375000 m y = 576214.562500 m z = 207704.765625 m
+v_x = 17 mm/s v_y = 4 mm/s v_z = 0 mm/s
+PDOP = 197
+LAT = 19.130922 deg LONG = 72.918480 deg ALT = 2.890000 m
+
+x = 177062.203125 m y = 576213.937500 m z = 207704.875000 m
+v_x = 4 mm/s v_y = -2 mm/s v_z = 7 mm/s
+PDOP = 197
+LAT = 19.130959 deg LONG = 72.918571 deg ALT = -5.330000 m
+
+x = 177062.781250 m y = 576214.375000 m z = 207704.796875 m
+v_x = 0 mm/s v_y = 9 mm/s v_z = 7 mm/s
+PDOP = 197
+LAT = 19.130936 deg LONG = 72.918526 deg ALT = 0.020000 m
+
+x = 177063.156250 m y = 576214.562500 m z = 207705.031250 m
+v_x = 10 mm/s v_y = 1 mm/s v_z = -10 mm/s
+PDOP = 197
+LAT = 19.130945 deg LONG = 72.918503 deg ALT = 3.490000 m
+
+x = 177062.343750 m y = 576213.750000 m z = 207704.703125 m
+v_x = -51 mm/s v_y = 18 mm/s v_z = -27 mm/s
+PDOP = 197
+LAT = 19.130951 deg LONG = 72.918549 deg ALT = -7.340000 m
+
+x = 177063.125000 m y = 576215.062500 m z = 207705.156250 m
+v_x = 20 mm/s v_y = 61 mm/s v_z = 1 mm/s
+PDOP = 197
+LAT = 19.130945 deg LONG = 72.918510 deg ALT = 7.720000 m
+
+x = 177062.984375 m y = 576215.187500 m z = 207705.109375 m
+v_x = -9 mm/s v_y = 66 mm/s v_z = 34 mm/s
+PDOP = 197
+LAT = 19.130938 deg LONG = 72.918526 deg ALT = 8.220000 m
+
+x = 177062.968750 m y = 576214.187500 m z = 207704.906250 m
+v_x = -137 mm/s v_y = 33 mm/s v_z = 15 mm/s
+PDOP = 327
+LAT = 19.130949 deg LONG = 72.918503 deg ALT = -0.880000 m
+
+x = 177062.921875 m y = 576214.562500 m z = 207704.843750 m
+v_x = -32 mm/s v_y = -10 mm/s v_z = -26 mm/s
+PDOP = 327
+LAT = 19.130934 deg LONG = 72.918518 deg ALT = 1.950000 m
+
+x = 177063.015625 m y = 576214.187500 m z = 207704.859375 m
+v_x = 46 mm/s v_y = 19 mm/s v_z = 3 mm/s
+PDOP = 327
+LAT = 19.130943 deg LONG = 72.918503 deg ALT = -0.790000 m
+
+x = 177062.203125 m y = 576213.437500 m z = 207704.718750 m
+v_x = 22 mm/s v_y = 5 mm/s v_z = 12 mm/s
+PDOP = 327
+LAT = 19.130960 deg LONG = 72.918556 deg ALT = -10.420000 m
+
+x = 177063.750000 m y = 576214.562500 m z = 207704.953125 m
+v_x = 20 mm/s v_y = 57 mm/s v_z = 14 mm/s
+PDOP = 197
+LAT = 19.130936 deg LONG = 72.918442 deg ALT = 4.950000 m
+
+x = 177063.625000 m y = 576215.125000 m z = 207705.265625 m
+v_x = -234 mm/s v_y = -223 mm/s v_z = -141 mm/s
+PDOP = 197
+LAT = 19.130949 deg LONG = 72.918465 deg ALT = 9.990000 m
+
+x = 177062.500000 m y = 576215.000000 m z = 207705.750000 m
+v_x = -88 mm/s v_y = -141 mm/s v_z = -29 mm/s
+PDOP = 197
+LAT = 19.131002 deg LONG = 72.918571 deg ALT = 7.290000 m
+
+x = 177062.953125 m y = 576214.625000 m z = 207704.859375 m
+v_x = 85 mm/s v_y = 106 mm/s v_z = 44 mm/s
+PDOP = 197
+LAT = 19.130934 deg LONG = 72.918510 deg ALT = 2.710000 m
+
+x = 177063.062500 m y = 576215.000000 m z = 207705.062500 m
+v_x = 12 mm/s v_y = 9 mm/s v_z = -16 mm/s
+PDOP = 197
+LAT = 19.130938 deg LONG = 72.918518 deg ALT = 6.730000 m
+
+x = 177063.187500 m y = 576215.312500 m z = 207705.281250 m
+v_x = 76 mm/s v_y = 46 mm/s v_z = 45 mm/s
+PDOP = 197
+LAT = 19.130949 deg LONG = 72.918510 deg ALT = 10.880000 m
+
+x = 177063.250000 m y = 576214.437500 m z = 207705.062500 m
+v_x = -32 mm/s v_y = 54 mm/s v_z = 0 mm/s
+PDOP = 197
+LAT = 19.130951 deg LONG = 72.918488 deg ALT = 2.690000 m
+
+x = 177061.828125 m y = 576214.937500 m z = 207705.609375 m
+v_x = -2 mm/s v_y = -38 mm/s v_z = 4 mm/s
+PDOP = 197
+LAT = 19.131001 deg LONG = 72.918633 deg ALT = 4.730000 m
+
+x = 177063.937500 m y = 576214.312500 m z = 207704.218750 m
+v_x = 18 mm/s v_y = -15 mm/s v_z = 22 mm/s
+PDOP = 197
+LAT = 19.130878 deg LONG = 72.918419 deg ALT = 0.450000 m
+
+x = 177063.125000 m y = 576214.500000 m z = 207704.953125 m
+v_x = 14 mm/s v_y = 22 mm/s v_z = 3 mm/s
+PDOP = 197
+LAT = 19.130943 deg LONG = 72.918503 deg ALT = 2.180000 m
+
+x = 177062.625000 m y = 576213.500000 m z = 207704.671875 m
+v_x = 11 mm/s v_y = 15 mm/s v_z = 7 mm/s
+PDOP = 197
+LAT = 19.130953 deg LONG = 72.918510 deg ALT = -8.950000 m
+
+x = 177062.343750 m y = 576212.937500 m z = 207704.437500 m
+v_x = -9 mm/s v_y = 32 mm/s v_z = -1 mm/s
+PDOP = 197
+LAT = 19.130949 deg LONG = 72.918526 deg ALT = -15.740000 m
+
+x = 177062.562500 m y = 576213.687500 m z = 207704.687500 m
+v_x = 4 mm/s v_y = 14 mm/s v_z = 9 mm/s
+PDOP = 197
+LAT = 19.130949 deg LONG = 72.918526 deg ALT = -7.720000 m
+
+x = 177062.062500 m y = 576213.500000 m z = 207704.531250 m
+v_x = -3 mm/s v_y = -11 mm/s v_z = -18 mm/s
+PDOP = 197
+LAT = 19.130945 deg LONG = 72.918571 deg ALT = -11.240000 m
+
+x = 177062.250000 m y = 576213.875000 m z = 207704.687500 m
+v_x = 51 mm/s v_y = 51 mm/s v_z = 20 mm/s
+PDOP = 197
+LAT = 19.130947 deg LONG = 72.918564 deg ALT = -6.820000 m
+
+x = 177062.281250 m y = 576214.125000 m z = 207704.875000 m
+v_x = -6 mm/s v_y = 23 mm/s v_z = 39 mm/s
+PDOP = 197
+LAT = 19.130953 deg LONG = 72.918564 deg ALT = -3.690000 m
+
+x = 177061.828125 m y = 576214.000000 m z = 207704.656250 m
+v_x = 22 mm/s v_y = 13 mm/s v_z = 20 mm/s
+PDOP = 197
+LAT = 19.130943 deg LONG = 72.918602 deg ALT = -6.720000 m
+
+x = 177062.859375 m y = 576215.062500 m z = 207705.343750 m
+v_x = 7 mm/s v_y = 6 mm/s v_z = 15 mm/s
+PDOP = 197
+LAT = 19.130964 deg LONG = 72.918533 deg ALT = 7.440000 m
+
+x = 177062.437500 m y = 576214.812500 m z = 207705.046875 m
+v_x = -19 mm/s v_y = 21 mm/s v_z = -32 mm/s
+PDOP = 197
+LAT = 19.130949 deg LONG = 72.918571 deg ALT = 3.140000 m
+
+x = 177062.421875 m y = 576214.437500 m z = 207704.906250 m
+v_x = 14 mm/s v_y = -9 mm/s v_z = -9 mm/s
+PDOP = 197
+LAT = 19.130947 deg LONG = 72.918564 deg ALT = 0.030000 m
+
+x = 177062.765625 m y = 576214.625000 m z = 207704.921875 m
+v_x = 23 mm/s v_y = 11 mm/s v_z = -36 mm/s
+PDOP = 197
+LAT = 19.130938 deg LONG = 72.918533 deg ALT = 2.770000 m
+
+x = 177063.171875 m y = 576215.250000 m z = 207704.859375 m
+v_x = 0 mm/s v_y = 6 mm/s v_z = 9 mm/s
+PDOP = 197
+LAT = 19.130915 deg LONG = 72.918510 deg ALT = 8.490000 m
+
+x = 177062.515625 m y = 576214.125000 m z = 207704.828125 m
+v_x = 23 mm/s v_y = -16 mm/s v_z = 8 mm/s
+PDOP = 197
+LAT = 19.130949 deg LONG = 72.918541 deg ALT = -3.020000 m
+
+x = 177062.656250 m y = 576214.250000 m z = 207704.703125 m
+v_x = -6 mm/s v_y = 21 mm/s v_z = 7 mm/s
+PDOP = 197
+LAT = 19.130932 deg LONG = 72.918533 deg ALT = -1.900000 m
+
+x = 177062.984375 m y = 576214.500000 m z = 207704.796875 m
+v_x = 30 mm/s v_y = -16 mm/s v_z = 5 mm/s
+PDOP = 197
+LAT = 19.130932 deg LONG = 72.918510 deg ALT = 1.450000 m
+
+x = 177063.156250 m y = 576214.812500 m z = 207705.093750 m
+v_x = 31 mm/s v_y = 0 mm/s v_z = 14 mm/s
+PDOP = 197
+LAT = 19.130947 deg LONG = 72.918503 deg ALT = 5.370000 m
+
+x = 177063.609375 m y = 576214.750000 m z = 207705.062500 m
+v_x = -6 mm/s v_y = 15 mm/s v_z = 8 mm/s
+PDOP = 197
+LAT = 19.130941 deg LONG = 72.918457 deg ALT = 6.100000 m
+
+x = 177063.421875 m y = 576214.875000 m z = 207704.968750 m
+v_x = 0 mm/s v_y = 25 mm/s v_z = 0 mm/s
+PDOP = 197
+LAT = 19.130934 deg LONG = 72.918480 deg ALT = 6.010000 m
+
+x = 177062.015625 m y = 576213.500000 m z = 207704.343750 m
+v_x = 43 mm/s v_y = 6 mm/s v_z = -20 mm/s
+PDOP = 197
+LAT = 19.130930 deg LONG = 72.918571 deg ALT = -12.040000 m
+
+x = 177062.500000 m y = 576213.812500 m z = 207704.546875 m
+v_x = -19 mm/s v_y = 17 mm/s v_z = -40 mm/s
+PDOP = 197
+LAT = 19.130932 deg LONG = 72.918533 deg ALT = -6.880000 m
+
+x = 177063.468750 m y = 576215.312500 m z = 207705.343750 m
+v_x = 33 mm/s v_y = 3 mm/s v_z = 18 mm/s
+PDOP = 197
+LAT = 19.130953 deg LONG = 72.918488 deg ALT = 11.600000 m
+
+x = 177062.765625 m y = 576214.625000 m z = 207704.984375 m
+v_x = 27 mm/s v_y = -12 mm/s v_z = -24 mm/s
+PDOP = 197
+LAT = 19.130945 deg LONG = 72.918533 deg ALT = 2.500000 m
+
+x = 177063.875000 m y = 576214.875000 m z = 207705.312500 m
+v_x = 6 mm/s v_y = 0 mm/s v_z = 10 mm/s
+PDOP = 197
+LAT = 19.130957 deg LONG = 72.918434 deg ALT = 8.700000 m
+
+x = 177063.046875 m y = 576214.500000 m z = 207705.078125 m
+v_x = -7 mm/s v_y = -27 mm/s v_z = 40 mm/s
+PDOP = 197
+LAT = 19.130953 deg LONG = 72.918503 deg ALT = 2.600000 m
+
+x = 177062.500000 m y = 576213.750000 m z = 207704.578125 m
+v_x = 3 mm/s v_y = -14 mm/s v_z = -2 mm/s
+PDOP = 197
+LAT = 19.130936 deg LONG = 72.918533 deg ALT = -7.470000 m
+
+x = 177062.312500 m y = 576213.687500 m z = 207704.562500 m
+v_x = 17 mm/s v_y = 25 mm/s v_z = 9 mm/s
+PDOP = 197
+LAT = 19.130938 deg LONG = 72.918549 deg ALT = -8.380000 m
+
+x = 177063.375000 m y = 576214.750000 m z = 207705.343750 m
+v_x = 9 mm/s v_y = 33 mm/s v_z = -4 mm/s
+PDOP = 197
+LAT = 19.130970 deg LONG = 72.918480 deg ALT = 5.990000 m
+
+x = 177063.203125 m y = 576214.500000 m z = 207705.390625 m
+v_x = -22 mm/s v_y = -2 mm/s v_z = 9 mm/s
+PDOP = 197
+LAT = 19.130978 deg LONG = 72.918495 deg ALT = 4.120000 m
+
+x = 177063.078125 m y = 576214.250000 m z = 207705.125000 m
+v_x = -9 mm/s v_y = 11 mm/s v_z = 8 mm/s
+PDOP = 197
+LAT = 19.130964 deg LONG = 72.918495 deg ALT = 0.290000 m
+
+x = 177062.687500 m y = 576213.437500 m z = 207704.828125 m
+v_x = -16 mm/s v_y = -19 mm/s v_z = 3 mm/s
+PDOP = 197
+LAT = 19.130966 deg LONG = 72.918503 deg ALT = -8.830000 m
+
+x = 177062.796875 m y = 576214.625000 m z = 207705.125000 m
+v_x = 17 mm/s v_y = -17 mm/s v_z = 41 mm/s
+PDOP = 197
+LAT = 19.130957 deg LONG = 72.918533 deg ALT = 3.290000 m
+
+x = 177062.875000 m y = 576214.250000 m z = 207704.765625 m
+v_x = 48 mm/s v_y = -19 mm/s v_z = 7 mm/s
+PDOP = 197
+LAT = 19.130936 deg LONG = 72.918510 deg ALT = -1.300000 m
+
+x = 177063.453125 m y = 576215.375000 m z = 207705.390625 m
+v_x = -18 mm/s v_y = -12 mm/s v_z = 6 mm/s
+PDOP = 197
+LAT = 19.130953 deg LONG = 72.918495 deg ALT = 12.240000 m
+
+x = 177061.890625 m y = 576213.750000 m z = 207704.406250 m
+v_x = 21 mm/s v_y = 29 mm/s v_z = -38 mm/s
+PDOP = 197
+LAT = 19.130926 deg LONG = 72.918587 deg ALT = -9.550000 m
+
+x = 177061.859375 m y = 576214.187500 m z = 207705.125000 m
+v_x = 7 mm/s v_y = -7 mm/s v_z = 0 mm/s
+PDOP = 197
+LAT = 19.130978 deg LONG = 72.918602 deg ALT = -3.660000 m
+
+x = 177062.687500 m y = 576214.562500 m z = 207704.906250 m
+v_x = -16 mm/s v_y = 2 mm/s v_z = -5 mm/s
+PDOP = 197
+LAT = 19.130941 deg LONG = 72.918541 deg ALT = 1.420000 m
+
+x = 177063.109375 m y = 576214.937500 m z = 207705.218750 m
+v_x = 12 mm/s v_y = 0 mm/s v_z = -6 mm/s
+PDOP = 197
+LAT = 19.130953 deg LONG = 72.918510 deg ALT = 6.890000 m
+
+x = 177062.859375 m y = 576214.437500 m z = 207705.062500 m
+v_x = 18 mm/s v_y = -3 mm/s v_z = 47 mm/s
+PDOP = 197
+LAT = 19.130953 deg LONG = 72.918518 deg ALT = 1.610000 m
+
+x = 177062.093750 m y = 576213.750000 m z = 207704.500000 m
+v_x = 32 mm/s v_y = 10 mm/s v_z = 22 mm/s
+PDOP = 197
+LAT = 19.130934 deg LONG = 72.918571 deg ALT = -8.670000 m
+
+x = 177063.343750 m y = 576214.875000 m z = 207705.015625 m
+v_x = 12 mm/s v_y = 17 mm/s v_z = -8 mm/s
+PDOP = 197
+LAT = 19.130936 deg LONG = 72.918488 deg ALT = 6.110000 m
+
+x = 177063.312500 m y = 576215.500000 m z = 207705.296875 m
+v_x = 12 mm/s v_y = 4 mm/s v_z = 52 mm/s
+PDOP = 197
+LAT = 19.130943 deg LONG = 72.918503 deg ALT = 12.550000 m
+
+x = 177063.484375 m y = 576215.125000 m z = 207705.203125 m
+v_x = -15 mm/s v_y = -37 mm/s v_z = 26 mm/s
+PDOP = 197
+LAT = 19.130943 deg LONG = 72.918488 deg ALT = 9.760000 m
+
+x = 177063.906250 m y = 576215.562500 m z = 207705.296875 m
+v_x = -12 mm/s v_y = 4 mm/s v_z = -7 mm/s
+PDOP = 197
+LAT = 19.130936 deg LONG = 72.918457 deg ALT = 14.850000 m
+
+x = 177064.734375 m y = 576215.625000 m z = 207705.468750 m
+v_x = 27 mm/s v_y = 66 mm/s v_z = -17 mm/s
+PDOP = 197
+LAT = 19.130941 deg LONG = 72.918381 deg ALT = 18.209999 m
+
+x = 177064.000000 m y = 576215.437500 m z = 207705.296875 m
+v_x = 37 mm/s v_y = 4 mm/s v_z = 8 mm/s
+PDOP = 197
+LAT = 19.130938 deg LONG = 72.918442 deg ALT = 14.140000 m
+
+x = 177064.078125 m y = 576215.250000 m z = 207705.359375 m
+v_x = -28 mm/s v_y = 20 mm/s v_z = 16 mm/s
+PDOP = 197
+LAT = 19.130949 deg LONG = 72.918434 deg ALT = 12.760000 m
+
+x = 177064.234375 m y = 576215.500000 m z = 207705.359375 m
+v_x = 49 mm/s v_y = 4 mm/s v_z = -5 mm/s
+PDOP = 197
+LAT = 19.130939 deg LONG = 72.918427 deg ALT = 15.520000 m
+
+x = 177064.015625 m y = 576214.875000 m z = 207705.265625 m
+v_x = -17 mm/s v_y = 6 mm/s v_z = -12 mm/s
+PDOP = 196
+LAT = 19.130953 deg LONG = 72.918427 deg ALT = 8.640000 m
+
+x = 177064.000000 m y = 576215.000000 m z = 207705.156250 m
+v_x = 3 mm/s v_y = 29 mm/s v_z = 7 mm/s
+PDOP = 196
+LAT = 19.130939 deg LONG = 72.918434 deg ALT = 9.440000 m
+
+x = 177063.687500 m y = 576214.875000 m z = 207705.171875 m
+v_x = -22 mm/s v_y = 34 mm/s v_z = 5 mm/s
+PDOP = 196
+LAT = 19.130947 deg LONG = 72.918457 deg ALT = 7.610000 m
+
+x = 177063.859375 m y = 576215.500000 m z = 207705.296875 m
+v_x = 6 mm/s v_y = -27 mm/s v_z = -4 mm/s
+PDOP = 196
+LAT = 19.130938 deg LONG = 72.918457 deg ALT = 14.070000 m
+
+x = 177063.859375 m y = 576214.937500 m z = 207705.218750 m
+v_x = -17 mm/s v_y = 13 mm/s v_z = 5 mm/s
+PDOP = 196
+LAT = 19.130947 deg LONG = 72.918442 deg ALT = 8.720000 m
+
+x = 177064.062500 m y = 576215.125000 m z = 207705.171875 m
+v_x = 5 mm/s v_y = 16 mm/s v_z = 15 mm/s
+PDOP = 196
+LAT = 19.130936 deg LONG = 72.918434 deg ALT = 11.150000 m
+
+x = 177062.890625 m y = 576214.812500 m z = 207705.515625 m
+v_x = 18 mm/s v_y = 28 mm/s v_z = 4 mm/s
+PDOP = 196
+LAT = 19.130985 deg LONG = 72.918526 deg ALT = 6.140000 m
+
+x = 177063.609375 m y = 576215.312500 m z = 207705.109375 m
+v_x = 53 mm/s v_y = 14 mm/s v_z = -5 mm/s
+PDOP = 196
+LAT = 19.130930 deg LONG = 72.918472 deg ALT = 11.130000 m
+
+x = 177063.593750 m y = 576215.312500 m z = 207705.109375 m
+v_x = 4 mm/s v_y = 19 mm/s v_z = -15 mm/s
+PDOP = 196
+LAT = 19.130930 deg LONG = 72.918480 deg ALT = 11.120000 m
+
+x = 177063.765625 m y = 576215.312500 m z = 207705.453125 m
+v_x = -18 mm/s v_y = -6 mm/s v_z = 10 mm/s
+PDOP = 196
+LAT = 19.130957 deg LONG = 72.918465 deg ALT = 13.080000 m
+
+x = 177063.640625 m y = 576215.500000 m z = 207705.359375 m
+v_x = 0 mm/s v_y = -27 mm/s v_z = 13 mm/s
+PDOP = 196
+LAT = 19.130945 deg LONG = 72.918480 deg ALT = 14.130000 m
+
+x = 177064.218750 m y = 576214.875000 m z = 207704.875000 m
+v_x = 5 mm/s v_y = -12 mm/s v_z = 24 mm/s
+PDOP = 196
+LAT = 19.130919 deg LONG = 72.918404 deg ALT = 8.080000 m
+
+x = 177063.250000 m y = 576214.812500 m z = 207705.140625 m
+v_x = -16 mm/s v_y = -6 mm/s v_z = -10 mm/s
+PDOP = 196
+LAT = 19.130951 deg LONG = 72.918495 deg ALT = 5.570000 m
+
+x = 177063.250000 m y = 576214.937500 m z = 207705.203125 m
+v_x = 13 mm/s v_y = 16 mm/s v_z = -9 mm/s
+PDOP = 196
+LAT = 19.130953 deg LONG = 72.918503 deg ALT = 6.830000 m
+
+x = 177063.406250 m y = 576214.625000 m z = 207705.203125 m
+v_x = 11 mm/s v_y = 22 mm/s v_z = -6 mm/s
+PDOP = 196
+LAT = 19.130957 deg LONG = 72.918480 deg ALT = 5.290000 m
+
+x = 177063.187500 m y = 576214.937500 m z = 207705.218750 m
+v_x = -15 mm/s v_y = -5 mm/s v_z = 17 mm/s
+PDOP = 196
+LAT = 19.130953 deg LONG = 72.918503 deg ALT = 6.960000 m
+
+x = 177063.500000 m y = 576215.062500 m z = 207705.312500 m
+v_x = 19 mm/s v_y = -4 mm/s v_z = 14 mm/s
+PDOP = 196
+LAT = 19.130955 deg LONG = 72.918480 deg ALT = 9.160000 m
+
+x = 177063.562500 m y = 576214.125000 m z = 207705.109375 m
+v_x = 9 mm/s v_y = 21 mm/s v_z = -4 mm/s
+PDOP = 196
+LAT = 19.130962 deg LONG = 72.918442 deg ALT = 0.850000 m
+
+x = 177063.906250 m y = 576214.312500 m z = 207705.031250 m
+v_x = 6 mm/s v_y = -4 mm/s v_z = 16 mm/s
+PDOP = 196
+LAT = 19.130947 deg LONG = 72.918427 deg ALT = 3.300000 m
+
+x = 177063.343750 m y = 576214.750000 m z = 207705.171875 m
+v_x = -3 mm/s v_y = 24 mm/s v_z = 12 mm/s
+PDOP = 196
+LAT = 19.130953 deg LONG = 72.918488 deg ALT = 5.800000 m
+
+x = 177063.343750 m y = 576214.250000 m z = 207705.093750 m
+v_x = 20 mm/s v_y = 41 mm/s v_z = 18 mm/s
+PDOP = 196
+LAT = 19.130959 deg LONG = 72.918472 deg ALT = 1.400000 m
+
+x = 177063.390625 m y = 576214.250000 m z = 207704.906250 m
+v_x = 0 mm/s v_y = 18 mm/s v_z = -4 mm/s
+PDOP = 196
+LAT = 19.130943 deg LONG = 72.918465 deg ALT = 0.810000 m
+
+x = 177063.406250 m y = 576214.562500 m z = 207705.093750 m
+v_x = 15 mm/s v_y = 40 mm/s v_z = 11 mm/s
+PDOP = 196
+LAT = 19.130951 deg LONG = 72.918472 deg ALT = 4.210000 m
+
+x = 177062.937500 m y = 576214.625000 m z = 207705.218750 m
+v_x = 19 mm/s v_y = 12 mm/s v_z = 10 mm/s
+PDOP = 196
+LAT = 19.130962 deg LONG = 72.918518 deg ALT = 4.250000 m
+
+x = 177062.750000 m y = 576214.187500 m z = 207705.093750 m
+v_x = -8 mm/s v_y = 32 mm/s v_z = -5 mm/s
+PDOP = 196
+LAT = 19.130966 deg LONG = 72.918518 deg ALT = -0.970000 m
+
+x = 177062.828125 m y = 576214.812500 m z = 207705.250000 m
+v_x = -8 mm/s v_y = -8 mm/s v_z = 0 mm/s
+PDOP = 196
+LAT = 19.130962 deg LONG = 72.918533 deg ALT = 4.830000 m
+
+x = 177063.203125 m y = 576214.875000 m z = 207705.421875 m
+v_x = 6 mm/s v_y = 39 mm/s v_z = 4 mm/s
+PDOP = 196
+LAT = 19.130972 deg LONG = 72.918503 deg ALT = 7.030000 m
+
+x = 177063.281250 m y = 576215.062500 m z = 207705.484375 m
+v_x = 13 mm/s v_y = 16 mm/s v_z = 6 mm/s
+PDOP = 196
+LAT = 19.130970 deg LONG = 72.918503 deg ALT = 9.580000 m
+
+x = 177063.359375 m y = 576215.250000 m z = 207705.296875 m
+v_x = -7 mm/s v_y = 0 mm/s v_z = -2 mm/s
+PDOP = 196
+LAT = 19.130951 deg LONG = 72.918495 deg ALT = 10.340000 m
+
+x = 177063.093750 m y = 576215.125000 m z = 207705.328125 m
+v_x = -15 mm/s v_y = -17 mm/s v_z = 14 mm/s
+PDOP = 196
+LAT = 19.130959 deg LONG = 72.918518 deg ALT = 8.810000 m
+
+x = 177063.140625 m y = 576214.750000 m z = 207705.140625 m
+v_x = -19 mm/s v_y = 38 mm/s v_z = -8 mm/s
+PDOP = 196
+LAT = 19.130953 deg LONG = 72.918503 deg ALT = 4.650000 m
+
+x = 177063.468750 m y = 576214.562500 m z = 207705.390625 m
+v_x = -10 mm/s v_y = 10 mm/s v_z = -10 mm/s
+PDOP = 196
+LAT = 19.130974 deg LONG = 72.918472 deg ALT = 5.720000 m
+
+x = 177063.718750 m y = 576214.500000 m z = 207705.250000 m
+v_x = -2 mm/s v_y = 1 mm/s v_z = -7 mm/s
+PDOP = 196
+LAT = 19.130960 deg LONG = 72.918442 deg ALT = 5.300000 m
+
+x = 177063.359375 m y = 576214.750000 m z = 207705.437500 m
+v_x = 18 mm/s v_y = 3 mm/s v_z = 12 mm/s
+PDOP = 196
+LAT = 19.130976 deg LONG = 72.918480 deg ALT = 6.580000 m
+
+x = 177063.250000 m y = 576214.875000 m z = 207705.234375 m
+v_x = 0 mm/s v_y = 17 mm/s v_z = -16 mm/s
+PDOP = 196
+LAT = 19.130955 deg LONG = 72.918495 deg ALT = 6.860000 m
+
+x = 177063.140625 m y = 576214.875000 m z = 207705.171875 m
+v_x = -3 mm/s v_y = 23 mm/s v_z = 4 mm/s
+PDOP = 196
+LAT = 19.130953 deg LONG = 72.918503 deg ALT = 5.950000 m
+
+x = 177063.468750 m y = 576214.625000 m z = 207705.187500 m
+v_x = -22 mm/s v_y = -1 mm/s v_z = 23 mm/s
+PDOP = 196
+LAT = 19.130953 deg LONG = 72.918472 deg ALT = 5.560000 m
+
+x = 177063.593750 m y = 576215.062500 m z = 207705.234375 m
+v_x = 30 mm/s v_y = 32 mm/s v_z = 2 mm/s
+PDOP = 196
+LAT = 19.130947 deg LONG = 72.918472 deg ALT = 9.610000 m
+
+x = 177063.609375 m y = 576215.250000 m z = 207705.125000 m
+v_x = -7 mm/s v_y = -11 mm/s v_z = 9 mm/s
+PDOP = 196
+LAT = 19.130934 deg LONG = 72.918472 deg ALT = 10.640000 m
+
+x = 177063.218750 m y = 576214.937500 m z = 207705.250000 m
+v_x = 2 mm/s v_y = 0 mm/s v_z = 0 mm/s
+PDOP = 196
+LAT = 19.130955 deg LONG = 72.918503 deg ALT = 7.340000 m
+
+x = 177063.375000 m y = 576215.062500 m z = 207704.968750 m
+v_x = 3 mm/s v_y = -3 mm/s v_z = 1 mm/s
+PDOP = 196
+LAT = 19.130928 deg LONG = 72.918495 deg ALT = 7.920000 m
+
+x = 177063.406250 m y = 576215.125000 m z = 207705.046875 m
+v_x = 3 mm/s v_y = 12 mm/s v_z = 11 mm/s
+PDOP = 196
+LAT = 19.130932 deg LONG = 72.918488 deg ALT = 8.720000 m
+
+x = 177063.812500 m y = 576215.187500 m z = 207705.109375 m
+v_x = 9 mm/s v_y = 9 mm/s v_z = -8 mm/s
+PDOP = 196
+LAT = 19.130930 deg LONG = 72.918449 deg ALT = 10.910000 m
+
+x = 177063.765625 m y = 576214.875000 m z = 207705.203125 m
+v_x = 15 mm/s v_y = 28 mm/s v_z = 9 mm/s
+PDOP = 196
+LAT = 19.130949 deg LONG = 72.918449 deg ALT = 7.950000 m
+
+x = 177063.515625 m y = 576214.562500 m z = 207705.140625 m
+v_x = 35 mm/s v_y = -2 mm/s v_z = -11 mm/s
+PDOP = 196
+LAT = 19.130953 deg LONG = 72.918465 deg ALT = 4.520000 m
+
+x = 177063.843750 m y = 576214.312500 m z = 207705.031250 m
+v_x = 17 mm/s v_y = -6 mm/s v_z = -8 mm/s
+PDOP = 196
+LAT = 19.130949 deg LONG = 72.918427 deg ALT = 2.850000 m
+
+x = 177063.312500 m y = 576214.062500 m z = 207705.062500 m
+v_x = -56 mm/s v_y = 30 mm/s v_z = 17 mm/s
+PDOP = 196
+LAT = 19.130962 deg LONG = 72.918465 deg ALT = -0.950000 m
+
+x = 177063.359375 m y = 576215.250000 m z = 207705.250000 m
+v_x = 0 mm/s v_y = 91 mm/s v_z = -25 mm/s
+PDOP = 196
+LAT = 19.130945 deg LONG = 72.918503 deg ALT = 10.630000 m
+
+x = 177063.046875 m y = 576215.500000 m z = 207705.140625 m
+v_x = -2 mm/s v_y = 14 mm/s v_z = -26 mm/s
+PDOP = 196
+LAT = 19.130932 deg LONG = 72.918533 deg ALT = 11.520000 m
+
+x = 177063.906250 m y = 576215.187500 m z = 207705.031250 m
+v_x = 13 mm/s v_y = 32 mm/s v_z = 26 mm/s
+PDOP = 196
+LAT = 19.130922 deg LONG = 72.918442 deg ALT = 10.410000 m
+
+x = 177063.546875 m y = 576215.187500 m z = 207704.828125 m
+v_x = 23 mm/s v_y = 12 mm/s v_z = -3 mm/s
+PDOP = 196
+LAT = 19.130909 deg LONG = 72.918480 deg ALT = 9.180000 m
+
+x = 177063.343750 m y = 576215.250000 m z = 207705.078125 m
+v_x = 21 mm/s v_y = 20 mm/s v_z = 9 mm/s
+PDOP = 196
+LAT = 19.130932 deg LONG = 72.918503 deg ALT = 9.650000 m
+
+x = 177063.390625 m y = 576215.625000 m z = 207705.234375 m
+v_x = 27 mm/s v_y = -17 mm/s v_z = -7 mm/s
+PDOP = 196
+LAT = 19.130932 deg LONG = 72.918503 deg ALT = 14.120000 m
+
+x = 177063.468750 m y = 576215.437500 m z = 207705.031250 m
+v_x = -18 mm/s v_y = 20 mm/s v_z = -8 mm/s
+PDOP = 196
+LAT = 19.130920 deg LONG = 72.918495 deg ALT = 11.580000 m
+
+x = 177063.187500 m y = 576215.250000 m z = 207705.140625 m
+v_x = 12 mm/s v_y = -42 mm/s v_z = 20 mm/s
+PDOP = 196
+LAT = 19.130936 deg LONG = 72.918510 deg ALT = 9.500000 m
+
+x = 177063.328125 m y = 576214.937500 m z = 207705.187500 m
+v_x = -42 mm/s v_y = -12 mm/s v_z = 6 mm/s
+PDOP = 206
+LAT = 19.130949 deg LONG = 72.918495 deg ALT = 7.030000 m
+
+x = 177063.359375 m y = 576215.312500 m z = 207705.093750 m
+v_x = 8 mm/s v_y = 0 mm/s v_z = -7 mm/s
+PDOP = 196
+LAT = 19.130930 deg LONG = 72.918503 deg ALT = 10.540000 m
+
+x = 177063.156250 m y = 576215.750000 m z = 207704.953125 m
+v_x = 2 mm/s v_y = -1 mm/s v_z = 13 mm/s
+PDOP = 196
+LAT = 19.130907 deg LONG = 72.918526 deg ALT = 13.710000 m
+
+x = 177063.546875 m y = 576215.375000 m z = 207705.062500 m
+v_x = -5 mm/s v_y = 39 mm/s v_z = 3 mm/s
+PDOP = 196
+LAT = 19.130922 deg LONG = 72.918488 deg ALT = 11.720000 m
+
+x = 177063.875000 m y = 576215.750000 m z = 207705.265625 m
+v_x = 21 mm/s v_y = -62 mm/s v_z = 19 mm/s
+PDOP = 196
+LAT = 19.130926 deg LONG = 72.918465 deg ALT = 16.740000 m
+
+x = 177063.593750 m y = 576215.750000 m z = 207705.062500 m
+v_x = 9 mm/s v_y = 27 mm/s v_z = -1 mm/s
+PDOP = 196
+LAT = 19.130913 deg LONG = 72.918488 deg ALT = 15.070000 m
+
+x = 177063.937500 m y = 576215.687500 m z = 207705.062500 m
+v_x = 24 mm/s v_y = -1 mm/s v_z = 3 mm/s
+PDOP = 196
+LAT = 19.130913 deg LONG = 72.918457 deg ALT = 15.290000 m
+
+x = 177063.906250 m y = 576215.812500 m z = 207705.187500 m
+v_x = 21 mm/s v_y = 1 mm/s v_z = 5 mm/s
+PDOP = 196
+LAT = 19.130920 deg LONG = 72.918465 deg ALT = 16.650000 m
+
+x = 177063.968750 m y = 576215.687500 m z = 207705.281250 m
+v_x = -24 mm/s v_y = 14 mm/s v_z = 15 mm/s
+PDOP = 196
+LAT = 19.130930 deg LONG = 72.918449 deg ALT = 16.340000 m
+
+x = 177063.906250 m y = 576215.937500 m z = 207705.078125 m
+v_x = 8 mm/s v_y = -30 mm/s v_z = 23 mm/s
+PDOP = 196
+LAT = 19.130905 deg LONG = 72.918465 deg ALT = 17.540001 m
+
+x = 177063.109375 m y = 576215.062500 m z = 207704.921875 m
+v_x = -39 mm/s v_y = 70 mm/s v_z = -14 mm/s
+PDOP = 196
+LAT = 19.130924 deg LONG = 72.918510 deg ALT = 7.050000 m
+
+x = 177063.562500 m y = 576215.312500 m z = 207704.953125 m
+v_x = -11 mm/s v_y = -23 mm/s v_z = 4 mm/s
+PDOP = 196
+LAT = 19.130919 deg LONG = 72.918480 deg ALT = 10.500000 m
+
+x = 177063.343750 m y = 576215.125000 m z = 207704.906250 m
+v_x = -16 mm/s v_y = -16 mm/s v_z = 1 mm/s
+PDOP = 196
+LAT = 19.130920 deg LONG = 72.918495 deg ALT = 7.900000 m
+
+x = 177063.171875 m y = 576215.250000 m z = 207704.828125 m
+v_x = 19 mm/s v_y = 0 mm/s v_z = -6 mm/s
+PDOP = 196
+LAT = 19.130913 deg LONG = 72.918510 deg ALT = 8.510000 m
+
+x = 177063.328125 m y = 576215.312500 m z = 207704.890625 m
+v_x = -12 mm/s v_y = 69 mm/s v_z = -7 mm/s
+PDOP = 196
+LAT = 19.130915 deg LONG = 72.918503 deg ALT = 9.930000 m
+
+x = 177059.390625 m y = 576216.375000 m z = 207707.140625 m
+v_x = 26 mm/s v_y = 2 mm/s v_z = -4 mm/s
+PDOP = 206
+LAT = 19.131107 deg LONG = 72.918892 deg ALT = 16.160000 m
+
+x = 177063.250000 m y = 576216.625000 m z = 207705.109375 m
+v_x = 13 mm/s v_y = -15 mm/s v_z = 14 mm/s
+PDOP = 206
+LAT = 19.130894 deg LONG = 72.918549 deg ALT = 22.410000 m
+
+x = 177063.265625 m y = 576216.000000 m z = 207705.062500 m
+v_x = 29 mm/s v_y = 35 mm/s v_z = -2 mm/s
+PDOP = 206
+LAT = 19.130909 deg LONG = 72.918526 deg ALT = 16.590000 m
+
+x = 177063.171875 m y = 576215.687500 m z = 207705.062500 m
+v_x = 5 mm/s v_y = 24 mm/s v_z = 8 mm/s
+PDOP = 206
+LAT = 19.130919 deg LONG = 72.918526 deg ALT = 13.030000 m
+
+x = 177062.859375 m y = 576215.500000 m z = 207704.968750 m
+v_x = -27 mm/s v_y = 3 mm/s v_z = 2 mm/s
+PDOP = 206
+LAT = 19.130919 deg LONG = 72.918549 deg ALT = 10.570000 m
+
+x = 177063.328125 m y = 576216.000000 m z = 207705.328125 m
+v_x = 43 mm/s v_y = 30 mm/s v_z = 25 mm/s
+PDOP = 206
+LAT = 19.130932 deg LONG = 72.918518 deg ALT = 17.350000 m
+
+x = 177063.312500 m y = 576215.187500 m z = 207704.937500 m
+v_x = -12 mm/s v_y = 2 mm/s v_z = 13 mm/s
+PDOP = 206
+LAT = 19.130920 deg LONG = 72.918503 deg ALT = 9.030000 m
+
+x = 177062.812500 m y = 576215.437500 m z = 207704.968750 m
+v_x = 52 mm/s v_y = 6 mm/s v_z = 53 mm/s
+PDOP = 206
+LAT = 19.130920 deg LONG = 72.918556 deg ALT = 9.920000 m
+
+x = 177063.640625 m y = 576215.000000 m z = 207704.859375 m
+v_x = -22 mm/s v_y = -32 mm/s v_z = 16 mm/s
+PDOP = 206
+LAT = 19.130919 deg LONG = 72.918465 deg ALT = 7.450000 m
+
+x = 177063.328125 m y = 576214.750000 m z = 207704.703125 m
+v_x = 20 mm/s v_y = -3 mm/s v_z = 4 mm/s
+PDOP = 206
+LAT = 19.130913 deg LONG = 72.918488 deg ALT = 4.200000 m
+
+x = 177063.234375 m y = 576215.000000 m z = 207704.796875 m
+v_x = 0 mm/s v_y = 3 mm/s v_z = -20 mm/s
+PDOP = 206
+LAT = 19.130917 deg LONG = 72.918503 deg ALT = 6.260000 m
+
+x = 177063.296875 m y = 576214.625000 m z = 207704.750000 m
+v_x = -15 mm/s v_y = 0 mm/s v_z = 15 mm/s
+PDOP = 206
+LAT = 19.130920 deg LONG = 72.918488 deg ALT = 3.630000 m
+
+x = 177063.265625 m y = 576215.000000 m z = 207704.796875 m
+v_x = 2 mm/s v_y = -6 mm/s v_z = 2 mm/s
+PDOP = 206
+LAT = 19.130917 deg LONG = 72.918503 deg ALT = 6.330000 m
+
+x = 177062.468750 m y = 576214.562500 m z = 207704.734375 m
+v_x = 15 mm/s v_y = 7 mm/s v_z = 6 mm/s
+PDOP = 206
+LAT = 19.130928 deg LONG = 72.918564 deg ALT = 0.260000 m
+
+x = 177062.515625 m y = 576214.562500 m z = 207704.953125 m
+v_x = 20 mm/s v_y = 16 mm/s v_z = 12 mm/s
+PDOP = 206
+LAT = 19.130947 deg LONG = 72.918556 deg ALT = 1.310000 m
+
+x = 177062.500000 m y = 576214.375000 m z = 207705.109375 m
+v_x = -8 mm/s v_y = 4 mm/s v_z = 0 mm/s
+PDOP = 206
+LAT = 19.130964 deg LONG = 72.918556 deg ALT = 0.040000 m
+
+x = 177062.593750 m y = 576214.375000 m z = 207704.984375 m
+v_x = 10 mm/s v_y = 4 mm/s v_z = 0 mm/s
+PDOP = 206
+LAT = 19.130953 deg LONG = 72.918541 deg ALT = -0.300000 m
+
+x = 177062.312500 m y = 576214.812500 m z = 207705.203125 m
+v_x = 18 mm/s v_y = -7 mm/s v_z = 7 mm/s
+PDOP = 206
+LAT = 19.130962 deg LONG = 72.918579 deg ALT = 3.480000 m
+
+x = 177062.468750 m y = 576214.250000 m z = 207705.078125 m
+v_x = 6 mm/s v_y = 9 mm/s v_z = -8 mm/s
+PDOP = 206
+LAT = 19.130966 deg LONG = 72.918556 deg ALT = -1.310000 m
+
+x = 177062.593750 m y = 576213.875000 m z = 207704.906250 m
+v_x = 37 mm/s v_y = 5 mm/s v_z = -2 mm/s
+PDOP = 206
+LAT = 19.130962 deg LONG = 72.918526 deg ALT = -5.020000 m
+
+x = 177062.734375 m y = 576213.812500 m z = 207704.953125 m
+v_x = 16 mm/s v_y = 8 mm/s v_z = 8 mm/s
+PDOP = 206
+LAT = 19.130968 deg LONG = 72.918510 deg ALT = -5.080000 m
+
+x = 177062.578125 m y = 576213.750000 m z = 207704.921875 m
+v_x = 8 mm/s v_y = 10 mm/s v_z = 4 mm/s
+PDOP = 206
+LAT = 19.130966 deg LONG = 72.918526 deg ALT = -5.840000 m
+

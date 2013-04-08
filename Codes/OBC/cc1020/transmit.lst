@@ -1,0 +1,441 @@
+GAS LISTING /tmp/cc4vr2zE.s 			page 1
+
+
+   1               		.file	"transmit.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.global __do_copy_data
+   8               		.global __do_clear_bss
+   9               		.stabs	"/data/programs/satellite/OBC/slave/",100,0,2,.Ltext0
+  10               		.stabs	"../cc1020/transmit.c",100,0,2,.Ltext0
+  11               		.text
+  12               	.Ltext0:
+  13               		.stabs	"gcc2_compiled.",60,0,0,0
+  14               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  15               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  16               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  17               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  18               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  19               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,0,
+  20               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,0,0
+  21               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,0,0
+  22               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,0,0
+  23               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,0,0
+  24               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,0,0
+  25               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,0,0
+  26               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,0,0
+  27               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,0,0
+  28               		.stabs	"void:t(0,15)=(0,15)",128,0,0,0
+  29               		.stabs	"/data/programs/satellite/OBC/common.h",130,0,0,0
+  30               		.stabs	"/usr/lib/gcc/avr/4.6.1/../../../../avr/include/avr/io.h",130,0,0,0
+  31               		.stabs	"/usr/lib/gcc/avr/4.6.1/../../../../avr/include/avr/sfr_defs.h",130,0,0,0
+  32               		.stabs	"/usr/lib/gcc/avr/4.6.1/../../../../avr/include/inttypes.h",130,0,0,0
+  33               		.stabs	"/usr/lib/gcc/avr/4.6.1/include/stdint.h",130,0,0,0
+  34               		.stabs	"/usr/lib/gcc/avr/4.6.1/../../../../avr/include/stdint.h",130,0,0,0
+  35               		.stabs	"int8_t:t(6,1)=(0,10)",128,0,121,0
+  36               		.stabs	"uint8_t:t(6,2)=(0,11)",128,0,122,0
+  37               		.stabs	"int16_t:t(6,3)=(0,1)",128,0,123,0
+  38               		.stabs	"uint16_t:t(6,4)=(0,4)",128,0,124,0
+  39               		.stabs	"int32_t:t(6,5)=(0,3)",128,0,125,0
+  40               		.stabs	"uint32_t:t(6,6)=(0,5)",128,0,126,0
+  41               		.stabs	"int64_t:t(6,7)=(0,6)",128,0,128,0
+  42               		.stabs	"uint64_t:t(6,8)=(0,7)",128,0,129,0
+  43               		.stabs	"intptr_t:t(6,9)=(6,3)",128,0,142,0
+  44               		.stabs	"uintptr_t:t(6,10)=(6,4)",128,0,147,0
+  45               		.stabs	"int_least8_t:t(6,11)=(6,1)",128,0,159,0
+  46               		.stabs	"uint_least8_t:t(6,12)=(6,2)",128,0,164,0
+  47               		.stabs	"int_least16_t:t(6,13)=(6,3)",128,0,169,0
+  48               		.stabs	"uint_least16_t:t(6,14)=(6,4)",128,0,174,0
+  49               		.stabs	"int_least32_t:t(6,15)=(6,5)",128,0,179,0
+  50               		.stabs	"uint_least32_t:t(6,16)=(6,6)",128,0,184,0
+  51               		.stabs	"int_least64_t:t(6,17)=(6,7)",128,0,192,0
+  52               		.stabs	"uint_least64_t:t(6,18)=(6,8)",128,0,199,0
+  53               		.stabs	"int_fast8_t:t(6,19)=(6,1)",128,0,213,0
+  54               		.stabs	"uint_fast8_t:t(6,20)=(6,2)",128,0,218,0
+  55               		.stabs	"int_fast16_t:t(6,21)=(6,3)",128,0,223,0
+  56               		.stabs	"uint_fast16_t:t(6,22)=(6,4)",128,0,228,0
+  57               		.stabs	"int_fast32_t:t(6,23)=(6,5)",128,0,233,0
+GAS LISTING /tmp/cc4vr2zE.s 			page 2
+
+
+  58               		.stabs	"uint_fast32_t:t(6,24)=(6,6)",128,0,238,0
+  59               		.stabs	"int_fast64_t:t(6,25)=(6,7)",128,0,246,0
+  60               		.stabs	"uint_fast64_t:t(6,26)=(6,8)",128,0,253,0
+  61               		.stabs	"intmax_t:t(6,27)=(6,7)",128,0,273,0
+  62               		.stabs	"uintmax_t:t(6,28)=(6,8)",128,0,278,0
+  63               		.stabn	162,0,0,0
+  64               		.stabn	162,0,0,0
+  65               		.stabs	"int_farptr_t:t(4,1)=(6,5)",128,0,77,0
+  66               		.stabs	"uint_farptr_t:t(4,2)=(6,6)",128,0,81,0
+  67               		.stabn	162,0,0,0
+  68               		.stabn	162,0,0,0
+  69               		.stabs	"/usr/lib/gcc/avr/4.6.1/../../../../avr/include/avr/fuse.h",130,0,0,0
+  70               		.stabs	"__fuse_t:t(7,1)=(7,2)=s3low:(0,11),0,8;high:(0,11),8,8;extended:(0,11),16,8;;",128,0,244,0
+  71               		.stabn	162,0,0,0
+  72               		.stabn	162,0,0,0
+  73               		.stabs	"/usr/lib/gcc/avr/4.6.1/../../../../avr/include/stdlib.h",130,0,0,0
+  74               		.stabs	"/usr/lib/gcc/avr/4.6.1/include/stddef.h",130,0,0,0
+  75               		.stabs	"size_t:t(9,1)=(0,4)",128,0,212,0
+  76               		.stabs	"wchar_t:t(9,2)=(0,1)",128,0,324,0
+  77               		.stabn	162,0,0,0
+  78               		.stabs	"div_t:t(8,1)=(8,2)=s4quot:(0,1),0,16;rem:(0,1),16,16;;",128,0,71,0
+  79               		.stabs	"ldiv_t:t(8,3)=(8,4)=s8quot:(0,3),0,32;rem:(0,3),32,32;;",128,0,77,0
+  80               		.stabs	"__compar_fn_t:t(8,5)=(8,6)=*(8,7)=f(0,1)",128,0,80,0
+  81               		.stabn	162,0,0,0
+  82               		.stabn	162,0,0,0
+  83               		.stabs	"cc1020_init_dio:F(0,15)",36,0,4,cc1020_init_dio
+  84               	.global	cc1020_init_dio
+  85               		.type	cc1020_init_dio, @function
+  86               	cc1020_init_dio:
+  87               		.stabd	46,0,0
+   1:../cc1020/transmit.c **** #include "common.h"
+   2:../cc1020/transmit.c **** #include "transmit.h"
+   3:../cc1020/transmit.c **** 
+   4:../cc1020/transmit.c **** void cc1020_init_dio(void)
+   5:../cc1020/transmit.c **** {
+  88               		.stabn	68,0,5,.LM0-.LFBB1
+  89               	.LM0:
+  90               	.LFBB1:
+  91               	/* prologue: function */
+  92               	/* frame size = 0 */
+  93               	/* stack size = 0 */
+  94               	.L__stack_usage = 0
+   6:../cc1020/transmit.c ****   cbi(DDR_TX, DCLK);
+  95               		.stabn	68,0,6,.LM1-.LFBB1
+  96               	.LM1:
+  97 0000 1498      		cbi 34-0x20,4
+   7:../cc1020/transmit.c ****   sbi(DDR_TX, DIO);
+  98               		.stabn	68,0,7,.LM2-.LFBB1
+  99               	.LM2:
+ 100 0002 159A      		sbi 34-0x20,5
+   8:../cc1020/transmit.c ****   sbi(PORT_TX, DIO);
+ 101               		.stabn	68,0,8,.LM3-.LFBB1
+ 102               	.LM3:
+ 103 0004 1D9A      		sbi 35-0x20,5
+ 104               	/* epilogue start */
+   9:../cc1020/transmit.c **** }
+ 105               		.stabn	68,0,9,.LM4-.LFBB1
+GAS LISTING /tmp/cc4vr2zE.s 			page 3
+
+
+ 106               	.LM4:
+ 107 0006 0895      		ret
+ 108               		.size	cc1020_init_dio, .-cc1020_init_dio
+ 109               	.Lscope1:
+ 110               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 111               		.stabd	78,0,0
+ 112               		.stabs	"cc1020_transmit_bit:F(0,15)",36,0,11,cc1020_transmit_bit
+ 113               		.stabs	"bit:P(6,2)",64,0,11,24
+ 114               	.global	cc1020_transmit_bit
+ 115               		.type	cc1020_transmit_bit, @function
+ 116               	cc1020_transmit_bit:
+ 117               		.stabd	46,0,0
+  10:../cc1020/transmit.c **** 
+  11:../cc1020/transmit.c **** void cc1020_transmit_bit(uint8_t bit)
+  12:../cc1020/transmit.c **** {
+ 118               		.stabn	68,0,12,.LM5-.LFBB2
+ 119               	.LM5:
+ 120               	.LFBB2:
+ 121               	/* prologue: function */
+ 122               	/* frame size = 0 */
+ 123               	/* stack size = 0 */
+ 124               	.L__stack_usage = 0
+ 125               	.L3:
+  13:../cc1020/transmit.c ****   while(PIN_TX & (1 << DCLK));
+ 126               		.stabn	68,0,13,.LM6-.LFBB2
+ 127               	.LM6:
+ 128 0008 0C99      		sbic 33-0x20,4
+ 129 000a 00C0      		rjmp .L3
+  14:../cc1020/transmit.c ****   if(bit)
+ 130               		.stabn	68,0,14,.LM7-.LFBB2
+ 131               	.LM7:
+ 132 000c 8823      		tst r24
+ 133 000e 01F0      		breq .L4
+  15:../cc1020/transmit.c ****     sbi(PORT_TX, DIO);
+ 134               		.stabn	68,0,15,.LM8-.LFBB2
+ 135               	.LM8:
+ 136 0010 1D9A      		sbi 35-0x20,5
+ 137 0012 00C0      		rjmp .L7
+ 138               	.L4:
+  16:../cc1020/transmit.c ****   else
+  17:../cc1020/transmit.c ****     cbi(PORT_TX, DIO);
+ 139               		.stabn	68,0,17,.LM9-.LFBB2
+ 140               	.LM9:
+ 141 0014 1D98      		cbi 35-0x20,5
+ 142               	.L7:
+  18:../cc1020/transmit.c ****   while(!(PIN_TX & (1 << DCLK)));
+ 143               		.stabn	68,0,18,.LM10-.LFBB2
+ 144               	.LM10:
+ 145 0016 0C9B      		sbis 33-0x20,4
+ 146 0018 00C0      		rjmp .L7
+ 147               	/* epilogue start */
+  19:../cc1020/transmit.c **** }
+ 148               		.stabn	68,0,19,.LM11-.LFBB2
+ 149               	.LM11:
+ 150 001a 0895      		ret
+ 151               		.size	cc1020_transmit_bit, .-cc1020_transmit_bit
+ 152               	.Lscope2:
+GAS LISTING /tmp/cc4vr2zE.s 			page 4
+
+
+ 153               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 154               		.stabd	78,0,0
+ 155               		.stabs	"cc1020_transmit_packet:F(0,15)",36,0,47,cc1020_transmit_packet
+ 156               		.stabs	"size:P(6,2)",64,0,47,10
+ 157               	.global	cc1020_transmit_packet
+ 158               		.type	cc1020_transmit_packet, @function
+ 159               	cc1020_transmit_packet:
+ 160               		.stabd	46,0,0
+  20:../cc1020/transmit.c **** 
+  21:../cc1020/transmit.c **** //implement bit stuffing
+  22:../cc1020/transmit.c **** /*void cc1020_transmit_packet(uint8_t *data, uint8_t size)
+  23:../cc1020/transmit.c **** {
+  24:../cc1020/transmit.c ****   uint8_t i, j, byte, bit;
+  25:../cc1020/transmit.c ****   for(i = 0; i < size; i++)
+  26:../cc1020/transmit.c ****   {
+  27:../cc1020/transmit.c ****     byte = data[i];
+  28:../cc1020/transmit.c ****     for(j = 0; j < 8; j++)
+  29:../cc1020/transmit.c ****     {
+  30:../cc1020/transmit.c ****       bit = byte & 0x01;
+  31:../cc1020/transmit.c ****       
+  32:../cc1020/transmit.c ****       while(PIN_TX & (1 << DCLK));
+  33:../cc1020/transmit.c ****       if(bit)
+  34:../cc1020/transmit.c ****         sbi(PORT_TX, DIO);
+  35:../cc1020/transmit.c ****       else
+  36:../cc1020/transmit.c ****         cbi(PORT_TX, DIO);
+  37:../cc1020/transmit.c ****       while(!(PIN_TX & (1 << DCLK)));
+  38:../cc1020/transmit.c ****       
+  39:../cc1020/transmit.c ****       byte = byte >> 1;
+  40:../cc1020/transmit.c ****     }
+  41:../cc1020/transmit.c ****   }
+  42:../cc1020/transmit.c ****   
+  43:../cc1020/transmit.c ****   sbi(PORT_TX, DIO);
+  44:../cc1020/transmit.c **** }*/
+  45:../cc1020/transmit.c **** 
+  46:../cc1020/transmit.c **** //with bit stuffing
+  47:../cc1020/transmit.c **** void cc1020_transmit_packet(uint8_t *data, uint8_t size)
+  48:../cc1020/transmit.c **** {
+ 161               		.stabn	68,0,48,.LM12-.LFBB3
+ 162               	.LM12:
+ 163               	.LFBB3:
+ 164 001c 6F92      		push r6
+ 165 001e 7F92      		push r7
+ 166 0020 8F92      		push r8
+ 167 0022 9F92      		push r9
+ 168 0024 AF92      		push r10
+ 169 0026 BF92      		push r11
+ 170 0028 CF92      		push r12
+ 171 002a DF92      		push r13
+ 172 002c EF92      		push r14
+ 173 002e FF92      		push r15
+ 174 0030 0F93      		push r16
+ 175 0032 1F93      		push r17
+ 176 0034 CF93      		push r28
+ 177 0036 DF93      		push r29
+ 178 0038 0F92      		push __tmp_reg__
+ 179 003a CDB7      		in r28,__SP_L__
+ 180 003c DEB7      		in r29,__SP_H__
+GAS LISTING /tmp/cc4vr2zE.s 			page 5
+
+
+ 181               	/* prologue: function */
+ 182               	/* frame size = 1 */
+ 183               	/* stack size = 15 */
+ 184               	.L__stack_usage = 15
+ 185 003e E82E      		mov r14,r24
+ 186 0040 A62E      		mov r10,r22
+  49:../cc1020/transmit.c ****   uint8_t i, j, byte, bit;
+  50:../cc1020/transmit.c ****   uint8_t ax_counter = 0;
+  51:../cc1020/transmit.c ****   
+  52:../cc1020/transmit.c ****   cc1020_transmit_bit(1);
+ 187               		.stabn	68,0,52,.LM13-.LFBB3
+ 188               	.LM13:
+ 189 0042 81E0      		ldi r24,lo8(1)
+ 190 0044 9983      		std Y+1,r25
+ 191 0046 0E94 0000 		call cc1020_transmit_bit
+ 192 004a 0E2D      		mov r16,r14
+ 193 004c 9981      		ldd r25,Y+1
+ 194 004e 192F      		mov r17,r25
+  50:../cc1020/transmit.c ****   uint8_t ax_counter = 0;
+ 195               		.stabn	68,0,50,.LM14-.LFBB3
+ 196               	.LM14:
+ 197 0050 CC24      		clr r12
+  53:../cc1020/transmit.c ****   
+  54:../cc1020/transmit.c ****   for(i = 0; i < size; i++)
+ 198               		.stabn	68,0,54,.LM15-.LFBB3
+ 199               	.LM15:
+ 200 0052 DD24      		clr r13
+  55:../cc1020/transmit.c ****   {
+  56:../cc1020/transmit.c ****     byte = data[i];
+  57:../cc1020/transmit.c ****     for(j = 0; j < 8; j++)
+  58:../cc1020/transmit.c ****     {
+  59:../cc1020/transmit.c ****       bit = byte & 0x01;
+  60:../cc1020/transmit.c ****       cc1020_transmit_bit(bit);
+  61:../cc1020/transmit.c ****       
+  62:../cc1020/transmit.c ****       if((i != 0) && (i != size - 1))
+ 201               		.stabn	68,0,62,.LM16-.LFBB3
+ 202               	.LM16:
+ 203 0054 6A2C      		mov r6,r10
+ 204 0056 7724      		clr r7
+ 205 0058 0894      		sec
+ 206 005a 6108      		sbc r6,__zero_reg__
+ 207 005c 7108      		sbc r7,__zero_reg__
+  54:../cc1020/transmit.c ****   for(i = 0; i < size; i++)
+ 208               		.stabn	68,0,54,.LM17-.LFBB3
+ 209               	.LM17:
+ 210 005e 00C0      		rjmp .L11
+ 211               	.L14:
+  56:../cc1020/transmit.c ****     byte = data[i];
+ 212               		.stabn	68,0,56,.LM18-.LFBB3
+ 213               	.LM18:
+ 214 0060 F801      		movw r30,r16
+ 215 0062 9190      		ld r9,Z+
+ 216 0064 8F01      		movw r16,r30
+ 217 0066 88E0      		ldi r24,lo8(8)
+ 218 0068 B82E      		mov r11,r24
+ 219               		.stabn	68,0,62,.LM19-.LFBB3
+ 220               	.LM19:
+GAS LISTING /tmp/cc4vr2zE.s 			page 6
+
+
+ 221 006a ED2C      		mov r14,r13
+ 222 006c FF24      		clr r15
+ 223               	.L13:
+  59:../cc1020/transmit.c ****       bit = byte & 0x01;
+ 224               		.stabn	68,0,59,.LM20-.LFBB3
+ 225               	.LM20:
+ 226 006e 8824      		clr r8
+ 227 0070 8394      		inc r8
+ 228 0072 8920      		and r8,r9
+  60:../cc1020/transmit.c ****       cc1020_transmit_bit(bit);
+ 229               		.stabn	68,0,60,.LM21-.LFBB3
+ 230               	.LM21:
+ 231 0074 882D      		mov r24,r8
+ 232 0076 0E94 0000 		call cc1020_transmit_bit
+ 233               		.stabn	68,0,62,.LM22-.LFBB3
+ 234               	.LM22:
+ 235 007a DD20      		tst r13
+ 236 007c 01F0      		breq .L12
+ 237               		.stabn	68,0,62,.LM23-.LFBB3
+ 238               	.LM23:
+ 239 007e E614      		cp r14,r6
+ 240 0080 F704      		cpc r15,r7
+ 241 0082 01F0      		breq .L12
+  63:../cc1020/transmit.c ****       {
+  64:../cc1020/transmit.c ****         if(bit)
+ 242               		.stabn	68,0,64,.LM24-.LFBB3
+ 243               	.LM24:
+ 244 0084 8820      		tst r8
+ 245 0086 01F0      		breq .L15
+  65:../cc1020/transmit.c ****           ax_counter++;
+ 246               		.stabn	68,0,65,.LM25-.LFBB3
+ 247               	.LM25:
+ 248 0088 C394      		inc r12
+  66:../cc1020/transmit.c ****         else
+  67:../cc1020/transmit.c ****           ax_counter = 0;
+  68:../cc1020/transmit.c ****         if(ax_counter == 5)
+ 249               		.stabn	68,0,68,.LM26-.LFBB3
+ 250               	.LM26:
+ 251 008a F5E0      		ldi r31,lo8(5)
+ 252 008c CF16      		cp r12,r31
+ 253 008e 01F4      		brne .L12
+  69:../cc1020/transmit.c ****         {
+  70:../cc1020/transmit.c ****           ax_counter = 0;
+  71:../cc1020/transmit.c ****           cc1020_transmit_bit(0);
+ 254               		.stabn	68,0,71,.LM27-.LFBB3
+ 255               	.LM27:
+ 256 0090 80E0      		ldi r24,lo8(0)
+ 257 0092 0E94 0000 		call cc1020_transmit_bit
+ 258               	.L15:
+  67:../cc1020/transmit.c ****           ax_counter = 0;
+ 259               		.stabn	68,0,67,.LM28-.LFBB3
+ 260               	.LM28:
+ 261 0096 CC24      		clr r12
+ 262               	.L12:
+  72:../cc1020/transmit.c ****         }
+  73:../cc1020/transmit.c ****       }  
+  74:../cc1020/transmit.c ****       
+GAS LISTING /tmp/cc4vr2zE.s 			page 7
+
+
+  75:../cc1020/transmit.c ****       byte = byte >> 1;
+ 263               		.stabn	68,0,75,.LM29-.LFBB3
+ 264               	.LM29:
+ 265 0098 9694      		lsr r9
+ 266 009a BA94      		dec r11
+  57:../cc1020/transmit.c ****     for(j = 0; j < 8; j++)
+ 267               		.stabn	68,0,57,.LM30-.LFBB3
+ 268               	.LM30:
+ 269 009c 01F4      		brne .L13
+  54:../cc1020/transmit.c ****   for(i = 0; i < size; i++)
+ 270               		.stabn	68,0,54,.LM31-.LFBB3
+ 271               	.LM31:
+ 272 009e D394      		inc r13
+ 273               	.L11:
+  54:../cc1020/transmit.c ****   for(i = 0; i < size; i++)
+ 274               		.stabn	68,0,54,.LM32-.LFBB3
+ 275               	.LM32:
+ 276 00a0 DA14      		cp r13,r10
+ 277 00a2 01F4      		brne .L14
+  76:../cc1020/transmit.c ****     }
+  77:../cc1020/transmit.c ****   }
+  78:../cc1020/transmit.c ****   
+  79:../cc1020/transmit.c ****   sbi(PORT_TX, DIO);
+ 278               		.stabn	68,0,79,.LM33-.LFBB3
+ 279               	.LM33:
+ 280 00a4 1D9A      		sbi 35-0x20,5
+ 281               	/* epilogue start */
+  80:../cc1020/transmit.c **** }
+ 282               		.stabn	68,0,80,.LM34-.LFBB3
+ 283               	.LM34:
+ 284 00a6 0F90      		pop __tmp_reg__
+ 285 00a8 DF91      		pop r29
+ 286 00aa CF91      		pop r28
+ 287 00ac 1F91      		pop r17
+ 288 00ae 0F91      		pop r16
+ 289 00b0 FF90      		pop r15
+ 290 00b2 EF90      		pop r14
+ 291 00b4 DF90      		pop r13
+ 292 00b6 CF90      		pop r12
+ 293 00b8 BF90      		pop r11
+ 294 00ba AF90      		pop r10
+ 295 00bc 9F90      		pop r9
+ 296 00be 8F90      		pop r8
+ 297 00c0 7F90      		pop r7
+ 298 00c2 6F90      		pop r6
+ 299 00c4 0895      		ret
+ 300               		.size	cc1020_transmit_packet, .-cc1020_transmit_packet
+ 301               		.stabs	"i:r(6,2)",64,0,49,13
+ 302               		.stabs	"byte:r(6,2)",64,0,49,9
+ 303               		.stabs	"bit:r(6,2)",64,0,49,8
+ 304               		.stabs	"ax_counter:r(6,2)",64,0,50,12
+ 305               		.stabn	192,0,0,.LFBB3-.LFBB3
+ 306               		.stabn	224,0,0,.Lscope3-.LFBB3
+ 307               	.Lscope3:
+ 308               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 309               		.stabd	78,0,0
+ 310               		.stabs	"",100,0,0,.Letext0
+GAS LISTING /tmp/cc4vr2zE.s 			page 8
+
+
+ 311               	.Letext0:
+GAS LISTING /tmp/cc4vr2zE.s 			page 9
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 transmit.c
+     /tmp/cc4vr2zE.s:2      *ABS*:000000000000003f __SREG__
+     /tmp/cc4vr2zE.s:3      *ABS*:000000000000003e __SP_H__
+     /tmp/cc4vr2zE.s:4      *ABS*:000000000000003d __SP_L__
+     /tmp/cc4vr2zE.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/cc4vr2zE.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/cc4vr2zE.s:86     .text:0000000000000000 cc1020_init_dio
+     /tmp/cc4vr2zE.s:116    .text:0000000000000008 cc1020_transmit_bit
+     /tmp/cc4vr2zE.s:159    .text:000000000000001c cc1020_transmit_packet
+
+UNDEFINED SYMBOLS
+__do_copy_data
+__do_clear_bss

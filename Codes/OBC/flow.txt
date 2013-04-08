@@ -1,0 +1,18 @@
+Master MuC:
+Snap
+
+Magnetometer Take readings
+Switch on Torquer
+
+Check if in nominal or detumbling
+Send Loads byte to power
+take sunsenor and gps readings in nominal mode
+condition for gps POL<5,3
+Apply PWM Torque
+
+Check If over India/France
+Send Load Byte to power
+Send slave india/france
+if over GS send to slave to transmit
+
+every 1.5 minutes send HM data to slave

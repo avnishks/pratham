@@ -1,0 +1,1495 @@
+GAS LISTING /tmp/ccuZ453q.s 			page 1
+
+
+   1               		.file	"eeprom.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.global __do_copy_data
+   8               		.global __do_clear_bss
+   9               		.stabs	"/data/programs/satellite/OBC/slave/",100,0,2,.Ltext0
+  10               		.stabs	"eeprom.c",100,0,2,.Ltext0
+  11               		.text
+  12               	.Ltext0:
+  13               		.stabs	"gcc2_compiled.",60,0,0,0
+  14               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  15               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  16               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  17               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  18               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  19               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,0,
+  20               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,0,0
+  21               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,0,0
+  22               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,0,0
+  23               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,0,0
+  24               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,0,0
+  25               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,0,0
+  26               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,0,0
+  27               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,0,0
+  28               		.stabs	"void:t(0,15)=(0,15)",128,0,0,0
+  29               		.stabs	"/data/programs/satellite/OBC/common.h",130,0,0,0
+  30               		.stabs	"/usr/lib/gcc/avr/4.6.1/../../../../avr/include/avr/io.h",130,0,0,0
+  31               		.stabs	"/usr/lib/gcc/avr/4.6.1/../../../../avr/include/avr/sfr_defs.h",130,0,0,0
+  32               		.stabs	"/usr/lib/gcc/avr/4.6.1/../../../../avr/include/inttypes.h",130,0,0,0
+  33               		.stabs	"/usr/lib/gcc/avr/4.6.1/include/stdint.h",130,0,0,0
+  34               		.stabs	"/usr/lib/gcc/avr/4.6.1/../../../../avr/include/stdint.h",130,0,0,0
+  35               		.stabs	"int8_t:t(6,1)=(0,10)",128,0,121,0
+  36               		.stabs	"uint8_t:t(6,2)=(0,11)",128,0,122,0
+  37               		.stabs	"int16_t:t(6,3)=(0,1)",128,0,123,0
+  38               		.stabs	"uint16_t:t(6,4)=(0,4)",128,0,124,0
+  39               		.stabs	"int32_t:t(6,5)=(0,3)",128,0,125,0
+  40               		.stabs	"uint32_t:t(6,6)=(0,5)",128,0,126,0
+  41               		.stabs	"int64_t:t(6,7)=(0,6)",128,0,128,0
+  42               		.stabs	"uint64_t:t(6,8)=(0,7)",128,0,129,0
+  43               		.stabs	"intptr_t:t(6,9)=(6,3)",128,0,142,0
+  44               		.stabs	"uintptr_t:t(6,10)=(6,4)",128,0,147,0
+  45               		.stabs	"int_least8_t:t(6,11)=(6,1)",128,0,159,0
+  46               		.stabs	"uint_least8_t:t(6,12)=(6,2)",128,0,164,0
+  47               		.stabs	"int_least16_t:t(6,13)=(6,3)",128,0,169,0
+  48               		.stabs	"uint_least16_t:t(6,14)=(6,4)",128,0,174,0
+  49               		.stabs	"int_least32_t:t(6,15)=(6,5)",128,0,179,0
+  50               		.stabs	"uint_least32_t:t(6,16)=(6,6)",128,0,184,0
+  51               		.stabs	"int_least64_t:t(6,17)=(6,7)",128,0,192,0
+  52               		.stabs	"uint_least64_t:t(6,18)=(6,8)",128,0,199,0
+  53               		.stabs	"int_fast8_t:t(6,19)=(6,1)",128,0,213,0
+  54               		.stabs	"uint_fast8_t:t(6,20)=(6,2)",128,0,218,0
+  55               		.stabs	"int_fast16_t:t(6,21)=(6,3)",128,0,223,0
+  56               		.stabs	"uint_fast16_t:t(6,22)=(6,4)",128,0,228,0
+  57               		.stabs	"int_fast32_t:t(6,23)=(6,5)",128,0,233,0
+GAS LISTING /tmp/ccuZ453q.s 			page 2
+
+
+  58               		.stabs	"uint_fast32_t:t(6,24)=(6,6)",128,0,238,0
+  59               		.stabs	"int_fast64_t:t(6,25)=(6,7)",128,0,246,0
+  60               		.stabs	"uint_fast64_t:t(6,26)=(6,8)",128,0,253,0
+  61               		.stabs	"intmax_t:t(6,27)=(6,7)",128,0,273,0
+  62               		.stabs	"uintmax_t:t(6,28)=(6,8)",128,0,278,0
+  63               		.stabn	162,0,0,0
+  64               		.stabn	162,0,0,0
+  65               		.stabs	"int_farptr_t:t(4,1)=(6,5)",128,0,77,0
+  66               		.stabs	"uint_farptr_t:t(4,2)=(6,6)",128,0,81,0
+  67               		.stabn	162,0,0,0
+  68               		.stabn	162,0,0,0
+  69               		.stabs	"/usr/lib/gcc/avr/4.6.1/../../../../avr/include/avr/fuse.h",130,0,0,0
+  70               		.stabs	"__fuse_t:t(7,1)=(7,2)=s3low:(0,11),0,8;high:(0,11),8,8;extended:(0,11),16,8;;",128,0,244,0
+  71               		.stabn	162,0,0,0
+  72               		.stabn	162,0,0,0
+  73               		.stabs	"/usr/lib/gcc/avr/4.6.1/../../../../avr/include/stdlib.h",130,0,0,0
+  74               		.stabs	"/usr/lib/gcc/avr/4.6.1/include/stddef.h",130,0,0,0
+  75               		.stabs	"size_t:t(9,1)=(0,4)",128,0,212,0
+  76               		.stabs	"wchar_t:t(9,2)=(0,1)",128,0,324,0
+  77               		.stabn	162,0,0,0
+  78               		.stabs	"div_t:t(8,1)=(8,2)=s4quot:(0,1),0,16;rem:(0,1),16,16;;",128,0,71,0
+  79               		.stabs	"ldiv_t:t(8,3)=(8,4)=s8quot:(0,3),0,32;rem:(0,3),32,32;;",128,0,77,0
+  80               		.stabs	"__compar_fn_t:t(8,5)=(8,6)=*(8,7)=f(0,1)",128,0,80,0
+  81               		.stabn	162,0,0,0
+  82               		.stabn	162,0,0,0
+  83               		.stabs	"ioinit:F(0,15)",36,0,38,ioinit
+  84               	.global	ioinit
+  85               		.type	ioinit, @function
+  86               	ioinit:
+  87               		.stabd	46,0,0
+   1:eeprom.c      **** /*
+   2:eeprom.c      ****  * ----------------------------------------------------------------------------
+   3:eeprom.c      ****  * "THE BEER-WARE LICENSE" (Revision 42):
+   4:eeprom.c      ****  * <joerg@FreeBSD.ORG> wrote this file.  As long as you retain this notice you
+   5:eeprom.c      ****  * can do whatever you want with this stuff. If we meet some day, and you think
+   6:eeprom.c      ****  * this stuff is worth it, you can buy me a beer in return.        Joerg Wunsch
+   7:eeprom.c      ****  * ----------------------------------------------------------------------------
+   8:eeprom.c      ****  */
+   9:eeprom.c      **** 
+  10:eeprom.c      **** /* $Id: twitest.c,v 1.6 2005/11/05 22:32:46 joerg_wunsch Exp $ */
+  11:eeprom.c      **** 
+  12:eeprom.c      **** /*
+  13:eeprom.c      ****  * Simple demo program that talks to a 24Cxx I²C EEPROM using the
+  14:eeprom.c      ****  * builtin TWI interface of an ATmega device.
+  15:eeprom.c      ****  */
+  16:eeprom.c      **** 
+  17:eeprom.c      **** /**
+  18:eeprom.c      ****  * @file eeprom.c
+  19:eeprom.c      ****  * @brief Interface with the EEPROM Device
+  20:eeprom.c      ****  */
+  21:eeprom.c      **** 
+  22:eeprom.c      **** #include "common.h"
+  23:eeprom.c      **** #include <util/twi.h>		/* Note [1] */
+  24:eeprom.c      **** #include <util/delay.h>
+  25:eeprom.c      **** #include "eeprom.h"
+  26:eeprom.c      **** 
+  27:eeprom.c      **** /**
+GAS LISTING /tmp/ccuZ453q.s 			page 3
+
+
+  28:eeprom.c      ****  * Note [3]
+  29:eeprom.c      ****  * TWI address for 24Cxx EEPROM:
+  30:eeprom.c      ****  *
+  31:eeprom.c      ****  * 1 0 1 0 E2 E1 E0 R/~W	24C01/24C02
+  32:eeprom.c      ****  * 1 0 1 0 E2 E1 A8 R/~W	24C04
+  33:eeprom.c      ****  * 1 0 1 0 E2 A9 A8 R/~W	24C08
+  34:eeprom.c      ****  * 1 0 1 0 A10 A9 A8 R/~W	24C16
+  35:eeprom.c      ****  */
+  36:eeprom.c      **** static uint8_t eeprom_addr = 0b10100110;	/* E2 E1 E0 = 0 0 0 */
+  37:eeprom.c      **** 
+  38:eeprom.c      **** void ioinit(void)
+  39:eeprom.c      **** {
+  88               		.stabn	68,0,39,.LM0-.LFBB1
+  89               	.LM0:
+  90               	.LFBB1:
+  91               	/* prologue: function */
+  92               	/* frame size = 0 */
+  93               	/* stack size = 0 */
+  94               	.L__stack_usage = 0
+  40:eeprom.c      **** 
+  41:eeprom.c      ****   /* initialize TWI clock: 100 kHz clock, TWPS = 0 => prescaler = 1 */
+  42:eeprom.c      **** #if defined(TWPS0)
+  43:eeprom.c      ****   /* has prescaler (mega128 & newer) */
+  44:eeprom.c      ****   TWSR = 0;
+  95               		.stabn	68,0,44,.LM1-.LFBB1
+  96               	.LM1:
+  97 0000 1092 7100 		sts 113,__zero_reg__
+  45:eeprom.c      **** #endif
+  46:eeprom.c      **** 
+  47:eeprom.c      **** #if F_CPU < 3600000UL
+  48:eeprom.c      ****   TWBR = 10;			/* smallest TWBR value, see note [5] */
+  49:eeprom.c      **** #else
+  50:eeprom.c      ****   TWBR = (F_CPU / 100000UL - 16) / 2;
+  98               		.stabn	68,0,50,.LM2-.LFBB1
+  99               	.LM2:
+ 100 0004 80E2      		ldi r24,lo8(32)
+ 101 0006 8093 7000 		sts 112,r24
+ 102               	/* epilogue start */
+  51:eeprom.c      **** #endif
+  52:eeprom.c      **** }
+ 103               		.stabn	68,0,52,.LM3-.LFBB1
+ 104               	.LM3:
+ 105 000a 0895      		ret
+ 106               		.size	ioinit, .-ioinit
+ 107               	.Lscope1:
+ 108               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 109               		.stabd	78,0,0
+ 110               		.stabs	"eeprom_read_bytes_part:F(0,1)",36,0,66,eeprom_read_bytes_part
+ 111               		.stabs	"eeaddr:P(6,6)",64,0,66,24
+ 112               		.stabs	"len:P(0,1)",64,0,66,20
+ 113               		.stabs	"buf:P(0,16)=*(6,2)",64,0,66,30
+ 114               	.global	eeprom_read_bytes_part
+ 115               		.type	eeprom_read_bytes_part, @function
+ 116               	eeprom_read_bytes_part:
+ 117               		.stabd	46,0,0
+  53:eeprom.c      **** 
+  54:eeprom.c      **** int eeprom_read_bytes(uint32_t eeaddr, int len, uint8_t *buf)
+GAS LISTING /tmp/ccuZ453q.s 			page 4
+
+
+  55:eeprom.c      **** {
+  56:eeprom.c      ****   if((eeaddr < HALF_ADDR) && ((eeaddr + len) > HALF_ADDR))
+  57:eeprom.c      ****   {
+  58:eeprom.c      ****     int first = HALF_ADDR - eeaddr;
+  59:eeprom.c      ****     eeprom_read_bytes_part(eeaddr, first, buf);
+  60:eeprom.c      ****     return eeprom_read_bytes_part(HALF_ADDR, len - first , buf + first);
+  61:eeprom.c      ****   }
+  62:eeprom.c      ****   
+  63:eeprom.c      ****   return eeprom_read_bytes_part(eeaddr, len, buf);
+  64:eeprom.c      **** }
+  65:eeprom.c      **** 
+  66:eeprom.c      **** int eeprom_read_bytes_part(uint32_t eeaddr, int len, uint8_t *buf)
+  67:eeprom.c      **** {
+ 118               		.stabn	68,0,67,.LM4-.LFBB2
+ 119               	.LM4:
+ 120               	.LFBB2:
+ 121 000c FF92      		push r15
+ 122 000e 0F93      		push r16
+ 123 0010 1F93      		push r17
+ 124               	/* prologue: function */
+ 125               	/* frame size = 0 */
+ 126               	/* stack size = 3 */
+ 127               	.L__stack_usage = 3
+ 128 0012 DC01      		movw r26,r24
+ 129 0014 CB01      		movw r24,r22
+ 130 0016 F901      		movw r30,r18
+ 131 0018 2091 0000 		lds r18,eeprom_addr
+  68:eeprom.c      ****   uint8_t sla, twcr, n = 0;
+  69:eeprom.c      ****   int rv = 0;
+  70:eeprom.c      ****   
+  71:eeprom.c      ****   ///* Added code for handling the two halves of the EEPROM
+  72:eeprom.c      ****   if(eeaddr >= HALF_ADDR)
+ 132               		.stabn	68,0,72,.LM5-.LFBB2
+ 133               	.LM5:
+ 134 001c 8030      		cpi r24,lo8(65536)
+ 135 001e 30E0      		ldi r19,hi8(65536)
+ 136 0020 9307      		cpc r25,r19
+ 137 0022 31E0      		ldi r19,hlo8(65536)
+ 138 0024 A307      		cpc r26,r19
+ 139 0026 30E0      		ldi r19,hhi8(65536)
+ 140 0028 B307      		cpc r27,r19
+ 141 002a 00F0      		brlo .L3
+  73:eeprom.c      ****   {
+  74:eeprom.c      ****     eeaddr -= HALF_ADDR;
+ 142               		.stabn	68,0,74,.LM6-.LFBB2
+ 143               	.LM6:
+ 144 002c 8050      		subi r24,lo8(-(-65536))
+ 145 002e 9040      		sbci r25,hi8(-(-65536))
+ 146 0030 A140      		sbci r26,hlo8(-(-65536))
+ 147 0032 B040      		sbci r27,hhi8(-(-65536))
+  75:eeprom.c      ****     eeprom_addr |= 0x08;
+ 148               		.stabn	68,0,75,.LM7-.LFBB2
+ 149               	.LM7:
+ 150 0034 2860      		ori r18,lo8(8)
+ 151 0036 00C0      		rjmp .L62
+ 152               	.L3:
+  76:eeprom.c      ****   }
+GAS LISTING /tmp/ccuZ453q.s 			page 5
+
+
+  77:eeprom.c      ****   else
+  78:eeprom.c      ****   {
+  79:eeprom.c      ****     eeprom_addr &= ~0x08;
+ 153               		.stabn	68,0,79,.LM8-.LFBB2
+ 154               	.LM8:
+ 155 0038 277F      		andi r18,lo8(-9)
+ 156               	.L62:
+ 157 003a 2093 0000 		sts eeprom_addr,r18
+  80:eeprom.c      ****   }
+  81:eeprom.c      ****   
+  82:eeprom.c      ****   /* patch high bits of EEPROM address into SLA */
+  83:eeprom.c      ****   sla = eeprom_addr;
+ 158               		.stabn	68,0,83,.LM9-.LFBB2
+ 159               	.LM9:
+ 160 003e 7091 0000 		lds r23,eeprom_addr
+  84:eeprom.c      **** 
+  85:eeprom.c      ****   /*
+  86:eeprom.c      ****    * Note [8]
+  87:eeprom.c      ****    * First cycle: master transmitter mode
+  88:eeprom.c      ****    */
+  89:eeprom.c      ****  restart:
+  90:eeprom.c      ****   if (n++ >= MAX_ITER)
+  91:eeprom.c      ****     return -1;
+  92:eeprom.c      ****  begin:
+  93:eeprom.c      **** 
+  94:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWSTA) | _BV(TWEN); /* send start condition */
+  95:eeprom.c      ****   while ((TWCR & _BV(TWINT)) == 0) ; /* wait for transmission */
+  96:eeprom.c      ****   switch ((twst = TW_STATUS))
+  97:eeprom.c      ****     {
+  98:eeprom.c      ****     case TW_REP_START:		/* OK, but should not happen */
+  99:eeprom.c      ****     case TW_START:
+ 100:eeprom.c      ****       break;
+ 101:eeprom.c      **** 
+ 102:eeprom.c      ****     case TW_MT_ARB_LOST:	/* Note [9] */
+ 103:eeprom.c      ****       goto begin;
+ 104:eeprom.c      **** 
+ 105:eeprom.c      ****     default:
+ 106:eeprom.c      ****       return -1;		/* error: not in start condition */
+ 107:eeprom.c      ****       /* NB: do /not/ send stop condition */
+ 108:eeprom.c      ****     }
+ 109:eeprom.c      **** 
+ 110:eeprom.c      ****   /* Note [10] */
+ 111:eeprom.c      ****   /* send SLA+W */
+ 112:eeprom.c      ****   TWDR = sla | TW_WRITE;
+ 113:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWEN); /* clear interrupt to start transmission */
+ 114:eeprom.c      ****   while ((TWCR & _BV(TWINT)) == 0) ; /* wait for transmission */
+ 115:eeprom.c      ****   switch ((twst = TW_STATUS))
+ 116:eeprom.c      ****     {
+ 117:eeprom.c      ****     case TW_MT_SLA_ACK:
+ 118:eeprom.c      ****       break;
+ 119:eeprom.c      **** 
+ 120:eeprom.c      ****     case TW_MT_SLA_NACK:	/* nack during select: device busy writing */
+ 121:eeprom.c      ****       /* Note [11] */
+ 122:eeprom.c      ****       goto restart;
+ 123:eeprom.c      **** 
+ 124:eeprom.c      ****     case TW_MT_ARB_LOST:	/* re-arbitrate */
+ 125:eeprom.c      ****       goto begin;
+GAS LISTING /tmp/ccuZ453q.s 			page 6
+
+
+ 126:eeprom.c      **** 
+ 127:eeprom.c      ****     default:
+ 128:eeprom.c      ****       goto error;		/* must send stop condition */
+ 129:eeprom.c      ****     }
+ 130:eeprom.c      **** 
+ 131:eeprom.c      ****   TWDR = (eeaddr>>8);		/* high 8 bits of addr */
+ 161               		.stabn	68,0,131,.LM10-.LFBB2
+ 162               	.LM10:
+ 163 0042 F92E      		mov r15,r25
+ 164 0044 69EC      		ldi r22,lo8(-55)
+  94:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWSTA) | _BV(TWEN); /* send start condition */
+ 165               		.stabn	68,0,94,.LM11-.LFBB2
+ 166               	.LM11:
+ 167 0046 14EA      		ldi r17,lo8(-92)
+ 113:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWEN); /* clear interrupt to start transmission */
+ 168               		.stabn	68,0,113,.LM12-.LFBB2
+ 169               	.LM12:
+ 170 0048 34E8      		ldi r19,lo8(-124)
+ 132:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWEN); /* clear interrupt to start transmission */
+ 133:eeprom.c      ****   while ((TWCR & _BV(TWINT)) == 0) ; /* wait for transmission */
+ 134:eeprom.c      ****   switch ((twst = TW_STATUS))
+ 135:eeprom.c      ****     {
+ 136:eeprom.c      ****     case TW_MT_DATA_ACK:
+ 137:eeprom.c      ****       break;
+ 138:eeprom.c      **** 
+ 139:eeprom.c      ****     case TW_MT_DATA_NACK:
+ 140:eeprom.c      **** 
+ 141:eeprom.c      ****     case TW_MT_ARB_LOST:
+ 142:eeprom.c      ****       goto begin;
+ 143:eeprom.c      **** 
+ 144:eeprom.c      ****     default:
+ 145:eeprom.c      ****       goto error;		/* must send stop condition */
+ 146:eeprom.c      ****     }
+ 147:eeprom.c      **** 
+ 148:eeprom.c      ****   TWDR = eeaddr;		/* low 8 bits of addr */
+ 149:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWEN); /* clear interrupt to start transmission */
+ 150:eeprom.c      ****   while ((TWCR & _BV(TWINT)) == 0) ; /* wait for transmission */
+ 151:eeprom.c      ****   switch ((twst = TW_STATUS))
+ 152:eeprom.c      ****     {
+ 153:eeprom.c      ****     case TW_MT_DATA_ACK:
+ 154:eeprom.c      ****       break;
+ 155:eeprom.c      **** 
+ 156:eeprom.c      ****     case TW_MT_DATA_NACK:
+ 157:eeprom.c      ****       goto quit;
+ 158:eeprom.c      **** 
+ 159:eeprom.c      ****     case TW_MT_ARB_LOST:
+ 160:eeprom.c      ****       goto begin;
+ 161:eeprom.c      **** 
+ 162:eeprom.c      ****     default:
+ 163:eeprom.c      ****       goto error;		/* must send stop condition */
+ 164:eeprom.c      ****     }
+ 165:eeprom.c      **** 
+ 166:eeprom.c      ****   /*
+ 167:eeprom.c      ****    * Note [12]
+ 168:eeprom.c      ****    * Next cycle(s): master receiver mode
+ 169:eeprom.c      ****    */
+ 170:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWSTA) | _BV(TWEN); /* send (rep.) start condition */
+GAS LISTING /tmp/ccuZ453q.s 			page 7
+
+
+ 171:eeprom.c      ****   while ((TWCR & _BV(TWINT)) == 0) ; /* wait for transmission */
+ 172:eeprom.c      ****   switch ((twst = TW_STATUS))
+ 173:eeprom.c      ****     {
+ 174:eeprom.c      ****     case TW_START:		/* OK, but should not happen */
+ 175:eeprom.c      ****     case TW_REP_START:
+ 176:eeprom.c      ****       break;
+ 177:eeprom.c      **** 
+ 178:eeprom.c      ****     case TW_MT_ARB_LOST:
+ 179:eeprom.c      ****       goto begin;
+ 180:eeprom.c      **** 
+ 181:eeprom.c      ****     default:
+ 182:eeprom.c      ****       goto error;
+ 183:eeprom.c      ****     }
+ 184:eeprom.c      **** 
+ 185:eeprom.c      ****   /* send SLA+R */
+ 186:eeprom.c      ****   TWDR = sla | TW_READ;
+ 171               		.stabn	68,0,186,.LM13-.LFBB2
+ 172               	.LM13:
+ 173 004a 072F      		mov r16,r23
+ 174 004c 0160      		ori r16,lo8(1)
+ 175               	.L5:
+ 131:eeprom.c      ****   TWDR = (eeaddr>>8);		/* high 8 bits of addr */
+ 176               		.stabn	68,0,131,.LM14-.LFBB2
+ 177               	.LM14:
+ 178 004e 6150      		subi r22,lo8(-(-1))
+  90:eeprom.c      ****   if (n++ >= MAX_ITER)
+ 179               		.stabn	68,0,90,.LM15-.LFBB2
+ 180               	.LM15:
+ 181 0050 01F4      		brne .+2
+ 182 0052 00C0      		rjmp .L55
+ 183               	.L54:
+  94:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWSTA) | _BV(TWEN); /* send start condition */
+ 184               		.stabn	68,0,94,.LM16-.LFBB2
+ 185               	.LM16:
+ 186 0054 1093 7400 		sts 116,r17
+ 187               	.L13:
+  95:eeprom.c      ****   while ((TWCR & _BV(TWINT)) == 0) ; /* wait for transmission */
+ 188               		.stabn	68,0,95,.LM17-.LFBB2
+ 189               	.LM17:
+ 190 0058 2091 7400 		lds r18,116
+ 191 005c 27FF      		sbrs r18,7
+ 192 005e 00C0      		rjmp .L13
+  96:eeprom.c      ****   switch ((twst = TW_STATUS))
+ 193               		.stabn	68,0,96,.LM18-.LFBB2
+ 194               	.LM18:
+ 195 0060 2091 7100 		lds r18,113
+ 196 0064 287F      		andi r18,lo8(-8)
+ 197 0066 2093 0000 		sts twst,r18
+ 198 006a 2031      		cpi r18,lo8(16)
+ 199 006c 01F0      		breq .L14
+ 200 006e 2833      		cpi r18,lo8(56)
+ 201 0070 01F0      		breq .L54
+ 202 0072 2830      		cpi r18,lo8(8)
+ 203 0074 01F0      		breq .+2
+ 204 0076 00C0      		rjmp .L55
+ 205               	.L14:
+ 112:eeprom.c      ****   TWDR = sla | TW_WRITE;
+GAS LISTING /tmp/ccuZ453q.s 			page 8
+
+
+ 206               		.stabn	68,0,112,.LM19-.LFBB2
+ 207               	.LM19:
+ 208 0078 7093 7300 		sts 115,r23
+ 113:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWEN); /* clear interrupt to start transmission */
+ 209               		.stabn	68,0,113,.LM20-.LFBB2
+ 210               	.LM20:
+ 211 007c 3093 7400 		sts 116,r19
+ 212               	.L15:
+ 114:eeprom.c      ****   while ((TWCR & _BV(TWINT)) == 0) ; /* wait for transmission */
+ 213               		.stabn	68,0,114,.LM21-.LFBB2
+ 214               	.LM21:
+ 215 0080 2091 7400 		lds r18,116
+ 216 0084 27FF      		sbrs r18,7
+ 217 0086 00C0      		rjmp .L15
+ 115:eeprom.c      ****   switch ((twst = TW_STATUS))
+ 218               		.stabn	68,0,115,.LM22-.LFBB2
+ 219               	.LM22:
+ 220 0088 2091 7100 		lds r18,113
+ 221 008c 287F      		andi r18,lo8(-8)
+ 222 008e 2093 0000 		sts twst,r18
+ 223 0092 2032      		cpi r18,lo8(32)
+ 224 0094 01F0      		breq .L5
+ 225 0096 2833      		cpi r18,lo8(56)
+ 226 0098 01F0      		breq .L54
+ 227 009a 2831      		cpi r18,lo8(24)
+ 228 009c 01F0      		breq .+2
+ 229 009e 00C0      		rjmp .L61
+ 131:eeprom.c      ****   TWDR = (eeaddr>>8);		/* high 8 bits of addr */
+ 230               		.stabn	68,0,131,.LM23-.LFBB2
+ 231               	.LM23:
+ 232 00a0 F092 7300 		sts 115,r15
+ 132:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWEN); /* clear interrupt to start transmission */
+ 233               		.stabn	68,0,132,.LM24-.LFBB2
+ 234               	.LM24:
+ 235 00a4 3093 7400 		sts 116,r19
+ 236               	.L18:
+ 133:eeprom.c      ****   while ((TWCR & _BV(TWINT)) == 0) ; /* wait for transmission */
+ 237               		.stabn	68,0,133,.LM25-.LFBB2
+ 238               	.LM25:
+ 239 00a8 2091 7400 		lds r18,116
+ 240 00ac 27FF      		sbrs r18,7
+ 241 00ae 00C0      		rjmp .L18
+ 134:eeprom.c      ****   switch ((twst = TW_STATUS))
+ 242               		.stabn	68,0,134,.LM26-.LFBB2
+ 243               	.LM26:
+ 244 00b0 2091 7100 		lds r18,113
+ 245 00b4 287F      		andi r18,lo8(-8)
+ 246 00b6 2093 0000 		sts twst,r18
+ 247 00ba 2033      		cpi r18,lo8(48)
+ 248 00bc 01F0      		breq .L54
+ 249 00be 2833      		cpi r18,lo8(56)
+ 250 00c0 01F0      		breq .L54
+ 251 00c2 2832      		cpi r18,lo8(40)
+ 252 00c4 01F0      		breq .+2
+ 253 00c6 00C0      		rjmp .L61
+ 148:eeprom.c      ****   TWDR = eeaddr;		/* low 8 bits of addr */
+ 254               		.stabn	68,0,148,.LM27-.LFBB2
+GAS LISTING /tmp/ccuZ453q.s 			page 9
+
+
+ 255               	.LM27:
+ 256 00c8 8093 7300 		sts 115,r24
+ 149:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWEN); /* clear interrupt to start transmission */
+ 257               		.stabn	68,0,149,.LM28-.LFBB2
+ 258               	.LM28:
+ 259 00cc 3093 7400 		sts 116,r19
+ 260               	.L20:
+ 150:eeprom.c      ****   while ((TWCR & _BV(TWINT)) == 0) ; /* wait for transmission */
+ 261               		.stabn	68,0,150,.LM29-.LFBB2
+ 262               	.LM29:
+ 263 00d0 2091 7400 		lds r18,116
+ 264 00d4 27FF      		sbrs r18,7
+ 265 00d6 00C0      		rjmp .L20
+ 151:eeprom.c      ****   switch ((twst = TW_STATUS))
+ 266               		.stabn	68,0,151,.LM30-.LFBB2
+ 267               	.LM30:
+ 268 00d8 2091 7100 		lds r18,113
+ 269 00dc 287F      		andi r18,lo8(-8)
+ 270 00de 2093 0000 		sts twst,r18
+ 271 00e2 2033      		cpi r18,lo8(48)
+ 272 00e4 01F0      		breq .L27
+ 273 00e6 2833      		cpi r18,lo8(56)
+ 274 00e8 01F4      		brne .+2
+ 275 00ea 00C0      		rjmp .L54
+ 276 00ec 2832      		cpi r18,lo8(40)
+ 277 00ee 01F0      		breq .+2
+ 278 00f0 00C0      		rjmp .L61
+ 170:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWSTA) | _BV(TWEN); /* send (rep.) start condition */
+ 279               		.stabn	68,0,170,.LM31-.LFBB2
+ 280               	.LM31:
+ 281 00f2 1093 7400 		sts 116,r17
+ 282               	.L23:
+ 171:eeprom.c      ****   while ((TWCR & _BV(TWINT)) == 0) ; /* wait for transmission */
+ 283               		.stabn	68,0,171,.LM32-.LFBB2
+ 284               	.LM32:
+ 285 00f6 2091 7400 		lds r18,116
+ 286 00fa 27FF      		sbrs r18,7
+ 287 00fc 00C0      		rjmp .L23
+ 172:eeprom.c      ****   switch ((twst = TW_STATUS))
+ 288               		.stabn	68,0,172,.LM33-.LFBB2
+ 289               	.LM33:
+ 290 00fe 2091 7100 		lds r18,113
+ 291 0102 287F      		andi r18,lo8(-8)
+ 292 0104 2093 0000 		sts twst,r18
+ 293 0108 2031      		cpi r18,lo8(16)
+ 294 010a 01F0      		breq .L24
+ 295 010c 2833      		cpi r18,lo8(56)
+ 296 010e 01F4      		brne .+2
+ 297 0110 00C0      		rjmp .L54
+ 298 0112 2830      		cpi r18,lo8(8)
+ 299 0114 01F4      		brne .L61
+ 300               	.L24:
+ 301               		.stabn	68,0,186,.LM34-.LFBB2
+ 302               	.LM34:
+ 303 0116 0093 7300 		sts 115,r16
+ 187:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWEN); /* clear interrupt to start transmission */
+ 304               		.stabn	68,0,187,.LM35-.LFBB2
+GAS LISTING /tmp/ccuZ453q.s 			page 10
+
+
+ 305               	.LM35:
+ 306 011a 3093 7400 		sts 116,r19
+ 307               	.L25:
+ 188:eeprom.c      ****   while ((TWCR & _BV(TWINT)) == 0) ; /* wait for transmission */
+ 308               		.stabn	68,0,188,.LM36-.LFBB2
+ 309               	.LM36:
+ 310 011e 2091 7400 		lds r18,116
+ 311 0122 27FF      		sbrs r18,7
+ 312 0124 00C0      		rjmp .L25
+ 189:eeprom.c      ****   switch ((twst = TW_STATUS))
+ 313               		.stabn	68,0,189,.LM37-.LFBB2
+ 314               	.LM37:
+ 315 0126 2091 7100 		lds r18,113
+ 316 012a 287F      		andi r18,lo8(-8)
+ 317 012c 2093 0000 		sts twst,r18
+ 318 0130 2034      		cpi r18,lo8(64)
+ 319 0132 01F0      		breq .L40
+ 320 0134 2834      		cpi r18,lo8(72)
+ 321 0136 01F0      		breq .L27
+ 322 0138 2833      		cpi r18,lo8(56)
+ 323 013a 01F4      		brne .L61
+ 324 013c 00C0      		rjmp .L54
+ 325               	.L27:
+  69:eeprom.c      ****   int rv = 0;
+ 326               		.stabn	68,0,69,.LM38-.LFBB2
+ 327               	.LM38:
+ 328 013e 80E0      		ldi r24,lo8(0)
+ 329 0140 90E0      		ldi r25,hi8(0)
+ 330 0142 00C0      		rjmp .L16
+ 331               	.L32:
+ 190:eeprom.c      ****     {
+ 191:eeprom.c      ****     case TW_MR_SLA_ACK:
+ 192:eeprom.c      ****       break;
+ 193:eeprom.c      **** 
+ 194:eeprom.c      ****     case TW_MR_SLA_NACK:
+ 195:eeprom.c      ****       goto quit;
+ 196:eeprom.c      **** 
+ 197:eeprom.c      ****     case TW_MR_ARB_LOST:
+ 198:eeprom.c      ****       goto begin;
+ 199:eeprom.c      **** 
+ 200:eeprom.c      ****     default:
+ 201:eeprom.c      ****       goto error;
+ 202:eeprom.c      ****     }
+ 203:eeprom.c      **** 
+ 204:eeprom.c      ****   for (twcr = _BV(TWINT) | _BV(TWEN) | _BV(TWEA);	len > 0;len--)
+ 205:eeprom.c      ****     {
+ 206:eeprom.c      ****       if (len == 1)
+ 332               		.stabn	68,0,206,.LM39-.LFBB2
+ 333               	.LM39:
+ 334 0144 4130      		cpi r20,1
+ 335 0146 5105      		cpc r21,__zero_reg__
+ 336 0148 01F4      		brne .L28
+ 207:eeprom.c      **** 	twcr = _BV(TWINT) | _BV(TWEN); /* send NAK this time */
+ 337               		.stabn	68,0,207,.LM40-.LFBB2
+ 338               	.LM40:
+ 339 014a 34E8      		ldi r19,lo8(-124)
+ 340               	.L28:
+GAS LISTING /tmp/ccuZ453q.s 			page 11
+
+
+ 208:eeprom.c      ****       TWCR = twcr;		/* clear int to start transmission */
+ 341               		.stabn	68,0,208,.LM41-.LFBB2
+ 342               	.LM41:
+ 343 014c 3093 7400 		sts 116,r19
+ 344               	.L29:
+ 209:eeprom.c      ****       while ((TWCR & _BV(TWINT)) == 0) ; /* wait for transmission */
+ 345               		.stabn	68,0,209,.LM42-.LFBB2
+ 346               	.LM42:
+ 347 0150 2091 7400 		lds r18,116
+ 348 0154 27FF      		sbrs r18,7
+ 349 0156 00C0      		rjmp .L29
+ 210:eeprom.c      ****       switch ((twst = TW_STATUS))
+ 350               		.stabn	68,0,210,.LM43-.LFBB2
+ 351               	.LM43:
+ 352 0158 2091 7100 		lds r18,113
+ 353 015c 287F      		andi r18,lo8(-8)
+ 354 015e 2093 0000 		sts twst,r18
+ 355 0162 2035      		cpi r18,lo8(80)
+ 356 0164 01F0      		breq .L31
+ 357 0166 2835      		cpi r18,lo8(88)
+ 358 0168 01F4      		brne .L61
+ 211:eeprom.c      **** 	{
+ 212:eeprom.c      **** 	case TW_MR_DATA_NACK:
+ 213:eeprom.c      **** 	  len = 0;		/* force end of loop */
+ 359               		.stabn	68,0,213,.LM44-.LFBB2
+ 360               	.LM44:
+ 361 016a 40E0      		ldi r20,lo8(0)
+ 362 016c 50E0      		ldi r21,hi8(0)
+ 363               	.L31:
+ 214:eeprom.c      **** 				/* FALLTHROUGH */
+ 215:eeprom.c      **** 	case TW_MR_DATA_ACK:
+ 216:eeprom.c      **** 	  *buf++ = TWDR;
+ 364               		.stabn	68,0,216,.LM45-.LFBB2
+ 365               	.LM45:
+ 366 016e 2091 7300 		lds r18,115
+ 367 0172 2193      		st Z+,r18
+ 217:eeprom.c      **** 	  rv++;
+ 368               		.stabn	68,0,217,.LM46-.LFBB2
+ 369               	.LM46:
+ 370 0174 0196      		adiw r24,1
+ 204:eeprom.c      ****   for (twcr = _BV(TWINT) | _BV(TWEN) | _BV(TWEA);	len > 0;len--)
+ 371               		.stabn	68,0,204,.LM47-.LFBB2
+ 372               	.LM47:
+ 373 0176 4150      		subi r20,lo8(-(-1))
+ 374 0178 5040      		sbci r21,hi8(-(-1))
+ 375 017a 00C0      		rjmp .L26
+ 376               	.L40:
+ 189:eeprom.c      ****   switch ((twst = TW_STATUS))
+ 377               		.stabn	68,0,189,.LM48-.LFBB2
+ 378               	.LM48:
+ 379 017c 80E0      		ldi r24,lo8(0)
+ 380 017e 90E0      		ldi r25,hi8(0)
+ 381 0180 34EC      		ldi r19,lo8(-60)
+ 382               	.L26:
+ 204:eeprom.c      ****   for (twcr = _BV(TWINT) | _BV(TWEN) | _BV(TWEA);	len > 0;len--)
+ 383               		.stabn	68,0,204,.LM49-.LFBB2
+ 384               	.LM49:
+GAS LISTING /tmp/ccuZ453q.s 			page 12
+
+
+ 385 0182 1416      		cp __zero_reg__,r20
+ 386 0184 1506      		cpc __zero_reg__,r21
+ 387 0186 04F0      		brlt .L32
+ 388 0188 00C0      		rjmp .L16
+ 389               	.L61:
+ 218:eeprom.c      **** 	  break;
+ 219:eeprom.c      **** 
+ 220:eeprom.c      **** 	default:
+ 221:eeprom.c      **** 	  goto error;
+ 222:eeprom.c      **** 	}
+ 223:eeprom.c      ****     }
+ 224:eeprom.c      ****  quit:
+ 225:eeprom.c      ****   /* Note [14] */
+ 226:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWSTO) | _BV(TWEN); /* send stop condition */
+ 227:eeprom.c      **** 
+ 228:eeprom.c      ****   return rv;
+ 229:eeprom.c      **** 
+ 230:eeprom.c      ****  error:
+ 231:eeprom.c      ****   rv = -1;
+ 390               		.stabn	68,0,231,.LM50-.LFBB2
+ 391               	.LM50:
+ 392 018a 8FEF      		ldi r24,lo8(-1)
+ 393 018c 9FEF      		ldi r25,hi8(-1)
+ 394               	.L16:
+ 226:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWSTO) | _BV(TWEN); /* send stop condition */
+ 395               		.stabn	68,0,226,.LM51-.LFBB2
+ 396               	.LM51:
+ 397 018e 24E9      		ldi r18,lo8(-108)
+ 398 0190 2093 7400 		sts 116,r18
+ 228:eeprom.c      ****   return rv;
+ 399               		.stabn	68,0,228,.LM52-.LFBB2
+ 400               	.LM52:
+ 401 0194 00C0      		rjmp .L6
+ 402               	.L55:
+ 106:eeprom.c      ****       return -1;		/* error: not in start condition */
+ 403               		.stabn	68,0,106,.LM53-.LFBB2
+ 404               	.LM53:
+ 405 0196 8FEF      		ldi r24,lo8(-1)
+ 406 0198 9FEF      		ldi r25,hi8(-1)
+ 407               	.L6:
+ 408               	/* epilogue start */
+ 232:eeprom.c      ****   goto quit;
+ 233:eeprom.c      **** }
+ 409               		.stabn	68,0,233,.LM54-.LFBB2
+ 410               	.LM54:
+ 411 019a 1F91      		pop r17
+ 412 019c 0F91      		pop r16
+ 413 019e FF90      		pop r15
+ 414 01a0 0895      		ret
+ 415               		.size	eeprom_read_bytes_part, .-eeprom_read_bytes_part
+ 416               		.stabs	"sla:r(6,2)",64,0,68,23
+ 417               		.stabs	"twcr:r(6,2)",64,0,68,19
+ 418               		.stabs	"rv:r(0,1)",64,0,69,24
+ 419               		.stabn	192,0,0,.LFBB2-.LFBB2
+ 420               		.stabn	224,0,0,.Lscope2-.LFBB2
+ 421               	.Lscope2:
+ 422               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+GAS LISTING /tmp/ccuZ453q.s 			page 13
+
+
+ 423               		.stabd	78,0,0
+ 424               		.stabs	"eeprom_read_bytes:F(0,1)",36,0,54,eeprom_read_bytes
+ 425               		.stabs	"eeaddr:P(6,6)",64,0,54,22
+ 426               		.stabs	"len:P(0,1)",64,0,54,14
+ 427               		.stabs	"buf:P(0,16)",64,0,54,12
+ 428               	.global	eeprom_read_bytes
+ 429               		.type	eeprom_read_bytes, @function
+ 430               	eeprom_read_bytes:
+ 431               		.stabd	46,0,0
+  55:eeprom.c      **** {
+ 432               		.stabn	68,0,55,.LM55-.LFBB3
+ 433               	.LM55:
+ 434               	.LFBB3:
+ 435 01a2 CF92      		push r12
+ 436 01a4 DF92      		push r13
+ 437 01a6 EF92      		push r14
+ 438 01a8 FF92      		push r15
+ 439 01aa 0F93      		push r16
+ 440 01ac 1F93      		push r17
+ 441 01ae CF93      		push r28
+ 442 01b0 DF93      		push r29
+ 443               	/* prologue: function */
+ 444               	/* frame size = 0 */
+ 445               	/* stack size = 8 */
+ 446               	.L__stack_usage = 8
+ 447 01b2 7A01      		movw r14,r20
+ 448 01b4 6901      		movw r12,r18
+  56:eeprom.c      ****   if((eeaddr < HALF_ADDR) && ((eeaddr + len) > HALF_ADDR))
+ 449               		.stabn	68,0,56,.LM56-.LFBB3
+ 450               	.LM56:
+ 451 01b6 6030      		cpi r22,lo8(65536)
+ 452 01b8 20E0      		ldi r18,hi8(65536)
+ 453 01ba 7207      		cpc r23,r18
+ 454 01bc 21E0      		ldi r18,hlo8(65536)
+ 455 01be 8207      		cpc r24,r18
+ 456 01c0 20E0      		ldi r18,hhi8(65536)
+ 457 01c2 9207      		cpc r25,r18
+ 458 01c4 00F4      		brsh .L64
+  56:eeprom.c      ****   if((eeaddr < HALF_ADDR) && ((eeaddr + len) > HALF_ADDR))
+ 459               		.stabn	68,0,56,.LM57-.LFBB3
+ 460               	.LM57:
+ 461 01c6 8A01      		movw r16,r20
+ 462 01c8 2227      		clr r18
+ 463 01ca 17FD      		sbrc r17,7
+ 464 01cc 2095      		com r18
+ 465 01ce 322F      		mov r19,r18
+ 466 01d0 060F      		add r16,r22
+ 467 01d2 171F      		adc r17,r23
+ 468 01d4 281F      		adc r18,r24
+ 469 01d6 391F      		adc r19,r25
+ 470 01d8 0130      		cpi r16,lo8(65537)
+ 471 01da 40E0      		ldi r20,hi8(65537)
+ 472 01dc 1407      		cpc r17,r20
+ 473 01de 41E0      		ldi r20,hlo8(65537)
+ 474 01e0 2407      		cpc r18,r20
+ 475 01e2 40E0      		ldi r20,hhi8(65537)
+ 476 01e4 3407      		cpc r19,r20
+GAS LISTING /tmp/ccuZ453q.s 			page 14
+
+
+ 477 01e6 00F0      		brlo .L64
+ 478               	.LBB2:
+  58:eeprom.c      ****     int first = HALF_ADDR - eeaddr;
+ 479               		.stabn	68,0,58,.LM58-.LFBB3
+ 480               	.LM58:
+ 481 01e8 CC27      		clr r28
+ 482 01ea DD27      		clr r29
+ 483 01ec C61B      		sub r28,r22
+ 484 01ee D70B      		sbc r29,r23
+  59:eeprom.c      ****     eeprom_read_bytes_part(eeaddr, first, buf);
+ 485               		.stabn	68,0,59,.LM59-.LFBB3
+ 486               	.LM59:
+ 487 01f0 AE01      		movw r20,r28
+ 488 01f2 9601      		movw r18,r12
+ 489 01f4 0E94 0000 		call eeprom_read_bytes_part
+  60:eeprom.c      ****     return eeprom_read_bytes_part(HALF_ADDR, len - first , buf + first);
+ 490               		.stabn	68,0,60,.LM60-.LFBB3
+ 491               	.LM60:
+ 492 01f8 A701      		movw r20,r14
+ 493 01fa 4C1B      		sub r20,r28
+ 494 01fc 5D0B      		sbc r21,r29
+ 495 01fe 9601      		movw r18,r12
+ 496 0200 2C0F      		add r18,r28
+ 497 0202 3D1F      		adc r19,r29
+ 498 0204 60E0      		ldi r22,lo8(65536)
+ 499 0206 70E0      		ldi r23,hi8(65536)
+ 500 0208 81E0      		ldi r24,hlo8(65536)
+ 501 020a 90E0      		ldi r25,hhi8(65536)
+ 502 020c 00C0      		rjmp .L66
+ 503               	.L64:
+ 504               	.LBE2:
+  63:eeprom.c      ****   return eeprom_read_bytes_part(eeaddr, len, buf);
+ 505               		.stabn	68,0,63,.LM61-.LFBB3
+ 506               	.LM61:
+ 507 020e A701      		movw r20,r14
+ 508 0210 9601      		movw r18,r12
+ 509               	.L66:
+ 510 0212 0E94 0000 		call eeprom_read_bytes_part
+ 511               	/* epilogue start */
+  64:eeprom.c      **** }
+ 512               		.stabn	68,0,64,.LM62-.LFBB3
+ 513               	.LM62:
+ 514 0216 DF91      		pop r29
+ 515 0218 CF91      		pop r28
+ 516 021a 1F91      		pop r17
+ 517 021c 0F91      		pop r16
+ 518 021e FF90      		pop r15
+ 519 0220 EF90      		pop r14
+ 520 0222 DF90      		pop r13
+ 521 0224 CF90      		pop r12
+ 522 0226 0895      		ret
+ 523               		.size	eeprom_read_bytes, .-eeprom_read_bytes
+ 524               	.Lscope3:
+ 525               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 526               		.stabd	78,0,0
+ 527               		.stabs	"eeprom_write_page:F(0,1)",36,0,235,eeprom_write_page
+ 528               		.stabs	"eeaddr:P(6,6)",64,0,235,12
+GAS LISTING /tmp/ccuZ453q.s 			page 15
+
+
+ 529               		.stabs	"len:P(0,1)",64,0,235,30
+ 530               	.global	eeprom_write_page
+ 531               		.type	eeprom_write_page, @function
+ 532               	eeprom_write_page:
+ 533               		.stabd	46,0,0
+ 234:eeprom.c      **** 
+ 235:eeprom.c      **** int eeprom_write_page(uint32_t eeaddr, int len, uint8_t *buf)
+ 236:eeprom.c      **** {
+ 534               		.stabn	68,0,236,.LM63-.LFBB4
+ 535               	.LM63:
+ 536               	.LFBB4:
+ 537 0228 CF92      		push r12
+ 538 022a DF92      		push r13
+ 539 022c EF92      		push r14
+ 540 022e FF92      		push r15
+ 541               	/* prologue: function */
+ 542               	/* frame size = 0 */
+ 543               	/* stack size = 4 */
+ 544               	.L__stack_usage = 4
+ 545 0230 6B01      		movw r12,r22
+ 546 0232 7C01      		movw r14,r24
+ 547 0234 FA01      		movw r30,r20
+ 548 0236 8091 0000 		lds r24,eeprom_addr
+ 237:eeprom.c      ****   uint8_t sla, n = 0;
+ 238:eeprom.c      ****   int rv = 0;
+ 239:eeprom.c      ****   uint16_t endaddr;
+ 240:eeprom.c      ****   
+ 241:eeprom.c      ****   ///* Added code for handling the two halves of the EEPROM
+ 242:eeprom.c      ****   if(eeaddr >= HALF_ADDR)
+ 549               		.stabn	68,0,242,.LM64-.LFBB4
+ 550               	.LM64:
+ 551 023a 40E0      		ldi r20,lo8(65536)
+ 552 023c C416      		cp r12,r20
+ 553 023e 40E0      		ldi r20,hi8(65536)
+ 554 0240 D406      		cpc r13,r20
+ 555 0242 41E0      		ldi r20,hlo8(65536)
+ 556 0244 E406      		cpc r14,r20
+ 557 0246 40E0      		ldi r20,hhi8(65536)
+ 558 0248 F406      		cpc r15,r20
+ 559 024a 00F0      		brlo .L68
+ 243:eeprom.c      ****   {
+ 244:eeprom.c      ****     eeaddr -= HALF_ADDR;
+ 560               		.stabn	68,0,244,.LM65-.LFBB4
+ 561               	.LM65:
+ 562 024c 40E0      		ldi r20,lo8(-65536)
+ 563 024e 50E0      		ldi r21,hi8(-65536)
+ 564 0250 6FEF      		ldi r22,hlo8(-65536)
+ 565 0252 7FEF      		ldi r23,hhi8(-65536)
+ 566 0254 C40E      		add r12,r20
+ 567 0256 D51E      		adc r13,r21
+ 568 0258 E61E      		adc r14,r22
+ 569 025a F71E      		adc r15,r23
+ 245:eeprom.c      ****     eeprom_addr |= 0x08;
+ 570               		.stabn	68,0,245,.LM66-.LFBB4
+ 571               	.LM66:
+ 572 025c 8860      		ori r24,lo8(8)
+ 573 025e 00C0      		rjmp .L113
+GAS LISTING /tmp/ccuZ453q.s 			page 16
+
+
+ 574               	.L68:
+ 246:eeprom.c      ****   }
+ 247:eeprom.c      ****   else
+ 248:eeprom.c      ****     eeprom_addr &= ~0x08;
+ 575               		.stabn	68,0,248,.LM67-.LFBB4
+ 576               	.LM67:
+ 577 0260 877F      		andi r24,lo8(-9)
+ 578               	.L113:
+ 579 0262 8093 0000 		sts eeprom_addr,r24
+ 249:eeprom.c      **** 
+ 250:eeprom.c      ****   if (eeaddr + len < (eeaddr | (PAGE_SIZE - 1)))
+ 580               		.stabn	68,0,250,.LM68-.LFBB4
+ 581               	.LM68:
+ 582 0266 CF01      		movw r24,r30
+ 583 0268 AA27      		clr r26
+ 584 026a 97FD      		sbrc r25,7
+ 585 026c A095      		com r26
+ 586 026e BA2F      		mov r27,r26
+ 587 0270 8C0D      		add r24,r12
+ 588 0272 9D1D      		adc r25,r13
+ 589 0274 AE1D      		adc r26,r14
+ 590 0276 BF1D      		adc r27,r15
+ 591 0278 B701      		movw r22,r14
+ 592 027a A601      		movw r20,r12
+ 593 027c 4F67      		ori r20,lo8(127)
+ 594 027e 8417      		cp r24,r20
+ 595 0280 9507      		cpc r25,r21
+ 596 0282 A607      		cpc r26,r22
+ 597 0284 B707      		cpc r27,r23
+ 598 0286 00F4      		brsh .L70
+ 251:eeprom.c      ****     endaddr = eeaddr + len;
+ 599               		.stabn	68,0,251,.LM69-.LFBB4
+ 600               	.LM69:
+ 601 0288 EC0D      		add r30,r12
+ 602 028a FD1D      		adc r31,r13
+ 603 028c 00C0      		rjmp .L71
+ 604               	.L70:
+ 252:eeprom.c      ****   else
+ 253:eeprom.c      ****     endaddr = (eeaddr | (PAGE_SIZE - 1)) + 1;
+ 605               		.stabn	68,0,253,.LM70-.LFBB4
+ 606               	.LM70:
+ 607 028e F601      		movw r30,r12
+ 608 0290 EF67      		ori r30,lo8(127)
+ 609 0292 3196      		adiw r30,1
+ 610               	.L71:
+ 254:eeprom.c      ****   len = endaddr - eeaddr;
+ 255:eeprom.c      **** 
+ 256:eeprom.c      ****   /* patch high bits of EEPROM address into SLA */
+ 257:eeprom.c      ****   sla = eeprom_addr;
+ 611               		.stabn	68,0,257,.LM71-.LFBB4
+ 612               	.LM71:
+ 613 0294 7091 0000 		lds r23,eeprom_addr
+ 258:eeprom.c      **** 
+ 259:eeprom.c      ****  restart:
+ 260:eeprom.c      ****   if (n++ >= MAX_ITER)
+ 261:eeprom.c      ****     return -1;
+ 262:eeprom.c      ****  begin:
+GAS LISTING /tmp/ccuZ453q.s 			page 17
+
+
+ 263:eeprom.c      **** 
+ 264:eeprom.c      ****   /* Note [15] */
+ 265:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWSTA) | _BV(TWEN); /* send start condition */
+ 266:eeprom.c      ****   while ((TWCR & _BV(TWINT)) == 0) ; /* wait for transmission */
+ 267:eeprom.c      ****   switch ((twst = TW_STATUS))
+ 268:eeprom.c      ****     {
+ 269:eeprom.c      ****     case TW_REP_START:		/* OK, but should not happen */
+ 270:eeprom.c      ****     case TW_START:
+ 271:eeprom.c      ****       break;
+ 272:eeprom.c      ****     case TW_MT_ARB_LOST:
+ 273:eeprom.c      ****       goto begin;
+ 274:eeprom.c      ****     default:
+ 275:eeprom.c      ****       return -1;		/* error: not in start condition */
+ 276:eeprom.c      ****       /* NB: do /not/ send stop condition */
+ 277:eeprom.c      ****     }
+ 278:eeprom.c      **** 
+ 279:eeprom.c      ****   /* send SLA+W */
+ 280:eeprom.c      ****   TWDR = sla | TW_WRITE;
+ 281:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWEN); /* clear interrupt to start transmission */
+ 282:eeprom.c      ****   while ((TWCR & _BV(TWINT)) == 0) ; /* wait for transmission */
+ 283:eeprom.c      ****   switch ((twst = TW_STATUS))
+ 284:eeprom.c      ****     {
+ 285:eeprom.c      ****     case TW_MT_SLA_ACK:
+ 286:eeprom.c      ****       break;
+ 287:eeprom.c      **** 
+ 288:eeprom.c      ****     case TW_MT_SLA_NACK:	/* nack during select: device busy writing */
+ 289:eeprom.c      ****       goto restart;
+ 290:eeprom.c      **** 
+ 291:eeprom.c      ****     case TW_MT_ARB_LOST:	/* re-arbitrate */
+ 292:eeprom.c      ****       goto begin;
+ 293:eeprom.c      **** 
+ 294:eeprom.c      ****     default:
+ 295:eeprom.c      ****       goto error;		/* must send stop condition */
+ 296:eeprom.c      ****     }
+ 297:eeprom.c      **** 	
+ 298:eeprom.c      **** 	
+ 299:eeprom.c      ****   TWDR = (eeaddr>>8);		/* high 8 bits of addr */
+ 614               		.stabn	68,0,299,.LM72-.LFBB4
+ 615               	.LM72:
+ 616 0298 6D2D      		mov r22,r13
+ 617 029a 49EC      		ldi r20,lo8(-55)
+ 265:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWSTA) | _BV(TWEN); /* send start condition */
+ 618               		.stabn	68,0,265,.LM73-.LFBB4
+ 619               	.LM73:
+ 620 029c 54EA      		ldi r21,lo8(-92)
+ 281:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWEN); /* clear interrupt to start transmission */
+ 621               		.stabn	68,0,281,.LM74-.LFBB4
+ 622               	.LM74:
+ 623 029e 94E8      		ldi r25,lo8(-124)
+ 624               	.L72:
+ 625               		.stabn	68,0,299,.LM75-.LFBB4
+ 626               	.LM75:
+ 627 02a0 4150      		subi r20,lo8(-(-1))
+ 260:eeprom.c      ****   if (n++ >= MAX_ITER)
+ 628               		.stabn	68,0,260,.LM76-.LFBB4
+ 629               	.LM76:
+ 630 02a2 01F4      		brne .+2
+GAS LISTING /tmp/ccuZ453q.s 			page 18
+
+
+ 631 02a4 00C0      		rjmp .L108
+ 632               	.L107:
+ 265:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWSTA) | _BV(TWEN); /* send start condition */
+ 633               		.stabn	68,0,265,.LM77-.LFBB4
+ 634               	.LM77:
+ 635 02a6 5093 7400 		sts 116,r21
+ 636               	.L78:
+ 266:eeprom.c      ****   while ((TWCR & _BV(TWINT)) == 0) ; /* wait for transmission */
+ 637               		.stabn	68,0,266,.LM78-.LFBB4
+ 638               	.LM78:
+ 639 02aa 8091 7400 		lds r24,116
+ 640 02ae 87FF      		sbrs r24,7
+ 641 02b0 00C0      		rjmp .L78
+ 267:eeprom.c      ****   switch ((twst = TW_STATUS))
+ 642               		.stabn	68,0,267,.LM79-.LFBB4
+ 643               	.LM79:
+ 644 02b2 8091 7100 		lds r24,113
+ 645 02b6 887F      		andi r24,lo8(-8)
+ 646 02b8 8093 0000 		sts twst,r24
+ 647 02bc 8031      		cpi r24,lo8(16)
+ 648 02be 01F0      		breq .L79
+ 649 02c0 8833      		cpi r24,lo8(56)
+ 650 02c2 01F0      		breq .L107
+ 651 02c4 8830      		cpi r24,lo8(8)
+ 652 02c6 01F0      		breq .+2
+ 653 02c8 00C0      		rjmp .L108
+ 654               	.L79:
+ 280:eeprom.c      ****   TWDR = sla | TW_WRITE;
+ 655               		.stabn	68,0,280,.LM80-.LFBB4
+ 656               	.LM80:
+ 657 02ca 7093 7300 		sts 115,r23
+ 281:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWEN); /* clear interrupt to start transmission */
+ 658               		.stabn	68,0,281,.LM81-.LFBB4
+ 659               	.LM81:
+ 660 02ce 9093 7400 		sts 116,r25
+ 661               	.L80:
+ 282:eeprom.c      ****   while ((TWCR & _BV(TWINT)) == 0) ; /* wait for transmission */
+ 662               		.stabn	68,0,282,.LM82-.LFBB4
+ 663               	.LM82:
+ 664 02d2 8091 7400 		lds r24,116
+ 665 02d6 87FF      		sbrs r24,7
+ 666 02d8 00C0      		rjmp .L80
+ 283:eeprom.c      ****   switch ((twst = TW_STATUS))
+ 667               		.stabn	68,0,283,.LM83-.LFBB4
+ 668               	.LM83:
+ 669 02da 8091 7100 		lds r24,113
+ 670 02de 887F      		andi r24,lo8(-8)
+ 671 02e0 8093 0000 		sts twst,r24
+ 672 02e4 8032      		cpi r24,lo8(32)
+ 673 02e6 01F0      		breq .L72
+ 674 02e8 8833      		cpi r24,lo8(56)
+ 675 02ea 01F0      		breq .L107
+ 676 02ec 8831      		cpi r24,lo8(24)
+ 677 02ee 01F0      		breq .+2
+ 678 02f0 00C0      		rjmp .L112
+ 679               		.stabn	68,0,299,.LM84-.LFBB4
+ 680               	.LM84:
+GAS LISTING /tmp/ccuZ453q.s 			page 19
+
+
+ 681 02f2 6093 7300 		sts 115,r22
+ 300:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWEN); /* clear interrupt to start transmission */
+ 682               		.stabn	68,0,300,.LM85-.LFBB4
+ 683               	.LM85:
+ 684 02f6 9093 7400 		sts 116,r25
+ 685               	.L83:
+ 301:eeprom.c      ****   while ((TWCR & _BV(TWINT)) == 0) ; /* wait for transmission */
+ 686               		.stabn	68,0,301,.LM86-.LFBB4
+ 687               	.LM86:
+ 688 02fa 8091 7400 		lds r24,116
+ 689 02fe 87FF      		sbrs r24,7
+ 690 0300 00C0      		rjmp .L83
+ 302:eeprom.c      ****   switch ((twst = TW_STATUS))
+ 691               		.stabn	68,0,302,.LM87-.LFBB4
+ 692               	.LM87:
+ 693 0302 8091 7100 		lds r24,113
+ 694 0306 887F      		andi r24,lo8(-8)
+ 695 0308 8093 0000 		sts twst,r24
+ 696 030c 8033      		cpi r24,lo8(48)
+ 697 030e 01F0      		breq .L88
+ 698 0310 8833      		cpi r24,lo8(56)
+ 699 0312 01F0      		breq .L107
+ 700 0314 8832      		cpi r24,lo8(40)
+ 701 0316 01F4      		brne .L112
+ 303:eeprom.c      ****     {
+ 304:eeprom.c      ****     case TW_MT_DATA_ACK:
+ 305:eeprom.c      ****       break;
+ 306:eeprom.c      **** 
+ 307:eeprom.c      ****     case TW_MT_DATA_NACK:
+ 308:eeprom.c      ****       goto quit;
+ 309:eeprom.c      **** 
+ 310:eeprom.c      ****     case TW_MT_ARB_LOST:
+ 311:eeprom.c      ****       goto begin;
+ 312:eeprom.c      **** 
+ 313:eeprom.c      ****     default:
+ 314:eeprom.c      ****       goto error;		/* must send stop condition */
+ 315:eeprom.c      ****     }
+ 316:eeprom.c      **** 
+ 317:eeprom.c      **** 
+ 318:eeprom.c      ****   TWDR = eeaddr;		/* low 8 bits of addr */
+ 702               		.stabn	68,0,318,.LM88-.LFBB4
+ 703               	.LM88:
+ 704 0318 C092 7300 		sts 115,r12
+ 319:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWEN); /* clear interrupt to start transmission */
+ 705               		.stabn	68,0,319,.LM89-.LFBB4
+ 706               	.LM89:
+ 707 031c 9093 7400 		sts 116,r25
+ 708               	.L86:
+ 320:eeprom.c      ****   while ((TWCR & _BV(TWINT)) == 0) ; /* wait for transmission */
+ 709               		.stabn	68,0,320,.LM90-.LFBB4
+ 710               	.LM90:
+ 711 0320 8091 7400 		lds r24,116
+ 712 0324 87FF      		sbrs r24,7
+ 713 0326 00C0      		rjmp .L86
+ 321:eeprom.c      ****   switch ((twst = TW_STATUS))
+ 714               		.stabn	68,0,321,.LM91-.LFBB4
+ 715               	.LM91:
+GAS LISTING /tmp/ccuZ453q.s 			page 20
+
+
+ 716 0328 8091 7100 		lds r24,113
+ 717 032c 887F      		andi r24,lo8(-8)
+ 718 032e 8093 0000 		sts twst,r24
+ 719 0332 8033      		cpi r24,lo8(48)
+ 720 0334 01F0      		breq .L88
+ 721 0336 8833      		cpi r24,lo8(56)
+ 722 0338 01F4      		brne .+2
+ 723 033a 00C0      		rjmp .L107
+ 724 033c 8832      		cpi r24,lo8(40)
+ 725 033e 01F4      		brne .L112
+ 726 0340 00C0      		rjmp .L114
+ 727               	.L88:
+ 238:eeprom.c      ****   int rv = 0;
+ 728               		.stabn	68,0,238,.LM92-.LFBB4
+ 729               	.LM92:
+ 730 0342 80E0      		ldi r24,lo8(0)
+ 731 0344 90E0      		ldi r25,hi8(0)
+ 732 0346 00C0      		rjmp .L81
+ 733               	.L114:
+ 254:eeprom.c      ****   len = endaddr - eeaddr;
+ 734               		.stabn	68,0,254,.LM93-.LFBB4
+ 735               	.LM93:
+ 736 0348 AF01      		movw r20,r30
+ 737 034a 4C19      		sub r20,r12
+ 738 034c 5D09      		sbc r21,r13
+ 739 034e F901      		movw r30,r18
+ 740 0350 80E0      		ldi r24,lo8(0)
+ 741 0352 90E0      		ldi r25,hi8(0)
+ 322:eeprom.c      ****     {
+ 323:eeprom.c      ****     case TW_MT_DATA_ACK:
+ 324:eeprom.c      ****       break;
+ 325:eeprom.c      **** 
+ 326:eeprom.c      ****     case TW_MT_DATA_NACK:
+ 327:eeprom.c      ****       goto quit;
+ 328:eeprom.c      **** 
+ 329:eeprom.c      ****     case TW_MT_ARB_LOST:
+ 330:eeprom.c      ****       goto begin;
+ 331:eeprom.c      **** 
+ 332:eeprom.c      ****     default:
+ 333:eeprom.c      ****       goto error;		/* must send stop condition */
+ 334:eeprom.c      ****     }
+ 335:eeprom.c      **** 
+ 336:eeprom.c      ****   for (; len > 0; len--)
+ 337:eeprom.c      ****     {
+ 338:eeprom.c      ****       TWDR = *buf++;
+ 339:eeprom.c      ****       TWCR = _BV(TWINT) | _BV(TWEN); /* start transmission */
+ 742               		.stabn	68,0,339,.LM94-.LFBB4
+ 743               	.LM94:
+ 744 0354 64E8      		ldi r22,lo8(-124)
+ 745 0356 00C0      		rjmp .L89
+ 746               	.L92:
+ 338:eeprom.c      ****       TWDR = *buf++;
+ 747               		.stabn	68,0,338,.LM95-.LFBB4
+ 748               	.LM95:
+ 749 0358 2191      		ld r18,Z+
+ 750 035a 2093 7300 		sts 115,r18
+ 751               		.stabn	68,0,339,.LM96-.LFBB4
+GAS LISTING /tmp/ccuZ453q.s 			page 21
+
+
+ 752               	.LM96:
+ 753 035e 6093 7400 		sts 116,r22
+ 754               	.L90:
+ 340:eeprom.c      ****       while ((TWCR & _BV(TWINT)) == 0) ; /* wait for transmission */
+ 755               		.stabn	68,0,340,.LM97-.LFBB4
+ 756               	.LM97:
+ 757 0362 2091 7400 		lds r18,116
+ 758 0366 27FF      		sbrs r18,7
+ 759 0368 00C0      		rjmp .L90
+ 341:eeprom.c      ****       switch ((twst = TW_STATUS))
+ 760               		.stabn	68,0,341,.LM98-.LFBB4
+ 761               	.LM98:
+ 762 036a 2091 7100 		lds r18,113
+ 763 036e 287F      		andi r18,lo8(-8)
+ 764 0370 2093 0000 		sts twst,r18
+ 765 0374 2832      		cpi r18,lo8(40)
+ 766 0376 01F4      		brne .L112
+ 342:eeprom.c      **** 	{
+ 343:eeprom.c      **** 	case TW_MT_DATA_NACK:
+ 344:eeprom.c      **** 	  goto error;		/* device write protected -- Note [16] */
+ 345:eeprom.c      **** 
+ 346:eeprom.c      **** 	case TW_MT_DATA_ACK:
+ 347:eeprom.c      **** 	  rv++;
+ 767               		.stabn	68,0,347,.LM99-.LFBB4
+ 768               	.LM99:
+ 769 0378 0196      		adiw r24,1
+ 770               	.L89:
+ 235:eeprom.c      **** int eeprom_write_page(uint32_t eeaddr, int len, uint8_t *buf)
+ 771               		.stabn	68,0,235,.LM100-.LFBB4
+ 772               	.LM100:
+ 773 037a 9A01      		movw r18,r20
+ 774 037c 281B      		sub r18,r24
+ 775 037e 390B      		sbc r19,r25
+ 336:eeprom.c      ****   for (; len > 0; len--)
+ 776               		.stabn	68,0,336,.LM101-.LFBB4
+ 777               	.LM101:
+ 778 0380 1216      		cp __zero_reg__,r18
+ 779 0382 1306      		cpc __zero_reg__,r19
+ 780 0384 04F0      		brlt .L92
+ 781 0386 00C0      		rjmp .L81
+ 782               	.L112:
+ 348:eeprom.c      **** 	  break;
+ 349:eeprom.c      **** 
+ 350:eeprom.c      **** 	default:
+ 351:eeprom.c      **** 	  goto error;
+ 352:eeprom.c      **** 	}
+ 353:eeprom.c      ****     }
+ 354:eeprom.c      ****  quit:
+ 355:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWSTO) | _BV(TWEN); /* send stop condition */
+ 356:eeprom.c      **** 
+ 357:eeprom.c      ****   return rv;
+ 358:eeprom.c      **** 
+ 359:eeprom.c      ****  error:
+ 360:eeprom.c      ****   rv = -1;
+ 783               		.stabn	68,0,360,.LM102-.LFBB4
+ 784               	.LM102:
+ 785 0388 8FEF      		ldi r24,lo8(-1)
+GAS LISTING /tmp/ccuZ453q.s 			page 22
+
+
+ 786 038a 9FEF      		ldi r25,hi8(-1)
+ 787               	.L81:
+ 355:eeprom.c      ****   TWCR = _BV(TWINT) | _BV(TWSTO) | _BV(TWEN); /* send stop condition */
+ 788               		.stabn	68,0,355,.LM103-.LFBB4
+ 789               	.LM103:
+ 790 038c 24E9      		ldi r18,lo8(-108)
+ 791 038e 2093 7400 		sts 116,r18
+ 357:eeprom.c      ****   return rv;
+ 792               		.stabn	68,0,357,.LM104-.LFBB4
+ 793               	.LM104:
+ 794 0392 00C0      		rjmp .L73
+ 795               	.L108:
+ 275:eeprom.c      ****       return -1;		/* error: not in start condition */
+ 796               		.stabn	68,0,275,.LM105-.LFBB4
+ 797               	.LM105:
+ 798 0394 8FEF      		ldi r24,lo8(-1)
+ 799 0396 9FEF      		ldi r25,hi8(-1)
+ 800               	.L73:
+ 801               	/* epilogue start */
+ 361:eeprom.c      ****   goto quit;
+ 362:eeprom.c      **** }
+ 802               		.stabn	68,0,362,.LM106-.LFBB4
+ 803               	.LM106:
+ 804 0398 FF90      		pop r15
+ 805 039a EF90      		pop r14
+ 806 039c DF90      		pop r13
+ 807 039e CF90      		pop r12
+ 808 03a0 0895      		ret
+ 809               		.size	eeprom_write_page, .-eeprom_write_page
+ 810               		.stabs	"sla:r(6,2)",64,0,237,23
+ 811               		.stabs	"rv:r(0,1)",64,0,238,24
+ 812               		.stabs	"endaddr:r(6,4)",64,0,239,30
+ 813               		.stabn	192,0,0,.LFBB4-.LFBB4
+ 814               		.stabn	224,0,0,.Lscope4-.LFBB4
+ 815               	.Lscope4:
+ 816               		.stabs	"",36,0,0,.Lscope4-.LFBB4
+ 817               		.stabd	78,0,0
+ 818               		.stabs	"eeprom_write_bytes:F(0,1)",36,0,364,eeprom_write_bytes
+ 819               		.stabs	"eeaddr:P(6,6)",64,0,364,12
+ 820               		.stabs	"len:P(0,1)",64,0,364,28
+ 821               		.stabs	"buf:P(0,16)",64,0,364,10
+ 822               	.global	eeprom_write_bytes
+ 823               		.type	eeprom_write_bytes, @function
+ 824               	eeprom_write_bytes:
+ 825               		.stabd	46,0,0
+ 363:eeprom.c      **** 
+ 364:eeprom.c      **** int eeprom_write_bytes(uint32_t eeaddr, int len, uint8_t *buf)
+ 365:eeprom.c      **** {
+ 826               		.stabn	68,0,365,.LM107-.LFBB5
+ 827               	.LM107:
+ 828               	.LFBB5:
+ 829 03a2 AF92      		push r10
+ 830 03a4 BF92      		push r11
+ 831 03a6 CF92      		push r12
+ 832 03a8 DF92      		push r13
+ 833 03aa EF92      		push r14
+ 834 03ac FF92      		push r15
+GAS LISTING /tmp/ccuZ453q.s 			page 23
+
+
+ 835 03ae 0F93      		push r16
+ 836 03b0 1F93      		push r17
+ 837 03b2 CF93      		push r28
+ 838 03b4 DF93      		push r29
+ 839               	/* prologue: function */
+ 840               	/* frame size = 0 */
+ 841               	/* stack size = 10 */
+ 842               	.L__stack_usage = 10
+ 843 03b6 6B01      		movw r12,r22
+ 844 03b8 7C01      		movw r14,r24
+ 845 03ba EA01      		movw r28,r20
+ 846 03bc 5901      		movw r10,r18
+ 366:eeprom.c      ****   int rv, total;
+ 367:eeprom.c      **** 
+ 368:eeprom.c      ****   total = 0;
+ 847               		.stabn	68,0,368,.LM108-.LFBB5
+ 848               	.LM108:
+ 849 03be 00E0      		ldi r16,lo8(0)
+ 850 03c0 10E0      		ldi r17,hi8(0)
+ 851               	.L117:
+ 369:eeprom.c      ****   do
+ 370:eeprom.c      ****     {
+ 371:eeprom.c      ****       rv = eeprom_write_page(eeaddr, len, buf);
+ 852               		.stabn	68,0,371,.LM109-.LFBB5
+ 853               	.LM109:
+ 854 03c2 C701      		movw r24,r14
+ 855 03c4 B601      		movw r22,r12
+ 856 03c6 AE01      		movw r20,r28
+ 857 03c8 9501      		movw r18,r10
+ 858 03ca 0E94 0000 		call eeprom_write_page
+ 372:eeprom.c      ****       if (rv == -1)
+ 859               		.stabn	68,0,372,.LM110-.LFBB5
+ 860               	.LM110:
+ 861 03ce 2FEF      		ldi r18,hi8(-1)
+ 862 03d0 8F3F      		cpi r24,lo8(-1)
+ 863 03d2 9207      		cpc r25,r18
+ 864 03d4 01F0      		breq .L118
+ 373:eeprom.c      ****         return -1;
+ 374:eeprom.c      ****       eeaddr += rv;
+ 865               		.stabn	68,0,374,.LM111-.LFBB5
+ 866               	.LM111:
+ 867 03d6 AC01      		movw r20,r24
+ 868 03d8 6627      		clr r22
+ 869 03da 57FD      		sbrc r21,7
+ 870 03dc 6095      		com r22
+ 871 03de 762F      		mov r23,r22
+ 872 03e0 C40E      		add r12,r20
+ 873 03e2 D51E      		adc r13,r21
+ 874 03e4 E61E      		adc r14,r22
+ 875 03e6 F71E      		adc r15,r23
+ 375:eeprom.c      ****       len -= rv;
+ 876               		.stabn	68,0,375,.LM112-.LFBB5
+ 877               	.LM112:
+ 878 03e8 C81B      		sub r28,r24
+ 879 03ea D90B      		sbc r29,r25
+ 376:eeprom.c      ****       buf += rv;
+ 880               		.stabn	68,0,376,.LM113-.LFBB5
+GAS LISTING /tmp/ccuZ453q.s 			page 24
+
+
+ 881               	.LM113:
+ 882 03ec A80E      		add r10,r24
+ 883 03ee B91E      		adc r11,r25
+ 377:eeprom.c      ****       total += rv;
+ 884               		.stabn	68,0,377,.LM114-.LFBB5
+ 885               	.LM114:
+ 886 03f0 080F      		add r16,r24
+ 887 03f2 191F      		adc r17,r25
+ 378:eeprom.c      ****     }
+ 379:eeprom.c      ****   while (len > 0);
+ 888               		.stabn	68,0,379,.LM115-.LFBB5
+ 889               	.LM115:
+ 890 03f4 1C16      		cp __zero_reg__,r28
+ 891 03f6 1D06      		cpc __zero_reg__,r29
+ 892 03f8 04F0      		brlt .L117
+ 893 03fa 00C0      		rjmp .L116
+ 894               	.L118:
+ 373:eeprom.c      ****         return -1;
+ 895               		.stabn	68,0,373,.LM116-.LFBB5
+ 896               	.LM116:
+ 897 03fc 0FEF      		ldi r16,lo8(-1)
+ 898 03fe 1FEF      		ldi r17,hi8(-1)
+ 899               	.L116:
+ 380:eeprom.c      **** 
+ 381:eeprom.c      ****   return total;
+ 382:eeprom.c      **** }
+ 900               		.stabn	68,0,382,.LM117-.LFBB5
+ 901               	.LM117:
+ 902 0400 C801      		movw r24,r16
+ 903               	/* epilogue start */
+ 904 0402 DF91      		pop r29
+ 905 0404 CF91      		pop r28
+ 906 0406 1F91      		pop r17
+ 907 0408 0F91      		pop r16
+ 908 040a FF90      		pop r15
+ 909 040c EF90      		pop r14
+ 910 040e DF90      		pop r13
+ 911 0410 CF90      		pop r12
+ 912 0412 BF90      		pop r11
+ 913 0414 AF90      		pop r10
+ 914 0416 0895      		ret
+ 915               		.size	eeprom_write_bytes, .-eeprom_write_bytes
+ 916               		.stabs	"rv:r(0,1)",64,0,366,24
+ 917               		.stabs	"total:r(0,1)",64,0,366,16
+ 918               		.stabn	192,0,0,.LFBB5-.LFBB5
+ 919               		.stabn	224,0,0,.Lscope5-.LFBB5
+ 920               	.Lscope5:
+ 921               		.stabs	"",36,0,0,.Lscope5-.LFBB5
+ 922               		.stabd	78,0,0
+ 923               		.stabs	"error:F(0,15)",36,0,384,error
+ 924               	.global	error
+ 925               		.type	error, @function
+ 926               	error:
+ 927               		.stabd	46,0,0
+ 383:eeprom.c      **** 
+ 384:eeprom.c      **** void error(void)
+ 385:eeprom.c      **** {
+GAS LISTING /tmp/ccuZ453q.s 			page 25
+
+
+ 928               		.stabn	68,0,385,.LM118-.LFBB6
+ 929               	.LM118:
+ 930               	.LFBB6:
+ 931               	/* prologue: function */
+ 932               	/* frame size = 0 */
+ 933               	/* stack size = 0 */
+ 934               	.L__stack_usage = 0
+ 386:eeprom.c      **** 
+ 387:eeprom.c      ****   exit(0);
+ 935               		.stabn	68,0,387,.LM119-.LFBB6
+ 936               	.LM119:
+ 937 0418 80E0      		ldi r24,lo8(0)
+ 938 041a 90E0      		ldi r25,hi8(0)
+ 939 041c 0E94 0000 		call exit
+ 940               		.size	error, .-error
+ 941               	.Lscope6:
+ 942               		.stabs	"",36,0,0,.Lscope6-.LFBB6
+ 943               		.stabd	78,0,0
+ 944               		.comm twst,1,1
+ 945               		.data
+ 946               		.type	eeprom_addr, @object
+ 947               		.size	eeprom_addr, 1
+ 948               	eeprom_addr:
+ 949 0000 A6        		.byte	-90
+ 950               		.stabs	"eeprom_addr:S(6,2)",38,0,36,eeprom_addr
+ 951               		.stabs	"twst:G(6,2)",32,0,90,0
+ 952               		.text
+ 953               		.stabs	"",100,0,0,.Letext0
+ 954               	.Letext0:
+GAS LISTING /tmp/ccuZ453q.s 			page 26
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 eeprom.c
+     /tmp/ccuZ453q.s:2      *ABS*:000000000000003f __SREG__
+     /tmp/ccuZ453q.s:3      *ABS*:000000000000003e __SP_H__
+     /tmp/ccuZ453q.s:4      *ABS*:000000000000003d __SP_L__
+     /tmp/ccuZ453q.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccuZ453q.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccuZ453q.s:86     .text:0000000000000000 ioinit
+     /tmp/ccuZ453q.s:116    .text:000000000000000c eeprom_read_bytes_part
+     /tmp/ccuZ453q.s:948    .data:0000000000000000 eeprom_addr
+                            *COM*:0000000000000001 twst
+     /tmp/ccuZ453q.s:430    .text:00000000000001a2 eeprom_read_bytes
+     /tmp/ccuZ453q.s:532    .text:0000000000000228 eeprom_write_page
+     /tmp/ccuZ453q.s:824    .text:00000000000003a2 eeprom_write_bytes
+     /tmp/ccuZ453q.s:926    .text:0000000000000418 error
+
+UNDEFINED SYMBOLS
+__do_copy_data
+__do_clear_bss
+exit

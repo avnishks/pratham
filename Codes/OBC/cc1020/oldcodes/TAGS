@@ -1,0 +1,350 @@
+
+cc1020.c,781
+const char DefaultConfig433[32] =DefaultConfig43331,778
+void WriteToCC1020Register(unsigned char addr, unsigned char data)WriteToCC1020Register72,2188
+unsigned char ReadFromCC1020Register(unsigned char addr)ReadFromCC1020Register101,3113
+void SetupCC1020PD(void)SetupCC1020PD128,3980
+void ResetCC1020(void)ResetCC1020141,4428
+void SetupCC1020Allregisters(void)SetupCC1020Allregisters154,4861
+void WakeUpCC1020ToTX(char TXANALOG1)WakeUpCC1020ToTX173,5412
+void WakeUpCC1020ToRX(char RXANALOG1)WakeUpCC1020ToRX197,6318
+int CalibrateCC1020(char PA_POWER1)CalibrateCC1020229,7336
+char SetupCC1020TX(char TXANALOG1, char PA_POWER1)SetupCC1020TX279,9236
+int init_CC1020 (void){init_CC1020334,10763
+void Transmit_CC1020(char* msg, int size)Transmit_CC1020349,11173
+
+cc1020comm.c,112
+int init_CC1020 (void){init_CC1020168,4143
+void Transmit_CC1020(char* str, int size)Transmit_CC1020181,4507
+
+cc1020functions.c,732
+const char DefaultConfig433[32] =DefaultConfig43331,757
+void WriteToCC1020Register(unsigned char addr, unsigned char data)WriteToCC1020Register72,2167
+unsigned char ReadFromCC1020Register(unsigned char addr)ReadFromCC1020Register101,3094
+void SetupCC1020PD(void)SetupCC1020PD128,3961
+void ResetCC1020(void)ResetCC1020141,4409
+void SetupCC1020Allregisters(void)SetupCC1020Allregisters154,4842
+void WakeUpCC1020ToTX(char TXANALOG1)WakeUpCC1020ToTX173,5393
+void WakeUpCC1020ToRX(char RXANALOG1)WakeUpCC1020ToRX198,6309
+int CalibrateCC1020(char PA_POWER1)CalibrateCC1020231,7333
+char SetupCC1020TX(char TXANALOG1, char PA_POWER1)SetupCC1020TX282,9243
+int Transmitpacket(char* str, int size)Transmitpacket338,10850
+
+cc1020.h,2720
+#define DIO	DIO17,408
+#define DCLK	DCLK19,449
+#define LOCKpin	LOCKpin21,512
+#define PORT_TX PORT_TX38,763
+#define PIN_TX PIN_TX39,786
+#define CAL_ATTEMPT_MAX CAL_ATTEMPT_MAX43,884
+#define CC1020_MAIN CC1020_MAIN54,1106
+#define CC1020_INTERFACE CC1020_INTERFACE55,1143
+#define CC1020_RESET CC1020_RESET56,1180
+#define CC1020_SEQUENCING CC1020_SEQUENCING57,1217
+#define CC1020_FREQ_2A CC1020_FREQ_2A58,1254
+#define CC1020_FREQ_1A CC1020_FREQ_1A59,1291
+#define CC1020_FREQ_0A CC1020_FREQ_0A60,1328
+#define CC1020_CLOCK_A CC1020_CLOCK_A61,1365
+#define CC1020_FREQ_2B CC1020_FREQ_2B62,1402
+#define CC1020_FREQ_1B CC1020_FREQ_1B63,1439
+#define CC1020_FREQ_0B CC1020_FREQ_0B64,1476
+#define CC1020_CLOCK_B CC1020_CLOCK_B65,1513
+#define CC1020_VCO CC1020_VCO66,1550
+#define CC1020_MODEM CC1020_MODEM67,1587
+#define CC1020_DEVIATION CC1020_DEVIATION68,1624
+#define CC1020_AFC_CONTROL CC1020_AFC_CONTROL69,1661
+#define CC1020_FILTER CC1020_FILTER70,1698
+#define CC1020_VGA1 CC1020_VGA171,1735
+#define CC1020_VGA2 CC1020_VGA272,1772
+#define CC1020_VGA3 CC1020_VGA373,1809
+#define CC1020_VGA4 CC1020_VGA474,1846
+#define CC1020_LOCK CC1020_LOCK75,1883
+#define CC1020_FRONTEND CC1020_FRONTEND76,1920
+#define CC1020_ANALOG CC1020_ANALOG77,1957
+#define CC1020_BUFF_SWING CC1020_BUFF_SWING78,1994
+#define CC1020_BUFF_CURRENT CC1020_BUFF_CURRENT79,2031
+#define CC1020_PLL_BW CC1020_PLL_BW80,2068
+#define CC1020_CALIBRATE CC1020_CALIBRATE81,2105
+#define CC1020_PA_POWER CC1020_PA_POWER82,2142
+#define CC1020_MATCH CC1020_MATCH83,2179
+#define CC1020_PHASE_COMP CC1020_PHASE_COMP84,2216
+#define CC1020_GAIN_COMP CC1020_GAIN_COMP85,2253
+#define CC1020_POWERDOWN CC1020_POWERDOWN86,2290
+#define CC1020_TEST1 CC1020_TEST187,2327
+#define CC1020_TEST2 CC1020_TEST288,2364
+#define CC1020_TEST3 CC1020_TEST389,2401
+#define CC1020_TEST4 CC1020_TEST490,2438
+#define CC1020_TEST5 CC1020_TEST591,2475
+#define CC1020_TEST6 CC1020_TEST692,2512
+#define CC1020_TEST7 CC1020_TEST793,2549
+#define CC1020_STATUS CC1020_STATUS94,2586
+#define CC1020_RESET_DONE CC1020_RESET_DONE95,2623
+#define CC1020_RSSI CC1020_RSSI96,2660
+#define CC1020_AFC CC1020_AFC97,2697
+#define CC1020_GAUSS_FILTER CC1020_GAUSS_FILTER98,2734
+#define CC1020_STATUS1 CC1020_STATUS199,2771
+#define CC1020_STATUS2 CC1020_STATUS2100,2808
+#define CC1020_STATUS3 CC1020_STATUS3101,2845
+#define CC1020_STATUS4 CC1020_STATUS4102,2882
+#define CC1020_STATUS5 CC1020_STATUS5103,2919
+#define CC1020_STATUS6 CC1020_STATUS6104,2956
+#define CC1020_STATUS7 CC1020_STATUS7105,2993
+#define PA_POWER PA_POWER107,3032
+#define TXANALOG TXANALOG109,3092
+#define RXANALOG RXANALOG110,3123
+
+common.h,665
+#define COMMON_HCOMMON_H7,153
+#define F_CPU F_CPU10,191
+#define sbi(sbi22,426
+#define cbi(cbi23,458
+#define tbi(tbi24,491
+#define TRUE TRUE26,525
+#define FALSE FALSE27,541
+#define HM_TIME HM_TIME30,600
+#define PREFLIGHT PREFLIGHT39,798
+#define NORMAL NORMAL41,836
+#define SAFE SAFE43,874
+#define EMERGENCY EMERGENCY45,908
+#define PORT_PF PORT_PF54,1062
+#define PIN_PF PIN_PF56,1129
+#define IN_LAT IN_LAT65,1314
+#define IN_LON IN_LON66,1338
+#define IN_RAD IN_RAD67,1362
+#define GS_LAT GS_LAT68,1381
+#define GS_LON GS_LON69,1402
+#define GS_RAD GS_RAD70,1426
+#define IN IN71,1444
+#define GS GS72,1458
+#define FR FR73,1472
+
+eeprom.c,448
+#define F_CPU F_CPU17,636
+#define DEBUG DEBUG26,840
+void ioinit(void)ioinit28,857
+int uart_putchar(char c, FILE *unused)uart_putchar56,1446
+int ee24xx_read_bytes(uint16_t eeaddr, int len, uint8_t *buf)ee24xx_read_bytes66,1596
+int ee24xx_write_page(uint16_t eeaddr, int len, uint8_t *buf)ee24xx_write_page224,5131
+int ee24xx_write_bytes(uint16_t eeaddr, int len, uint8_t *buf)ee24xx_write_bytes355,8294
+void error(void)error382,8744
+
+eeprom.h,174
+#define DEBUG DEBUG60,2272
+#define TWI_SLA_24CXX	TWI_SLA_24CXX72,2477
+#define MAX_ITER	MAX_ITER84,3071
+#define PAGE_SIZE PAGE_SIZE94,3400
+uint8_t twst;twst101,3640
+
+hm.c,180
+struct HM_data* check_loads(void){check_loads3,17
+uint8_t decide_loads(struct HM_data* hmdata, int mode){decide_loads12,212
+uint8_t send_loads(uint8_t load){send_loads17,363
+
+hm.h,24
+#define HM_HHM_H7,145
+
+mag.c,160
+void init_UART(void )init_UART6,75
+FILE *temp;temp17,320
+void UART_send( unsigned char data)UART_send19,333
+void configure_mag(void)configure_mag29,585
+
+mag.h,31
+FILE mystdout;mystdout26,569
+
+Makefile,1486
+MCU=atmega128MCU2,1
+PROGRAMMER_MCU=m8PROGRAMMER_MCU4,16
+PROJECTNAME=masterPROJECTNAME6,35
+PRJSRC=eeprom.c spi.c timer.c master.c hm.c slave_comm.c cc1020comm.c cc1020functions.c twi.c peripherals.c eeprom.cPRJSRC8,55
+INC=INC11,219
+LIBS=LIBS14,263
+OPTLEVEL=sOPTLEVEL18,332
+AVRDUDE_PROGRAMMERID=usbaspAVRDUDE_PROGRAMMERID20,344
+AVRDUDE_PORT=usbAVRDUDE_PORT22,373
+HEXFORMAT=ihexHEXFORMAT27,452
+CFLAGS=-I. $(INC) -g -mmcu=$(MCU) -O$(OPTLEVEL) \CFLAGS30,479
+CPPFLAGS=-fno-exceptions               \CPPFLAGS38,755
+ASMFLAGS =-I. $(INC) -mmcu=$(MCU)        \ASMFLAGS45,943
+LDFLAGS=-Wl,-Map,$(TRG).map -mmcu=$(MCU) \LDFLAGS52,1097
+CC=avr-gccCC56,1177
+OBJCOPY=avr-objcopyOBJCOPY57,1188
+OBJDUMP=avr-objdumpOBJDUMP58,1208
+SIZE=avr-sizeSIZE59,1228
+AVRDUDE=avrdude -FAVRDUDE60,1242
+REMOVE=rm -fREMOVE61,1261
+TRG=$(PROJECTNAME).outTRG64,1309
+DUMPTRG=$(PROJECTNAME).sDUMPTRG65,1332
+HEXROMTRG=$(PROJECTNAME).hex HEXROMTRG67,1358
+HEXTRG=$(HEXROMTRG) $(PROJECTNAME).ee.hexHEXTRG68,1388
+GDBINITFILE=gdbinit-$(PROJECTNAME)GDBINITFILE69,1430
+CPPFILES=$(filter %.cpp, $(PRJSRC))CPPFILES75,1543
+CCFILES=$(filter %.cc, $(PRJSRC))CCFILES76,1579
+BIGCFILES=$(filter %.C, $(PRJSRC))BIGCFILES77,1613
+CFILES=$(filter %.c, $(PRJSRC))CFILES79,1653
+ASMFILES=$(filter %.S, $(PRJSRC))ASMFILES81,1697
+OBJDEPS=$(CFILES:.c=.o)    \OBJDEPS85,1775
+LST=$(filter %.lst, $(OBJDEPS:.o=.lst))LST92,1914
+GENASMFILES=$(filter %.s, $(OBJDEPS:.o=.s)) GENASMFILES96,2013
+
+master.c,441
+int Mode;Mode26,464
+struct state* Current_state;Current_state27,474
+int Transmission;Transmission28,503
+int HM_counter;HM_counter29,521
+char* state_to_char(struct state* Current_state){state_to_char33,544
+struct state* control(void){control45,803
+void power(void){power65,1345
+int check_GS(void){check_GS81,1873
+void comm(void){comm129,3313
+int preflight_check(void){preflight_check139,3511
+int main(void){main151,3692
+
+peripherals.c,603
+#define NULL NULL4,27
+uint8_t PWM_init = 0;PWM_init6,59
+struct GPS_reading * read_GPS(void){read_GPS8,82
+struct SS_reading * read_SS(void){read_SS19,315
+struct MM_reading * read_MM(void){read_MM30,525
+void send_HM_data(struct HM_data* h){send_HM_data42,717
+void send_SS_reading(struct SS_reading* s){send_SS_reading46,828
+void send_GPS_reading(struct GPS_reading* g){send_GPS_reading52,969
+void send_MM_reading(struct MM_reading* m){send_MM_reading58,1172
+void init_PWM(void){init_PWM63,1290
+void reset_PWM(void){reset_PWM70,1434
+int set_PWM(int dir, float width){set_PWM82,1613
+
+peripherals.h,898
+#define PERI_HPERI_H8,139
+#define N_SS N_SS18,279
+#define PWM_DEFAULT PWM_DEFAULT21,335
+#define TRUE TRUE23,360
+#define FALSE FALSE24,375
+#define X X33,547
+#define Y Y34,559
+#define Z Z35,571
+#define A A36,583
+#define B B37,595
+#define C C38,607
+struct GPS_reading{GPS_reading43,651
+  float lat,lon,time;lat44,671
+  float lat,lon,time;lon44,671
+  float lat,lon,time;time44,671
+struct SS_reading{SS_reading48,730
+  uint16_t reading[6];reading49,749
+struct HM{HM52,776
+struct MM_reading{MM_reading59,901
+struct HM_data{HM_data114,2114
+  int a;a115,2130
+struct packet{packet119,2172
+  char com;com120,2187
+  unsigned char size;size121,2199
+  float coords[3];coords122,2221
+  float vels[3];vels123,2240
+  float angles[3];angles124,2257
+struct state{state128,2320
+  struct GPS_reading gps;gps129,2334
+  struct HM_data hm_data; hm_data130,2360
+
+slave.c,775
+int transmit_frame_EEPROM (void){transmit_frame_EEPROM10,160
+int transmit_state (void){transmit_state14,246
+void propogate (void){propogate18,324
+#define MAX_ADDRMAX_ADDR22,398
+#define START_ADDRSTART_ADDR23,415
+int Transmission;Transmission24,434
+uint8_t data[MAX_DATA], Checksum;data25,452
+uint8_t data[MAX_DATA], Checksum;Checksum25,452
+int End;End26,486
+uint16_t  Write_addr, Read_Addr;Write_addr27,495
+uint16_t  Write_addr, Read_Addr;Read_Addr27,495
+struct state Current_state;Current_state28,528
+int Reader, Size, Counter, Data; Reader29,556
+int Reader, Size, Counter, Data; Size29,556
+int Reader, Size, Counter, Data; Counter29,556
+int Reader, Size, Counter, Data; Data29,556
+ISR(SPI_STC_vect)ISR34,720
+int main(void) {main119,2528
+
+slave_comm.c,73
+void slave_send (uint8_t command, char* data, int size){slave_send3,25
+
+slave_comm.h,344
+#define HM_DATA HM_DATA26,425
+#define BEGIN_TX_GS BEGIN_TX_GS28,484
+#define BEGIN_TX_COMM BEGIN_TX_COMM30,566
+#define END_TX END_TX32,623
+#define END_SPI END_SPI36,675
+#define ACK ACK37,711
+#define MAX_DATA MAX_DATA40,785
+#define COMMAND COMMAND47,900
+#define SIZE SIZE48,918
+#define DATA DATA49,933
+#define END END50,948
+
+spi.c,153
+void init_SPI_trans(int CS_pin){init_SPI_trans18,478
+void SPI_send(void* str, int size) SPI_send29,825
+void init_SPI_rec(void) init_SPI_rec43,1055
+
+spi.h,260
+#define SPI_HSPI_H8,115
+#define SPIDI	SPIDI12,177
+#define SPIDO	SPIDO14,236
+#define SPICLK	SPICLK16,279
+#define PORT_CS PORT_CS24,452
+#define DDR_CS DDR_CS26,515
+#define SLAVE SLAVE27,548
+#define CC1020 CC102028,580
+#define ADC_S ADC_S29,612
+
+timer.c,153
+void timer_reset_two_sec(void){timer_reset_two_sec4,43
+void watch_dog(int time){watch_dog14,237
+void timer_wait_reset(void){timer_wait_reset19,308
+
+timer.h,142
+#define T_CONTROL T_CONTROL13,245
+#define T_POWER T_POWER14,265
+#define T_COMM T_COMM15,283
+#define TIMER_TWO_SEC TIMER_TWO_SEC19,362
+
+twi.c,186
+char rdata;rdata11,173
+void init_TWI(void) {init_TWI13,188
+int TWI_rec_byte(char addr, char *buf){TWI_rec_byte20,368
+int TWI_send_byte(char addr, char data){TWI_send_byte56,1440
+
+twi.h,25
+char rdata;rdata10,139
+
+twitest.c,899
+#define F_CPU F_CPU17,636
+#define DEBUG DEBUG26,821
+#  define UCSRA UCSRA41,1131
+#  define UCSRB UCSRB42,1154
+#  define UBRR UBRR43,1177
+#  define UDR UDR44,1199
+#  define UCSRA UCSRA46,1239
+#  define UCSRB UCSRB47,1259
+#  define UBRR UBRR51,1307
+#define TWI_SLA_24CXX	TWI_SLA_24CXX63,1522
+#define MAX_ITER	MAX_ITER75,2115
+#define PAGE_SIZE PAGE_SIZE85,2443
+uint8_t twst;twst92,2682
+void ioinit(void)ioinit98,2811
+int uart_putchar(char c, FILE *unused)uart_putchar131,3501
+int ee24xx_read_bytes(uint16_t eeaddr, int len, uint8_t *buf)ee24xx_read_bytes158,4362
+int ee24xx_write_page(uint16_t eeaddr, int len, uint8_t *buf)ee24xx_write_page335,8870
+int ee24xx_write_bytes(uint16_t eeaddr, int len, uint8_t *buf)ee24xx_write_bytes471,12192
+void error(void)error498,12642
+FILE mystdout = FDEV_SETUP_STREAM(uart_putchar, NULL, _FDEV_SETUP_WRITE);mystdout505,12730
+
+uart.h,202
+#  define UCSRA UCSRA12,291
+#  define UCSRB UCSRB13,314
+#  define UBRR UBRR14,337
+#  define UDR UDR15,359
+#  define UCSRA UCSRA17,399
+#  define UCSRB UCSRB18,419
+#  define UBRR UBRR22,467

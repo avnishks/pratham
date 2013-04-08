@@ -1,0 +1,188 @@
+MPLINK 4.38, Linker
+Linker Map File - Created Wed Dec 12 01:39:08 2012
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000000
+                   .org_1       code   0x000000    program   0x000002
+                   .org_2       code   0x000004    program   0x0003ec
+.config_2007_POWER_V1_4.O       code   0x002007    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000000      
+                            0x000004    0x0001f9      
+                            0x002007    0x002007      
+            504 out of 8454 program addresses used, program memory utilization is 5%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                  ADCLoop   0x000104    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                  ADCWait   0x000116    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+           ADCWaitbattery   0x000190    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+             BatteryCheck   0x000185    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                 BitCheck   0x0000f4    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                   Delay1   0x00009b    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                 Delay108   0x000091    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                 Delay109   0x000090    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                   Delay2   0x00009a    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                  Delay20   0x00008f    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                   Delay3   0x000099    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                   Delay4   0x000110    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                   Delay5   0x00010f    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                   DelayS   0x000098    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                 Delay_1s   0x00008d    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+            Delaybattery1   0x000189    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+            Delaybattery2   0x00018a    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                  EndLoop   0x0001f8    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                  ExitI2C   0x00005c    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                  ExitISR   0x000010    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+               I2CHandler   0x000016    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                     Kill   0x0001f7    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                     Loop   0x0000e3    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+       OBCCommandResponse   0x000031    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+       PowerSavingModeEND   0x0001bf    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                Preflight   0x0000cb    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                RealSleep   0x0000c0    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                 SafeMode   0x0001c5    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+               SendHMData   0x00001c    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                 Shutdown   0x00007e    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                   SkipB1   0x000039    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                   SkipB2   0x0001cf    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+            SkipBeaconOff   0x0001b9    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+            SkipBeaconOn1   0x0001ae    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+            SkipBeaconOn2   0x0001b6    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                   SkipC1   0x000044    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                   SkipC2   0x0001da    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+               SkipCheck2   0x000059    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+               SkipCheck3   0x000054    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+               SkipCheck4   0x00004d    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+               SkipCheck5   0x000046    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+               SkipCheck6   0x00003f    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+               SkipCheck7   0x00003a    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                   SkipD1   0x00003e    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                   SkipD2   0x0001d4    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                   SkipG1   0x000052    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                   SkipG2   0x0001e8    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+              SkipI2CData   0x00005b    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+           SkipLoadCheck2   0x0001ef    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+           SkipLoadCheck3   0x0001ea    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+           SkipLoadCheck4   0x0001e3    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+           SkipLoadCheck5   0x0001dc    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+           SkipLoadCheck6   0x0001d5    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+           SkipLoadCheck7   0x0001d0    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                   SkipM1   0x000058    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                   SkipM2   0x0001ee    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                   SkipO1   0x00004b    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                   SkipO2   0x0001e1    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                 SkipOff4   0x00017b    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                 SkipOff5   0x000171    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                 SkipOff6   0x000167    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                 SkipOff7   0x00015e    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                  SkipOn3   0x000154    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                  SkipOn4   0x00014a    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                  SkipOn5   0x000140    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                  SkipOn6   0x000136    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                  SkipOn7   0x00012c    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+      SkipPowerSavingMode   0x0001c9    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+            SkipPreflight   0x0000ff    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+          SkipRestoreLoad   0x0001f3    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+               SkipUplink   0x0000ef    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                SleepMode   0x0000a2    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                     Snap   0x0000c9    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                    Start   0x0000cd    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                  Startup   0x00006e    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+              Startup_all   0x00005e    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                 WriteI2C   0x000025    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                  ExitISR   0x000010    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+               I2CHandler   0x000016    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+               SendHMData   0x00001c    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                 WriteI2C   0x000025    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+       OBCCommandResponse   0x000031    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                   SkipB1   0x000039    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+               SkipCheck7   0x00003a    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                   SkipD1   0x00003e    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+               SkipCheck6   0x00003f    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                   SkipC1   0x000044    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+               SkipCheck5   0x000046    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                   SkipO1   0x00004b    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+               SkipCheck4   0x00004d    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                   SkipG1   0x000052    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+               SkipCheck3   0x000054    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                   SkipM1   0x000058    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+               SkipCheck2   0x000059    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+              SkipI2CData   0x00005b    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                  ExitI2C   0x00005c    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+              Startup_all   0x00005e    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                  Startup   0x00006e    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                 Shutdown   0x00007e    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                 Delay_1s   0x00008d    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                  Delay20   0x00008f    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                 Delay109   0x000090    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                 Delay108   0x000091    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                   DelayS   0x000098    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                   Delay3   0x000099    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                   Delay2   0x00009a    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                   Delay1   0x00009b    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                SleepMode   0x0000a2    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                RealSleep   0x0000c0    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                     Snap   0x0000c9    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                Preflight   0x0000cb    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                    Start   0x0000cd    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                     Loop   0x0000e3    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+               SkipUplink   0x0000ef    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                 BitCheck   0x0000f4    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+            SkipPreflight   0x0000ff    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                  ADCLoop   0x000104    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                   Delay5   0x00010f    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                   Delay4   0x000110    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                  ADCWait   0x000116    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                  SkipOn7   0x00012c    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                  SkipOn6   0x000136    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                  SkipOn5   0x000140    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                  SkipOn4   0x00014a    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                  SkipOn3   0x000154    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                 SkipOff7   0x00015e    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                 SkipOff6   0x000167    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                 SkipOff5   0x000171    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                 SkipOff4   0x00017b    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+             BatteryCheck   0x000185    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+            Delaybattery1   0x000189    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+            Delaybattery2   0x00018a    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+           ADCWaitbattery   0x000190    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+            SkipBeaconOn1   0x0001ae    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+            SkipBeaconOn2   0x0001b6    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+            SkipBeaconOff   0x0001b9    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+       PowerSavingModeEND   0x0001bf    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                 SafeMode   0x0001c5    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+      SkipPowerSavingMode   0x0001c9    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                   SkipB2   0x0001cf    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+           SkipLoadCheck7   0x0001d0    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                   SkipD2   0x0001d4    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+           SkipLoadCheck6   0x0001d5    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                   SkipC2   0x0001da    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+           SkipLoadCheck5   0x0001dc    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                   SkipO2   0x0001e1    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+           SkipLoadCheck4   0x0001e3    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                   SkipG2   0x0001e8    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+           SkipLoadCheck3   0x0001ea    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                   SkipM2   0x0001ee    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+           SkipLoadCheck2   0x0001ef    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+          SkipRestoreLoad   0x0001f3    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                     Kill   0x0001f7    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+                  EndLoop   0x0001f8    program     static D:\Documents and Settings\Administrator\Desktop\prashant\Codes\power\power_V1_4.asm
+
+

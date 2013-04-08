@@ -1,0 +1,446 @@
+GAS LISTING /tmp/ccZ8DK0c.s 			page 1
+
+
+   1               		.file	"transmit.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+   8               		.global __do_copy_data
+   9               		.global __do_clear_bss
+  10               		.stabs	"/home/chaitan3/Satellite/OBC/tests/transmitter/",100,0,2,.Ltext0
+  11               		.stabs	"transmit.c",100,0,2,.Ltext0
+  12               		.text
+  13               	.Ltext0:
+  14               		.stabs	"gcc2_compiled.",60,0,0,0
+  15               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,1,0
+  16               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,1,0
+  17               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,1,0
+  18               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,1,0
+  19               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,1,0
+  20               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,1,
+  21               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,1,0
+  22               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,1,0
+  23               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,1,0
+  24               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,1,0
+  25               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,1,0
+  26               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,1,0
+  27               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,1,0
+  28               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,1,0
+  29               		.stabs	"void:t(0,15)=(0,15)",128,0,1,0
+  30               		.stabs	"common.h",130,0,0,0
+  31               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/avr/io.h",130,0,0,0
+  32               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/avr/sfr_defs.h",130,0,0,0
+  33               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/inttypes.h",130,0,0,0
+  34               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/stdint.h",130,0,0,0
+  35               		.stabs	"int8_t:t(5,1)=(0,10)",128,0,121,0
+  36               		.stabs	"uint8_t:t(5,2)=(0,11)",128,0,122,0
+  37               		.stabs	"int16_t:t(5,3)=(0,1)",128,0,123,0
+  38               		.stabs	"uint16_t:t(5,4)=(0,4)",128,0,124,0
+  39               		.stabs	"int32_t:t(5,5)=(0,3)",128,0,125,0
+  40               		.stabs	"uint32_t:t(5,6)=(0,5)",128,0,126,0
+  41               		.stabs	"int64_t:t(5,7)=(0,6)",128,0,128,0
+  42               		.stabs	"uint64_t:t(5,8)=(0,7)",128,0,129,0
+  43               		.stabs	"intptr_t:t(5,9)=(5,3)",128,0,142,0
+  44               		.stabs	"uintptr_t:t(5,10)=(5,4)",128,0,147,0
+  45               		.stabs	"int_least8_t:t(5,11)=(5,1)",128,0,159,0
+  46               		.stabs	"uint_least8_t:t(5,12)=(5,2)",128,0,164,0
+  47               		.stabs	"int_least16_t:t(5,13)=(5,3)",128,0,169,0
+  48               		.stabs	"uint_least16_t:t(5,14)=(5,4)",128,0,174,0
+  49               		.stabs	"int_least32_t:t(5,15)=(5,5)",128,0,179,0
+  50               		.stabs	"uint_least32_t:t(5,16)=(5,6)",128,0,184,0
+  51               		.stabs	"int_least64_t:t(5,17)=(5,7)",128,0,192,0
+  52               		.stabs	"uint_least64_t:t(5,18)=(5,8)",128,0,199,0
+  53               		.stabs	"int_fast8_t:t(5,19)=(5,1)",128,0,213,0
+  54               		.stabs	"uint_fast8_t:t(5,20)=(5,2)",128,0,218,0
+  55               		.stabs	"int_fast16_t:t(5,21)=(5,3)",128,0,223,0
+  56               		.stabs	"uint_fast16_t:t(5,22)=(5,4)",128,0,228,0
+  57               		.stabs	"int_fast32_t:t(5,23)=(5,5)",128,0,233,0
+GAS LISTING /tmp/ccZ8DK0c.s 			page 2
+
+
+  58               		.stabs	"uint_fast32_t:t(5,24)=(5,6)",128,0,238,0
+  59               		.stabs	"int_fast64_t:t(5,25)=(5,7)",128,0,246,0
+  60               		.stabs	"uint_fast64_t:t(5,26)=(5,8)",128,0,253,0
+  61               		.stabs	"intmax_t:t(5,27)=(5,7)",128,0,273,0
+  62               		.stabs	"uintmax_t:t(5,28)=(5,8)",128,0,278,0
+  63               		.stabn	162,0,0,0
+  64               		.stabs	"int_farptr_t:t(4,1)=(5,5)",128,0,77,0
+  65               		.stabs	"uint_farptr_t:t(4,2)=(5,6)",128,0,81,0
+  66               		.stabn	162,0,0,0
+  67               		.stabn	162,0,0,0
+  68               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/avr/fuse.h",130,0,0,0
+  69               		.stabs	"__fuse_t:t(6,1)=(6,2)=s2low:(0,11),0,8;high:(0,11),8,8;;",128,0,247,0
+  70               		.stabn	162,0,0,0
+  71               		.stabn	162,0,0,0
+  72               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/stdlib.h",130,0,0,0
+  73               		.stabs	"/usr/lib/gcc/avr/4.3.4/include/stddef.h",130,0,0,0
+  74               		.stabs	"size_t:t(8,1)=(0,4)",128,0,214,0
+  75               		.stabs	"wchar_t:t(8,2)=(0,1)",128,0,326,0
+  76               		.stabn	162,0,0,0
+  77               		.stabs	"div_t:t(7,1)=(7,2)=s4quot:(0,1),0,16;rem:(0,1),16,16;;",128,0,71,0
+  78               		.stabs	"ldiv_t:t(7,3)=(7,4)=s8quot:(0,3),0,32;rem:(0,3),32,32;;",128,0,77,0
+  79               		.stabs	"__compar_fn_t:t(7,5)=(7,6)=*(7,7)=f(0,1)",128,0,80,0
+  80               		.stabn	162,0,0,0
+  81               		.stabs	"/usr/lib/gcc/avr/4.3.4/../../../avr/include/stdio.h",130,0,0,0
+  82               		.stabs	"/usr/lib/gcc/avr/4.3.4/include/stdarg.h",130,0,0,0
+  83               		.stabs	"__gnuc_va_list:t(10,1)=(10,2)=*(0,15)",128,0,43,0
+  84               		.stabs	"va_list:t(10,3)=(10,1)",128,0,105,0
+  85               		.stabn	162,0,0,0
+  86               		.stabs	"__file:T(9,1)=s14buf:(9,2)=*(0,2),0,16;unget:(0,11),16,8;flags:(5,2),24,8;size:(0,1),32,16
+  87               		.stabn	162,0,0,0
+  88               		.stabn	162,0,0,0
+  89               		.stabs	"cc1020_init_dio:F(0,15)",36,0,5,cc1020_init_dio
+  90               	.global	cc1020_init_dio
+  91               		.type	cc1020_init_dio, @function
+  92               	cc1020_init_dio:
+  93               		.stabd	46,0,0
+   0:transmit.c    **** #include "common.h"
+   1:transmit.c    **** #include "transmit.h"
+   2:transmit.c    **** 
+   3:transmit.c    **** void cc1020_init_dio(void)
+   4:transmit.c    **** {
+  94               		.stabn	68,0,5,.LM0-.LFBB1
+  95               	.LM0:
+  96               	.LFBB1:
+  97               	/* prologue: function */
+  98               	/* frame size = 0 */
+   5:transmit.c    ****   cbi(DDR_TX, DCLK);
+  99               		.stabn	68,0,6,.LM1-.LFBB1
+ 100               	.LM1:
+ 101 0000 BA98      		cbi 55-32,2
+   6:transmit.c    ****   sbi(DDR_TX, DIO);
+ 102               		.stabn	68,0,7,.LM2-.LFBB1
+ 103               	.LM2:
+ 104 0002 B99A      		sbi 55-32,1
+   7:transmit.c    ****   sbi(PORT_TX, DIO);
+ 105               		.stabn	68,0,8,.LM3-.LFBB1
+ 106               	.LM3:
+GAS LISTING /tmp/ccZ8DK0c.s 			page 3
+
+
+ 107 0004 C19A      		sbi 56-32,1
+ 108               	/* epilogue start */
+   8:transmit.c    **** }
+ 109               		.stabn	68,0,9,.LM4-.LFBB1
+ 110               	.LM4:
+ 111 0006 0895      		ret
+ 112               		.size	cc1020_init_dio, .-cc1020_init_dio
+ 113               	.Lscope1:
+ 114               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 115               		.stabd	78,0,0
+ 116               		.stabs	"cc1020_transmit_bit:F(0,15)",36,0,12,cc1020_transmit_bit
+ 117               		.stabs	"bit:P(5,2)",64,0,11,24
+ 118               	.global	cc1020_transmit_bit
+ 119               		.type	cc1020_transmit_bit, @function
+ 120               	cc1020_transmit_bit:
+ 121               		.stabd	46,0,0
+   9:transmit.c    **** 
+  10:transmit.c    **** void cc1020_transmit_bit(uint8_t bit)
+  11:transmit.c    **** {
+ 122               		.stabn	68,0,12,.LM5-.LFBB2
+ 123               	.LM5:
+ 124               	.LFBB2:
+ 125               	/* prologue: function */
+ 126               	/* frame size = 0 */
+ 127               	.L4:
+  12:transmit.c    ****   while(PIN_TX & (1 << DCLK));
+ 128               		.stabn	68,0,13,.LM6-.LFBB2
+ 129               	.LM6:
+ 130 0008 B299      		sbic 54-32,2
+ 131 000a 00C0      		rjmp .L4
+  13:transmit.c    ****   if(bit == 0)
+ 132               		.stabn	68,0,14,.LM7-.LFBB2
+ 133               	.LM7:
+ 134 000c 8823      		tst r24
+ 135 000e 01F4      		brne .L5
+  14:transmit.c    ****     cbi(PORT_TX, DIO);
+ 136               		.stabn	68,0,15,.LM8-.LFBB2
+ 137               	.LM8:
+ 138 0010 C198      		cbi 56-32,1
+ 139 0012 00C0      		rjmp .L8
+ 140               	.L5:
+  15:transmit.c    ****   else
+  16:transmit.c    ****     sbi(PORT_TX, DIO);
+ 141               		.stabn	68,0,17,.LM9-.LFBB2
+ 142               	.LM9:
+ 143 0014 C19A      		sbi 56-32,1
+ 144               	.L8:
+  17:transmit.c    ****   while(!(PIN_TX & (1 << DCLK)));
+ 145               		.stabn	68,0,18,.LM10-.LFBB2
+ 146               	.LM10:
+ 147 0016 B29B      		sbis 54-32,2
+ 148 0018 00C0      		rjmp .L8
+ 149               	/* epilogue start */
+  18:transmit.c    **** }
+ 150               		.stabn	68,0,19,.LM11-.LFBB2
+ 151               	.LM11:
+ 152 001a 0895      		ret
+GAS LISTING /tmp/ccZ8DK0c.s 			page 4
+
+
+ 153               		.size	cc1020_transmit_bit, .-cc1020_transmit_bit
+ 154               	.Lscope2:
+ 155               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 156               		.stabd	78,0,0
+ 157               		.stabs	"cc1020_transmit_packet:F(0,15)",36,0,48,cc1020_transmit_packet
+ 158               		.stabs	"size:P(5,2)",64,0,47,22
+ 159               	.global	cc1020_transmit_packet
+ 160               		.type	cc1020_transmit_packet, @function
+ 161               	cc1020_transmit_packet:
+ 162               		.stabd	46,0,0
+  19:transmit.c    **** 
+  20:transmit.c    **** //implement bit stuffing
+  21:transmit.c    **** /*void cc1020_transmit_packet(uint8_t *data, uint8_t size)
+  22:transmit.c    **** {
+  23:transmit.c    ****   uint8_t i, j, byte, bit;
+  24:transmit.c    ****   for(i = 0; i < size; i++)
+  25:transmit.c    ****   {
+  26:transmit.c    ****     byte = data[i];
+  27:transmit.c    ****     for(j = 0; j < 8; j++)
+  28:transmit.c    ****     {
+  29:transmit.c    ****       bit = byte & 0x01;
+  30:transmit.c    ****       
+  31:transmit.c    ****       while(PIN_TX & (1 << DCLK));
+  32:transmit.c    ****       if(bit)
+  33:transmit.c    ****         sbi(PORT_TX, DIO);
+  34:transmit.c    ****       else
+  35:transmit.c    ****         cbi(PORT_TX, DIO);
+  36:transmit.c    ****       while(!(PIN_TX & (1 << DCLK)));
+  37:transmit.c    ****       
+  38:transmit.c    ****       byte = byte >> 1;
+  39:transmit.c    ****     }
+  40:transmit.c    ****   }
+  41:transmit.c    ****   
+  42:transmit.c    ****   sbi(PORT_TX, DIO);
+  43:transmit.c    **** }*/
+  44:transmit.c    **** 
+  45:transmit.c    **** //with bit stuffing
+  46:transmit.c    **** void cc1020_transmit_packet(uint8_t *data, uint8_t size)
+  47:transmit.c    **** {
+ 163               		.stabn	68,0,48,.LM12-.LFBB3
+ 164               	.LM12:
+ 165               	.LFBB3:
+ 166               	/* prologue: function */
+ 167               	/* frame size = 0 */
+ 168 001c 9C01      		movw r18,r24
+ 169               	.L12:
+ 170               	.LBB8:
+ 171               	.LBB9:
+  13:transmit.c    ****   while(PIN_TX & (1 << DCLK));
+ 172               		.stabn	68,0,13,.LM13-.LFBB3
+ 173               	.LM13:
+ 174 001e B299      		sbic 54-32,2
+ 175 0020 00C0      		rjmp .L12
+  17:transmit.c    ****     sbi(PORT_TX, DIO);
+ 176               		.stabn	68,0,17,.LM14-.LFBB3
+ 177               	.LM14:
+ 178 0022 C19A      		sbi 56-32,1
+GAS LISTING /tmp/ccZ8DK0c.s 			page 5
+
+
+ 179               	.L13:
+  18:transmit.c    ****   while(!(PIN_TX & (1 << DCLK)));
+ 180               		.stabn	68,0,18,.LM15-.LFBB3
+ 181               	.LM15:
+ 182 0024 B29B      		sbis 54-32,2
+ 183 0026 00C0      		rjmp .L13
+ 184 0028 F901      		movw r30,r18
+ 185 002a 20E0      		ldi r18,lo8(0)
+ 186 002c 30E0      		ldi r19,lo8(0)
+ 187               	.LBE9:
+ 188               	.LBE8:
+  48:transmit.c    ****   uint8_t i, j, byte, bit;
+  49:transmit.c    ****   uint8_t ax_counter = 0;
+  50:transmit.c    ****   
+  51:transmit.c    ****   cc1020_transmit_bit(1);
+  52:transmit.c    ****   
+  53:transmit.c    ****   for(i = 0; i < size; i++)
+  54:transmit.c    ****   {
+  55:transmit.c    ****     byte = data[i];
+  56:transmit.c    ****     for(j = 0; j < 8; j++)
+  57:transmit.c    ****     {
+  58:transmit.c    ****       bit = byte & 0x80;
+  59:transmit.c    ****       cc1020_transmit_bit(bit);
+  60:transmit.c    ****       
+  61:transmit.c    ****       if((i != 0) && (i != size - 1))
+ 189               		.stabn	68,0,62,.LM16-.LFBB3
+ 190               	.LM16:
+ 191 002e 862F      		mov r24,r22
+ 192 0030 90E0      		ldi r25,lo8(0)
+ 193 0032 0197      		sbiw r24,1
+ 194 0034 00C0      		rjmp .L14
+ 195               	.L24:
+  56:transmit.c    ****     byte = data[i];
+ 196               		.stabn	68,0,56,.LM17-.LFBB3
+ 197               	.LM17:
+ 198 0036 5081      		ld r21,Z
+ 199 0038 40E0      		ldi r20,lo8(0)
+ 200               		.stabn	68,0,62,.LM18-.LFBB3
+ 201               	.LM18:
+ 202 003a A22F      		mov r26,r18
+ 203 003c B0E0      		ldi r27,lo8(0)
+ 204               	.L23:
+  59:transmit.c    ****       bit = byte & 0x80;
+ 205               		.stabn	68,0,59,.LM19-.LFBB3
+ 206               	.LM19:
+ 207 003e 752F      		mov r23,r21
+ 208 0040 7078      		andi r23,lo8(-128)
+ 209               	.L15:
+ 210               	.LBB10:
+ 211               	.LBB11:
+  13:transmit.c    ****   while(PIN_TX & (1 << DCLK));
+ 212               		.stabn	68,0,13,.LM20-.LFBB3
+ 213               	.LM20:
+ 214 0042 B299      		sbic 54-32,2
+ 215 0044 00C0      		rjmp .L15
+  14:transmit.c    ****   if(bit == 0)
+ 216               		.stabn	68,0,14,.LM21-.LFBB3
+GAS LISTING /tmp/ccZ8DK0c.s 			page 6
+
+
+ 217               	.LM21:
+ 218 0046 7723      		tst r23
+ 219 0048 01F4      		brne .L16
+  15:transmit.c    ****     cbi(PORT_TX, DIO);
+ 220               		.stabn	68,0,15,.LM22-.LFBB3
+ 221               	.LM22:
+ 222 004a C198      		cbi 56-32,1
+ 223 004c 00C0      		rjmp .L27
+ 224               	.L16:
+  17:transmit.c    ****     sbi(PORT_TX, DIO);
+ 225               		.stabn	68,0,17,.LM23-.LFBB3
+ 226               	.LM23:
+ 227 004e C19A      		sbi 56-32,1
+ 228               	.L27:
+  18:transmit.c    ****   while(!(PIN_TX & (1 << DCLK)));
+ 229               		.stabn	68,0,18,.LM24-.LFBB3
+ 230               	.LM24:
+ 231 0050 B29B      		sbis 54-32,2
+ 232 0052 00C0      		rjmp .L27
+ 233               	.LBE11:
+ 234               	.LBE10:
+ 235               		.stabn	68,0,62,.LM25-.LFBB3
+ 236               	.LM25:
+ 237 0054 2223      		tst r18
+ 238 0056 01F0      		breq .L18
+ 239 0058 A817      		cp r26,r24
+ 240 005a B907      		cpc r27,r25
+ 241 005c 01F0      		breq .L18
+  62:transmit.c    ****       {
+  63:transmit.c    ****         if(bit)
+ 242               		.stabn	68,0,64,.LM26-.LFBB3
+ 243               	.LM26:
+ 244 005e 7723      		tst r23
+ 245 0060 01F0      		breq .L19
+  64:transmit.c    ****           ax_counter++;
+ 246               		.stabn	68,0,65,.LM27-.LFBB3
+ 247               	.LM27:
+ 248 0062 3F5F      		subi r19,lo8(-(1))
+  65:transmit.c    ****         else
+  66:transmit.c    ****           ax_counter = 0;
+  67:transmit.c    ****         if(ax_counter == 5)
+ 249               		.stabn	68,0,68,.LM28-.LFBB3
+ 250               	.LM28:
+ 251 0064 3530      		cpi r19,lo8(5)
+ 252 0066 01F4      		brne .L18
+ 253               	.L26:
+ 254               	.LBB12:
+ 255               	.LBB13:
+  13:transmit.c    ****   while(PIN_TX & (1 << DCLK));
+ 256               		.stabn	68,0,13,.LM29-.LFBB3
+ 257               	.LM29:
+ 258 0068 B299      		sbic 54-32,2
+ 259 006a 00C0      		rjmp .L26
+  15:transmit.c    ****     cbi(PORT_TX, DIO);
+ 260               		.stabn	68,0,15,.LM30-.LFBB3
+ 261               	.LM30:
+ 262 006c C198      		cbi 56-32,1
+GAS LISTING /tmp/ccZ8DK0c.s 			page 7
+
+
+ 263               	.L21:
+  18:transmit.c    ****   while(!(PIN_TX & (1 << DCLK)));
+ 264               		.stabn	68,0,18,.LM31-.LFBB3
+ 265               	.LM31:
+ 266 006e B29B      		sbis 54-32,2
+ 267 0070 00C0      		rjmp .L21
+ 268               	.L19:
+ 269 0072 30E0      		ldi r19,lo8(0)
+ 270               	.L18:
+ 271               	.LBE13:
+ 272               	.LBE12:
+  57:transmit.c    ****     for(j = 0; j < 8; j++)
+ 273               		.stabn	68,0,57,.LM32-.LFBB3
+ 274               	.LM32:
+ 275 0074 4F5F      		subi r20,lo8(-(1))
+ 276 0076 4830      		cpi r20,lo8(8)
+ 277 0078 01F0      		breq .L22
+  68:transmit.c    ****         {
+  69:transmit.c    ****           ax_counter = 0;
+  70:transmit.c    ****           cc1020_transmit_bit(0);
+  71:transmit.c    ****         }
+  72:transmit.c    ****       }  
+  73:transmit.c    ****       
+  74:transmit.c    ****       byte = byte << 1;
+ 278               		.stabn	68,0,75,.LM33-.LFBB3
+ 279               	.LM33:
+ 280 007a 550F      		lsl r21
+ 281 007c 00C0      		rjmp .L23
+ 282               	.L22:
+  54:transmit.c    ****   for(i = 0; i < size; i++)
+ 283               		.stabn	68,0,54,.LM34-.LFBB3
+ 284               	.LM34:
+ 285 007e 2F5F      		subi r18,lo8(-(1))
+ 286 0080 3196      		adiw r30,1
+ 287               	.L14:
+ 288 0082 2617      		cp r18,r22
+ 289 0084 00F0      		brlo .L24
+  75:transmit.c    ****     }
+  76:transmit.c    ****   }
+  77:transmit.c    ****   
+  78:transmit.c    ****   sbi(PORT_TX, DIO);
+ 290               		.stabn	68,0,79,.LM35-.LFBB3
+ 291               	.LM35:
+ 292 0086 C19A      		sbi 56-32,1
+ 293               	/* epilogue start */
+  79:transmit.c    **** }
+ 294               		.stabn	68,0,80,.LM36-.LFBB3
+ 295               	.LM36:
+ 296 0088 0895      		ret
+ 297               		.size	cc1020_transmit_packet, .-cc1020_transmit_packet
+ 298               		.stabs	"i:r(5,2)",64,0,49,18
+ 299               		.stabs	"j:r(5,2)",64,0,49,20
+ 300               		.stabs	"byte:r(5,2)",64,0,49,21
+ 301               		.stabs	"bit:r(5,2)",64,0,49,23
+ 302               		.stabs	"ax_counter:r(5,2)",64,0,50,19
+ 303               		.stabn	192,0,0,.LFBB3-.LFBB3
+ 304               		.stabn	224,0,0,.Lscope3-.LFBB3
+GAS LISTING /tmp/ccZ8DK0c.s 			page 8
+
+
+ 305               	.Lscope3:
+ 306               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 307               		.stabd	78,0,0
+ 308               		.stabs	"",100,0,0,.Letext0
+ 309               	.Letext0:
+GAS LISTING /tmp/ccZ8DK0c.s 			page 9
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 transmit.c
+     /tmp/ccZ8DK0c.s:2      *ABS*:000000000000003f __SREG__
+     /tmp/ccZ8DK0c.s:3      *ABS*:000000000000003e __SP_H__
+     /tmp/ccZ8DK0c.s:4      *ABS*:000000000000003d __SP_L__
+     /tmp/ccZ8DK0c.s:5      *ABS*:0000000000000034 __CCP__
+     /tmp/ccZ8DK0c.s:6      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccZ8DK0c.s:7      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccZ8DK0c.s:92     .text:0000000000000000 cc1020_init_dio
+     /tmp/ccZ8DK0c.s:120    .text:0000000000000008 cc1020_transmit_bit
+     /tmp/ccZ8DK0c.s:161    .text:000000000000001c cc1020_transmit_packet
+
+UNDEFINED SYMBOLS
+__do_copy_data
+__do_clear_bss

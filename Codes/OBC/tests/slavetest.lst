@@ -1,0 +1,983 @@
+GAS LISTING /tmp/ccKofr7C.s 			page 1
+
+
+   1               		.file	"slavetest.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.global __do_copy_data
+   8               		.global __do_clear_bss
+   9               		.stabs	"/data/programs/satellite/OBC/slave/",100,0,2,.Ltext0
+  10               		.stabs	"../tests/slavetest.c",100,0,2,.Ltext0
+  11               		.text
+  12               	.Ltext0:
+  13               		.stabs	"gcc2_compiled.",60,0,0,0
+  14               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  15               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  16               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  17               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  18               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  19               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,0,
+  20               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,0,0
+  21               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,0,0
+  22               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,0,0
+  23               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,0,0
+  24               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,0,0
+  25               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,0,0
+  26               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,0,0
+  27               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,0,0
+  28               		.stabs	"void:t(0,15)=(0,15)",128,0,0,0
+  29               		.stabs	"/data/programs/satellite/OBC/common.h",130,0,0,0
+  30               		.stabs	"/usr/lib/gcc/avr/4.6.1/../../../../avr/include/avr/io.h",130,0,0,0
+  31               		.stabs	"/usr/lib/gcc/avr/4.6.1/../../../../avr/include/avr/sfr_defs.h",130,0,0,0
+  32               		.stabs	"/usr/lib/gcc/avr/4.6.1/../../../../avr/include/inttypes.h",130,0,0,0
+  33               		.stabs	"/usr/lib/gcc/avr/4.6.1/include/stdint.h",130,0,0,0
+  34               		.stabs	"/usr/lib/gcc/avr/4.6.1/../../../../avr/include/stdint.h",130,0,0,0
+  35               		.stabs	"int8_t:t(6,1)=(0,10)",128,0,121,0
+  36               		.stabs	"uint8_t:t(6,2)=(0,11)",128,0,122,0
+  37               		.stabs	"int16_t:t(6,3)=(0,1)",128,0,123,0
+  38               		.stabs	"uint16_t:t(6,4)=(0,4)",128,0,124,0
+  39               		.stabs	"int32_t:t(6,5)=(0,3)",128,0,125,0
+  40               		.stabs	"uint32_t:t(6,6)=(0,5)",128,0,126,0
+  41               		.stabs	"int64_t:t(6,7)=(0,6)",128,0,128,0
+  42               		.stabs	"uint64_t:t(6,8)=(0,7)",128,0,129,0
+  43               		.stabs	"intptr_t:t(6,9)=(6,3)",128,0,142,0
+  44               		.stabs	"uintptr_t:t(6,10)=(6,4)",128,0,147,0
+  45               		.stabs	"int_least8_t:t(6,11)=(6,1)",128,0,159,0
+  46               		.stabs	"uint_least8_t:t(6,12)=(6,2)",128,0,164,0
+  47               		.stabs	"int_least16_t:t(6,13)=(6,3)",128,0,169,0
+  48               		.stabs	"uint_least16_t:t(6,14)=(6,4)",128,0,174,0
+  49               		.stabs	"int_least32_t:t(6,15)=(6,5)",128,0,179,0
+  50               		.stabs	"uint_least32_t:t(6,16)=(6,6)",128,0,184,0
+  51               		.stabs	"int_least64_t:t(6,17)=(6,7)",128,0,192,0
+  52               		.stabs	"uint_least64_t:t(6,18)=(6,8)",128,0,199,0
+  53               		.stabs	"int_fast8_t:t(6,19)=(6,1)",128,0,213,0
+  54               		.stabs	"uint_fast8_t:t(6,20)=(6,2)",128,0,218,0
+  55               		.stabs	"int_fast16_t:t(6,21)=(6,3)",128,0,223,0
+  56               		.stabs	"uint_fast16_t:t(6,22)=(6,4)",128,0,228,0
+  57               		.stabs	"int_fast32_t:t(6,23)=(6,5)",128,0,233,0
+GAS LISTING /tmp/ccKofr7C.s 			page 2
+
+
+  58               		.stabs	"uint_fast32_t:t(6,24)=(6,6)",128,0,238,0
+  59               		.stabs	"int_fast64_t:t(6,25)=(6,7)",128,0,246,0
+  60               		.stabs	"uint_fast64_t:t(6,26)=(6,8)",128,0,253,0
+  61               		.stabs	"intmax_t:t(6,27)=(6,7)",128,0,273,0
+  62               		.stabs	"uintmax_t:t(6,28)=(6,8)",128,0,278,0
+  63               		.stabn	162,0,0,0
+  64               		.stabn	162,0,0,0
+  65               		.stabs	"int_farptr_t:t(4,1)=(6,5)",128,0,77,0
+  66               		.stabs	"uint_farptr_t:t(4,2)=(6,6)",128,0,81,0
+  67               		.stabn	162,0,0,0
+  68               		.stabn	162,0,0,0
+  69               		.stabs	"/usr/lib/gcc/avr/4.6.1/../../../../avr/include/avr/fuse.h",130,0,0,0
+  70               		.stabs	"__fuse_t:t(7,1)=(7,2)=s3low:(0,11),0,8;high:(0,11),8,8;extended:(0,11),16,8;;",128,0,244,0
+  71               		.stabn	162,0,0,0
+  72               		.stabn	162,0,0,0
+  73               		.stabs	"/usr/lib/gcc/avr/4.6.1/../../../../avr/include/stdlib.h",130,0,0,0
+  74               		.stabs	"/usr/lib/gcc/avr/4.6.1/include/stddef.h",130,0,0,0
+  75               		.stabs	"size_t:t(9,1)=(0,4)",128,0,212,0
+  76               		.stabs	"wchar_t:t(9,2)=(0,1)",128,0,324,0
+  77               		.stabn	162,0,0,0
+  78               		.stabs	"div_t:t(8,1)=(8,2)=s4quot:(0,1),0,16;rem:(0,1),16,16;;",128,0,71,0
+  79               		.stabs	"ldiv_t:t(8,3)=(8,4)=s8quot:(0,3),0,32;rem:(0,3),32,32;;",128,0,77,0
+  80               		.stabs	"__compar_fn_t:t(8,5)=(8,6)=*(8,7)=f(0,1)",128,0,80,0
+  81               		.stabn	162,0,0,0
+  82               		.stabn	162,0,0,0
+  83               		.stabs	"/data/programs/satellite/OBC/peripherals.h",130,0,0,0
+  84               		.stabs	"/data/programs/satellite/OBC/hm.h",130,0,0,0
+  85               		.stabs	"HM_data:T(11,1)=s7LoadStatus:(6,2),0,8;BatteryCurrent:(6,2),8,8;BatteryVoltage:(6,2),16,8;
+  86               		.stabn	162,0,0,0
+  87               		.stabs	"GPS_reading:T(10,1)=s45x:(6,5),0,32;y:(6,5),32,32;z:(6,5),64,32;v_x:(6,5),96,32;v_y:(6,5),
+  88               		.stabs	"SS_reading:T(10,2)=s12reading:(10,3)=ar(10,4)=r(10,4);0;0177777;;0;5;(6,4),0,96;;",128,0,0
+  89               		.stabs	"MM_reading:T(10,5)=s12B_x:(0,12),0,32;B_y:(0,12),32,32;B_z:(0,12),64,32;;",128,0,0,0
+  90               		.stabs	"PWM_values:T(10,6)=s9x:(6,4),0,16;y:(6,4),16,16;z:(6,4),32,16;x_dir:(6,2),48,8;y_dir:(6,2)
+  91               		.stabs	"state:T(10,7)=s85gps:(10,1),0,360;ss:(10,2),360,96;mm:(10,5),456,96;hm:(11,1),552,56;pwm:(
+  92               		.stabn	162,0,0,0
+  93               		.stabs	"__vector_17:F(0,15)",36,0,23,__vector_17
+  94               	.global	__vector_17
+  95               		.type	__vector_17, @function
+  96               	__vector_17:
+  97               		.stabd	46,0,0
+   1:../tests/slavetest.c **** /**
+   2:../tests/slavetest.c ****  * @file slave.c
+   3:../tests/slavetest.c ****  * @brief Slave main file
+   4:../tests/slavetest.c ****  */
+   5:../tests/slavetest.c **** 
+   6:../tests/slavetest.c **** #include "common.h"
+   7:../tests/slavetest.c **** #include "comm.h"
+   8:../tests/slavetest.c **** #include "spi.h"
+   9:../tests/slavetest.c **** #include "eeprom.h"
+  10:../tests/slavetest.c **** #include "slave_comm.h"
+  11:../tests/slavetest.c **** #include "peripherals.h"
+  12:../tests/slavetest.c **** #include "ax25.h"
+  13:../tests/slavetest.c **** #include "transmit.h"
+  14:../tests/slavetest.c **** 
+  15:../tests/slavetest.c **** ///Variables required for receiving data thru the SPI interface
+  16:../tests/slavetest.c **** volatile char message[256];
+  17:../tests/slavetest.c **** volatile uint8_t end = 0, t = 0, process = 0;
+GAS LISTING /tmp/ccKofr7C.s 			page 3
+
+
+  18:../tests/slavetest.c **** 
+  19:../tests/slavetest.c **** static uint32_t read_addr = 0, write_addr = 0;
+  20:../tests/slavetest.c **** /**
+  21:../tests/slavetest.c ****  * @brief Interrupt service routine for SPI
+  22:../tests/slavetest.c ****  */
+  23:../tests/slavetest.c **** ISR(SPI_STC_vect)
+  24:../tests/slavetest.c **** {
+  98               		.stabn	68,0,24,.LM0-.LFBB1
+  99               	.LM0:
+ 100               	.LFBB1:
+ 101 0000 1F92      		push r1
+ 102 0002 0F92      		push r0
+ 103 0004 0FB6      		in r0,__SREG__
+ 104 0006 0F92      		push r0
+ 105 0008 0BB6      		in r0,91-0x20
+ 106 000a 0F92      		push r0
+ 107 000c 1124      		clr __zero_reg__
+ 108 000e 8F93      		push r24
+ 109 0010 EF93      		push r30
+ 110 0012 FF93      		push r31
+ 111               	/* prologue: Signal */
+ 112               	/* frame size = 0 */
+ 113               	/* stack size = 7 */
+ 114               	.L__stack_usage = 7
+  25:../tests/slavetest.c ****   
+  26:../tests/slavetest.c ****   if(!process)
+ 115               		.stabn	68,0,26,.LM1-.LFBB1
+ 116               	.LM1:
+ 117 0014 8091 0000 		lds r24,process
+ 118 0018 8823      		tst r24
+ 119 001a 01F4      		brne .L1
+  27:../tests/slavetest.c ****   {
+  28:../tests/slavetest.c ****     message[t] = SPDR;
+ 120               		.stabn	68,0,28,.LM2-.LFBB1
+ 121               	.LM2:
+ 122 001c E091 0000 		lds r30,t
+ 123 0020 F0E0      		ldi r31,lo8(0)
+ 124 0022 8FB1      		in r24,47-0x20
+ 125 0024 E050      		subi r30,lo8(-(message))
+ 126 0026 F040      		sbci r31,hi8(-(message))
+ 127 0028 8083      		st Z,r24
+  29:../tests/slavetest.c ****     if(message[t] == END_SPI)
+ 128               		.stabn	68,0,29,.LM3-.LFBB1
+ 129               	.LM3:
+ 130 002a E091 0000 		lds r30,t
+ 131 002e F0E0      		ldi r31,lo8(0)
+ 132 0030 E050      		subi r30,lo8(-(message))
+ 133 0032 F040      		sbci r31,hi8(-(message))
+ 134 0034 8081      		ld r24,Z
+ 135 0036 8A3A      		cpi r24,lo8(-86)
+ 136 0038 01F4      		brne .L3
+  30:../tests/slavetest.c ****       end++;
+ 137               		.stabn	68,0,30,.LM4-.LFBB1
+ 138               	.LM4:
+ 139 003a 8091 0000 		lds r24,end
+ 140 003e 8F5F      		subi r24,lo8(-(1))
+ 141 0040 8093 0000 		sts end,r24
+GAS LISTING /tmp/ccKofr7C.s 			page 4
+
+
+ 142 0044 00C0      		rjmp .L4
+ 143               	.L3:
+  31:../tests/slavetest.c ****     else if(end)
+ 144               		.stabn	68,0,31,.LM5-.LFBB1
+ 145               	.LM5:
+ 146 0046 8091 0000 		lds r24,end
+ 147 004a 8823      		tst r24
+ 148 004c 01F0      		breq .L4
+  32:../tests/slavetest.c ****       end = 0;
+ 149               		.stabn	68,0,32,.LM6-.LFBB1
+ 150               	.LM6:
+ 151 004e 1092 0000 		sts end,__zero_reg__
+ 152               	.L4:
+  33:../tests/slavetest.c ****     if(end == N_END_SPI)
+ 153               		.stabn	68,0,33,.LM7-.LFBB1
+ 154               	.LM7:
+ 155 0052 8091 0000 		lds r24,end
+ 156 0056 8230      		cpi r24,lo8(2)
+ 157 0058 01F4      		brne .L5
+  34:../tests/slavetest.c ****       process = 1;
+ 158               		.stabn	68,0,34,.LM8-.LFBB1
+ 159               	.LM8:
+ 160 005a 81E0      		ldi r24,lo8(1)
+ 161 005c 8093 0000 		sts process,r24
+ 162               	.L5:
+  35:../tests/slavetest.c ****     t++;
+ 163               		.stabn	68,0,35,.LM9-.LFBB1
+ 164               	.LM9:
+ 165 0060 8091 0000 		lds r24,t
+ 166 0064 8F5F      		subi r24,lo8(-(1))
+ 167 0066 8093 0000 		sts t,r24
+ 168               	.L1:
+ 169               	/* epilogue start */
+  36:../tests/slavetest.c ****   }
+  37:../tests/slavetest.c **** }
+ 170               		.stabn	68,0,37,.LM10-.LFBB1
+ 171               	.LM10:
+ 172 006a FF91      		pop r31
+ 173 006c EF91      		pop r30
+ 174 006e 8F91      		pop r24
+ 175 0070 0F90      		pop r0
+ 176 0072 0BBE      		out 91-0x20,r0
+ 177 0074 0F90      		pop r0
+ 178 0076 0FBE      		out __SREG__,r0
+ 179 0078 0F90      		pop r0
+ 180 007a 1F90      		pop r1
+ 181 007c 1895      		reti
+ 182               		.size	__vector_17, .-__vector_17
+ 183               	.Lscope1:
+ 184               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 185               		.stabd	78,0,0
+ 186               		.stabs	"send_MM_cmd:F(0,15)",36,0,39,send_MM_cmd
+ 187               		.stabs	"size:P(6,2)",64,0,39,22
+ 188               	.global	send_MM_cmd
+ 189               		.type	send_MM_cmd, @function
+ 190               	send_MM_cmd:
+ 191               		.stabd	46,0,0
+GAS LISTING /tmp/ccKofr7C.s 			page 5
+
+
+  38:../tests/slavetest.c **** 
+  39:../tests/slavetest.c **** void send_MM_cmd(char *data, uint8_t size)
+  40:../tests/slavetest.c **** {
+ 192               		.stabn	68,0,40,.LM11-.LFBB2
+ 193               	.LM11:
+ 194               	.LFBB2:
+ 195               	/* prologue: function */
+ 196               	/* frame size = 0 */
+ 197               	/* stack size = 0 */
+ 198               	.L__stack_usage = 0
+  41:../tests/slavetest.c ****   uint8_t i;
+  42:../tests/slavetest.c ****   ///Send the char array till stop
+  43:../tests/slavetest.c ****   for(i = 0; i < size; i++)
+ 199               		.stabn	68,0,43,.LM12-.LFBB2
+ 200               	.LM12:
+ 201 007e FC01      		movw r30,r24
+ 202 0080 00C0      		rjmp .L7
+ 203               	.L9:
+  44:../tests/slavetest.c ****   {
+  45:../tests/slavetest.c ****     ///* Wait for empty transmit buffer 
+  46:../tests/slavetest.c ****     while ( !(UCSR1A & (_BV(UDRE1))) );
+ 204               		.stabn	68,0,46,.LM13-.LFBB2
+ 205               	.LM13:
+ 206 0082 9091 9B00 		lds r25,155
+ 207 0086 95FF      		sbrs r25,5
+ 208 0088 00C0      		rjmp .L9
+  47:../tests/slavetest.c ****     ///* Start transmission
+  48:../tests/slavetest.c ****     UDR1 = data[i];
+ 209               		.stabn	68,0,48,.LM14-.LFBB2
+ 210               	.LM14:
+ 211 008a 9191      		ld r25,Z+
+ 212 008c 9093 9C00 		sts 156,r25
+ 213               	.L7:
+  43:../tests/slavetest.c ****   for(i = 0; i < size; i++)
+ 214               		.stabn	68,0,43,.LM15-.LFBB2
+ 215               	.LM15:
+ 216 0090 9E2F      		mov r25,r30
+ 217 0092 981B      		sub r25,r24
+ 218 0094 9617      		cp r25,r22
+ 219 0096 00F0      		brlo .L9
+ 220               	/* epilogue start */
+  49:../tests/slavetest.c ****   }
+  50:../tests/slavetest.c ****   
+  51:../tests/slavetest.c **** }
+ 221               		.stabn	68,0,51,.LM16-.LFBB2
+ 222               	.LM16:
+ 223 0098 0895      		ret
+ 224               		.size	send_MM_cmd, .-send_MM_cmd
+ 225               	.Lscope2:
+ 226               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 227               		.stabd	78,0,0
+ 228               		.stabs	"init_UART_MM:F(0,15)",36,0,53,init_UART_MM
+ 229               	.global	init_UART_MM
+ 230               		.type	init_UART_MM, @function
+ 231               	init_UART_MM:
+ 232               		.stabd	46,0,0
+  52:../tests/slavetest.c **** 
+GAS LISTING /tmp/ccKofr7C.s 			page 6
+
+
+  53:../tests/slavetest.c **** void init_UART_MM(void )
+  54:../tests/slavetest.c **** {
+ 233               		.stabn	68,0,54,.LM17-.LFBB3
+ 234               	.LM17:
+ 235               	.LFBB3:
+ 236 009a CF93      		push r28
+ 237 009c DF93      		push r29
+ 238               	/* prologue: function */
+ 239               	/* frame size = 0 */
+ 240               	/* stack size = 2 */
+ 241               	.L__stack_usage = 2
+  55:../tests/slavetest.c **** 
+  56:../tests/slavetest.c ****   UCSR1A = 0;
+ 242               		.stabn	68,0,56,.LM18-.LFBB3
+ 243               	.LM18:
+ 244 009e CBE9      		ldi r28,lo8(155)
+ 245 00a0 D0E0      		ldi r29,hi8(155)
+ 246 00a2 1882      		st Y,__zero_reg__
+  57:../tests/slavetest.c ****   UCSR1B = 0;
+ 247               		.stabn	68,0,57,.LM19-.LFBB3
+ 248               	.LM19:
+ 249 00a4 AAE9      		ldi r26,lo8(154)
+ 250 00a6 B0E0      		ldi r27,hi8(154)
+ 251 00a8 1C92      		st X,__zero_reg__
+  58:../tests/slavetest.c ****   UCSR1C = 0;
+ 252               		.stabn	68,0,58,.LM20-.LFBB3
+ 253               	.LM20:
+ 254 00aa EDE9      		ldi r30,lo8(157)
+ 255 00ac F0E0      		ldi r31,hi8(157)
+ 256 00ae 1082      		st Z,__zero_reg__
+  59:../tests/slavetest.c ****   
+  60:../tests/slavetest.c ****   ///Double Baud Rate
+  61:../tests/slavetest.c ****   UCSR1A |= _BV(U2X1);
+ 257               		.stabn	68,0,61,.LM21-.LFBB3
+ 258               	.LM21:
+ 259 00b0 8881      		ld r24,Y
+ 260 00b2 8260      		ori r24,lo8(2)
+ 261 00b4 8883      		st Y,r24
+  62:../tests/slavetest.c ****   ///Enable Transmission and Reception
+  63:../tests/slavetest.c ****   UCSR1B |= _BV(TXEN1) | _BV(RXEN1);
+ 262               		.stabn	68,0,63,.LM22-.LFBB3
+ 263               	.LM22:
+ 264 00b6 8C91      		ld r24,X
+ 265 00b8 8861      		ori r24,lo8(24)
+ 266 00ba 8C93      		st X,r24
+  64:../tests/slavetest.c ****   ///8-bit Data Byte
+  65:../tests/slavetest.c ****   UCSR1C |= _BV(UCSZ11) | _BV(UCSZ10);
+ 267               		.stabn	68,0,65,.LM23-.LFBB3
+ 268               	.LM23:
+ 269 00bc 8081      		ld r24,Z
+ 270 00be 8660      		ori r24,lo8(6)
+ 271 00c0 8083      		st Z,r24
+  66:../tests/slavetest.c ****   ///Set Baud Rate to 9600
+  67:../tests/slavetest.c ****   UBRR1L = 103;
+ 272               		.stabn	68,0,67,.LM24-.LFBB3
+ 273               	.LM24:
+ 274 00c2 87E6      		ldi r24,lo8(103)
+GAS LISTING /tmp/ccKofr7C.s 			page 7
+
+
+ 275 00c4 8093 9900 		sts 153,r24
+  68:../tests/slavetest.c ****   UBRR1H = 0;
+ 276               		.stabn	68,0,68,.LM25-.LFBB3
+ 277               	.LM25:
+ 278 00c8 1092 9800 		sts 152,__zero_reg__
+ 279               	/* epilogue start */
+  69:../tests/slavetest.c **** }
+ 280               		.stabn	68,0,69,.LM26-.LFBB3
+ 281               	.LM26:
+ 282 00cc DF91      		pop r29
+ 283 00ce CF91      		pop r28
+ 284 00d0 0895      		ret
+ 285               		.size	init_UART_MM, .-init_UART_MM
+ 286               	.Lscope3:
+ 287               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 288               		.stabd	78,0,0
+ 289               		.stabs	"write_frame_to_eeprom:F(0,15)",36,0,71,write_frame_to_eeprom
+ 290               		.stabs	"frame:P(0,16)=*(6,2)",64,0,71,18
+ 291               	.global	write_frame_to_eeprom
+ 292               		.type	write_frame_to_eeprom, @function
+ 293               	write_frame_to_eeprom:
+ 294               		.stabd	46,0,0
+  70:../tests/slavetest.c **** 
+  71:../tests/slavetest.c **** void write_frame_to_eeprom(uint8_t *frame)
+  72:../tests/slavetest.c **** {
+ 295               		.stabn	68,0,72,.LM27-.LFBB4
+ 296               	.LM27:
+ 297               	.LFBB4:
+ 298               	/* prologue: function */
+ 299               	/* frame size = 0 */
+ 300               	/* stack size = 0 */
+ 301               	.L__stack_usage = 0
+ 302 00d2 9C01      		movw r18,r24
+  73:../tests/slavetest.c ****   
+  74:../tests/slavetest.c ****   //correct the eeprom function for supporting 32-bit addresses
+  75:../tests/slavetest.c ****   static uint8_t start = 0;
+  76:../tests/slavetest.c ****   
+  77:../tests/slavetest.c ****   if((write_addr == read_addr) && start)
+ 303               		.stabn	68,0,77,.LM28-.LFBB4
+ 304               	.LM28:
+ 305 00d4 8091 0000 		lds r24,write_addr
+ 306 00d8 9091 0000 		lds r25,write_addr+1
+ 307 00dc A091 0000 		lds r26,write_addr+2
+ 308 00e0 B091 0000 		lds r27,write_addr+3
+ 309 00e4 4091 0000 		lds r20,read_addr
+ 310 00e8 5091 0000 		lds r21,read_addr+1
+ 311 00ec 6091 0000 		lds r22,read_addr+2
+ 312 00f0 7091 0000 		lds r23,read_addr+3
+ 313 00f4 8417      		cp r24,r20
+ 314 00f6 9507      		cpc r25,r21
+ 315 00f8 A607      		cpc r26,r22
+ 316 00fa B707      		cpc r27,r23
+ 317 00fc 01F4      		brne .L13
+ 318               		.stabn	68,0,77,.LM29-.LFBB4
+ 319               	.LM29:
+ 320 00fe 4091 0000 		lds r20,start.1745
+ 321 0102 4423      		tst r20
+GAS LISTING /tmp/ccKofr7C.s 			page 8
+
+
+ 322 0104 01F0      		breq .L13
+  78:../tests/slavetest.c ****     read_addr += FRAME_SIZE;
+ 323               		.stabn	68,0,78,.LM30-.LFBB4
+ 324               	.LM30:
+ 325 0106 AC01      		movw r20,r24
+ 326 0108 BD01      		movw r22,r26
+ 327 010a 4C58      		subi r20,lo8(-(116))
+ 328 010c 5F4F      		sbci r21,hi8(-(116))
+ 329 010e 6F4F      		sbci r22,hlo8(-(116))
+ 330 0110 7F4F      		sbci r23,hhi8(-(116))
+ 331 0112 4093 0000 		sts read_addr,r20
+ 332 0116 5093 0000 		sts read_addr+1,r21
+ 333 011a 6093 0000 		sts read_addr+2,r22
+ 334 011e 7093 0000 		sts read_addr+3,r23
+ 335               	.L13:
+  79:../tests/slavetest.c ****     
+  80:../tests/slavetest.c ****   eeprom_write_bytes(write_addr, FRAME_SIZE,frame);
+ 336               		.stabn	68,0,80,.LM31-.LFBB4
+ 337               	.LM31:
+ 338 0122 BC01      		movw r22,r24
+ 339 0124 CD01      		movw r24,r26
+ 340 0126 44E7      		ldi r20,lo8(116)
+ 341 0128 50E0      		ldi r21,hi8(116)
+ 342 012a 0E94 0000 		call eeprom_write_bytes
+  81:../tests/slavetest.c ****   write_addr += FRAME_SIZE;
+ 343               		.stabn	68,0,81,.LM32-.LFBB4
+ 344               	.LM32:
+ 345 012e 8091 0000 		lds r24,write_addr
+ 346 0132 9091 0000 		lds r25,write_addr+1
+ 347 0136 A091 0000 		lds r26,write_addr+2
+ 348 013a B091 0000 		lds r27,write_addr+3
+ 349 013e AC01      		movw r20,r24
+ 350 0140 BD01      		movw r22,r26
+ 351 0142 4C58      		subi r20,lo8(-(116))
+ 352 0144 5F4F      		sbci r21,hi8(-(116))
+ 353 0146 6F4F      		sbci r22,hlo8(-(116))
+ 354 0148 7F4F      		sbci r23,hhi8(-(116))
+ 355 014a 4093 0000 		sts write_addr,r20
+ 356 014e 5093 0000 		sts write_addr+1,r21
+ 357 0152 6093 0000 		sts write_addr+2,r22
+ 358 0156 7093 0000 		sts write_addr+3,r23
+  82:../tests/slavetest.c ****   
+  83:../tests/slavetest.c ****   if(write_addr + FRAME_SIZE > MAX_ADDR)
+ 359               		.stabn	68,0,83,.LM33-.LFBB4
+ 360               	.LM33:
+ 361 015a 8851      		subi r24,lo8(-(232))
+ 362 015c 9F4F      		sbci r25,hi8(-(232))
+ 363 015e AF4F      		sbci r26,hlo8(-(232))
+ 364 0160 BF4F      		sbci r27,hhi8(-(232))
+ 365 0162 8130      		cpi r24,lo8(131073)
+ 366 0164 20E0      		ldi r18,hi8(131073)
+ 367 0166 9207      		cpc r25,r18
+ 368 0168 22E0      		ldi r18,hlo8(131073)
+ 369 016a A207      		cpc r26,r18
+ 370 016c 20E0      		ldi r18,hhi8(131073)
+ 371 016e B207      		cpc r27,r18
+ 372 0170 00F0      		brlo .L14
+GAS LISTING /tmp/ccKofr7C.s 			page 9
+
+
+  84:../tests/slavetest.c ****     write_addr = 0;
+ 373               		.stabn	68,0,84,.LM34-.LFBB4
+ 374               	.LM34:
+ 375 0172 1092 0000 		sts write_addr,__zero_reg__
+ 376 0176 1092 0000 		sts write_addr+1,__zero_reg__
+ 377 017a 1092 0000 		sts write_addr+2,__zero_reg__
+ 378 017e 1092 0000 		sts write_addr+3,__zero_reg__
+ 379               	.L14:
+  85:../tests/slavetest.c ****   
+  86:../tests/slavetest.c ****   start = 1;
+ 380               		.stabn	68,0,86,.LM35-.LFBB4
+ 381               	.LM35:
+ 382 0182 81E0      		ldi r24,lo8(1)
+ 383 0184 8093 0000 		sts start.1745,r24
+ 384               	/* epilogue start */
+  87:../tests/slavetest.c **** }
+ 385               		.stabn	68,0,87,.LM36-.LFBB4
+ 386               	.LM36:
+ 387 0188 0895      		ret
+ 388               		.size	write_frame_to_eeprom, .-write_frame_to_eeprom
+ 389               		.stabs	"start:V(6,2)",38,0,75,start.1745
+ 390               		.stabn	192,0,0,.LFBB4-.LFBB4
+ 391               		.stabn	224,0,0,.Lscope4-.LFBB4
+ 392               	.Lscope4:
+ 393               		.stabs	"",36,0,0,.Lscope4-.LFBB4
+ 394               		.stabd	78,0,0
+ 395               		.stabs	"read_frame_from_eeprom:F(0,15)",36,0,89,read_frame_from_eeprom
+ 396               		.stabs	"frame:P(0,16)",64,0,89,18
+ 397               	.global	read_frame_from_eeprom
+ 398               		.type	read_frame_from_eeprom, @function
+ 399               	read_frame_from_eeprom:
+ 400               		.stabd	46,0,0
+  88:../tests/slavetest.c **** 
+  89:../tests/slavetest.c **** void read_frame_from_eeprom(uint8_t *frame)
+  90:../tests/slavetest.c **** {
+ 401               		.stabn	68,0,90,.LM37-.LFBB5
+ 402               	.LM37:
+ 403               	.LFBB5:
+ 404               	/* prologue: function */
+ 405               	/* frame size = 0 */
+ 406               	/* stack size = 0 */
+ 407               	.L__stack_usage = 0
+ 408 018a 9C01      		movw r18,r24
+  91:../tests/slavetest.c ****   eeprom_read_bytes(read_addr, FRAME_SIZE, frame);
+ 409               		.stabn	68,0,91,.LM38-.LFBB5
+ 410               	.LM38:
+ 411 018c 6091 0000 		lds r22,read_addr
+ 412 0190 7091 0000 		lds r23,read_addr+1
+ 413 0194 8091 0000 		lds r24,read_addr+2
+ 414 0198 9091 0000 		lds r25,read_addr+3
+ 415 019c 44E7      		ldi r20,lo8(116)
+ 416 019e 50E0      		ldi r21,hi8(116)
+ 417 01a0 0E94 0000 		call eeprom_read_bytes
+  92:../tests/slavetest.c ****   read_addr += FRAME_SIZE;
+ 418               		.stabn	68,0,92,.LM39-.LFBB5
+ 419               	.LM39:
+ 420 01a4 8091 0000 		lds r24,read_addr
+GAS LISTING /tmp/ccKofr7C.s 			page 10
+
+
+ 421 01a8 9091 0000 		lds r25,read_addr+1
+ 422 01ac A091 0000 		lds r26,read_addr+2
+ 423 01b0 B091 0000 		lds r27,read_addr+3
+ 424 01b4 AC01      		movw r20,r24
+ 425 01b6 BD01      		movw r22,r26
+ 426 01b8 4C58      		subi r20,lo8(-(116))
+ 427 01ba 5F4F      		sbci r21,hi8(-(116))
+ 428 01bc 6F4F      		sbci r22,hlo8(-(116))
+ 429 01be 7F4F      		sbci r23,hhi8(-(116))
+ 430 01c0 4093 0000 		sts read_addr,r20
+ 431 01c4 5093 0000 		sts read_addr+1,r21
+ 432 01c8 6093 0000 		sts read_addr+2,r22
+ 433 01cc 7093 0000 		sts read_addr+3,r23
+  93:../tests/slavetest.c ****   
+  94:../tests/slavetest.c ****   if(read_addr + FRAME_SIZE > MAX_ADDR)
+ 434               		.stabn	68,0,94,.LM40-.LFBB5
+ 435               	.LM40:
+ 436 01d0 8851      		subi r24,lo8(-(232))
+ 437 01d2 9F4F      		sbci r25,hi8(-(232))
+ 438 01d4 AF4F      		sbci r26,hlo8(-(232))
+ 439 01d6 BF4F      		sbci r27,hhi8(-(232))
+ 440 01d8 8130      		cpi r24,lo8(131073)
+ 441 01da 20E0      		ldi r18,hi8(131073)
+ 442 01dc 9207      		cpc r25,r18
+ 443 01de 22E0      		ldi r18,hlo8(131073)
+ 444 01e0 A207      		cpc r26,r18
+ 445 01e2 20E0      		ldi r18,hhi8(131073)
+ 446 01e4 B207      		cpc r27,r18
+ 447 01e6 00F0      		brlo .L15
+  95:../tests/slavetest.c ****     read_addr = 0;
+ 448               		.stabn	68,0,95,.LM41-.LFBB5
+ 449               	.LM41:
+ 450 01e8 1092 0000 		sts read_addr,__zero_reg__
+ 451 01ec 1092 0000 		sts read_addr+1,__zero_reg__
+ 452 01f0 1092 0000 		sts read_addr+2,__zero_reg__
+ 453 01f4 1092 0000 		sts read_addr+3,__zero_reg__
+ 454               	.L15:
+ 455 01f8 0895      		ret
+ 456               		.size	read_frame_from_eeprom, .-read_frame_from_eeprom
+ 457               	.Lscope5:
+ 458               		.stabs	"",36,0,0,.Lscope5-.LFBB5
+ 459               		.stabd	78,0,0
+ 460               		.data
+ 461               	.LC0:
+ 462 0000 4869 0D00 		.string	"Hi\r"
+ 463               		.section	.text.startup,"ax",@progbits
+ 464               		.stabs	"main:F(0,1)",36,0,101,main
+ 465               	.global	main
+ 466               		.type	main, @function
+ 467               	main:
+ 468               		.stabd	46,0,0
+  96:../tests/slavetest.c **** }
+  97:../tests/slavetest.c **** /** @brief Main function
+  98:../tests/slavetest.c ****  *  @todo Complete slave coding
+  99:../tests/slavetest.c ****  */
+ 100:../tests/slavetest.c **** 
+ 101:../tests/slavetest.c **** int main(void) {
+GAS LISTING /tmp/ccKofr7C.s 			page 11
+
+
+ 469               		.stabn	68,0,101,.LM42-.LFBB6
+ 470               	.LM42:
+ 471               	.LFBB6:
+ 472 0000 CF93      		push r28
+ 473 0002 DF93      		push r29
+ 474 0004 CDB7      		in r28,__SP_L__
+ 475 0006 DEB7      		in r29,__SP_H__
+ 476 0008 C050      		subi r28,lo8(-(-256))
+ 477 000a D140      		sbci r29,hi8(-(-256))
+ 478 000c 0FB6      		in __tmp_reg__,__SREG__
+ 479 000e F894      		cli
+ 480 0010 DEBF      		out __SP_H__,r29
+ 481 0012 0FBE      		out __SREG__,__tmp_reg__
+ 482 0014 CDBF      		out __SP_L__,r28
+ 483               	/* prologue: function */
+ 484               	/* frame size = 256 */
+ 485               	/* stack size = 258 */
+ 486               	.L__stack_usage = 258
+ 102:../tests/slavetest.c ****   
+ 103:../tests/slavetest.c ****   /// Current state of satellite
+ 104:../tests/slavetest.c ****   uint8_t frame[256];
+ 105:../tests/slavetest.c ****   uint8_t transmission = 0, command;
+ 106:../tests/slavetest.c ****   uint16_t crc, recv_crc;
+ 107:../tests/slavetest.c ****   
+ 108:../tests/slavetest.c ****   sbi(DDRA, PA2);
+ 487               		.stabn	68,0,108,.LM43-.LFBB6
+ 488               	.LM43:
+ 489 0016 D29A      		sbi 58-0x20,2
+ 109:../tests/slavetest.c ****   cbi(PORTA, PA2);
+ 490               		.stabn	68,0,109,.LM44-.LFBB6
+ 491               	.LM44:
+ 492 0018 DA98      		cbi 59-0x20,2
+ 110:../tests/slavetest.c ****   
+ 111:../tests/slavetest.c ****   ///Disable Watchdog Timer
+ 112:../tests/slavetest.c ****   wdt_disable();
+ 493               		.stabn	68,0,112,.LM45-.LFBB6
+ 494               	.LM45:
+ 495 001a 88E1      		ldi r24,lo8(24)
+ 496               	/* #APP */
+ 497               	 ;  112 "../tests/slavetest.c" 1
+ 498 001c 0FB6      		in __tmp_reg__, __SREG__
+ 499 001e F894      		cli
+ 500 0020 81BD      		out 33, r24
+ 501 0022 11BC      		out 33, __zero_reg__
+ 502 0024 0FBE      		out __SREG__,__tmp_reg__
+ 503               		
+ 504               	 ;  0 "" 2
+ 113:../tests/slavetest.c ****   ///Initialise SPI as slave
+ 114:../tests/slavetest.c ****   init_SPI_slave();
+ 505               		.stabn	68,0,114,.LM46-.LFBB6
+ 506               	.LM46:
+ 507               	/* #NOAPP */
+ 508 0026 0E94 0000 		call init_SPI_slave
+ 115:../tests/slavetest.c ****   
+ 116:../tests/slavetest.c ****   init_UART_MM();
+ 509               		.stabn	68,0,116,.LM47-.LFBB6
+ 510               	.LM47:
+GAS LISTING /tmp/ccKofr7C.s 			page 12
+
+
+ 511 002a 0E94 0000 		call init_UART_MM
+ 117:../tests/slavetest.c ****   send_MM_cmd("Hi\r", 3);
+ 512               		.stabn	68,0,117,.LM48-.LFBB6
+ 513               	.LM48:
+ 514 002e 80E0      		ldi r24,lo8(.LC0)
+ 515 0030 90E0      		ldi r25,hi8(.LC0)
+ 516 0032 63E0      		ldi r22,lo8(3)
+ 517 0034 0E94 0000 		call send_MM_cmd
+ 118:../tests/slavetest.c ****   
+ 119:../tests/slavetest.c ****   ///EEPROM function to initialise I/O
+ 120:../tests/slavetest.c ****   //ioinit();
+ 121:../tests/slavetest.c ****   
+ 122:../tests/slavetest.c ****   ///Initialise CC1020 DIO pins
+ 123:../tests/slavetest.c ****   //cc1020_init_dio();
+ 124:../tests/slavetest.c ****   
+ 125:../tests/slavetest.c ****   ///Enable Global Interrupts
+ 126:../tests/slavetest.c ****   sei();
+ 518               		.stabn	68,0,126,.LM49-.LFBB6
+ 519               	.LM49:
+ 520               	/* #APP */
+ 521               	 ;  126 "../tests/slavetest.c" 1
+ 522 0038 7894      		sei
+ 523               	 ;  0 "" 2
+ 105:../tests/slavetest.c ****   uint8_t transmission = 0, command;
+ 524               		.stabn	68,0,105,.LM50-.LFBB6
+ 525               	.LM50:
+ 526               	/* #NOAPP */
+ 527 003a 10E0      		ldi r17,lo8(0)
+ 127:../tests/slavetest.c ****   
+ 128:../tests/slavetest.c ****   ///Main Loop for slave
+ 129:../tests/slavetest.c ****   while (1)
+ 130:../tests/slavetest.c ****   {
+ 131:../tests/slavetest.c ****     if(process)
+ 132:../tests/slavetest.c ****     {
+ 133:../tests/slavetest.c ****       send_MM_cmd((char *)message, t);
+ 134:../tests/slavetest.c ****       crc = calculate_crc_16((uint8_t *)message, t - (sizeof(uint16_t) + N_END_SPI));
+ 135:../tests/slavetest.c ****       memcpy((void *)&recv_crc, (void *)&(message[t - (sizeof(uint16_t) + N_END_SPI)]), sizeof(uint
+ 136:../tests/slavetest.c ****       
+ 137:../tests/slavetest.c ****       //if(crc == recv_crc)
+ 138:../tests/slavetest.c ****       {
+ 139:../tests/slavetest.c ****         
+ 140:../tests/slavetest.c ****         command = message[0];
+ 141:../tests/slavetest.c ****         if(command == BEGIN_TX_COMM)
+ 142:../tests/slavetest.c ****           transmission = IN;
+ 143:../tests/slavetest.c ****         else if(command == BEGIN_TX_GS)
+ 144:../tests/slavetest.c ****           transmission = GS;
+ 145:../tests/slavetest.c ****         else if(command == END_TX)
+ 146:../tests/slavetest.c ****         {
+ 147:../tests/slavetest.c ****           SPI_transfer(ACK);
+ 148:../tests/slavetest.c ****           transmission = 0;
+ 149:../tests/slavetest.c ****         }
+ 150:../tests/slavetest.c ****         else if(command == HM_DATA)
+ 151:../tests/slavetest.c ****         {
+ 152:../tests/slavetest.c ****           tbi(PORTA, PA2);
+ 528               		.stabn	68,0,152,.LM51-.LFBB6
+ 529               	.LM51:
+ 530 003c 04E0      		ldi r16,lo8(4)
+GAS LISTING /tmp/ccKofr7C.s 			page 13
+
+
+ 531               	.L30:
+ 131:../tests/slavetest.c ****     if(process)
+ 532               		.stabn	68,0,131,.LM52-.LFBB6
+ 533               	.LM52:
+ 534 003e 8091 0000 		lds r24,process
+ 535 0042 8823      		tst r24
+ 536 0044 01F0      		breq .L19
+ 133:../tests/slavetest.c ****       send_MM_cmd((char *)message, t);
+ 537               		.stabn	68,0,133,.LM53-.LFBB6
+ 538               	.LM53:
+ 539 0046 6091 0000 		lds r22,t
+ 540 004a 80E0      		ldi r24,lo8(message)
+ 541 004c 90E0      		ldi r25,hi8(message)
+ 542 004e 0E94 0000 		call send_MM_cmd
+ 134:../tests/slavetest.c ****       crc = calculate_crc_16((uint8_t *)message, t - (sizeof(uint16_t) + N_END_SPI));
+ 543               		.stabn	68,0,134,.LM54-.LFBB6
+ 544               	.LM54:
+ 545 0052 6091 0000 		lds r22,t
+ 546 0056 6450      		subi r22,lo8(-(-4))
+ 547 0058 80E0      		ldi r24,lo8(message)
+ 548 005a 90E0      		ldi r25,hi8(message)
+ 549 005c 0E94 0000 		call calculate_crc_16
+ 135:../tests/slavetest.c ****       memcpy((void *)&recv_crc, (void *)&(message[t - (sizeof(uint16_t) + N_END_SPI)]), sizeof(uint
+ 550               		.stabn	68,0,135,.LM55-.LFBB6
+ 551               	.LM55:
+ 552 0060 8091 0000 		lds r24,t
+ 140:../tests/slavetest.c ****         command = message[0];
+ 553               		.stabn	68,0,140,.LM56-.LFBB6
+ 554               	.LM56:
+ 555 0064 8091 0000 		lds r24,message
+ 141:../tests/slavetest.c ****         if(command == BEGIN_TX_COMM)
+ 556               		.stabn	68,0,141,.LM57-.LFBB6
+ 557               	.LM57:
+ 558 0068 8A35      		cpi r24,lo8(90)
+ 559 006a 01F0      		breq .L26
+ 143:../tests/slavetest.c ****         else if(command == BEGIN_TX_GS)
+ 560               		.stabn	68,0,143,.LM58-.LFBB6
+ 561               	.LM58:
+ 562 006c 8535      		cpi r24,lo8(85)
+ 563 006e 01F0      		breq .L27
+ 145:../tests/slavetest.c ****         else if(command == END_TX)
+ 564               		.stabn	68,0,145,.LM59-.LFBB6
+ 565               	.LM59:
+ 566 0070 8333      		cpi r24,lo8(51)
+ 567 0072 01F4      		brne .L21
+ 147:../tests/slavetest.c ****           SPI_transfer(ACK);
+ 568               		.stabn	68,0,147,.LM60-.LFBB6
+ 569               	.LM60:
+ 570 0074 82E9      		ldi r24,lo8(-110)
+ 571 0076 0E94 0000 		call SPI_transfer
+ 148:../tests/slavetest.c ****           transmission = 0;
+ 572               		.stabn	68,0,148,.LM61-.LFBB6
+ 573               	.LM61:
+ 574 007a 10E0      		ldi r17,lo8(0)
+ 575 007c 00C0      		rjmp .L20
+ 576               	.L21:
+ 150:../tests/slavetest.c ****         else if(command == HM_DATA)
+GAS LISTING /tmp/ccKofr7C.s 			page 14
+
+
+ 577               		.stabn	68,0,150,.LM62-.LFBB6
+ 578               	.LM62:
+ 579 007e 8823      		tst r24
+ 580 0080 01F4      		brne .L22
+ 581               		.stabn	68,0,152,.LM63-.LFBB6
+ 582               	.LM63:
+ 583 0082 8BB3      		in r24,59-0x20
+ 584 0084 8027      		eor r24,r16
+ 585 0086 8BBB      		out 59-0x20,r24
+ 586 0088 00C0      		rjmp .L32
+ 587               	.L22:
+ 153:../tests/slavetest.c ****           make_ax25_frame_from_data(frame, (uint8_t *)message + 2);
+ 154:../tests/slavetest.c ****           //write_frame_to_eeprom(frame);
+ 155:../tests/slavetest.c ****         }
+ 156:../tests/slavetest.c ****         else if(command == REAL_TIME)
+ 588               		.stabn	68,0,156,.LM64-.LFBB6
+ 589               	.LM64:
+ 590 008a 853D      		cpi r24,lo8(-43)
+ 591 008c 01F4      		brne .L20
+ 592               	.L32:
+ 157:../tests/slavetest.c ****           make_ax25_frame_from_data(frame, (uint8_t *)message + 2);
+ 593               		.stabn	68,0,157,.LM65-.LFBB6
+ 594               	.LM65:
+ 595 008e CE01      		movw r24,r28
+ 596 0090 0196      		adiw r24,1
+ 597 0092 60E0      		ldi r22,lo8(message+2)
+ 598 0094 70E0      		ldi r23,hi8(message+2)
+ 599 0096 0E94 0000 		call make_ax25_frame_from_data
+ 600 009a 00C0      		rjmp .L20
+ 601               	.L26:
+ 142:../tests/slavetest.c ****           transmission = IN;
+ 602               		.stabn	68,0,142,.LM66-.LFBB6
+ 603               	.LM66:
+ 604 009c 1AEA      		ldi r17,lo8(-86)
+ 605 009e 00C0      		rjmp .L20
+ 606               	.L27:
+ 144:../tests/slavetest.c ****           transmission = GS;
+ 607               		.stabn	68,0,144,.LM67-.LFBB6
+ 608               	.LM67:
+ 609 00a0 1BEB      		ldi r17,lo8(-69)
+ 610               	.L20:
+ 158:../tests/slavetest.c ****       }
+ 159:../tests/slavetest.c ****       end = 0;
+ 611               		.stabn	68,0,159,.LM68-.LFBB6
+ 612               	.LM68:
+ 613 00a2 1092 0000 		sts end,__zero_reg__
+ 160:../tests/slavetest.c ****       t = 0;
+ 614               		.stabn	68,0,160,.LM69-.LFBB6
+ 615               	.LM69:
+ 616 00a6 1092 0000 		sts t,__zero_reg__
+ 161:../tests/slavetest.c ****       process = 0;
+ 617               		.stabn	68,0,161,.LM70-.LFBB6
+ 618               	.LM70:
+ 619 00aa 1092 0000 		sts process,__zero_reg__
+ 620               	.L19:
+ 162:../tests/slavetest.c ****     }
+ 163:../tests/slavetest.c ****     
+GAS LISTING /tmp/ccKofr7C.s 			page 15
+
+
+ 164:../tests/slavetest.c ****     if(transmission == GS)
+ 621               		.stabn	68,0,164,.LM71-.LFBB6
+ 622               	.LM71:
+ 623 00ae 1B3B      		cpi r17,lo8(-69)
+ 624 00b0 01F4      		brne .L23
+ 165:../tests/slavetest.c ****     {
+ 166:../tests/slavetest.c ****       read_frame_from_eeprom(frame);
+ 625               		.stabn	68,0,166,.LM72-.LFBB6
+ 626               	.LM72:
+ 627 00b2 CE01      		movw r24,r28
+ 628 00b4 0196      		adiw r24,1
+ 629 00b6 0E94 0000 		call read_frame_from_eeprom
+ 167:../tests/slavetest.c ****       if(read_addr == write_addr)
+ 630               		.stabn	68,0,167,.LM73-.LFBB6
+ 631               	.LM73:
+ 632 00ba 8091 0000 		lds r24,read_addr
+ 633 00be 9091 0000 		lds r25,read_addr+1
+ 634 00c2 A091 0000 		lds r26,read_addr+2
+ 635 00c6 B091 0000 		lds r27,read_addr+3
+ 636 00ca 4091 0000 		lds r20,write_addr
+ 637 00ce 5091 0000 		lds r21,write_addr+1
+ 638 00d2 6091 0000 		lds r22,write_addr+2
+ 639 00d6 7091 0000 		lds r23,write_addr+3
+ 640 00da 8417      		cp r24,r20
+ 641 00dc 9507      		cpc r25,r21
+ 642 00de A607      		cpc r26,r22
+ 643 00e0 B707      		cpc r27,r23
+ 644 00e2 01F4      		brne .L31
+ 168:../tests/slavetest.c ****         read_addr -= FRAME_SIZE;
+ 645               		.stabn	68,0,168,.LM74-.LFBB6
+ 646               	.LM74:
+ 647 00e4 8457      		subi r24,lo8(-(-116))
+ 648 00e6 9040      		sbci r25,hi8(-(-116))
+ 649 00e8 A040      		sbci r26,hlo8(-(-116))
+ 650 00ea B040      		sbci r27,hhi8(-(-116))
+ 651 00ec 8093 0000 		sts read_addr,r24
+ 652 00f0 9093 0000 		sts read_addr+1,r25
+ 653 00f4 A093 0000 		sts read_addr+2,r26
+ 654 00f8 B093 0000 		sts read_addr+3,r27
+ 655 00fc 00C0      		rjmp .L31
+ 656               	.L23:
+ 169:../tests/slavetest.c ****         
+ 170:../tests/slavetest.c ****       cc1020_transmit_packet(frame, FRAME_SIZE);
+ 171:../tests/slavetest.c ****     }
+ 172:../tests/slavetest.c ****     else if(transmission == IN)
+ 657               		.stabn	68,0,172,.LM75-.LFBB6
+ 658               	.LM75:
+ 659 00fe 1A3A      		cpi r17,lo8(-86)
+ 660 0100 01F0      		breq .+2
+ 661 0102 00C0      		rjmp .L30
+ 662               	.L31:
+ 173:../tests/slavetest.c ****       cc1020_transmit_packet(frame, FRAME_SIZE);
+ 663               		.stabn	68,0,173,.LM76-.LFBB6
+ 664               	.LM76:
+ 665 0104 CE01      		movw r24,r28
+ 666 0106 0196      		adiw r24,1
+ 667 0108 64E7      		ldi r22,lo8(116)
+GAS LISTING /tmp/ccKofr7C.s 			page 16
+
+
+ 668 010a 0E94 0000 		call cc1020_transmit_packet
+ 669 010e 00C0      		rjmp .L30
+ 670               		.size	main, .-main
+ 671               		.stabs	"frame:(0,17)=ar(10,4);0;255;(6,2)",128,0,104,1
+ 672               		.stabs	"transmission:r(6,2)",64,0,105,17
+ 673               		.stabs	"command:r(6,2)",64,0,105,24
+ 674               		.stabn	192,0,0,.LFBB6-.LFBB6
+ 675               		.stabn	224,0,0,.Lscope6-.LFBB6
+ 676               	.Lscope6:
+ 677               		.stabs	"",36,0,0,.Lscope6-.LFBB6
+ 678               		.stabd	78,0,0
+ 679               	.global	process
+ 680               	.global	process
+ 681               		.section .bss
+ 682               		.type	process, @object
+ 683               		.size	process, 1
+ 684               	process:
+ 685 0000 00        		.skip 1,0
+ 686               	.global	t
+ 687               	.global	t
+ 688               		.type	t, @object
+ 689               		.size	t, 1
+ 690               	t:
+ 691 0001 00        		.skip 1,0
+ 692               	.global	end
+ 693               	.global	end
+ 694               		.type	end, @object
+ 695               		.size	end, 1
+ 696               	end:
+ 697 0002 00        		.skip 1,0
+ 698               		.comm message,256,1
+ 699               		.comm twst,1,1
+ 700               		.lcomm write_addr,4
+ 701               		.lcomm read_addr,4
+ 702               		.lcomm start.1745,1
+ 703               		.stabs	"read_addr:S(6,6)",38,0,19,read_addr
+ 704               		.stabs	"write_addr:S(6,6)",38,0,19,write_addr
+ 705               		.stabs	"twst:G(6,2)",32,0,90,0
+ 706               		.stabs	"message:G(0,18)=ar(10,4);0;255;(0,19)=B(0,2)",32,0,16,0
+ 707               		.stabs	"end:G(0,20)=B(6,2)",32,0,17,0
+ 708               		.stabs	"t:G(0,20)",32,0,17,0
+ 709               		.stabs	"process:G(0,20)",32,0,17,0
+ 710               		.text
+ 711               		.stabs	"",100,0,0,.Letext0
+ 712               	.Letext0:
+GAS LISTING /tmp/ccKofr7C.s 			page 17
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 slavetest.c
+     /tmp/ccKofr7C.s:2      *ABS*:000000000000003f __SREG__
+     /tmp/ccKofr7C.s:3      *ABS*:000000000000003e __SP_H__
+     /tmp/ccKofr7C.s:4      *ABS*:000000000000003d __SP_L__
+     /tmp/ccKofr7C.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccKofr7C.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccKofr7C.s:96     .text:0000000000000000 __vector_17
+     /tmp/ccKofr7C.s:684    .bss:0000000000000000 process
+     /tmp/ccKofr7C.s:690    .bss:0000000000000001 t
+                            *COM*:0000000000000100 message
+     /tmp/ccKofr7C.s:696    .bss:0000000000000002 end
+     /tmp/ccKofr7C.s:190    .text:000000000000007e send_MM_cmd
+     /tmp/ccKofr7C.s:231    .text:000000000000009a init_UART_MM
+     /tmp/ccKofr7C.s:293    .text:00000000000000d2 write_frame_to_eeprom
+                             .bss:0000000000000003 write_addr
+     /tmp/ccKofr7C.s:700    .bss:0000000000000007 read_addr
+     /tmp/ccKofr7C.s:701    .bss:000000000000000b start.1745
+     /tmp/ccKofr7C.s:399    .text:000000000000018a read_frame_from_eeprom
+     /tmp/ccKofr7C.s:467    .text.startup:0000000000000000 main
+                            *COM*:0000000000000001 twst
+
+UNDEFINED SYMBOLS
+__do_copy_data
+__do_clear_bss
+eeprom_write_bytes
+eeprom_read_bytes
+init_SPI_slave
+calculate_crc_16
+SPI_transfer
+make_ax25_frame_from_data
+cc1020_transmit_packet

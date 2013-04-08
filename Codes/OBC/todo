@@ -1,0 +1,4 @@
+Put Communication routine in Preflight
+Magnetometer On/Off in OBC + Power:wait for power board change
+Change Master.c
+Change comm.c: if mode = preflight return GS position
