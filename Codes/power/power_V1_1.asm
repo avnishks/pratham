@@ -1,5 +1,3 @@
-; adapted from Talni's useless code 
-; Sanyam and Avnish 
 
 	list		p=16f877a	; list directive to define processor
 	#include	<p16f877a.inc>	; processor specific variable definitions

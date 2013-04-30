@@ -1,5 +1,3 @@
-; adapted from Sanyam and Avnish
-; changes done by Prashant Rupapara
 
 	list		p=16f877a	; list directive to define processor
 	#include	<p16f877a.inc>	; processor specific variable definitions
