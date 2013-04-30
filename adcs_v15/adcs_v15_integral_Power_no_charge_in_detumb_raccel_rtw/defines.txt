@@ -1,0 +1,6 @@
+MODEL=adcs_v15_integral_Power_no_charge_in_detumb
+NUMST=5
+NCSTATES=8
+HAVESTDIO
+INTEGER_CODE=0
+MT=1

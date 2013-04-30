@@ -1,0 +1,14 @@
+Simnum
+5002: Sample worst case from MC (0.002 deg/s rates and [17.28 140.710 76.89] (nominal model)
+5001: Representative high euler angle (0.002 deg/s and [179 10 20] (nominal model ran)
+5003: Inertia increases by 1.5 (rates [5 -5 5] and [euler angles [20 140 80])
+5004: inertia lower by 0.5
+5005: 10 times the cross inertia terms
+5006: 3 times the cross terms
+5007: 2 times the cross product
+5008: nominal case with original inertia values
+5009: very high initial rates (10 deg/s on each axis -ve on 2nd axis) (same attitudes)
+5010: high rates 12 deg/s on all axes
+
+Including the SS measurement errors
+Change the V_S

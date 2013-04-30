@@ -1,0 +1,108 @@
+CC     = "c:\program files (x86)\matlab\r2009b\sys\lcc\bin\lcc.exe"
+LD     = "c:\program files (x86)\matlab\r2009b\sys\lcc\bin\lcclnk.exe"
+LIBCMD = "c:\program files (x86)\matlab\r2009b\sys\lcc\bin\lcclib.exe"
+CFLAGS = -c -Zp8 -DMATLAB_MEX_FILE -noregistrylookup
+LDFLAGS = -s -dll -L"c:\program files (x86)\matlab\r2009b\sys\lcc\lib"
+LIBFLAGS = 
+
+OBJECTS = \
+	"adcs_v15_integral_Power_sfun.obj"\
+	"adcs_v15_integral_Power_sfun_registry.obj"\
+	"c1_adcs_v15_integral_Power.obj"\
+	"c2_adcs_v15_integral_Power.obj"\
+	"c4_adcs_v15_integral_Power.obj"\
+	"c5_adcs_v15_integral_Power.obj"\
+	"c6_adcs_v15_integral_Power.obj"\
+	"c7_adcs_v15_integral_Power.obj"\
+	"c8_adcs_v15_integral_Power.obj"\
+	"c9_adcs_v15_integral_Power.obj"\
+	"c10_adcs_v15_integral_Power.obj"\
+	"c11_adcs_v15_integral_Power.obj"\
+	"c12_adcs_v15_integral_Power.obj"\
+	"c13_adcs_v15_integral_Power.obj"\
+	"c16_adcs_v15_integral_Power.obj"\
+	"c19_adcs_v15_integral_Power.obj"\
+	"c20_adcs_v15_integral_Power.obj"\
+	"c22_adcs_v15_integral_Power.obj"\
+	"c23_adcs_v15_integral_Power.obj"\
+	"c24_adcs_v15_integral_Power.obj"\
+	"c25_adcs_v15_integral_Power.obj"\
+	"c26_adcs_v15_integral_Power.obj"\
+	"c27_adcs_v15_integral_Power.obj"\
+	"c28_adcs_v15_integral_Power.obj"\
+	"c29_adcs_v15_integral_Power.obj"\
+	"c30_adcs_v15_integral_Power.obj"\
+	"c31_adcs_v15_integral_Power.obj"\
+	"lccstub.obj"\
+	"c:\program files (x86)\matlab\r2009b\sys\lcc\mex\lccdef.def"\
+	"c:\program files (x86)\matlab\r2009b\stateflow\c\debugger\lib\win32\sfc_debuglcc.lib"\
+	"c:\program files (x86)\matlab\r2009b\stateflow\c\mex\lib\win32\sfc_mexlcc.lib"\
+	"c:\program files (x86)\matlab\r2009b\extern\lib\win32\lcc\libmex.lib"\
+	"c:\program files (x86)\matlab\r2009b\extern\lib\win32\lcc\libmx.lib"\
+	"c:\program files (x86)\matlab\r2009b\extern\lib\win32\lcc\libfixedpoint.lib"\
+	"c:\program files (x86)\matlab\r2009b\extern\lib\win32\lcc\libut.lib"\
+	"c:\program files (x86)\matlab\r2009b\extern\lib\win32\lcc\libmwmathutil.lib"\
+	"c:\program files (x86)\matlab\r2009b\extern\lib\win32\lcc\libemlrt.lib"\
+	"c:\program files (x86)\matlab\r2009b\extern\lib\win32\lcc\libmwblascompat32.lib"\
+
+INCLUDE_PATH= -I"c:\program files (x86)\matlab\r2009b\sys\lcc\include"  -I"c:\program files (x86)\matlab\r2009b\extern\include"  -I"c:\program files (x86)\matlab\r2009b\simulink\include"  -I"c:\program files (x86)\matlab\r2009b\stateflow\c\mex\include"  -I"c:\program files (x86)\matlab\r2009b\stateflow\c\debugger\include" 
+ 
+
+adcs_v15_integral_Power_sfun.mexw32 : $(MAKEFILE) $(OBJECTS)
+	$(LD) $(LDFLAGS) -o adcs_v15_integral_Power_sfun.mexw32 @adcs_v15_integral_Power_sfun.lmko
+adcs_v15_integral_Power_sfun.obj :	"adcs_v15_integral_Power_sfun.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "adcs_v15_integral_Power_sfun.c"
+adcs_v15_integral_Power_sfun_registry.obj :	"adcs_v15_integral_Power_sfun_registry.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "adcs_v15_integral_Power_sfun_registry.c"
+c1_adcs_v15_integral_Power.obj :	"c1_adcs_v15_integral_Power.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c1_adcs_v15_integral_Power.c"
+c2_adcs_v15_integral_Power.obj :	"c2_adcs_v15_integral_Power.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c2_adcs_v15_integral_Power.c"
+c4_adcs_v15_integral_Power.obj :	"c4_adcs_v15_integral_Power.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c4_adcs_v15_integral_Power.c"
+c5_adcs_v15_integral_Power.obj :	"c5_adcs_v15_integral_Power.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c5_adcs_v15_integral_Power.c"
+c6_adcs_v15_integral_Power.obj :	"c6_adcs_v15_integral_Power.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c6_adcs_v15_integral_Power.c"
+c7_adcs_v15_integral_Power.obj :	"c7_adcs_v15_integral_Power.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c7_adcs_v15_integral_Power.c"
+c8_adcs_v15_integral_Power.obj :	"c8_adcs_v15_integral_Power.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c8_adcs_v15_integral_Power.c"
+c9_adcs_v15_integral_Power.obj :	"c9_adcs_v15_integral_Power.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c9_adcs_v15_integral_Power.c"
+c10_adcs_v15_integral_Power.obj :	"c10_adcs_v15_integral_Power.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c10_adcs_v15_integral_Power.c"
+c11_adcs_v15_integral_Power.obj :	"c11_adcs_v15_integral_Power.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c11_adcs_v15_integral_Power.c"
+c12_adcs_v15_integral_Power.obj :	"c12_adcs_v15_integral_Power.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c12_adcs_v15_integral_Power.c"
+c13_adcs_v15_integral_Power.obj :	"c13_adcs_v15_integral_Power.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c13_adcs_v15_integral_Power.c"
+c16_adcs_v15_integral_Power.obj :	"c16_adcs_v15_integral_Power.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c16_adcs_v15_integral_Power.c"
+c19_adcs_v15_integral_Power.obj :	"c19_adcs_v15_integral_Power.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c19_adcs_v15_integral_Power.c"
+c20_adcs_v15_integral_Power.obj :	"c20_adcs_v15_integral_Power.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c20_adcs_v15_integral_Power.c"
+c22_adcs_v15_integral_Power.obj :	"c22_adcs_v15_integral_Power.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c22_adcs_v15_integral_Power.c"
+c23_adcs_v15_integral_Power.obj :	"c23_adcs_v15_integral_Power.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c23_adcs_v15_integral_Power.c"
+c24_adcs_v15_integral_Power.obj :	"c24_adcs_v15_integral_Power.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c24_adcs_v15_integral_Power.c"
+c25_adcs_v15_integral_Power.obj :	"c25_adcs_v15_integral_Power.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c25_adcs_v15_integral_Power.c"
+c26_adcs_v15_integral_Power.obj :	"c26_adcs_v15_integral_Power.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c26_adcs_v15_integral_Power.c"
+c27_adcs_v15_integral_Power.obj :	"c27_adcs_v15_integral_Power.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c27_adcs_v15_integral_Power.c"
+c28_adcs_v15_integral_Power.obj :	"c28_adcs_v15_integral_Power.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c28_adcs_v15_integral_Power.c"
+c29_adcs_v15_integral_Power.obj :	"c29_adcs_v15_integral_Power.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c29_adcs_v15_integral_Power.c"
+c30_adcs_v15_integral_Power.obj :	"c30_adcs_v15_integral_Power.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c30_adcs_v15_integral_Power.c"
+c31_adcs_v15_integral_Power.obj :	"c31_adcs_v15_integral_Power.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c31_adcs_v15_integral_Power.c"
+lccstub.obj :	"c:\program files (x86)\matlab\r2009b\sys\lcc\mex\lccstub.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c:\program files (x86)\matlab\r2009b\sys\lcc\mex\lccstub.c"
